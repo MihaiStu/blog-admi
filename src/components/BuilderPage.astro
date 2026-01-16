@@ -1,0 +1,14 @@
+---
+import { builder, BuilderComponent } from '@builder.io/sdk';
+import type { Content } from '@builder.io/sdk';
+
+builder.init(import.meta.env.PUBLIC_BUILDER_API_KEY);
+
+const content: Content | null = await builder
+  .get('page', {
+    url: Astro.url.pathname,
+  })
+  .toPromise();
+---
+
+{content ? <BuilderComponent model="page" content={content} /> : null}
