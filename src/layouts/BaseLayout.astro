@@ -1,0 +1,711 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/layout-controls.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  pageBg?: string;
+}
+
+const { title, description = "Blog de AdmiLogistic" } = Astro.props;
+
+// Self-determine page from URL pathname (more reliable than relying on props)
+const pathname = Astro.url.pathname;
+let page = "home";
+if (pathname.startsWith("/categorias")) page = "categorias";
+else if (pathname.startsWith("/bases")) page = "bases";
+else if (pathname.startsWith("/proyectos")) page = "proyectos";
+
+const BG_MAP = {
+  home: '/images/backgrounds/bg-home-boost.webp',
+  categorias: '/images/backgrounds/bg-categorias-boost.webp',
+  bases: '/images/backgrounds/bg-bases-boost.webp',
+  proyectos: '/images/backgrounds/bg-proyectos-boost.webp'
+};
+
+const htmlStyle = `--bg-image: url('${BG_MAP[page] || '/images/backgrounds/bg-editorial-boost.webp'}');`;
+
+// No server-side CSS injection needed - JavaScript will handle it
+const bgStyleTag = ``;
+---
+
+<!doctype html>
+<html lang="es" style={htmlStyle} class={import.meta.env.DEV ? "edit-mode" : ""}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class={`bg-${page} amp-mask`} data-page={page}>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    
+    <script>
+      (function(){
+        // Background system - applies per-page backgrounds with custom settings
+        
+        function setVar(prop, value) {
+          const cssValue = prop === 'blur' ? `${value}px` : value;
+          document.documentElement.style.setProperty(`--bg-${prop}`, cssValue);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+          // Set page name in body
+          const pathname = window.location.pathname;
+          let currentPage = 'home';
+          if (pathname.includes('/categorias')) currentPage = 'categorias';
+          else if (pathname.includes('/bases')) currentPage = 'bases';
+          else if (pathname.includes('/proyectos')) currentPage = 'proyectos';
+          document.body.setAttribute('data-current-page', currentPage);
+
+          // Per-page default values
+          const pageDefaults = {
+            home: { opacity: 0.83, blur: '13px', saturate: 1.2, brightness: 1, scale: 1.05 },
+            categorias: { opacity: 0.74, blur: '0px', saturate: 0.6, brightness: 1, scale: 1.05 },
+            bases: { opacity: 0.93, blur: '0px', saturate: 0.9, brightness: 1, scale: 1.05 },
+            proyectos: { opacity: 0.62, blur: '1px', saturate: 0.7, brightness: 1, scale: 1.05 }
+          };
+
+          const defaults = pageDefaults[currentPage] || pageDefaults.home;
+
+          // Map of backgrounds per page
+          const bgMap = {
+            home: '/images/backgrounds/bg-home-boost.webp',
+            categorias: '/images/backgrounds/bg-categorias-boost.webp',
+            bases: '/images/backgrounds/bg-bases-boost.webp',
+            proyectos: '/images/backgrounds/bg-proyectos-boost.webp'
+          };
+
+          const bgUrl = bgMap[currentPage] || bgMap.home;
+          
+          // Inject a style tag with the background and CSS filters
+          const styleTag = document.createElement('style');
+          styleTag.id = 'page-background-style';
+          styleTag.textContent = `
+            body::before {
+              content: "";
+              position: fixed;
+              inset: 0;
+              background-image: url('${bgUrl}') !important;
+              background-size: cover !important;
+              background-position: center !important;
+              background-attachment: fixed !important;
+              background-repeat: no-repeat !important;
+              opacity: var(--bg-opacity, ${defaults.opacity});
+              filter: blur(var(--bg-blur, ${defaults.blur})) saturate(var(--bg-saturate, ${defaults.saturate})) brightness(var(--bg-brightness, ${defaults.brightness}));
+              transform: scale(var(--bg-scale, ${defaults.scale}));
+              z-index: -1;
+              pointer-events: none;
+            }
+          `;
+          document.head.appendChild(styleTag);
+
+          // Apply defaults for this page
+          setVar('opacity', defaults.opacity);
+          setVar('blur', defaults.blur);
+          setVar('saturate', defaults.saturate);
+          setVar('brightness', defaults.brightness);
+          setVar('scale', defaults.scale);
+
+          console.log('✅ Background loaded for:', currentPage);
+        });
+      })();
+    </script>
+  </body>
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: system-ui, sans-serif;
+  }
+
+  /* PASO 1: MATA EL FONDO EN main (CLAVE) */
+  html,
+  body,
+  main {
+    background: transparent !important;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* PASO 2: FONDO EDITORIAL — fondo movido a ::before para permitir transparencias en wrappers */
+  body {
+    background: transparent !important;
+  }
+
+
+
+  main {
+    flex: 1;
+    width: 100%;
+  }
+
+  .hero {
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .card {
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.55) !important;
+    backdrop-filter: blur(14px) saturate(1.2) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(1.2) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
+    transition: box-shadow 0.2s;
+  }
+
+  .card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+
+  .card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .card a {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .card a:hover {
+    color: #1d4ed8;
+  }
+
+  .cta-main {
+    background: #0f172a;
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+    margin-top: 3rem;
+    border-radius: 8px;
+  }
+
+  .cta-main h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+
+  .cta-main p {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.6;
+  }
+
+  .button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: #2563eb;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+  }
+
+  .button:hover {
+    background: #1d4ed8;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+    }
+
+    .cta-main {
+      padding: 2rem 1rem;
+    }
+
+    .cta-main h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  /* ========================= MODO EDICIÓN VISUAL ========================= */
+  .edit-mode [data-editable] {
+    outline: 1px dashed rgba(0, 0, 0, 0.2);
+    position: relative;
+    cursor: pointer;
+    transition: outline 0.2s ease;
+  }
+
+  .edit-mode [data-editable]:hover {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+  }
+
+  .edit-mode [data-editable].active {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+    background: rgba(102, 126, 234, 0.05);
+  }
+
+  /* Panel de control */
+  #editor-panel {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    width: 260px;
+    padding: 20px;
+    background: #111;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 12px;
+    z-index: 9999;
+    display: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    font-family: system-ui, sans-serif;
+  }
+
+  .edit-mode #editor-panel {
+    display: block;
+  }
+
+  #editor-panel strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 16px;
+    color: #667eea;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  #editor-panel label {
+    display: block;
+    margin: 12px 0;
+    color: #e0e0e0;
+  }
+
+  #editor-panel label span {
+    display: inline-block;
+    margin-left: 8px;
+    color: #667eea;
+    font-weight: 600;
+    min-width: 60px;
+  }
+
+  #editor-panel input[type="range"] {
+    width: 100%;
+    margin-top: 4px;
+    cursor: pointer;
+  }
+
+  #editor-panel button {
+    width: 100%;
+    margin-top: 16px;
+    padding: 10px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  #editor-panel button:hover {
+    background: #4f46e5;
+  }
+
+  /* PASO 3: ELIMINA FONDOS DE SECCIONES RAÍZ (NO CARDS) */
+  main > section,
+  main > div {
+    background: transparent !important;
+  }
+
+  /* QUITA "CAPAS FALSAS" EN SECCIONES */
+  main section {
+    background: transparent !important;
+  }
+
+  section,
+  section > .container,
+  section > .content,
+  section > div,
+  .projects,
+  .videos,
+  .databases,
+  .news-container,
+  .section-inner {
+    background: transparent !important;
+  }
+
+  .hero {
+    background: transparent !important;
+  }
+
+  /* CAMBIO CLAVE: FONDO REAL TIPO GLASS (NO BLANCO) */
+  .card,
+  .project-card,
+  .video-card,
+  .database-card,
+  .database-item,
+  .news-item,
+  .news-featured,
+  .news-list > article,
+  .sidebar-follow,
+  .sidebar-card {
+    background: rgba(255, 255, 255, 0.55) !important;
+    backdrop-filter: blur(14px) saturate(1.2) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(1.2) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  }
+
+</style>
+
+<!-- RESET ESTRUCTURAL FINAL (sobrescribe todo) -->
+<script is:inline>
+  (function() {
+    const style = document.createElement('style');
+    style.textContent = `
+      /* PASO 1: MATA FONDOS ESTRUCTURALES */
+      html,
+      body,
+      main {
+        background: transparent !important;
+      }
+      /* PASO 3: ELIMINA FONDOS DE SECCIONES RAÍZ */
+      main > section,
+      main > div {
+        background: transparent !important;
+      }
+      section,
+      section > .container,
+      section > .content,
+      section > div,
+      .projects,
+      .videos,
+      .databases,
+      .news-container,
+      .section-inner {
+        background: transparent !important;
+      }
+      .hero {
+        background: transparent !important;
+      }
+      /* CAMBIO CLAVE: FONDO REAL TIPO GLASS */
+      .card,
+      .project-card,
+      .video-card,
+      .database-card,
+      .database-item,
+      .news-item,
+      .news-featured,
+      .news-list > article,
+      .sidebar-card,
+      .sidebar-follow,
+      section .project-card,
+      section .video-card,
+      section .database-card,
+      section .database-item,
+      main .project-card,
+      main .video-card,
+      main .database-card,
+      main .database-item {
+        background: rgba(255, 255, 255, 0.55) !important;
+        backdrop-filter: blur(14px) saturate(1.2) !important;
+        -webkit-backdrop-filter: blur(14px) saturate(1.2) !important;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
+        border: 1px solid rgba(255, 255, 255, 0.35) !important;
+      }
+      /* QUITA "CAPAS FALSAS" EN SECCIONES */
+      main section {
+        background: transparent !important;
+      }
+      /* 🧪 DEBUG FINAL (TEMPORAL - QUITAR DESPUÉS) */
+      /* * {
+        background-color: transparent !important;
+      } */
+    `;
+    document.head.appendChild(style);
+  })();
+</script>
+
+<script>
+  // Solo ejecutar en modo desarrollo
+  if (import.meta.env.DEV) {
+    let target = null;
+    let currentBlockType = null;
+
+    // Función para obtener valor de variable CSS
+    function getCSSVariable(varName) {
+      return getComputedStyle(document.documentElement)
+        .getPropertyValue(varName)
+        .trim();
+    }
+
+    // Función para establecer variable CSS
+    function setCSSVariable(varName, value) {
+      document.documentElement.style.setProperty(varName, value);
+    }
+
+    // Hacer bloques editables clickeables
+    document.querySelectorAll('[data-editable]').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        
+        // Remover clase active de todos
+        document.querySelectorAll('[data-editable]').forEach(item => {
+          item.classList.remove('active');
+        });
+        
+        // Añadir clase active al seleccionado
+        el.classList.add('active');
+        target = el;
+        currentBlockType = el.dataset.editable;
+        
+        // Actualizar nombre en el panel
+        document.getElementById('target-name').textContent = currentBlockType || 'Bloque';
+        
+        // Mostrar controles según el tipo de bloque
+        const heroControls = document.getElementById('hero-controls');
+        const sectionControls = document.getElementById('section-controls');
+        
+        if (currentBlockType === 'hero') {
+          heroControls.style.display = 'block';
+          sectionControls.style.display = 'none';
+          
+          // Cargar valores actuales de variables CSS
+          const heroPy = parseInt(getCSSVariable('--hero-padding-top')) || 64;
+          const heroMw = parseInt(getCSSVariable('--hero-max-width')) || 1200;
+          const heroImg = parseInt(getCSSVariable('--hero-image-width')) || 360;
+          
+          document.getElementById('hero-py').value = heroPy;
+          document.getElementById('hero-py-value').textContent = heroPy + 'px';
+          document.getElementById('hero-mw').value = heroMw;
+          document.getElementById('hero-mw-value').textContent = heroMw + 'px';
+          document.getElementById('hero-img').value = heroImg;
+          document.getElementById('hero-img-value').textContent = heroImg + 'px';
+        } else {
+          heroControls.style.display = 'none';
+          sectionControls.style.display = 'block';
+          
+          // Cargar valores actuales de variables CSS
+          const sectionPy = parseInt(getCSSVariable('--section-padding-y')) || 64;
+          const sectionMw = 1200; // Valor por defecto
+          
+          document.getElementById('section-py').value = sectionPy;
+          document.getElementById('section-py-value').textContent = sectionPy + 'px';
+          document.getElementById('section-mw').value = sectionMw;
+          document.getElementById('section-mw-value').textContent = sectionMw + 'px';
+        }
+      });
+    });
+
+    // Controles del hero
+    const heroPy = document.getElementById('hero-py');
+    const heroMw = document.getElementById('hero-mw');
+    const heroImg = document.getElementById('hero-img');
+    const heroPyValue = document.getElementById('hero-py-value');
+    const heroMwValue = document.getElementById('hero-mw-value');
+    const heroImgValue = document.getElementById('hero-img-value');
+
+    if (heroPy) {
+      heroPy.addEventListener('input', () => {
+        const value = heroPy.value;
+        heroPyValue.textContent = value + 'px';
+        setCSSVariable('--hero-padding-top', value + 'px');
+        setCSSVariable('--hero-padding-bottom', value + 'px');
+      });
+    }
+
+    if (heroMw) {
+      heroMw.addEventListener('input', () => {
+        const value = heroMw.value;
+        heroMwValue.textContent = value + 'px';
+        setCSSVariable('--hero-max-width', value + 'px');
+      });
+    }
+
+    if (heroImg) {
+      heroImg.addEventListener('input', () => {
+        const value = heroImg.value;
+        heroImgValue.textContent = value + 'px';
+        setCSSVariable('--hero-image-width', value + 'px');
+      });
+    }
+
+    // Controles de secciones
+    const sectionPy = document.getElementById('section-py');
+    const sectionMw = document.getElementById('section-mw');
+    const sectionPyValue = document.getElementById('section-py-value');
+    const sectionMwValue = document.getElementById('section-mw-value');
+
+    if (sectionPy) {
+      sectionPy.addEventListener('input', () => {
+        const value = sectionPy.value;
+        sectionPyValue.textContent = value + 'px';
+        setCSSVariable('--section-padding-y', value + 'px');
+      });
+    }
+
+    if (sectionMw) {
+      sectionMw.addEventListener('input', () => {
+        const value = sectionMw.value;
+        sectionMwValue.textContent = value + 'px';
+        // Para secciones generales, actualizar max-width del contenedor
+        if (target) {
+          const heroContent = target.querySelector('.hero-content');
+          if (heroContent) {
+            heroContent.style.maxWidth = value + 'px';
+          }
+        }
+      });
+    }
+
+    // Controles del fondo editorial
+    const bgOpacity = document.getElementById('bg-opacity');
+    const bgBlur = document.getElementById('bg-blur');
+    const bgSaturate = document.getElementById('bg-saturate');
+    const bgOpacityValue = document.getElementById('bg-opacity-value');
+    const bgBlurValue = document.getElementById('bg-blur-value');
+    const bgSaturateValue = document.getElementById('bg-saturate-value');
+
+    if (bgOpacity) {
+      bgOpacity.addEventListener('input', () => {
+        const value = (bgOpacity.value / 100).toFixed(2);
+        bgOpacityValue.textContent = value;
+        setCSSVariable('--bg-opacity', value);
+      });
+    }
+
+    if (bgBlur) {
+      // Cargar valor inicial
+      const initialBlur = getCSSVariable('--bg-blur') || '2px';
+      bgBlur.value = parseInt(initialBlur) || 2;
+      bgBlurValue.textContent = initialBlur;
+      
+      bgBlur.addEventListener('input', () => {
+        const value = bgBlur.value;
+        bgBlurValue.textContent = value + 'px';
+        setCSSVariable('--bg-blur', value + 'px');
+      });
+    }
+
+    if (bgSaturate) {
+      // Cargar valor inicial
+      const initialSaturate = getCSSVariable('--bg-saturate') || '0.85';
+      bgSaturate.value = Math.round(parseFloat(initialSaturate) * 100);
+      bgSaturateValue.textContent = initialSaturate;
+      
+      bgSaturate.addEventListener('input', () => {
+        const value = (bgSaturate.value / 100).toFixed(2);
+        bgSaturateValue.textContent = value;
+        setCSSVariable('--bg-saturate', value);
+      });
+    }
+
+    // Botón copiar variables CSS
+    const copyBtn = document.getElementById('copy');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        // Obtener todos los valores actuales de las variables CSS
+        const heroPyVal = heroPy ? heroPy.value : getCSSVariable('--hero-padding-top').replace('px', '') || '64';
+        const heroMwVal = heroMw ? heroMw.value : getCSSVariable('--hero-max-width').replace('px', '') || '1200';
+        const heroImgVal = heroImg ? heroImg.value : getCSSVariable('--hero-image-width').replace('px', '') || '360';
+        const sectionPyVal = sectionPy ? sectionPy.value : getCSSVariable('--section-padding-y').replace('px', '') || '64';
+        const bgOpacityVal = bgOpacity ? (bgOpacity.value / 100).toFixed(2) : getCSSVariable('--bg-opacity') || '0.75';
+        const bgBlurVal = bgBlur ? bgBlur.value + 'px' : getCSSVariable('--bg-blur') || '2px';
+        const bgSaturateVal = bgSaturate ? (bgSaturate.value / 100).toFixed(2) : getCSSVariable('--bg-saturate') || '0.85';
+        
+        // Generar un solo bloque :root con todas las variables modificadas
+        const css = `/* Variables CSS - Sistema Global de Control */
+:root {
+  /* FONDO EDITORIAL */
+  --bg-opacity: ${bgOpacityVal};
+  --bg-blur: ${bgBlurVal};
+  --bg-saturate: ${bgSaturateVal};
+  
+  /* HERO */
+  --hero-padding-top: ${heroPyVal}px;
+  --hero-padding-bottom: ${heroPyVal}px;
+  --hero-max-width: ${heroMwVal}px;
+  --hero-image-width: ${heroImgVal}px;
+  
+  /* SECCIONES */
+  --section-padding-y: ${sectionPyVal}px;
+}`;
+        
+        navigator.clipboard.writeText(css).then(() => {
+          const btn = document.getElementById('copy');
+          const originalText = btn.textContent;
+          btn.textContent = '✓ Copiado!';
+          btn.style.background = '#10b981';
+          setTimeout(() => {
+            btn.textContent = originalText;
+            btn.style.background = '#667eea';
+          }, 2000);
+        }).catch(() => {
+          alert('Error al copiar. Variables CSS:\n\n' + css);
+        });
+      });
+    }
+  }
+</script>

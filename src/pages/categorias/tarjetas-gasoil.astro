@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout pageBg="categorias" title="Tarjetas de Gasoil Profesional - Blog AdmiLogistic" description="Comparativas de tarjetas de combustible: Repsol, Galp, BP, DKV. Descuentos, zonas y casos reales">
+  <div class="tarjetas-page">
+    <header class="tarjetas-header">
+      <h1>Tarjetas de Gasoil Profesional</h1>
+      <p class="tarjetas-intro">Comparativas detalladas de tarjetas de combustible para transportistas profesionales. Descuentos reales, red de estaciones, condiciones comerciales y casos de uso.</p>
+    </header>
+
+    <section class="tarjetas-grid">
+      <article class="tarjeta-card">
+        <h2>Repsol Profesional</h2>
+        <p>Análisis completo de la tarjeta Repsol para flotas profesionales. Descuentos por volumen, red de estaciones y ventajas comerciales.</p>
+      </article>
+
+      <article class="tarjeta-card">
+        <h2>Galp Frota</h2>
+        <p>Tarjeta Galp para gestión de flotas. Cobertura peninsular, descuentos y servicios adicionales para transportistas.</p>
+      </article>
+
+      <article class="tarjeta-card">
+        <h2>BP Plus</h2>
+        <p>Solución BP para empresas de transporte. Red europea, control de gastos y reportes detallados.</p>
+      </article>
+
+      <article class="tarjeta-card">
+        <h2>DKV Card</h2>
+        <p>Tarjeta multimarca para transporte internacional. Amplia red europea, peajes y servicios complementarios.</p>
+      </article>
+    </section>
+
+    <section class="comparativa-section">
+      <h2>Comparativas y Casos Reales</h2>
+      <p>Análisis prácticos sobre ahorro real, gestión de costes y experiencias de empresas del sector con diferentes tarjetas de combustible.</p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .tarjetas-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .tarjetas-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .tarjetas-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .tarjetas-intro {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .tarjetas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .tarjeta-card {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(16px) saturate(1.1);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.35);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    transition: transform .35s ease, box-shadow .35s ease;
+  }
+
+  .tarjeta-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+  }
+
+  .tarjeta-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #0f172a;
+  }
+
+  .tarjeta-card p {
+    color: #475569;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .comparativa-section {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(16px) saturate(1.1);
+    border-radius: 12px;
+    border: 2px solid rgba(99,102,241,0.35);
+    text-align: center;
+  }
+
+  .comparativa-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #0f172a;
+  }
+
+  .comparativa-section p {
+    color: #475569;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .tarjetas-header h1 {
+      font-size: 2rem;
+    }
+
+    .tarjetas-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

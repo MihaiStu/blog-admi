@@ -1,0 +1,1468 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout pageBg="home" title="Recursos y Herramientas para Transportistas | AdmiLogistic" description="Centro de recursos profesionales para transportistas y gestores de flotas. Noticias, fiscalidad, tacógrafo, rutas, bases de datos y herramientas de gestión logística.">
+  <!-- SCHEMA.ORG JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://admilogistic.es/#organization",
+        "name": "AdmiLogistic",
+        "url": "https://admilogistic.es",
+        "description": "Organización especializada en recursos y herramientas para el transporte profesional y la gestión de flotas",
+        "areaServed": {
+          "@type": "Place",
+          "name": "España"
+        },
+        "knowsAbout": [
+          "Transporte profesional",
+          "Gestión de flotas",
+          "Logística",
+          "Tacógrafo digital",
+          "Fiscalidad del transporte"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://admilogistic.es/#website",
+        "url": "https://admilogistic.es",
+        "name": "AdmiLogistic - Recursos para Transportistas",
+        "description": "Centro de recursos profesionales para transportistas y gestores de flotas",
+        "publisher": {
+          "@id": "https://admilogistic.es/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://admilogistic.es/?s={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  })} />
+  
+  <!-- HERO SECTION -->
+  <section class="hero" data-editable="hero">
+    <div class="section-inner">
+      <div class="hero-content">
+      <div class="hero-text">
+        <h1>Centro de recursos y herramientas para el transporte profesional</h1>
+        <p>Información especializada, bases de datos públicas y herramientas de gestión para transportistas, gestores de flotas y empresas de logística.</p>
+        <div class="hero-search">
+          <input type="search" placeholder="Buscar en el blog..." aria-label="Buscar contenido">
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/images/hero/Portadaok2.png" alt="Centro de recursos y herramientas para el transporte profesional" class="hero-image-content" loading="eager" />
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- TEXTO AMBIENTE FLOTANTE -->
+  <div class="bg-ambient-text">
+    <p>
+      La plataforma que entiende el transporte profesional · normativa real ·
+      datos reales · herramientas del sector
+      <a href="/categorias"><strong>→ Ver herramientas</strong></a>
+    </p>
+  </div>
+
+  <!-- PROJECTS SECTION -->
+  <section class="projects" data-editable="projects">
+    <div class="section-inner">
+      <h2>Herramientas profesionales para el transporte</h2>
+    <p class="section-intro">Ecosistema integrado de plataformas diseñadas para optimizar la gestión de flotas, cumplimiento normativo y operaciones logísticas. Todas las herramientas trabajan de forma coordinada.</p>
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="project-image">
+          <picture>
+            <source type="image/webp" srcset="/images/projects/admin-logistic-tools-480.webp 480w, /images/projects/admin-logistic-tools-800.webp 800w, /images/projects/admin-logistic-tools-1200.webp 1200w" sizes="(max-width: 600px) 100vw, 33vw" />
+            <img src="/images/projects/admin-logistic-tools-800.jpg" srcset="/images/projects/admin-logistic-tools-480.jpg 480w, /images/projects/admin-logistic-tools-800.jpg 800w, /images/projects/admin-logistic-tools-1200.jpg 1200w" sizes="(max-width: 600px) 100vw, 33vw" alt="Admi Logistic Tools" loading="lazy" width="800" />
+          </picture>
+        </div>
+        <h3>Admi Logistic Tools</h3>
+        <p>Plataforma completa de administración y gestión logística para empresas de transporte. Parte del ecosistema AdmiLogistic.</p>
+        <a href="/proyectos/admin-logistic" class="project-button" aria-label="Ver información de Admi Logistic Tools">Ver Admi Logistic Tools</a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-image">
+          <picture>
+            <source type="image/webp" srcset="/images/projects/roadmaster-480.webp 480w, /images/projects/roadmaster-800.webp 800w, /images/projects/roadmaster-1200.webp 1200w" sizes="(max-width: 600px) 100vw, 33vw" />
+            <img src="/images/projects/roadmaster-800.jpg" srcset="/images/projects/roadmaster-480.jpg 480w, /images/projects/roadmaster-800.jpg 800w, /images/projects/roadmaster-1200.jpg 1200w" sizes="(max-width: 600px) 100vw, 33vw" alt="RoadMaster" loading="lazy" width="800" />
+          </picture>
+        </div>
+        <h3>RoadMaster</h3>
+        <p>Solución integral de gestión para empresas de transporte y logística. Integrada con el resto del ecosistema AdmiLogistic.</p>
+        <a href="/proyectos/roadmaster" class="project-button" aria-label="Ver información de RoadMaster">Ver RoadMaster</a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-image">
+          <picture>
+            <source type="image/webp" srcset="/images/projects/tacografo-480.webp 480w, /images/projects/tacografo-800.webp 800w, /images/projects/tacografo-1200.webp 1200w" sizes="(max-width: 600px) 100vw, 33vw" />
+            <img src="/images/projects/tacografo-800.jpg" srcset="/images/projects/tacografo-480.jpg 480w, /images/projects/tacografo-800.jpg 800w, /images/projects/tacografo-1200.jpg 1200w" sizes="(max-width: 600px) 100vw, 33vw" alt="Tacógrafo" loading="lazy" width="800" />
+          </picture>
+        </div>
+        <h3>Tacógrafo</h3>
+        <p>Aplicación especializada en la gestión y análisis de datos de tacógrafos digitales. Compatible con RoadMaster y Admi Logistic.</p>
+        <a href="/proyectos/tacografo" class="project-button" aria-label="Ver información de la herramienta Tacógrafo">Ver Tacógrafo</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- NEWS SECTION WITH SIDEBAR -->
+  <div class="news-container">
+    <section class="news" data-editable="news">
+      <h2>Actualidad y normativa del transporte</h2>
+      <p class="section-intro">Información actualizada sobre normativas, fiscalidad, tecnología y mejores prácticas del sector del transporte profesional.</p>
+      <article class="news-featured">
+        <div class="news-featured-image">
+          <div class="news-placeholder">
+            <svg width="300" height="200" viewBox="0 0 300 200" fill="none">
+              <rect width="300" height="200" fill="#e0e7ff" rx="8"/>
+              <text x="150" y="100" text-anchor="middle" fill="#6366f1" font-size="12">Featured News</text>
+            </svg>
+          </div>
+        </div>
+        <div class="news-featured-content">
+          <h3>Últimas actualizaciones normativas del sector transporte</h3>
+          <p>Conoce las nuevas regulaciones y cambios que afectan al transporte profesional en 2024.</p>
+          <a href="/categorias/noticias" class="news-link" aria-label="Leer noticias del transporte">Ver todas las noticias del transporte →</a>
+        </div>
+      </article>
+      <div class="news-list">
+        <article class="news-item">
+          <div class="news-item-image">
+            <div class="news-placeholder-small">
+              <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
+                <rect width="120" height="80" fill="#f0f4ff" rx="4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="news-item-content">
+            <h4>Fiscalidad del transporte</h4>
+            <p>Guías actualizadas sobre obligaciones fiscales para transportistas.</p>
+            <a href="/categorias/fiscalidad" class="news-item-link" aria-label="Ver artículos sobre fiscalidad del transporte">Ver fiscalidad →</a>
+          </div>
+        </article>
+        <article class="news-item">
+          <div class="news-item-image">
+            <div class="news-placeholder-small">
+              <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
+                <rect width="120" height="80" fill="#f0f4ff" rx="4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="news-item-content">
+            <h4>Tecnología en logística</h4>
+            <p>Últimas tendencias tecnológicas aplicadas al transporte.</p>
+            <a href="/categorias/tecnologia" class="news-item-link" aria-label="Ver artículos sobre tecnología en logística">Ver tecnología →</a>
+          </div>
+        </article>
+        <article class="news-item">
+          <div class="news-item-image">
+            <div class="news-placeholder-small">
+              <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
+                <rect width="120" height="80" fill="#f0f4ff" rx="4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="news-item-content">
+            <h4>Rutas optimizadas</h4>
+            <p>Mejores prácticas en planificación de rutas para transportistas.</p>
+            <a href="/categorias/rutas" class="news-item-link" aria-label="Ver artículos sobre planificación de rutas">Ver rutas →</a>
+          </div>
+        </article>
+      </div>
+      
+      <!-- CATEGORÍAS POPULARES HORIZONTAL -->
+      <div class="popular-categories">
+        <h3>Categorías más populares</h3>
+        <div class="categories-horizontal">
+          <a href="/categorias/fiscalidad" class="category-card" aria-label="Ver artículos sobre fiscalidad del transporte">
+            <span class="category-icon-large">📊</span>
+            <span class="category-name">Fiscalidad</span>
+          </a>
+          <a href="/categorias/tacografo" class="category-card" aria-label="Ver artículos sobre tacógrafo digital">
+            <span class="category-icon-large">⏱️</span>
+            <span class="category-name">Tacógrafo</span>
+          </a>
+          <a href="/categorias/rutas" class="category-card" aria-label="Ver artículos sobre planificación de rutas">
+            <span class="category-icon-large">🗺️</span>
+            <span class="category-name">Rutas</span>
+          </a>
+          <a href="/categorias/tecnologia" class="category-card" aria-label="Ver artículos sobre tecnología en el transporte">
+            <span class="category-icon-large">💻</span>
+            <span class="category-name">Tecnología</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <!-- Bloque Colaboradores/Patrocinadores -->
+      <div class="sidebar-card sidebar-sponsors">
+        <h3>🤝 Colaboradores y Patrocinadores</h3>
+        <p>Espacio reservado para empresas y promotores que colaboran con AdmiLogistic</p>
+        <div class="sponsors-placeholder">
+          <svg width="100%" height="180" viewBox="0 0 280 180" fill="none">
+            <rect width="280" height="180" fill="#e0e7ff" rx="8"/>
+            <text x="140" y="80" text-anchor="middle" fill="#6366f1" font-size="18" font-weight="700">COLABORADORES</text>
+            <text x="140" y="110" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="500">Tu empresa aquí</text>
+          </svg>
+        </div>
+        <a href="mailto:contacto@admilogistic.es?subject=Solicitud de colaboración&body=Hola, me gustaría colaborar con AdmiLogistic." class="sidebar-button">Quiero colaborar</a>
+      </div>
+      
+      <div class="sidebar-follow">
+        <h3>Síguenos</h3>
+        <div class="social-links">
+          <a href="#" aria-label="LinkedIn" class="social-link linkedin">
+            <svg class="icon-social" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="#" aria-label="YouTube" class="social-link youtube">
+            <svg class="icon-social" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="currentColor"/>
+            </svg>
+            <span>YouTube</span>
+          </a>
+          <a href="#" aria-label="TikTok" class="social-link tiktok">
+            <svg class="icon-social" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" fill="currentColor"/>
+            </svg>
+            <span>TikTok</span>
+          </a>
+          <a href="#" aria-label="Instagram" class="social-link instagram">
+            <svg class="icon-social" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="currentColor"/>
+            </svg>
+            <span>Instagram</span>
+          </a>
+          <a href="#" aria-label="Facebook" class="social-link facebook">
+            <svg class="icon-social" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="currentColor"/>
+            </svg>
+            <span>Facebook</span>
+          </a>
+          <a href="#" aria-label="X (Twitter)" class="social-link twitter">
+            <svg class="icon-social" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/>
+            </svg>
+            <span>X (Twitter)</span>
+          </a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- VIDEOS SECTION -->
+  <section class="videos" data-editable="videos">
+    <div class="section-inner">
+      <h2>Videos y tutoriales para transportistas</h2>
+      <p class="section-intro">Contenido formativo sobre tacógrafo, fiscalidad, optimización de rutas y gestión de flotas.</p>
+      <div class="videos-grid">
+        <article class="video-card">
+          <div class="video-thumbnail">
+            <div class="video-placeholder">
+              <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
+                <rect width="400" height="225" fill="#e0e7ff"/>
+                <circle cx="200" cy="112.5" r="30" fill="#6366f1"/>
+                <path d="M195 100 L215 112.5 L195 125 Z" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <h4>Tutorial: Gestión de tacógrafo</h4>
+          <a href="/categorias/tacografo" class="video-link" aria-label="Ver más sobre gestión de tacógrafo">Ver más sobre tacógrafo</a>
+        </article>
+
+        <article class="video-card">
+          <div class="video-thumbnail">
+            <div class="video-placeholder">
+              <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
+                <rect width="400" height="225" fill="#e0e7ff"/>
+                <circle cx="200" cy="112.5" r="30" fill="#6366f1"/>
+                <path d="M195 100 L215 112.5 L195 125 Z" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <h4>Fiscalidad para transportistas</h4>
+          <a href="/categorias/fiscalidad" class="video-link" aria-label="Ver guías sobre fiscalidad del transporte">Ver guías de fiscalidad</a>
+        </article>
+
+        <article class="video-card">
+          <div class="video-thumbnail">
+            <div class="video-placeholder">
+              <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
+                <rect width="400" height="225" fill="#e0e7ff"/>
+                <circle cx="200" cy="112.5" r="30" fill="#6366f1"/>
+                <path d="M195 100 L215 112.5 L195 125 Z" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <h4>Optimización de rutas</h4>
+          <a href="/categorias/rutas" class="video-link" aria-label="Ver contenido sobre planificación de rutas">Ver planificación de rutas</a>
+        </article>
+
+        <article class="video-card">
+          <div class="video-thumbnail">
+            <div class="video-placeholder">
+              <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
+                <rect width="400" height="225" fill="#e0e7ff"/>
+                <circle cx="200" cy="112.5" r="30" fill="#6366f1"/>
+                <path d="M195 100 L215 112.5 L195 125 Z" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <h4>Novedades del sector</h4>
+          <a href="/categorias/noticias" class="video-link" aria-label="Ver noticias del sector transporte">Ver noticias del transporte</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DATABASES SECTION -->
+  <section class="databases" data-editable="databases">
+    <div class="section-inner">
+      <h2>Bases de datos públicas para transportistas</h2>
+      <p class="section-intro">Acceso gratuito a información de talleres, gasolineras, parkings y hoteles adaptados para vehículos industriales.</p>
+      <div class="databases-grid">
+        <a href="/bases-datos/talleres" class="database-item" aria-label="Ver base de datos de talleres especializados">
+          <div class="database-icon">🔧</div>
+          <span>Talleres</span>
+          <p class="database-desc">Talleres especializados</p>
+        </a>
+        <a href="/bases-datos/gasolineras" class="database-item" aria-label="Ver base de datos de gasolineras">
+          <div class="database-icon">⛽</div>
+          <span>Gasolineras</span>
+          <p class="database-desc">Estaciones servicio</p>
+        </a>
+        <a href="/bases-datos/parkings" class="database-item" aria-label="Ver base de datos de áreas de descanso">
+          <div class="database-icon">🅿️</div>
+          <span>Parkings</span>
+          <p class="database-desc">Áreas de descanso</p>
+        </a>
+        <a href="/bases-datos/hoteles" class="database-item" aria-label="Ver base de datos de alojamiento para transportistas">
+          <div class="database-icon">🏨</div>
+          <span>Hoteles</span>
+          <p class="database-desc">Alojamiento camiones</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  :root {
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+    --section-spacing: 6rem;
+    --section-padding-y: 64px;
+    --radius: 16px;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.2);
+    --text-primary: #1a1a1a;
+    --text-secondary: #666;
+    --accent-primary: #6366f1;
+    --accent-hover: #4f46e5;
+    --projects-icon-size: 80px;
+    --news-featured-height: 240px;
+  }
+
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+  }
+
+  /* BG AMBIENT TEXT */
+  .bg-ambient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--section-spacing);
+    box-shadow: none;
+    position: relative;
+  }
+
+  .bg-ambient-text::before,
+  .bg-ambient-text::after {
+    content: '';
+    position: absolute;
+    left: -100vw;
+    right: -100vw;
+    pointer-events: none;
+  }
+
+  .bg-ambient-text::before {
+    top: -80px;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, rgba(102, 126, 234, 0.08));
+  }
+
+  .bg-ambient-text::after {
+    bottom: -80px;
+    height: 80px;
+    background: linear-gradient(to top, transparent, rgba(118, 75, 162, 0.08));
+  }
+
+  .bg-ambient-text p {
+    margin: 0;
+    padding: 0 var(--spacing-sm);
+  }
+
+  .bg-ambient-text a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    transition: border-color 0.2s;
+    margin-left: var(--spacing-md);
+  }
+
+  .bg-ambient-text a:hover {
+    border-bottom-color: white;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 80px var(--spacing-sm) 96px;
+    margin-bottom: var(--section-spacing);
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: calc(var(--section-spacing) * -0.5);
+    left: 0;
+    right: 0;
+    height: calc(var(--section-spacing) * 0.5);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.01), transparent);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(2.25rem, 5vw, 3rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+
+  .hero-text p {
+    font-size: clamp(1.0625rem, 2vw, 1.1875rem);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .hero-search {
+    position: relative;
+    max-width: 500px;
+  }
+
+  .hero-search input {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .hero-search input:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.36), 0 0 0 6px rgba(255, 255, 255, 0.06);
+    transform: translateY(-1px);
+    background: rgba(0, 0, 0, 0.36);
+  }
+
+  .hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-image-content {
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    object-fit: contain;
+    display: block;
+  }
+
+  /* PROJECTS SECTION */
+  .projects {
+    margin-bottom: var(--section-spacing);
+    background: transparent;
+    position: relative;
+  }
+
+  .projects::after {
+    content: '';
+    position: absolute;
+    bottom: calc(var(--section-spacing) * -0.5);
+    left: 0;
+    right: 0;
+    height: calc(var(--section-spacing) * 0.5);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.02), transparent);
+    pointer-events: none;
+  }
+
+  .projects h2 {
+    font-size: clamp(1.875rem, 4vw, 2.25rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+  }
+
+  .section-intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 48px;
+    line-height: 1.65;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: stretch !important;
+    justify-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .project-card {
+    border-radius: var(--radius);
+    padding: var(--spacing-md) var(--spacing-lg);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    display: flex !important;
+    flex-direction: column !important;
+    background: rgba(255, 255, 255, 0.55) !important;
+    backdrop-filter: blur(14px) saturate(1.2) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(1.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    margin: 0 !important;
+    height: 100% !important;
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .project-image {
+    margin: 0 0 var(--spacing-sm) 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    min-height: 60px;
+  }
+
+  .project-image img {
+    max-width: 60px;
+    max-height: 60px;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin: 0;
+    display: block;
+  }
+
+  .project-placeholder {
+    width: var(--projects-icon-size);
+    height: var(--projects-icon-size);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .project-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  .project-card p {
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0 0 var(--spacing-md) 0;
+    flex-grow: 1;
+    font-size: 0.8125rem;
+  }
+
+  .project-button {
+    display: inline-block;
+    padding: 0.5rem 0.875rem;
+    background: var(--accent-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.8125rem;
+    transition: all 0.3s ease;
+    margin: auto 0 0 0;
+  }
+
+  .project-button:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  /* NEWS SECTION WITH SIDEBAR */
+  .news-container {
+    max-width: 1200px;
+    margin: 0 auto var(--section-spacing);
+    padding-top: var(--section-padding-y);
+    padding-bottom: var(--section-padding-y);
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: var(--spacing-xl);
+    align-items: start;
+    background: transparent;
+    position: relative;
+  }
+
+  .news-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    right: -100vw;
+    height: 80px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.015), transparent);
+    pointer-events: none;
+  }
+
+  .news-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100vw;
+    right: -100vw;
+    height: 80px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.015), transparent);
+    pointer-events: none;
+  }
+
+  .news {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .news h2 {
+    font-size: clamp(1.875rem, 4vw, 2.25rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+  }
+
+  .news .section-intro {
+    margin-bottom: 32px;
+  }
+
+  .news-featured {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-bottom: var(--spacing-xl);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.55) !important;
+    backdrop-filter: blur(14px) saturate(1.2) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(1.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .news-featured:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .news-featured-image {
+    height: var(--news-featured-height);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .news-placeholder {
+    width: 100%;
+    height: 100%;
+  }
+
+  .news-featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .news-featured-content {
+    padding: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .news-featured-content h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+  }
+
+  .news-featured-content p {
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: var(--spacing-sm);
+    font-size: 1rem;
+  }
+
+  .news-link {
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+
+  .news-link:hover {
+    color: var(--accent-hover);
+  }
+
+  .news-list {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .news-item {
+    border-radius: 12px;
+    padding: var(--spacing-sm);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    min-width: 280px;
+    display: flex;
+    gap: var(--spacing-sm);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.55) !important;
+    backdrop-filter: blur(14px) saturate(1.2) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(1.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .news-item:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .news-item-image {
+    flex-shrink: 0;
+  }
+
+  .news-placeholder-small {
+    width: 120px;
+    height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .news-item-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .news-item-content h4 {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+
+  .news-item-content p {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  .news-item-link {
+    font-size: 0.8125rem;
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .news-item-link:hover {
+    color: var(--accent-hover);
+  }
+
+  /* POPULAR CATEGORIES HORIZONTAL */
+  .popular-categories {
+    margin-top: var(--spacing-2xl);
+    padding-top: var(--spacing-xl);
+    position: relative;
+  }
+
+  .popular-categories::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(99, 102, 241, 0.2), transparent);
+  }
+
+  .popular-categories h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    letter-spacing: -0.01em;
+  }
+
+  .categories-horizontal {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  .category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius);
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(14px) saturate(1.2);
+    -webkit-backdrop-filter: blur(14px) saturate(1.2);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+
+  .category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-primary);
+  }
+
+  .category-icon-large {
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  .category-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  /* SIDEBAR */
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .sidebar-card {
+    border-radius: var(--radius);
+    padding: var(--spacing-xl);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.55) !important;
+    backdrop-filter: blur(14px) saturate(1.2) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(1.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .sidebar-card h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+    letter-spacing: -0.01em;
+  }
+
+  .sidebar-card p {
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: var(--spacing-md);
+    font-size: 0.9375rem;
+  }
+
+  .sidebar-button {
+    display: inline-block;
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background: var(--accent-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .sidebar-button:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .sidebar-sponsors {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(168, 85, 247, 0.08) 100%);
+    border: 2px dashed rgba(99, 102, 241, 0.3) !important;
+    text-align: center;
+  }
+
+  .sidebar-sponsors h3 {
+    color: var(--accent-primary);
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .sidebar-sponsors p {
+    text-align: center;
+  }
+
+  .sponsors-placeholder {
+    margin: var(--spacing-md) 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 8px rgba(99, 102, 241, 0.1);
+  }
+
+  .sidebar-follow {
+    border-radius: var(--radius);
+    padding: var(--spacing-xl);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.55) !important;
+    backdrop-filter: blur(14px) saturate(1.2) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(1.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .sidebar-follow h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+    letter-spacing: -0.01em;
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 0.75rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s;
+    font-weight: 500;
+    font-size: 0.9375rem;
+  }
+
+  .social-link.linkedin {
+    background: linear-gradient(135deg, rgba(10, 102, 194, 0.1), rgba(0, 119, 181, 0.1));
+    color: #0a66c2;
+  }
+
+  .social-link.linkedin:hover {
+    background: linear-gradient(135deg, rgba(10, 102, 194, 0.2), rgba(0, 119, 181, 0.2));
+    transform: translateX(4px);
+  }
+
+  .social-link.youtube {
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.1), rgba(200, 0, 0, 0.1));
+    color: #ff0000;
+  }
+
+  .social-link.youtube:hover {
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.2), rgba(200, 0, 0, 0.2));
+    transform: translateX(4px);
+  }
+
+  .social-link.tiktok {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(254, 44, 85, 0.1));
+    color: #000000;
+  }
+
+  .social-link.tiktok:hover {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(254, 44, 85, 0.2));
+    transform: translateX(4px);
+  }
+
+  .social-link.instagram {
+    background: linear-gradient(45deg, rgba(255, 48, 107, 0.1), rgba(255, 174, 0, 0.1));
+    color: #E1306C;
+  }
+
+  .social-link.instagram:hover {
+    background: linear-gradient(45deg, rgba(255, 48, 107, 0.2), rgba(255, 174, 0, 0.2));
+    transform: translateX(4px);
+  }
+
+  .social-link.facebook {
+    background: linear-gradient(135deg, rgba(24, 119, 242, 0.1), rgba(0, 82, 204, 0.1));
+    color: #1877f2;
+  }
+
+  .social-link.facebook:hover {
+    background: linear-gradient(135deg, rgba(24, 119, 242, 0.2), rgba(0, 82, 204, 0.2));
+    transform: translateX(4px);
+  }
+
+  .social-link.twitter {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(50, 50, 50, 0.1));
+    color: #000000;
+  }
+
+  .social-link.twitter:hover {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(50, 50, 50, 0.2));
+    transform: translateX(4px);
+  }
+
+  .icon-social {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .sidebar-categories {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .category-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 0.75rem;
+    border-radius: 8px;
+    text-decoration: none;
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: all 0.2s;
+  }
+
+  .category-link:hover {
+    background: rgba(99, 102, 241, 0.2);
+    transform: translateX(4px);
+  }
+
+  .category-icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  /* VIDEOS SECTION */
+  .videos {
+    max-width: 1200px;
+    margin: 0 auto var(--section-spacing);
+    padding-top: var(--section-padding-y);
+    padding-bottom: var(--section-padding-y);
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+    background: transparent;
+    position: relative;
+  }
+
+  .videos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.02), transparent);
+    pointer-events: none;
+  }
+
+  .videos h2 {
+    font-size: clamp(1.875rem, 4vw, 2.25rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+  }
+
+  .videos .section-intro {
+    margin-bottom: 32px;
+  }
+
+  .videos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+    justify-items: stretch;
+  }
+
+  .video-card {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.55) !important;
+    backdrop-filter: blur(14px) saturate(1.2) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(1.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+  }
+
+  .video-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .video-thumbnail {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+  }
+
+  .video-placeholder {
+    width: 100%;
+    height: 100%;
+  }
+
+  .video-card h4 {
+    padding: var(--spacing-md) var(--spacing-md) 8px;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+    letter-spacing: -0.005em;
+    flex: 1 0 auto;
+    margin: 0;
+  }
+
+  .video-link {
+    display: block;
+    padding: 0 var(--spacing-md) var(--spacing-md);
+    font-size: 0.8125rem;
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    margin: 0;
+  }
+
+  .video-link:hover {
+    color: var(--accent-hover);
+  }
+
+  /* DATABASES SECTION */
+  .databases {
+    max-width: 1200px;
+    margin: 0 auto 0;
+    padding-top: var(--section-padding-y);
+    padding-bottom: var(--section-padding-y);
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+    background: transparent;
+    position: relative;
+  }
+
+  .databases::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.02), transparent);
+    pointer-events: none;
+  }
+
+  .databases h2 {
+    font-size: clamp(1.875rem, 4vw, 2.25rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+  }
+
+  .databases .section-intro {
+    margin-bottom: 32px;
+  }
+
+  .databases-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1.5rem !important;
+    align-items: stretch !important;
+    justify-items: stretch !important;
+  }
+
+  .database-item {
+    border-radius: var(--radius);
+    padding: var(--spacing-lg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+    color: var(--text-primary);
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.55) !important;
+    backdrop-filter: blur(14px) saturate(1.2) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(1.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    min-height: 160px !important;
+    height: 100% !important;
+    margin: 0 !important;
+  }
+
+  .database-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .database-icon {
+    font-size: 2.25rem;
+    line-height: 1;
+    margin: 0;
+  }
+
+  .database-item span {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .database-item .database-desc {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .news-container {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+    }
+
+    .sidebar {
+      order: -1;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .hero-content {
+      gap: 48px;
+    }
+    
+    .news-container {
+      gap: var(--spacing-lg);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      min-height: auto;
+      padding: 80px var(--spacing-sm) 64px;
+      margin-bottom: 64px;
+    }
+
+    .hero-content {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .hero-image {
+      order: -1;
+    }
+
+    .hero-text h1 {
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      margin-bottom: 24px;
+    }
+
+    .projects,
+    .news-container,
+    .videos,
+    .databases {
+      margin-bottom: 64px;
+    }
+
+    .projects h2,
+    .news h2,
+    .videos h2,
+    .databases h2 {
+      margin-bottom: 24px;
+    }
+
+    .projects-grid,
+    .videos-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+    }
+
+    .categories-horizontal {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-sm);
+    }
+
+    .news-featured {
+      grid-template-columns: 1fr;
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .news-featured-image {
+      height: var(--news-featured-height);
+    }
+
+    .news-featured-content {
+      padding: var(--spacing-lg);
+    }
+
+    .databases-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-sm);
+    }
+
+    .project-card,
+    .sidebar-card,
+    .sidebar-follow {
+      padding: var(--spacing-lg);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      padding: 48px 16px 40px;
+      margin-bottom: 48px;
+    }
+
+    .hero-text h1 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .hero-text p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .projects,
+    .news-container,
+    .videos,
+    .databases {
+      margin-bottom: 48px;
+    }
+
+    .databases-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .news-item {
+      min-width: 240px;
+    }
+
+    .projects-grid,
+    .videos-grid {
+      gap: var(--spacing-md);
+    }
+  }
+</style>

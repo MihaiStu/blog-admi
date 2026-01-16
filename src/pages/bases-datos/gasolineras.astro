@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout page="bases-datos" title="Bases de Datos - Gasolineras - Blog AdmiLogistic" description="Base de datos de gasolineras">
+  <div class="database-page">
+    <h1>Base de Datos de Gasolineras</h1>
+    
+    <div class="info-box">
+      <p><strong>Datos orientativos</strong></p>
+      <p>Esta base de datos contiene información de gasolineras y estaciones de servicio. Los datos son de carácter orientativo y se actualizan periódicamente.</p>
+    </div>
+
+    <div class="cta-box">
+      <h2>¿Quieres usar esto en Roadmaster?</h2>
+      <p>Integra esta base de datos directamente en tu aplicación Roadmaster para acceder a información actualizada de gasolineras.</p>
+      <a href="/proyectos/roadmaster" class="cta-button">Ver Roadmaster</a>
+    </div>
+
+    <div class="coming-soon">
+      <p>Los datos se cargarán próximamente desde:</p>
+      <ul>
+        <li>JSON estático</li>
+        <li>Supabase</li>
+        <li>API externa</li>
+      </ul>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .database-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+  }
+
+  .info-box {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(6px);
+    border-left: 4px solid #0066cc;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .info-box p {
+    margin-bottom: 0.5rem;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .info-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  .cta-box {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(6px);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .cta-box h2 {
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+
+  .cta-box p {
+    margin-bottom: 1.5rem;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: #1a1a1a;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+
+  .cta-button:hover {
+    background-color: #333;
+  }
+
+  .coming-soon {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    padding: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .coming-soon p {
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .coming-soon ul {
+    margin: 0.5rem 0 0 1.5rem;
+    color: #666;
+  }
+
+  .coming-soon li {
+    margin-bottom: 0.25rem;
+  }
+</style>

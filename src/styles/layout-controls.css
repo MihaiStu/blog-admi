@@ -1,0 +1,1370 @@
+/* ================================
+   SISTEMA GLOBAL DE CONTROL LAYOUT
+   ================================ */
+
+/* ================================
+   RESET TOTAL DE FONDOS BLANCOS
+   ================================ */
+section,
+section > div,
+section article,
+section article > div {
+  background: transparent !important;
+}
+
+.projects,
+.videos,
+.databases,
+.news-container {
+  background: transparent !important;
+}
+
+.hero {
+  background: transparent !important;
+}
+
+/* ================================
+   FORZAR TRANSPARENCIA EN WRAPPERS (necesario para que el fondo editorial respire)
+   ================================ */
+.categories-page,
+.categories-wrapper,
+main,
+main > section,
+.content,
+.container {
+  background: transparent !important;
+}
+
+/* Asegurar que body no bloquee el fondo */
+body {
+  background-color: transparent !important;
+} 
+
+/* ================================
+   CAMBIO CLAVE: FONDO REAL TIPO GLASS (NO BLANCO)
+   ================================ */
+.card,
+.category-card,
+.project-card,
+.video-card,
+.database-card,
+.database-item,
+.news-item,
+.news-featured,
+.news-list > article,
+.sidebar-follow,
+.sidebar-card {
+  /* Global glass 'window' look - enhanced depth */
+  background: rgba(255, 255, 255, 0.48) !important;
+  backdrop-filter: blur(18px) saturate(1.15) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(1.15) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.32) !important;
+}
+
+:root {
+  /* =================
+     FONDO EDITORIAL (Master variables)
+     ================= */
+  /* Card glass opacity and glass effect settings (design-wide defaults) */
+  --card-bg-opacity: 0.42; /* increased translucency for better text contrast */
+  --card-bg-blur: 18px; /* slightly deeper blur to separate text from background */
+  --card-bg-saturate: 1.12;
+
+  /* Editorial background variables (controllable from the visual panel) */
+  --bg-opacity: 0.80;      /* 0 - 1 */
+  --bg-blur: 12px;         /* px */
+  --bg-saturate: 1;        /* multiplier */
+  --bg-brightness: 1;      /* multiplier */
+  --bg-scale: 1.05;        /* scale factor */
+  
+  /* =================
+     SECCIONES
+     ================= */
+  --section-max-width: 1200px;
+  --section-padding-x: 16px;
+  --section-padding-y: 64px;
+  --section-gap: 32px;
+
+  /* =================
+     HERO
+     ================= */
+  --hero-padding-top: 64px;
+  --hero-padding-bottom: 64px;
+  --hero-gap: 48px;
+  --hero-image-width: 360px;
+
+  /* =================
+     PROJECTS / TOOLS
+     ================= */
+  --projects-card-width: 320px;
+  --projects-card-padding: 24px;
+  --projects-icon-size: 56px;
+  --projects-gap: 32px;
+
+  /* =================
+     NEWS
+     ================= */
+  --news-featured-height: 180px;
+  --news-item-image-width: 88px;
+  --news-item-image-height: 64px;
+  --news-gap: 24px;
+
+  /* =================
+     VIDEOS
+     ================= */
+  --video-thumb-width: 100%;
+  --video-thumb-max-width: 360px;
+  --video-thumb-height: 180px;
+  --video-gap: 32px;
+
+  /* =================
+     DATABASES
+     ================= */
+  --database-card-width: 220px;
+  --database-icon-size: 48px;
+  --database-gap: 32px;
+
+  /* =================
+     TYPOGRAPHY / TEXT TONES
+     ================= */
+  --text-muted: #4b5563;
+  --text-soft: #6b7280;
+  --text-secondary: #374151;
+
+    /* =================
+      LOQUE: GLASS LEVELS
+      ================= */
+    --glass-opacity-light: 0.28;
+    --glass-blur-light: 10px;
+    --glass-opacity-medium: 0.42;
+    --glass-blur-medium: 18px;
+    --glass-opacity-strong: 0.65;
+    --glass-blur-strong: 24px;
+    --glass-saturate: 1.12;
+
+    /* =================
+      LOQUE: VERTICAL RHYTHM
+      ================= */
+    --rhythm-xs: 8px;
+    --rhythm-sm: 12px;
+    --rhythm-md: 16px;
+    --rhythm-lg: 24px;
+    --rhythm-xl: 32px;
+
+    /* =================
+      LOQUE: MICRODETAILS
+      ================= */
+    --accent-color: rgba(255, 255, 255, 0.55);
+    --accent-shadow: rgba(0, 0, 0, 0.20);
+}
+
+/* MASTER BACKGROUND: migrated to body::before pseudo-element - legacy #editorial-bg removed */
+
+/* Editorial background via body class and ::before */
+body[class^="bg-"] {
+  position: relative;
+}
+
+/* Readability enhancements (scoped to pages using amp-mask on body) */
+body.amp-mask h1,
+body.amp-mask .hero h1,
+body.amp-mask .section-inner h1 {
+  color: rgba(255, 255, 255, 0.96);
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.45);
+}
+
+body.amp-mask h2,
+body.amp-mask .project-card h3 {
+  color: rgba(255, 255, 255, 0.94);
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.40);
+}
+
+/* Paragraphs and lists directly over background */
+body.amp-mask p,
+body.amp-mask li {
+  color: rgba(255, 255, 255, 0.90);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* Keep strong dark text inside glass cards for maximum contrast */
+body.amp-mask .card h2,
+body.amp-mask .card p {
+  color: rgba(30, 30, 30, 0.95);
+  text-shadow: none;
+}
+
+/* Category card title emphasis */
+body.amp-mask .category-card h3 {
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Per-page backgrounds removed — now injected directly from BaseLayout.astro */
+
+/* ================================
+   REGLAS BASE PARA SECCIONES
+   ================================ */
+section {
+  position: relative;
+  min-height: auto;
+  height: auto;
+  padding-inline: var(--section-padding-x);
+  padding-block: var(--section-padding-y);
+  background: transparent;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0,0,0,0.05),
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Optional subtle bottom fade to anchor sections visually */
+section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 24px;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.06));
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure section content sits above the ambient shadow */
+.section-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* Subtle global noise layer (optional image `noise.svg`) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("/images/noise.svg");
+  opacity: 0.035; /* slightly increased so it's subtle but visible */
+  pointer-events: none;
+  z-index: 9998;
+}
+
+.section-inner {
+  max-width: var(--section-max-width);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+}
+
+/* ================================
+   LOQUE: VERTICAL RHYTHM + ACCENTS
+   ================================ */
+.section-inner h1,
+.section-inner h2 {
+  margin-block-end: var(--rhythm-lg);
+}
+
+.section-inner h3,
+.section-inner h4 {
+  margin-block-end: var(--rhythm-md);
+}
+
+.section-inner p,
+.section-inner ul,
+.section-inner ol {
+  margin-block: var(--rhythm-sm);
+}
+
+.section-inner h2 {
+  position: relative;
+}
+
+.section-inner h2::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 2px;
+  margin-top: var(--rhythm-xs);
+  background: linear-gradient(to right, var(--accent-color), transparent);
+  box-shadow: 0 1px 2px var(--accent-shadow);
+  border-radius: 2px;
+}
+
+/* ================================
+   HERO
+   ================================ */
+.hero {
+  position: relative;
+  background: transparent;
+  padding-top: var(--hero-padding-top);
+  padding-bottom: var(--hero-padding-bottom);
+}
+
+/* Hero typography: refined contrast and shadows per design */
+.hero h1 {
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.25),
+    0 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.78);
+
+/* ================================
+   LOQUE: GLASS UTILITY CLASSES
+   ================================ */
+.glass-light {
+  background: rgba(255, 255, 255, var(--glass-opacity-light)) !important;
+  backdrop-filter: blur(var(--glass-blur-light)) saturate(var(--glass-saturate)) !important;
+  -webkit-backdrop-filter: blur(var(--glass-blur-light)) saturate(var(--glass-saturate)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07), inset 0 1px 0 rgba(255,255,255,0.35) !important;
+}
+
+.glass-medium {
+  background: rgba(255, 255, 255, var(--glass-opacity-medium)) !important;
+  backdrop-filter: blur(var(--glass-blur-medium)) saturate(var(--glass-saturate)) !important;
+  -webkit-backdrop-filter: blur(var(--glass-blur-medium)) saturate(var(--glass-saturate)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.30) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255,255,255,0.40) !important;
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, var(--glass-opacity-strong)) !important;
+  backdrop-filter: blur(var(--glass-blur-strong)) saturate(var(--glass-saturate)) !important;
+  -webkit-backdrop-filter: blur(var(--glass-blur-strong)) saturate(var(--glass-saturate)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.34) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.10), inset 0 1px 0 rgba(255,255,255,0.45) !important;
+}
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Search input and placeholder styles */
+.hero input::placeholder {
+  /* Más contraste para visibilidad discreta */
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.hero input {
+  /* Fondo más opaco y límite sutil para distinguirlo del fondo */
+  background: rgba(255, 255, 255, 0.24);
+  color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 12px 18px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 640px;
+  transition: box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.hero input:focus {
+  outline: none;
+  /* Resaltar al enfocar sin romper la paleta */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 0 0 4px rgba(255, 255, 255, 0.06);
+}
+
+/* Optional PRO overlay for very bright images */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.05)
+  );
+  z-index: 0;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--hero-gap);
+  align-items: center;
+}
+
+.hero-image img {
+  width: var(--hero-image-width);
+  height: auto;
+  max-width: 100%;
+}
+
+/* ================================
+   PROJECTS / CARDS
+   ================================ */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--database-card-width), 1fr));
+  gap: var(--database-gap);
+  align-items: start;
+}
+
+.project-card {
+  padding: var(--projects-card-padding);
+}
+
+.project-card img,
+.project-card svg {
+  width: var(--projects-icon-size);
+  height: auto;
+}
+
+/* ================================
+   NEWS
+   ================================ */
+.news-featured {
+  height: var(--news-featured-height);
+}
+
+.news-item img {
+  width: var(--news-item-image-width);
+  height: var(--news-item-image-height);
+  object-fit: cover;
+}
+
+/* ================================
+   VIDEOS
+   ================================ */
+/* Videos-specific variable overrides (can be customized per design)
+   The block below adapts padding, container width and thumbnail sizing
+   using the global control variables provided in the design system. */
+.videos {
+  /* Use hero paddings for a more compact / prominent videos section */
+  padding-top: var(--hero-padding-top);
+  padding-bottom: var(--hero-padding-bottom);
+
+  /* Limit the section inner width to the hero max width when desired */
+  --section-max-width: var(--hero-max-width);
+
+  /* Make thumbnails respect the hero image width by default */
+  --video-thumb-max-width: var(--hero-image-width);
+
+  /* Ensure we can position decorative overlays if needed */
+  position: relative;
+}
+
+ .videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--database-card-width), 1fr));
+  gap: var(--database-gap);
+  align-items: start;
+}
+
+.video-thumb {
+  width: var(--video-thumb-width);
+  max-width: var(--video-thumb-max-width);
+  height: var(--video-thumb-height);
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+
+/* ================================
+   DATABASES
+   ================================ */
+.databases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--database-card-width), 1fr));
+  gap: var(--database-gap);
+  align-items: stretch;
+}
+
+.database-card img,
+.database-card svg {
+  width: var(--database-icon-size);
+  height: auto;
+}
+
+/* ================================
+   PASO 1: MATA EL FONDO EN main (CLAVE)
+   ================================ */
+html,
+body,
+main {
+  background: transparent !important;
+}
+
+/* Micro-movement: cards breathe coherently across the site */
+.category-card,
+.project-card,
+.video-card {
+  transition: transform .4s ease, box-shadow .4s ease, background .4s ease;
+}
+
+/* LOQUE microdetails: coherent hover elevation + subtle brighten */
+.category-card:hover,
+.project-card:hover,
+.video-card:hover,
+.database-card:hover,
+.news-item:hover,
+.news-featured:hover,
+.sidebar-card:hover,
+.sidebar-follow:hover,
+.news-list > article:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.14), inset 0 1px 0 rgba(255,255,255,0.50) !important;
+  background: rgba(255, 255, 255, calc(var(--card-bg-opacity, 0.42) + 0.06)) !important;
+}
+
+/* ======================================
+   PASO 3 · SISTEMA TIPOGRÁFICO PREMIUM
+   ====================================== */
+
+/* ---------- BASE ---------- */
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue",
+               Arial, sans-serif;
+
+  color-scheme: dark;
+}
+
+body {
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- TÍTULOS ---------- */
+
+h1, h2, h3, h4 {
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* ---------- TEXTO ---------- */
+
+p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 1rem;
+}
+
+small,
+.text-muted {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ---------- LINKS ---------- */
+
+a {
+  color: rgba(199, 210, 254, 0.95);
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+/* ---------- BOTONES ---------- */
+
+button,
+.button,
+.cta-button {
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* ---------- CARDS / LABELS ---------- */
+
+.card,
+.project-card,
+.video-card,
+.database-item,
+.category-card {
+  font-size: 0.9rem;
+  color: rgba(15, 23, 42, 0.95); /* texto oscuro sobre glass */
+}
+
+.card h3,
+.project-card h3,
+.category-card h2 {
+  color: rgba(15, 23, 42, 0.95);
+}
+
+.card,
+.project-card,
+.video-card,
+.database-card,
+.category-card {
+  padding: 1.1rem 1.75rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+/* Ensure first element inside cards doesn't add extra top spacing */
+.card > *:first-child,
+.project-card > *:first-child,
+.video-card > *:first-child,
+.database-card > *:first-child,
+.category-card > *:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+input,
+textarea {
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ======================================
+   PASO 4 · MICROINTERACCIONES PREMIUM
+   ====================================== */
+
+/* ---------- TRANSICIONES BASE ---------- */
+* {
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease,
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+/* ---------- CARDS (VIDA SUTIL) ---------- */
+
+.card,
+.project-card,
+.video-card,
+.database-item,
+.category-card,
+.news-item {
+  transform: translateZ(0);
+}
+
+.card:hover,
+.project-card:hover,
+.video-card:hover,
+.database-item:hover,
+.category-card:hover,
+.news-item:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.18),
+    0 1px 0 rgba(255, 255, 255, 0.25) inset;
+}
+
+/* ---------- LINKS ---------- */
+
+a {
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.25;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ---------- BOTONES / CTA ---------- */
+
+button,
+.button,
+.cta-button {
+  cursor: pointer;
+  transform: translateZ(0);
+}
+
+button:hover,
+.button:hover,
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+button:active,
+.button:active,
+.cta-button:active {
+  transform: translateY(0);
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- INPUTS ---------- */
+
+input,
+textarea {
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow:
+    0 0 0 2px rgba(99, 102, 241, 0.35),
+    0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- HERO (RESPIRA) ---------- */
+
+.hero > * {
+  animation: heroFade 0.6s ease both;
+}
+
+@keyframes heroFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- ICONOS ---------- */
+
+svg,
+.icon {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover svg,
+button:hover svg {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+/* ---------- ACCESIBILIDAD ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* ======================================
+   ESPACIADO Y JERARQUÍA VERTICAL GLOBAL
+   ====================================== */
+
+/* Variables base de aire (fácil de ajustar) */
+:root {
+  --section-gap: clamp(3rem, 6vw, 5rem);
+  --block-gap: 1.25rem;
+  --card-gap: 1.5rem;
+}
+
+/* Separación clara entre secciones principales */
+main > section,
+main > div.section,
+main > div {
+  margin-bottom: var(--section-gap);
+}
+
+/* Títulos respiran */
+h1 {
+  margin-bottom: 1.25rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-bottom: 0.75rem;
+}
+
+/* Texto nunca pegado */
+p {
+  margin-bottom: 0.75rem;
+}
+
+/* Bloques de texto */
+.section-inner,
+.content,
+.container {
+  gap: var(--block-gap);
+}
+
+/* Cards: aire interno y externo */
+.card,
+.project-card,
+.video-card,
+.database-card,
+.category-card {
+  padding: 1.1rem 1.75rem 1.75rem 1.75rem;
+  margin-bottom: var(--card-gap);
+}
+
+/* Evitar bloques apelotonados */
+.card > * + * {
+  margin-top: 0.75rem;
+}
+
+/* CTA no pegados al contenido */
+.cta,
+.cta-main,
+.cta-section {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Hero más compacto (sin ocupar media página) */
+.hero {
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* ======================================
+   CARDS PREMIUM – NIVEL PRODUCTO
+   ====================================== */
+
+/* Base premium para todas las cards */
+.card,
+.project-card,
+.video-card,
+.database-card,
+.category-card,
+.news-item,
+.news-featured,
+.sidebar-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px) saturate(1.15);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+  overflow: hidden;
+}
+
+/* Hover elegante (nada agresivo) */
+.card:hover,
+.project-card:hover,
+.video-card:hover,
+.database-card:hover,
+.category-card:hover,
+.news-item:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  border-color: rgba(99, 102, 241, 0.35);
+}
+
+/* Títulos dentro de cards: más autoridad */
+.card h2,
+.card h3,
+.project-card h2,
+.project-card h3,
+.category-card h2 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Texto secundario dentro de cards */
+.card p,
+.project-card p,
+.category-card p {
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* Cards destacadas (featured / importantes) */
+.card.featured,
+.category-card.featured {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* Evita sensación de bloques pegados */
+.card + .card,
+.project-card + .project-card,
+.video-card + .video-card {
+  margin-top: 1.5rem;
+}
+
+/* ================================
+   PASO 3: ELIMINA FONDOS DE SECCIONES RAÍZ (NO CARDS)
+   ================================ */
+main > section,
+main > div {
+  background: transparent !important;
+}
+
+/* QUITA "CAPAS FALSAS" EN SECCIONES */
+main section {
+  background: transparent !important;
+}
+
+section,
+section > .container,
+section > .content,
+section > div,
+.projects,
+.videos,
+.databases,
+.news-container,
+.section-inner {
+  background: transparent !important;
+}
+
+/* ================================
+   CTA FINAL – CIERRE DE AUTORIDAD
+   ================================ */
+.cta-final {
+  position: relative;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  padding: 96px 16px;
+  background: transparent;
+}
+
+.cta-final-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(20px) saturate(1.2);
+  border-radius: 24px;
+  padding: 64px 48px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.cta-final h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 24px;
+}
+
+.cta-final p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 40px;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-primary {
+  padding: 14px 36px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cta-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 45px rgba(99, 102, 241, 0.6);
+}
+
+.cta-secondary {
+  padding: 14px 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.25s ease;
+}
+
+.cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ================================
+   TEXTO AMBIENTE FLOTANTE
+   ================================ */
+.bg-ambient-text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bg-ambient-text p {
+  max-width: 1100px;
+  padding: 0 2rem;
+  text-align: center;
+  margin: 0;
+
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.45),
+    0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.bg-ambient-text a {
+  pointer-events: auto;
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.bg-ambient-text a:hover {
+  opacity: 0.8;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .bg-ambient-text {
+    padding: 3rem 1rem;
+  }
+  .bg-ambient-text p {
+    padding: 0 1rem;
+  }
+}
+
+/* ======================================
+   PASO 5 · CTA FINAL POTENTE
+   ====================================== */
+
+.cta-final {
+  position: relative;
+  margin: 120px auto 96px;
+  padding: 96px 16px;
+  max-width: 1200px;
+  border-radius: 24px;
+  overflow: hidden;
+
+  background: linear-gradient(
+    to bottom right,
+    rgba(15, 23, 42, 0.85),
+    rgba(2, 6, 23, 0.85)
+  );
+
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* Fondo sutil que une todo */
+.cta-final::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(99, 102, 241, 0.25), transparent 60%),
+    radial-gradient(circle at bottom right, rgba(139, 92, 246, 0.18), transparent 60%);
+  pointer-events: none;
+}
+
+/* Contenido */
+.cta-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Título */
+.cta-final h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+/* Texto */
+.cta-final p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 40px;
+}
+
+/* Botón */
+.cta-button-final {
+  display: inline-block;
+  padding: 16px 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6
+  );
+
+  border-radius: 999px;
+
+  box-shadow:
+    0 20px 40px rgba(99, 102, 241, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.cta-button-final:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 28px 60px rgba(99, 102, 241, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-final {
+    padding: 72px 16px;
+    margin: 96px 16px;
+  }
+
+  .cta-final p {
+    font-size: 1rem;
+  }
+}
+
+/* ======================================
+   HEADER PREMIUM – COMPACTO Y POTENTE
+   ====================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+
+  height: 56px;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.15)
+  );
+  backdrop-filter: blur(14px) saturate(1.15);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Logo */
+.site-header .logo {
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Navegación */
+.site-header nav a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.2s ease;
+}
+
+.site-header nav a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+/* ======================================
+   PASO 6 · LIMPIEZA FINAL GLOBAL
+   ====================================== */
+
+/* 1. REDUCCIÓN DE ESPACIADOS EXCESIVOS */
+section {
+  margin-bottom: 72px !important;
+}
+
+@media (max-width: 768px) {
+  section {
+    margin-bottom: 56px !important;
+  }
+}
+
+/* 2. HERO MÁS COMPACTO */
+.hero {
+  min-height: auto !important;
+  padding-top: 96px !important;
+  padding-bottom: 72px !important;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 72px !important;
+    padding-bottom: 56px !important;
+  }
+}
+
+/* 3. ELIMINAR BLOQUES DUPLICADOS / VACÍOS */
+section:empty,
+div:empty {
+  display: none !important;
+}
+
+/* 4. UNIFICAR TODAS LAS CARDS */
+.card,
+.project-card,
+.video-card,
+.database-card,
+.database-item,
+.news-item,
+.news-featured,
+.sidebar-follow,
+.category-card {
+  border-radius: 16px;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.52);
+  backdrop-filter: blur(14px) saturate(1.15);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* 5. COMPACTAR HEADER */
+.site-header {
+  height: 56px;
+  padding: 0 16px;
+}
+
+/* 6. COMPACTAR FOOTER */
+footer {
+  padding: 32px 0;
+  font-size: 0.875rem;
+  opacity: 0.85;
+  text-align: center !important;
+}
+
+footer p {
+  max-width: none !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* 7. ELIMINAR "SECCIONES DE RELLENO" */
+.projects + .projects,
+.videos + .videos,
+.databases + .databases {
+  display: none !important;
+}
+
+/* 8. TEXTO MÁS LEGIBLE Y CONTUNDENTE */
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+p {
+  max-width: 70ch;
+}
+
+/* 9. NADA DE BLANCO DURO */
+* {
+  background-color: transparent !important;
+}
+
+/* 10. EVITAR EFECTO "PÁGINA LARGA" */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* CATEGORIAS GRID - Separación uniforme */
+  .categories-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    row-gap: 3rem !important;
+    column-gap: 5rem !important;
+  }

@@ -1,0 +1,140 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout pageBg="bases" title="Hoteles para Transportistas">
+  <section class="container">
+    <h1>Hoteles para Transportistas</h1>
+
+    <p>
+      Base de datos pública de hoteles adaptados a transportistas:
+      accesos para camiones, parking vigilado, horarios flexibles
+      y cercanía a rutas principales.
+    </p>
+
+    <div class="notice">
+      ⚠️ Datos orientativos. La información puede variar según disponibilidad
+      y cambios del establecimiento.
+    </div>
+
+    <h2>¿Qué tipo de hoteles encontrarás aquí?</h2>
+    <ul>
+      <li>Hoteles con parking para camiones</li>
+      <li>Alojamientos cerca de áreas logísticas</li>
+      <li>Hoteles en rutas nacionales e internacionales</li>
+      <li>Opciones económicas para chóferes</li>
+    </ul>
+
+    <div class="cta">
+      <h3>¿Quieres usar esta información en tiempo real?</h3>
+      <p>
+        En Roadmaster puedes ver hoteles cercanos a tu ruta,
+        filtrados por distancia, servicios y compatibilidad con camiones.
+      </p>
+
+      <a href="/proyectos/roadmaster" class="button">
+        Usar hoteles en Roadmaster
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background: transparent;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+
+  .notice {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(6px);
+    border-left: 4px solid #ff9800;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 4px;
+    color: #333;
+    line-height: 1.6;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+
+  ul {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+    color: #333;
+    line-height: 1.8;
+  }
+
+  li {
+    margin-bottom: 0.75rem;
+  }
+
+  .cta {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(6px);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .cta h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+
+  .cta p {
+    margin-bottom: 1.5rem;
+    color: #666;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    background-color: #1a1a1a;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+
+  .button:hover {
+    background-color: #333;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    .container {
+      padding: 1rem;
+    }
+  }
+</style>

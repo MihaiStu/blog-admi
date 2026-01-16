@@ -1,0 +1,319 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout pageBg="categorias" title="Noticias del Transporte | Actualidad y Normativa | AdmiLogistic" description="Últimas noticias, actualizaciones normativas y novedades del sector del transporte y la logística. Información profesional y actualizada para transportistas y gestores de flotas.">
+  <div class="news-page">
+    <!-- HEADER EDITORIAL -->
+    <header class="news-header">
+      <h1>Noticias del Transporte</h1>
+      <p class="news-intro">Actualidad, normativas y novedades del sector del transporte profesional y la logística. Información actualizada para transportistas, gestores de flotas y empresas del sector.</p>
+    </header>
+
+    <!-- FILTROS/TAGS -->
+    <div class="news-filters">
+      <button class="filter-btn active" data-filter="all">Todas</button>
+      <button class="filter-btn" data-filter="normativa">Normativa</button>
+      <button class="filter-btn" data-filter="sector">Sector</button>
+      <button class="filter-btn" data-filter="tecnologia">Tecnología</button>
+    </div>
+
+    <!-- LISTA DE NOTICIAS -->
+    <section class="news-list">
+      <article class="news-card">
+        <div class="news-card-header">
+          <span class="news-category">Normativa</span>
+          <time class="news-date" datetime="2024-01-15">15 de enero, 2024</time>
+        </div>
+        <h2 class="news-title">Nuevas regulaciones europeas sobre tiempos de conducción y descanso</h2>
+        <p class="news-excerpt">La Comisión Europea ha actualizado las normativas sobre tiempos de conducción y períodos de descanso obligatorios para conductores profesionales. Estos cambios afectan directamente a las empresas de transporte y requieren adaptación de los sistemas de gestión de flotas.</p>
+        <div class="news-meta">
+          <span class="news-tag">Normativa</span>
+          <span class="news-tag">Europa</span>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="news-card-header">
+          <span class="news-category">Sector</span>
+          <time class="news-date" datetime="2024-01-12">12 de enero, 2024</time>
+        </div>
+        <h2 class="news-title">El sector del transporte crece un 8% en el último trimestre</h2>
+        <p class="news-excerpt">Los datos oficiales muestran un crecimiento sostenido del sector del transporte de mercancías por carretera. El aumento de la demanda logística y la recuperación económica están impulsando la actividad del sector.</p>
+        <div class="news-meta">
+          <span class="news-tag">Sector</span>
+          <span class="news-tag">Estadísticas</span>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="news-card-header">
+          <span class="news-category">Tecnología</span>
+          <time class="news-date" datetime="2024-01-10">10 de enero, 2024</time>
+        </div>
+        <h2 class="news-title">Inteligencia artificial aplicada a la optimización de rutas</h2>
+        <p class="news-excerpt">Las nuevas tecnologías de IA están revolucionando la planificación de rutas en el transporte profesional. Sistemas avanzados permiten reducir tiempos de trayecto y optimizar el consumo de combustible.</p>
+        <div class="news-meta">
+          <span class="news-tag">Tecnología</span>
+          <span class="news-tag">IA</span>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="news-card-header">
+          <span class="news-category">Normativa</span>
+          <time class="news-date" datetime="2024-01-08">8 de enero, 2024</time>
+        </div>
+        <h2 class="news-title">Actualización de la normativa sobre tacógrafos digitales</h2>
+        <p class="news-excerpt">Nuevos requisitos técnicos para los tacógrafos digitales entran en vigor este año. Las empresas deben asegurarse de que sus dispositivos cumplen con los estándares actualizados de la UE.</p>
+        <div class="news-meta">
+          <span class="news-tag">Normativa</span>
+          <span class="news-tag">Tacógrafo</span>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="news-card-header">
+          <span class="news-category">Sector</span>
+          <time class="news-date" datetime="2024-01-05">5 de enero, 2024</time>
+        </div>
+        <h2 class="news-title">Escasez de conductores profesionales: un desafío del sector</h2>
+        <p class="news-excerpt">El sector del transporte enfrenta una creciente escasez de conductores profesionales cualificados. Las empresas buscan estrategias para atraer y retener talento en un mercado competitivo.</p>
+        <div class="news-meta">
+          <span class="news-tag">Sector</span>
+          <span class="news-tag">Recursos humanos</span>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="news-card-header">
+          <span class="news-category">Tecnología</span>
+          <time class="news-date" datetime="2024-01-03">3 de enero, 2024</time>
+        </div>
+        <h2 class="news-title">Sistemas de gestión de flotas: tendencias para 2024</h2>
+        <p class="news-excerpt">Las plataformas de gestión de flotas evolucionan hacia soluciones más integradas y automatizadas. La conectividad y el análisis de datos en tiempo real marcan las tendencias del año.</p>
+        <div class="news-meta">
+          <span class="news-tag">Tecnología</span>
+          <span class="news-tag">Gestión</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="news-pagination">
+      <button class="pagination-btn" disabled>Anterior</button>
+      <span class="pagination-info">Página 1 de 3</span>
+      <button class="pagination-btn">Siguiente</button>
+    </nav>
+  </div>
+</BaseLayout>
+
+<style>
+  :root {
+    --bg-primary: #f5f7fb;
+    --bg-white: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --accent-primary: #6366f1;
+    --border-color: #e2e8f0;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 2px 8px -2px rgba(0, 0, 0, 0.08), 0 1px 4px -1px rgba(0, 0, 0, 0.04);
+    --radius: 16px;
+  }
+
+  .news-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 1rem;
+  }
+
+  /* HEADER EDITORIAL */
+  .news-header {
+    margin-bottom: 48px;
+    text-align: center;
+  }
+
+  .news-header h1 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  .news-intro {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* FILTROS */
+  .news-filters {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1.25rem;
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+  }
+
+  .filter-btn:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+  }
+
+  .filter-btn.active {
+    background: var(--accent-primary);
+    color: white;
+    border-color: var(--accent-primary);
+  }
+
+  /* LISTA DE NOTICIAS */
+  .news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .news-card {
+    background: var(--bg-white);
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--shadow-md);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .news-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .news-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .news-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-primary);
+    padding: 0.25rem 0.75rem;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 12px;
+  }
+
+  .news-date {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+
+  .news-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  .news-excerpt {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  .news-meta {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .news-tag {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    padding: 0.25rem 0.75rem;
+    background: var(--bg-primary);
+    border-radius: 12px;
+  }
+
+  /* PAGINACIÓN */
+  .news-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 48px;
+  }
+
+  .pagination-btn {
+    padding: 0.75rem 1.5rem;
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.875rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+  }
+
+  .pagination-btn:hover:not(:disabled) {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+  }
+
+  .pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .pagination-info {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .news-page {
+      padding: 32px 1rem;
+    }
+
+    .news-header {
+      margin-bottom: 32px;
+    }
+
+    .news-card {
+      padding: 24px;
+    }
+
+    .news-title {
+      font-size: 1.25rem;
+    }
+
+    .news-filters {
+      justify-content: flex-start;
+    }
+  }
+</style>

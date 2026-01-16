@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout pageBg="categorias" title="Actualidad del Transporte | Noticias y Tecnología | AdmiLogistic" description="Noticias del sector, tecnología aplicada y novedades del transporte profesional. Información actualizada para transportistas y gestores de flotas.">
+  <div class="news-page">
+    <header class="news-header">
+      <h1>Actualidad del Transporte</h1>
+      <p class="news-intro">Noticias del sector, tecnología aplicada, normativas actualizadas y novedades del transporte profesional y la logística.</p>
+    </header>
+
+    <div class="news-filters">
+      <button class="filter-btn active" data-filter="all">Todas</button>
+      <button class="filter-btn" data-filter="normativa">Normativa</button>
+      <button class="filter-btn" data-filter="sector">Sector</button>
+      <button class="filter-btn" data-filter="tecnologia">Tecnología</button>
+    </div>
+
+    <section class="news-list">
+      <article class="news-card">
+        <div class="news-card-header">
+          <span class="news-category">Normativa</span>
+          <time class="news-date" datetime="2024-01-15">15 de enero, 2024</time>
+        </div>
+        <h2 class="news-title">Nuevas regulaciones europeas sobre tiempos de conducción y descanso</h2>
+        <p class="news-excerpt">La Comisión Europea ha actualizado las normativas sobre tiempos de conducción y períodos de descanso obligatorios para conductores profesionales.</p>
+        <div class="news-meta">
+          <span class="read-time">5 min lectura</span>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="news-card-header">
+          <span class="news-category">Tecnología</span>
+          <time class="news-date" datetime="2024-01-10">10 de enero, 2024</time>
+        </div>
+        <h2 class="news-title">IA aplicada a la optimización de rutas en tiempo real</h2>
+        <p class="news-excerpt">Nuevas soluciones tecnológicas permiten optimizar rutas dinámicamente mediante inteligencia artificial, reduciendo costes de combustible hasta un 15%.</p>
+        <div class="news-meta">
+          <span class="read-time">4 min lectura</span>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="news-card-header">
+          <span class="news-category">Sector</span>
+          <time class="news-date" datetime="2024-01-05">5 de enero, 2024</time>
+        </div>
+        <h2 class="news-title">Situación del mercado del transporte en España 2024</h2>
+        <p class="news-excerpt">Análisis del estado actual del sector transporte en España: demanda, precios, costes operativos y perspectivas para el año en curso.</p>
+        <div class="news-meta">
+          <span class="read-time">6 min lectura</span>
+        </div>
+      </article>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .news-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .news-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .news-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .news-intro {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .news-filters {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1.25rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 24px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .filter-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255,255,255,0.4);
+  }
+
+  .filter-btn.active {
+    background: rgba(99,102,241,0.8);
+    border-color: rgba(99,102,241,1);
+    color: white;
+  }
+
+  .news-list {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .news-card {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(16px) saturate(1.1);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.35);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    transition: transform .35s ease, box-shadow .35s ease;
+  }
+
+  .news-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+  }
+
+  .news-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .news-category {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(99,102,241,0.15);
+    border: 1px solid rgba(99,102,241,0.3);
+    border-radius: 12px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4f46e5;
+  }
+
+  .news-date {
+    font-size: 0.875rem;
+    color: #64748b;
+  }
+
+  .news-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #0f172a;
+    line-height: 1.3;
+  }
+
+  .news-excerpt {
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .news-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .read-time {
+    font-size: 0.875rem;
+    color: #64748b;
+  }
+
+  @media (max-width: 768px) {
+    .news-header h1 {
+      font-size: 2rem;
+    }
+
+    .filter-btn {
+      font-size: 0.875rem;
+      padding: 0.4rem 1rem;
+    }
+  }
+</style>

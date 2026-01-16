@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout pageBg="proyectos" title="Roadmaster - Proyectos - Blog AdmiLogistic" description="Roadmaster: Gestión integral para empresas de transporte">
+  <div class="project-page">
+    <h1>Roadmaster</h1>
+
+    <section class="what-is">
+      <h2>¿Qué es Roadmaster?</h2>
+      <p>Roadmaster es una solución integral de gestión para empresas de transporte y logística. Proporciona herramientas completas para la administración de flotas, control de tiempos de conducción, gestión de rutas y cumplimiento normativo.</p>
+    </section>
+
+    <section class="problem">
+      <h2>¿Qué problema resuelve?</h2>
+      <ul>
+        <li>Gestión centralizada de flotas de vehículos</li>
+        <li>Cumplimiento automático de normativas de tacógrafo</li>
+        <li>Optimización de rutas y planificación de viajes</li>
+        <li>Control de tiempos de conducción y descanso</li>
+        <li>Integración con bases de datos de talleres, gasolineras y parkings</li>
+        <li>Reportes y análisis para toma de decisiones</li>
+      </ul>
+    </section>
+
+    <section class="screenshots">
+      <h2>Capturas</h2>
+      <p class="placeholder">Las capturas de pantalla se agregarán próximamente.</p>
+    </section>
+
+    <div class="cta-buttons">
+      <a href="#" class="btn btn-primary">Entrar a la app</a>
+      <a href="#" class="btn btn-secondary">Probar demo</a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .project-page {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  .what-is {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+
+  .problem {
+    background: #f0f7ff;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+
+  .problem ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+  }
+
+  .problem li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .problem li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #0066cc;
+    font-weight: bold;
+  }
+
+  .screenshots {
+    background: #fff9e6;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .placeholder {
+    color: #666;
+    font-style: italic;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.2s;
+    font-size: 1.125rem;
+  }
+
+  .btn-primary {
+    background-color: #1a1a1a;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    color: #1a1a1a;
+    border: 2px solid #1a1a1a;
+  }
+
+  .btn-secondary:hover {
+    background-color: #1a1a1a;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+    }
+
+    .btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>

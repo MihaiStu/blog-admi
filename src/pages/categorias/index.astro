@@ -1,0 +1,290 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout pageBg="categorias" title="Categorías - Blog AdmiLogistic" description="Categorías profesionales para transportistas y empresas de logística">
+  <div class="categories-page">
+    <div class="header-section" style="text-align: center;">
+      <h1 style="text-align: center;">Categorías</h1>
+      <p style="text-align: center;">Contenido profesional organizado por áreas clave del sector transporte.</p>
+    </div>
+
+    <div class="categories-grid">
+      <a href="/categorias/operaciones" class="category-card">
+        <div class="category-image">
+          <img src="/images/categorias/RUTASok.png" alt="Operaciones" loading="lazy" />
+        </div>
+        <h2>Operaciones</h2>
+        <p>Rutas, flotas, optimización de costes y casos reales de gestión operativa.</p>
+      </a>
+
+      <a href="/categorias/cumplimiento" class="category-card">
+        <div class="category-image">
+          <img src="/images/categorias/tacografook.png" alt="Cumplimiento" loading="lazy" />
+        </div>
+        <h2>Cumplimiento</h2>
+        <p>Tacógrafo, normativa, tiempos de conducción, inspecciones y sanciones.</p>
+      </a>
+
+      <a href="/categorias/fiscalidad" class="category-card">
+        <div class="category-image">
+          <img src="/images/categorias/FISCALIDAD ok.png" alt="Fiscalidad" loading="lazy" />
+        </div>
+        <h2>Fiscalidad</h2>
+        <p>Autónomos, SL, IVA, IRPF y errores fiscales habituales del sector.</p>
+      </a>
+
+      <a href="/categorias/vehiculos" class="category-card">
+        <div class="category-image">
+          <img src="/images/categorias/camionesok.png" alt="Vehículos" loading="lazy" />
+        </div>
+        <h2>Vehículos</h2>
+        <p>Camiones, mantenimiento, averías, consumos y equipamiento profesional.</p>
+      </a>
+
+      <a href="/categorias/tarjetas-gasoil" class="category-card featured">
+        <div class="category-image">
+          <img src="/images/categorias/tarjetas-gasoilok.png" alt="Tarjetas de Gasoil Profesional" loading="lazy" />
+        </div>
+        <h2>Tarjetas de Gasoil Profesional</h2>
+        <p>Comparativas Repsol, Galp, BP, DKV. Descuentos, zonas y casos reales.</p>
+      </a>
+
+      <a href="/categorias/actualidad" class="category-card">
+        <div class="category-image">
+          <img src="/images/categorias/NOTICIAS2 ok.png" alt="Actualidad" loading="lazy" />
+        </div>
+        <h2>Actualidad</h2>
+        <p>Noticias del sector, tecnología aplicada y novedades del transporte profesional.</p>
+      </a>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Centrar header
+    const header = document.querySelector('.header-section');
+    if (header) {
+      header.style.textAlign = 'center';
+      header.style.display = 'block';
+      header.style.width = '100%';
+      
+      const h1 = header.querySelector('h1');
+      const p = header.querySelector('p');
+      
+      if (h1) {
+        h1.style.textAlign = 'center';
+        h1.style.width = '100%';
+        h1.style.display = 'block';
+      }
+      
+      if (p) {
+        p.style.textAlign = 'center';
+        p.style.width = '100%';
+        p.style.display = 'block';
+        p.style.marginLeft = 'auto';
+        p.style.marginRight = 'auto';
+      }
+    }
+
+    // Forzar grid gap en categorías
+    const grid = document.querySelector('.categories-grid');
+    if (grid) {
+      grid.style.display = 'grid';
+      grid.style.gridTemplateColumns = 'repeat(3, 1fr)';
+      grid.style.rowGap = '3rem';
+      grid.style.columnGap = '5rem';
+    }
+  });
+</script>
+
+<style>
+  .categories-page {
+    position: relative;
+    background: transparent;
+    padding: var(--section-padding-y, 64px) var(--section-padding-x, 16px);
+  }
+
+  .categories-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.02), rgba(0,0,0,0.04));
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .categories-page,
+  .categories-page > *:not(.category-card),
+  .categories-page > * > *:not(.category-card) {
+    background: transparent !important;
+    background-image: none !important;
+  }
+
+  .header-section {
+    text-align: center !important;
+    margin-bottom: 3rem;
+    width: 100% !important;
+    display: block !important;
+  }
+
+  .header-section * {
+    text-align: center !important;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .header-section p {
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 2rem !important;
+  }
+
+  .categories-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    row-gap: 3rem !important;
+    column-gap: 5rem !important;
+    margin-top: 3rem;
+    align-items: stretch !important;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1.25rem;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(8px) saturate(1.05);
+    -webkit-backdrop-filter: blur(8px) saturate(1.05);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease, background .3s ease;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    max-height: 280px;
+  }
+
+  .category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+    background: rgba(255, 255, 255, 0.45);
+  }
+
+  .category-image {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+  }
+
+  .category-image img,
+  .category-image svg {
+    width: 64px;
+    height: 64px;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 6px 12px rgba(99,102,241,0.2));
+    transition: transform .25s ease;
+  }
+
+  .category-image svg {
+    color: #6366f1;
+  }
+
+  .category-card:hover .category-image img,
+  .category-card:hover .category-image svg {
+    transform: scale(1.1);
+  }
+
+  .category-card h2 {
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 1.125rem;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+    min-height: auto;
+  }
+
+  .category-card h2::after {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 2px;
+    margin: 0.5rem auto 0;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    border-radius: 2px;
+    opacity: 0.8;
+  }
+
+  .category-card p {
+    color: #1e293b;
+    line-height: 1.5;
+    margin: 0.75rem 0 0;
+    font-size: 0.875rem;
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .category-card.featured {
+    background: rgba(255,255,255,0.45);
+    border: 2px solid rgba(99,102,241,0.4);
+    box-shadow: 0 12px 30px rgba(99,102,241,0.12);
+  }
+
+  .category-card.featured:hover {
+    border-color: rgba(99,102,241,0.6);
+    box-shadow: 0 20px 50px rgba(99,102,241,0.2);
+    background: rgba(255,255,255,0.55);
+  }
+
+  .category-card.featured h2::after {
+    width: 36px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+  }
+
+  @media (max-width: 1024px) {
+    .categories-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .categories-grid {
+      grid-template-columns: 1fr;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+</style>

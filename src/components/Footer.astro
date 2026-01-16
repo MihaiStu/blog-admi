@@ -1,0 +1,46 @@
+---
+---
+
+<footer style="text-align: center;">
+  <div class="container" style="text-align: center;">
+    <p style="text-align: center;">&copy; {new Date().getFullYear()} Blog AdmiLogistic. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  // Forzar centrado del footer
+  document.addEventListener('DOMContentLoaded', () => {
+    const footer = document.querySelector('footer');
+    const container = footer?.querySelector('.container');
+    const p = footer?.querySelector('p');
+    
+    if (footer) footer.style.textAlign = 'center';
+    if (container) container.style.textAlign = 'center';
+    if (p) p.style.textAlign = 'center';
+  });
+</script>
+
+<style>
+  footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 2rem 0;
+    margin-top: auto;
+    width: 100%;
+  }
+
+  footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center !important;
+    width: 100%;
+  }
+
+  footer p {
+    margin: 0;
+    opacity: 0.8;
+    text-align: center !important;
+    width: 100%;
+  }
+</style>

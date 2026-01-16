@@ -1,0 +1,207 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout pageBg="bases" title="Bases de Datos - Blog AdmiLogistic" description="Bases de datos públicas de talleres, gasolineras, parkings y hoteles">
+  <div class="header-section" style="text-align: center;">
+    <h1 style="text-align: center;">Bases de Datos</h1>
+    <p style="text-align: center;">Accede a nuestras bases de datos públicas con información útil para el sector del transporte.</p>
+  </div>
+
+  <div class="databases-grid">
+    <a href="/bases-datos/talleres" class="database-card">
+      <div class="database-image">
+        <img src="/images/bases-datos/talleresok.png" alt="Talleres" loading="lazy" />
+      </div>
+      <h2>Talleres</h2>
+      <p>Base de datos de talleres especializados en vehículos industriales.</p>
+      <span class="badge">Datos orientativos</span>
+    </a>
+
+    <a href="/bases-datos/gasolineras" class="database-card">
+      <div class="database-image">
+        <img src="/images/bases-datos/gasolinerasok.png" alt="Gasolineras" loading="lazy" />
+      </div>
+      <h2>Gasolineras</h2>
+      <p>Base de datos de gasolineras y estaciones de servicio.</p>
+      <span class="badge">Datos orientativos</span>
+    </a>
+
+    <a href="/bases-datos/parkings" class="database-card">
+      <div class="database-image">
+        <img src="/images/bases-datos/parkingok.png" alt="Parkings" loading="lazy" />
+      </div>
+      <h2>Parkings</h2>
+      <p>Base de datos de parkings y áreas de descanso para vehículos industriales.</p>
+      <span class="badge">Datos orientativos</span>
+    </a>
+
+    <a href="/bases-datos/hoteles" class="database-card">
+      <div class="database-image">
+        <img src="/images/bases-datos/hotelesok.png" alt="Hoteles" loading="lazy" />
+      </div>
+      <h2>Hoteles</h2>
+      <p>Base de datos de hoteles adaptados a transportistas con parking para camiones.</p>
+      <span class="badge">Datos orientativos</span>
+    </a>
+  </div>
+
+  <div class="info-note">
+    <p><strong>Nota:</strong> Estas bases de datos son de carácter informativo y orientativo. Los datos se actualizan periódicamente.</p>
+  </div>
+</BaseLayout>
+
+<script>
+  // Forzar centrado de textos
+  document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('.header-section');
+    
+    if (header) {
+      header.style.textAlign = 'center';
+      const h1 = header.querySelector('h1');
+      const p = header.querySelector('p');
+      if (h1) h1.style.textAlign = 'center';
+      if (p) p.style.textAlign = 'center';
+    }
+  });
+</script>
+
+<style>
+  .header-section {
+    text-align: center !important;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    width: 100% !important;
+    display: block !important;
+  }
+
+  .header-section * {
+    text-align: center !important;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .header-section p {
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .databases-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 2rem !important;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: stretch !important;
+  }
+
+  .database-card {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 2rem !important;
+    background: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    height: 100% !important;
+  }
+
+  .database-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .database-image {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .database-image img {
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  .database-card h2 {
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+
+  .database-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem !important;
+    flex-grow: 1 !important;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: #0066cc;
+    color: white;
+    border-radius: 12px;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .info-note {
+    background: #f0f7ff;
+    border-left: 4px solid #0066cc;
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin-top: 2rem;
+  }
+
+  .info-note p {
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  @media (min-width: 1200px) {
+    .databases-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  /* Anular margin-top de layout-controls.css que desalinea las tarjetas */
+  .database-card + .database-card {
+    margin-top: 0 !important;
+  }
+
+  @media (max-width: 768px) {
+    .databases-grid {
+      grid-template-columns: 1fr;
+    }
+
+    /* En móvil sí queremos separación vertical entre tarjetas */
+    .database-card + .database-card {
+      margin-top: 1.5rem !important;
+    }
+  }
+</style>
