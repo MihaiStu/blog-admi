@@ -1365,6 +1365,5 @@ main {
   .categories-grid {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    row-gap: 3rem !important;
-    column-gap: 5rem !important;
+    gap: 4rem !important;
   }
