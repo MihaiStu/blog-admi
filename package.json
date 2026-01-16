@@ -10,7 +10,6 @@
     "images:optimize": "node scripts/optimize-images.cjs"
   },
   "dependencies": {
-    "@builder.io/sdk": "^6.2.0",
     "astro": "^5.16.8"
   },
   "devDependencies": {
