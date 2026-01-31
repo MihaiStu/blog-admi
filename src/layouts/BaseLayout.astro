@@ -288,22 +288,22 @@ const bgStyleTag = ``;
   }
 
   /* ========================= MODO EDICIÓN VISUAL ========================= */
+  /* Sin outline por defecto para evitar marcas/bordes visibles en los bloques */
   .edit-mode [data-editable] {
-    outline: 1px dashed rgba(0, 0, 0, 0.2);
+    outline: none;
     position: relative;
     cursor: pointer;
-    transition: outline 0.2s ease;
   }
 
   .edit-mode [data-editable]:hover {
-    outline: 2px solid #667eea;
-    outline-offset: 2px;
+    outline: 1px dashed rgba(102, 126, 234, 0.4);
+    outline-offset: 4px;
   }
 
   .edit-mode [data-editable].active {
-    outline: 2px solid #667eea;
-    outline-offset: 2px;
-    background: rgba(102, 126, 234, 0.05);
+    outline: 1px dashed #667eea;
+    outline-offset: 4px;
+    background: transparent !important;
   }
 
   /* Panel de control */

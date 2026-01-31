@@ -1,0 +1,95 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection, getEntry, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content, headings } = await render(post);
+const categoryLabel: Record<string, string> = {
+  operaciones: "Operaciones",
+  cumplimiento: "Cumplimiento",
+  fiscalidad: "Fiscalidad",
+  vehiculos: "Vehículos",
+  "tarjetas-gasoil": "Tarjetas de Gasoil",
+  actualidad: "Actualidad",
+};
+---
+
+<BaseLayout
+  pageBg="categorias"
+  title={`${post.data.title} | Blog AdmiLogistic`}
+  description={post.data.description ?? post.data.title}
+>
+  <article class="article-page">
+    <header class="article-header">
+      <a href={`/categorias/${post.data.category === "tarjetas-gasoil" ? "tarjetas-gasoil" : post.data.category}`} class="article-category">
+        {categoryLabel[post.data.category] ?? post.data.category}
+      </a>
+      <h1>{post.data.title}</h1>
+      <time datetime={post.data.pubDate.toISOString()}>
+        {post.data.pubDate.toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" })}
+      </time>
+    </header>
+    <div class="article-body">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .article-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+  }
+  .article-header {
+    margin-bottom: 2rem;
+  }
+  .article-category {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #6366f1;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+  }
+  .article-category:hover {
+    text-decoration: underline;
+  }
+  .article-header h1 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    margin: 0 0 0.5rem 0;
+    color: #1a1a1a;
+  }
+  .article-header time {
+    font-size: 0.9375rem;
+    color: #666;
+  }
+  .article-body {
+    line-height: 1.7;
+    color: #333;
+  }
+  .article-body :global(h2) {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.375rem;
+  }
+  .article-body :global(p) {
+    margin-bottom: 1rem;
+  }
+  .article-body :global(ul),
+  .article-body :global(ol) {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+  }
+  .article-body :global(a) {
+    color: #6366f1;
+  }
+</style>

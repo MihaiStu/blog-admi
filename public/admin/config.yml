@@ -14,7 +14,9 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "Descripción", name: "description", widget: "text", required: false }
+      - { label: "Fecha publicación", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Categoría", name: "category", widget: "select", options: ["operaciones", "cumplimiento", "fiscalidad", "vehiculos", "tarjetas-gasoil", "actualidad"] }
       - { label: "Imagen", name: "image", widget: "image", required: false }
       - { label: "Contenido", name: "body", widget: "markdown" }
 

@@ -92,7 +92,7 @@ body {
   --hero-padding-top: 64px;
   --hero-padding-bottom: 64px;
   --hero-gap: 48px;
-  --hero-image-width: 360px;
+  --hero-image-width: 480px;
 
   /* =================
      PROJECTS / TOOLS
@@ -240,21 +240,31 @@ section::after {
   z-index: 0;
 }
 
+/* En el hero no mostramos overlays para evitar marcas/bordes que tapen la imagen */
+.hero::after,
+.hero::before,
+section.hero::after,
+section.hero::before {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+}
+
 /* Ensure section content sits above the ambient shadow */
 .section-inner {
   position: relative;
   z-index: 1;
 }
 
-/* Subtle global noise layer (optional image `noise.svg`) */
+/* Capa de ruido detrás del contenido para no tapar la imagen del hero */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
   background: url("/images/noise.svg");
-  opacity: 0.035; /* slightly increased so it's subtle but visible */
+  opacity: 0.035;
   pointer-events: none;
-  z-index: 9998;
+  z-index: 0;
 }
 
 .section-inner {
@@ -376,17 +386,10 @@ body::after {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 0 0 4px rgba(255, 255, 255, 0.06);
 }
 
-/* Optional PRO overlay for very bright images */
+/* Sin overlay en el hero para que la imagen de la tarjeta no quede tapada */
 .hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0,0,0,0.35),
-    rgba(0,0,0,0.05)
-  );
-  z-index: 0;
+  display: none !important;
+  content: none !important;
 }
 
 .hero > * {
@@ -394,17 +397,51 @@ body::after {
   z-index: 1;
 }
 
+/* Asegurar que la imagen del hero esté siempre visible y por encima */
+.hero .hero-image,
+.hero .hero-image-content,
+.hero-image img {
+  position: relative;
+  z-index: 100 !important;
+}
+
+/* ELIMINAR TODO TIPO DE BLUR/FILTRO DE LA IMAGEN DEL HERO */
+.hero,
+.hero .section-inner,
+.hero .hero-content,
+.hero .hero-image,
+.hero .hero-image-content,
+.hero-image img {
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  -webkit-filter: none !important;
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+}
+
+/* Eliminar cualquier pseudo-elemento que pueda causar overlay en el hero */
+.hero *::before,
+.hero *::after {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+}
+
 .hero-content {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr 1fr;
   gap: var(--hero-gap);
   align-items: center;
 }
 
 .hero-image img {
-  width: var(--hero-image-width);
+  width: 100%;
+  max-width: var(--hero-image-width);
   height: auto;
-  max-width: 100%;
+  max-height: min(380px, 55vh);
+  object-fit: contain;
+  object-position: center;
 }
 
 /* ================================
@@ -1063,6 +1100,7 @@ section > div,
   padding: 4rem 2rem;
   pointer-events: none;
   z-index: 1;
+  background: transparent !important;
 }
 
 .bg-ambient-text p {

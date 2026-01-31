@@ -1,8 +1,65 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const articulos = (await getCollection('blog', ({ data }) => data.category === 'operaciones'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <BaseLayout pageBg="categorias" title="Operaciones - Blog AdmiLogistic" description="Gestión operativa, rutas, flotas, optimización de costes y casos reales del sector transporte">
-  <h1>Operaciones</h1>
-  <p>Artículos sobre gestión de flotas, planificación de rutas, optimización de costes operativos y casos reales de empresas de transporte.</p>
+  <div class="section-inner" style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem 4rem;">
+    <h1>Operaciones</h1>
+    <p class="intro">Artículos sobre gestión de flotas, planificación de rutas, optimización de costes operativos y casos reales de empresas de transporte.</p>
+
+    {articulos.length === 0 ? (
+      <p>Aún no hay artículos en esta categoría. Crea un archivo en <code>src/content/blog/</code> con <code>category: operaciones</code> en el frontmatter.</p>
+    ) : (
+      <ul class="lista-articulos">
+        {articulos.map((entry) => (
+          <li>
+            <a href={`/blog/${entry.id}`}>{entry.data.title}</a>
+            <time datetime={entry.data.pubDate.toISOString()}>
+              {entry.data.pubDate.toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' })}
+            </time>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
 </BaseLayout>
+
+<style>
+  .intro {
+    margin-bottom: 2rem;
+    color: #666;
+  }
+  .lista-articulos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .lista-articulos li {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  .lista-articulos a {
+    font-weight: 600;
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+  .lista-articulos a:hover {
+    color: #6366f1;
+  }
+  .lista-articulos time {
+    display: block;
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 0.25rem;
+  }
+  code {
+    background: rgba(0, 0, 0, 0.06);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+</style>
