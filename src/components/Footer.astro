@@ -1,24 +1,18 @@
 ---
 ---
 
-<footer style="text-align: center;">
-  <div class="container" style="text-align: center;">
-    <p style="text-align: center;">&copy; {new Date().getFullYear()} Blog AdmiLogistic. Todos los derechos reservados.</p>
+<footer>
+  <div class="container">
+    <nav class="footer-links" aria-label="Enlaces legales">
+      <a href="/aviso-legal">Aviso legal</a>
+      <span class="sep" aria-hidden="true">·</span>
+      <a href="/privacidad">Política de privacidad</a>
+      <span class="sep" aria-hidden="true">·</span>
+      <a href="/cookies">Política de cookies</a>
+    </nav>
+    <p class="copyright">&copy; {new Date().getFullYear()} Blog AdmiLogistic. Todos los derechos reservados.</p>
   </div>
 </footer>
-
-<script>
-  // Forzar centrado del footer
-  document.addEventListener('DOMContentLoaded', () => {
-    const footer = document.querySelector('footer');
-    const container = footer?.querySelector('.container');
-    const p = footer?.querySelector('p');
-    
-    if (footer) footer.style.textAlign = 'center';
-    if (container) container.style.textAlign = 'center';
-    if (p) p.style.textAlign = 'center';
-  });
-</script>
 
 <style>
   footer {
@@ -27,20 +21,38 @@
     padding: 2rem 0;
     margin-top: auto;
     width: 100%;
+    text-align: center;
   }
 
   footer .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
-    text-align: center !important;
-    width: 100%;
   }
 
-  footer p {
+  .footer-links {
+    margin-bottom: 1rem;
+  }
+
+  .footer-links a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 0.9375rem;
+  }
+
+  .footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .footer-links .sep {
+    margin: 0 0.5rem;
+    opacity: 0.6;
+  }
+
+  .copyright {
     margin: 0;
     opacity: 0.8;
-    text-align: center !important;
-    width: 100%;
+    font-size: 0.875rem;
   }
 </style>

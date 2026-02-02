@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout pageBg="categorias" title="Aviso Legal - Blog AdmiLogistic" description="Aviso legal y condiciones de uso del sitio Blog AdmiLogistic">
+  <div class="legal-page">
+    <h1>Aviso Legal</h1>
+    <p class="updated">Última actualización: febrero 2026</p>
+
+    <section>
+      <h2>1. Datos identificativos</h2>
+      <p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI-CE), se informa:</p>
+      <p><strong>Titular:</strong> ADMI LOGISTIC SL</p>
+      <p><strong>Domicilio:</strong> España</p>
+      <p><strong>NIF/CIF:</strong> B22571921</p>
+      <p><strong>Correo electrónico:</strong> contacto@admilogistic.es</p>
+    </section>
+
+    <section>
+      <h2>2. Objeto y aceptación</h2>
+      <p>El presente aviso legal regula el uso del sitio web <strong>Blog AdmiLogistic</strong>. La navegación por el sitio implica la aceptación de las presentes condiciones. Se recomienda su lectura con atención.</p>
+    </section>
+
+    <section>
+      <h2>3. Condiciones de uso</h2>
+      <p>El usuario se compromete a hacer un uso adecuado de los contenidos y servicios ofrecidos a través de este sitio web, y a no emplearlos para actividades ilícitas o contrarias a la buena fe.</p>
+    </section>
+
+    <section>
+      <h2>4. Propiedad intelectual e industrial</h2>
+      <p>Los contenidos del sitio (textos, imágenes, diseño, código) son propiedad del titular o de sus licenciantes y están protegidos por la legislación sobre propiedad intelectual e industrial. Queda prohibida su reproducción o distribución sin autorización expresa.</p>
+    </section>
+
+    <section>
+      <h2>5. Enlaces</h2>
+      <p>El sitio puede incluir enlaces a sitios de terceros. El titular no asume responsabilidad por el contenido o las prácticas de dichos sitios.</p>
+    </section>
+
+    <section>
+      <h2>6. Modificaciones</h2>
+      <p>El titular se reserva el derecho de modificar el presente aviso legal en cualquier momento. Los cambios serán publicados en esta página.</p>
+    </section>
+
+    <p class="contact">Para cualquier cuestión relacionada con este aviso legal, puede contactar en la dirección de correo indicada anteriormente.</p>
+  </div>
+</BaseLayout>
+
+<style>
+  .legal-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+    color: #1a1a1a;
+  }
+  .legal-page h1 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+  }
+  .legal-page .updated {
+    font-size: 0.9375rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  .legal-page section {
+    margin-bottom: 2rem;
+  }
+  .legal-page h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #0f172a;
+  }
+  .legal-page p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  .legal-page .contact {
+    margin-top: 2rem;
+    font-size: 0.9375rem;
+    color: #666;
+  }
+</style>
