@@ -1,89 +1,138 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const defaultList = [
+  'Gestión centralizada de flotas de vehículos',
+  'Cumplimiento automático de normativas de tacógrafo',
+  'Optimización de rutas y planificación de viajes',
+  'Control de tiempos de conducción y descanso',
+  'Integración con bases de datos de talleres, gasolineras y parkings',
+  'Reportes y análisis para toma de decisiones',
+];
+
+let data: { id: string; data: { title?: string; description?: string; intro?: string; problemList?: (string | { item: string })[]; screenshotText?: string; btnPrimaryLabel?: string; btnPrimaryUrl?: string; btnSecondaryLabel?: string; btnSecondaryUrl?: string } } | undefined;
+try {
+  const proyectos = await getCollection('proyectos');
+  const entry = proyectos.find((e) => e.id === 'roadmaster' || e.id === 'roadmaster.md') ?? proyectos[0];
+  data = entry as typeof data;
+} catch {
+  data = undefined;
+}
+
+const title = data?.data?.title ?? 'Roadmaster';
+const description = data?.data?.description ?? 'Gestión integral para empresas de transporte';
+const intro = data?.data?.intro ?? 'Roadmaster es una solución integral de gestión para empresas de transporte y logística. Proporciona herramientas completas para la administración de flotas, control de tiempos de conducción, gestión de rutas y cumplimiento normativo.';
+const rawList = data?.data?.problemList ?? defaultList;
+const problemList = Array.isArray(rawList) ? rawList.map((p: string | { item: string }) => typeof p === 'string' ? p : p.item) : defaultList;
+const screenshotText = data?.data?.screenshotText ?? 'Las capturas de pantalla se agregarán próximamente.';
+const btnPrimaryLabel = data?.data?.btnPrimaryLabel ?? 'Entrar a la app';
+const btnPrimaryUrl = (data?.data?.btnPrimaryUrl as string | undefined) ?? '#';
+const btnSecondaryLabel = data?.data?.btnSecondaryLabel ?? 'Probar demo';
+const btnSecondaryUrl = (data?.data?.btnSecondaryUrl as string | undefined) ?? '#';
 ---
 
-<BaseLayout pageBg="proyectos" title="Roadmaster - Proyectos - Blog AdmiLogistic" description="Roadmaster: Gestión integral para empresas de transporte">
-  <div class="project-page">
-    <div class="project-page-inner">
-      <h1>Roadmaster</h1>
+<BaseLayout pageBg="proyectos" title={`${title} - Proyectos - Blog AdmiLogistic`} description={description}>
+  <div class="project-page roadmaster-page">
+    <div class="project-page-inner roadmaster-inner">
+      <h1>{title}</h1>
 
     <section class="what-is">
-      <h2>¿Qué es Roadmaster?</h2>
-      <p>Roadmaster es una solución integral de gestión para empresas de transporte y logística. Proporciona herramientas completas para la administración de flotas, control de tiempos de conducción, gestión de rutas y cumplimiento normativo.</p>
+      <h2>¿Qué es {title}?</h2>
+      <p>{intro}</p>
     </section>
 
     <section class="problem">
       <h2>¿Qué problema resuelve?</h2>
       <ul>
-        <li>Gestión centralizada de flotas de vehículos</li>
-        <li>Cumplimiento automático de normativas de tacógrafo</li>
-        <li>Optimización de rutas y planificación de viajes</li>
-        <li>Control de tiempos de conducción y descanso</li>
-        <li>Integración con bases de datos de talleres, gasolineras y parkings</li>
-        <li>Reportes y análisis para toma de decisiones</li>
+        {problemList.map((item) => <li>{item}</li>)}
       </ul>
     </section>
 
+    <section class="screenshots">
+      <h2>Capturas</h2>
+      <p class="placeholder">{screenshotText}</p>
+    </section>
+
     <div class="cta-buttons">
-      <a href="#" class="btn btn-primary">Entrar a la app</a>
-      <a href="#" class="btn btn-secondary">Probar demo</a>
+      <a href={btnPrimaryUrl} class="btn btn-primary">{btnPrimaryLabel}</a>
+      <a href={btnSecondaryUrl} class="btn btn-secondary">{btnSecondaryLabel}</a>
     </div>
     </div>
   </div>
 </BaseLayout>
 
 <style>
-  .project-page {
-    min-height: 100%;
-    padding: 2rem 1rem 4rem;
+  /* ============================================
+     COLOR Y TAMAÑO DE TEXTO – editar aquí
+     ============================================ */
+  .roadmaster-inner,
+  main .roadmaster-inner {
+    --roadmaster-text-color: #ffffff;
+    --roadmaster-title-size: clamp(1.75rem, 5vw, 3rem);
+    --roadmaster-subtitle-size: clamp(1.25rem, 3vw, 2rem);
+    --roadmaster-body-size: clamp(1rem, 2vw, 1.125rem);
   }
 
-  main .project-page-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    background: rgba(0, 0, 0, 0.75);
+  .roadmaster-page {
+    min-height: 100%;
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem 1rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+  }
+
+  /* Panel tipo cristal: se ve el fondo, bloque centrado en la página */
+  .roadmaster-page .roadmaster-inner,
+  main .roadmaster-inner {
+    width: min(100%, 720px);
+    max-width: 720px;
+    flex: 0 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(15, 15, 35, 0.55) !important;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     padding: 2rem;
-    border-radius: 16px;
+    border-radius: 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
     color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.18);
   }
 
-  main .project-page-inner h1,
-  main .project-page-inner h2 {
-    color: #ffffff !important;
-    text-shadow: none !important;
+  main .roadmaster-inner h1,
+  main .roadmaster-inner h2,
+  main .roadmaster-inner p,
+  main .roadmaster-inner li,
+  main .roadmaster-inner .placeholder {
+    color: var(--roadmaster-text-color) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   }
 
-  main .project-page-inner p,
-  main .project-page-inner li {
-    color: #ffffff !important;
-    text-shadow: none !important;
-  }
-
-  main .project-page-inner .problem li {
-    color: #ffffff !important;
-    font-weight: 500;
-  }
-
-
-  main .project-page-inner h1 {
-    font-size: clamp(1.75rem, 5vw, 3rem);
+  main .roadmaster-inner h1 {
+    font-size: var(--roadmaster-title-size);
     margin-bottom: 2rem;
+    font-weight: 700;
   }
 
-  main .project-page-inner section {
+  .roadmaster-inner section {
     margin-bottom: 2.5rem;
   }
 
-  main .project-page-inner h2 {
-    font-size: clamp(1.25rem, 3vw, 2rem);
+  main .roadmaster-inner h2 {
+    font-size: var(--roadmaster-subtitle-size);
     margin-bottom: 1rem;
+    font-weight: 600;
   }
 
-  main .project-page-inner p {
-    font-size: clamp(1rem, 2vw, 1.125rem);
+  main .roadmaster-inner p {
+    font-size: var(--roadmaster-body-size);
     line-height: 1.8;
     margin-bottom: 1rem;
+    font-weight: 500;
   }
 
   .what-is {
@@ -93,7 +142,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   }
 
   .problem {
-    background: rgba(99, 102, 241, 0.15);
+    background: rgba(99, 102, 241, 0.2);
     padding: 1.5rem;
     border-radius: 12px;
   }
@@ -110,6 +159,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     position: relative;
     color: #ffffff !important;
     line-height: 1.6;
+    font-weight: 500;
   }
 
   .problem li::before {
@@ -120,6 +170,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     font-weight: bold;
   }
 
+  .screenshots {
+    background: rgba(251, 191, 36, 0.2);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+  }
 
   .cta-buttons {
     display: flex;
@@ -129,38 +185,47 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     flex-wrap: wrap;
   }
 
-  .btn {
+  main .roadmaster-inner .btn {
     display: inline-block;
     padding: 0.875rem 2rem;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: 600;
     transition: all 0.2s;
     font-size: clamp(0.9375rem, 2vw, 1.125rem);
+    min-height: 48px;
+    line-height: 1.2;
+    box-sizing: border-box;
   }
 
-  .btn-primary {
-    background-color: #ffffff;
-    color: #1a1a1a !important;
+  main .roadmaster-inner .btn-primary {
+    background: #ffffff !important;
+    color: #0f0f23 !important;
+    border: none !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    font-weight: 700;
   }
 
-  .btn-primary:hover {
-    background-color: #e5e5e5;
+  main .roadmaster-inner .btn-primary:hover {
+    background: #f0f0f5 !important;
+    color: #0f0f23 !important;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
   }
 
-  main .project-page-inner .btn-secondary {
-    background-color: transparent !important;
+  main .roadmaster-inner .btn-secondary {
+    background: rgba(255, 255, 255, 0.2) !important;
     color: #ffffff !important;
     border: 2px solid #ffffff !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
   }
 
-  main .project-page-inner .btn-secondary:hover {
-    background-color: #ffffff !important;
-    color: #1a1a1a !important;
+  main .roadmaster-inner .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.35) !important;
+    color: #ffffff !important;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
   }
 
   @media (max-width: 768px) {
@@ -168,22 +233,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       padding: 1.5rem 0.75rem 3rem;
     }
 
-    main .project-page-inner {
+    .roadmaster-inner {
       padding: 1.25rem 1rem;
       border-radius: 12px;
     }
 
-    main .project-page-inner h1 {
+    .roadmaster-inner h1 {
       font-size: 1.75rem;
       margin-bottom: 1.5rem;
     }
 
-    main .project-page-inner h2 {
+    .roadmaster-inner h2 {
       font-size: 1.25rem;
     }
 
     .what-is,
-    .problem {
+    .problem,
+    .screenshots {
       padding: 1.25rem;
     }
 
@@ -192,7 +258,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       margin-top: 2rem;
     }
 
-    .btn {
+    main .roadmaster-inner .btn {
       width: 100%;
       text-align: center;
     }
@@ -203,7 +269,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       padding: 1rem 0.5rem 2rem;
     }
 
-    main .project-page-inner {
+    main .roadmaster-inner {
       padding: 1rem 0.75rem;
     }
   }

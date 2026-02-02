@@ -22,4 +22,20 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { blog };
+const proyectos = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/proyectos" }),
+  schema: z.object({
+    slug: z.string().optional(),
+    title: z.string(),
+    description: z.string().optional(),
+    intro: z.string(),
+    problemList: z.array(z.union([z.string(), z.object({ item: z.string() })])),
+    screenshotText: z.string().optional(),
+    btnPrimaryLabel: z.string().optional(),
+    btnPrimaryUrl: z.string().optional(),
+    btnSecondaryLabel: z.string().optional(),
+    btnSecondaryUrl: z.string().optional(),
+  }),
+});
+
+export const collections = { blog, proyectos };

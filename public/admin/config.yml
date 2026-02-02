@@ -1,3 +1,7 @@
+# En localhost, Decap usa el proxy local (npx decap-server) y escribe en tu repo Git local.
+# En producción sigue usando GitHub.
+local_backend: true
+
 backend:
   name: github
   repo: MihaiStu/blog-admi
@@ -28,3 +32,26 @@ collections:
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "proyectos"
+    label: "Proyectos"
+    folder: "src/content/proyectos"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "slug"
+    fields:
+      - { label: "Slug (nombre archivo)", name: "slug", widget: "string", hint: "Ej: roadmaster" }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción (meta)", name: "description", widget: "string", required: false }
+      - { label: "Párrafo intro (¿Qué es?)", name: "intro", widget: "text" }
+      - label: "Lista (¿Qué problema resuelve?)"
+        name: "problemList"
+        widget: "list"
+        summary: "{{fields.item}}"
+        fields:
+          - { label: "Punto", name: "item", widget: "string" }
+      - { label: "Texto capturas", name: "screenshotText", widget: "string", required: false }
+      - { label: "Botón principal - texto", name: "btnPrimaryLabel", widget: "string", required: false }
+      - { label: "Botón principal - enlace", name: "btnPrimaryUrl", widget: "string", required: false }
+      - { label: "Botón demo - texto", name: "btnSecondaryLabel", widget: "string", required: false }
+      - { label: "Botón demo - enlace", name: "btnSecondaryUrl", widget: "string", required: false }

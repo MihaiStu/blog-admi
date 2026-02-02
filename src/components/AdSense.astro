@@ -1,0 +1,48 @@
+---
+/**
+ * Bloque de Google AdSense.
+ * Necesitas: cuenta AdSense aprobada, ID de publicador (ca-pub-XXX) y al menos un bloque de anuncios (data-ad-slot).
+ *
+ * En .env define:
+ *   PUBLIC_ADSENSE_CLIENT=ca-pub-XXXXXXXX
+ *
+ * En el panel de AdSense crea bloques de anuncios y copia el data-ad-slot (número) en la prop adSlot.
+ */
+interface Props {
+  adSlot: string;
+  adClient?: string;
+  format?: 'auto' | 'rectangle' | 'horizontal' | 'vertical';
+  className?: string;
+  style?: string;
+}
+
+const { adSlot, adClient = import.meta.env.PUBLIC_ADSENSE_CLIENT, format = 'auto', className = '', style = 'display:block' } = Astro.props;
+const showAd = adClient && adSlot;
+---
+
+{showAd && (
+  <div class={`adsense-wrapper ${className}`}>
+    <ins
+      class="adsbygoogle"
+      style={style}
+      data-ad-client={adClient}
+      data-ad-slot={adSlot}
+      data-ad-format={format}
+      data-full-width-responsive="true"
+    />
+    <script is:inline>
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+)
+
+<style>
+  .adsense-wrapper {
+    margin: 1.5rem 0;
+    min-height: 100px;
+    text-align: center;
+  }
+  .adsense-wrapper :global(.adsbygoogle) {
+    overflow: hidden;
+  }
+</style>
