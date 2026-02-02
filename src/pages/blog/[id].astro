@@ -187,6 +187,74 @@ const categoryLabel: Record<string, string> = {
     margin: 2.5rem 0;
   }
 
+  /* Tablas responsive */
+  .article-body :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .article-body :global(th),
+  .article-body :global(td) {
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .article-body :global(th) {
+    background: rgba(99, 102, 241, 0.1);
+    font-weight: 600;
+    color: #0f172a;
+  }
+
+  .article-body :global(tr:nth-child(even)) {
+    background: rgba(0, 0, 0, 0.02);
+  }
+
+  /* Blockquotes */
+  .article-body :global(blockquote) {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    background: rgba(99, 102, 241, 0.08);
+    border-left: 4px solid #6366f1;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    color: #334155;
+  }
+
+  .article-body :global(blockquote p) {
+    margin: 0;
+  }
+
+  /* Videos/iframes */
+  .article-body :global(.video-container) {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    margin: 2rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .article-body :global(.video-container iframe) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .article-body :global(iframe) {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
   /* Tablet */
   @media (max-width: 1024px) {
     .article-page {
@@ -242,6 +310,20 @@ const categoryLabel: Record<string, string> = {
     .article-image img {
       max-height: 250px;
     }
+
+    .article-body :global(table) {
+      font-size: 0.875rem;
+    }
+
+    .article-body :global(th),
+    .article-body :global(td) {
+      padding: 0.5rem 0.75rem;
+    }
+
+    .article-body :global(blockquote) {
+      padding: 0.875rem 1rem;
+      margin: 1.25rem 0;
+    }
   }
 
   /* Móvil pequeño */
@@ -276,6 +358,20 @@ const categoryLabel: Record<string, string> = {
 
     .article-image img {
       max-height: 200px;
+    }
+
+    .article-body :global(table) {
+      font-size: 0.8125rem;
+    }
+
+    .article-body :global(th),
+    .article-body :global(td) {
+      padding: 0.4rem 0.5rem;
+    }
+
+    .article-body :global(blockquote) {
+      padding: 0.75rem;
+      font-size: 0.9rem;
     }
   }
 </style>

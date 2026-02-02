@@ -31,10 +31,9 @@ const articulos = (await getCollection('blog', ({ data }) => data.category === '
         <p>Tarjeta BP para transporte profesional. Descuentos por volumen, control de gasto y facturación detallada.</p>
       </a>
 
-      <a href="#" class="tarjeta-card tarjeta-pending">
+      <a href="/blog/2026-02-02-tarjeta-gasoil-profesional-dkv" class="tarjeta-card">
         <h2>DKV Card</h2>
         <p>Tarjeta multimarca para transporte internacional. Amplia red europea, peajes y servicios complementarios.</p>
-        <span class="coming-soon">Próximamente</span>
       </a>
     </section>
   </div>
@@ -369,13 +368,82 @@ const articulos = (await getCollection('blog', ({ data }) => data.category === '
     }
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 480px) {
+    .marcas-container {
+      padding: 0.75rem 0.5rem 1rem;
+    }
+
+    .tarjetas-header h1 {
+      font-size: 1.25rem;
+    }
+
+    .tarjetas-intro {
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    .tarjetas-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+
+    .tarjeta-card {
+      padding: 0.875rem;
+    }
+
+    .tarjeta-card h2 {
+      font-size: 1rem;
+      margin-bottom: 0.375rem;
+    }
+
+    .tarjeta-card p {
+      font-size: 0.75rem;
+      line-height: 1.4;
+    }
+
+    .coming-soon {
+      font-size: 0.625rem;
+      padding: 0.2rem 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .articulos-container {
+      padding: 0 0.5rem 2rem;
+    }
+
+    .articulos-section h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .articulo-content {
+      padding: 0.75rem;
+    }
+
+    .articulo-content h3 {
+      font-size: 0.875rem;
+    }
+
+    .articulo-content p {
+      font-size: 0.75rem;
+    }
+  }
+
+  @media (max-width: 360px) {
     .tarjetas-grid {
       grid-template-columns: 1fr;
     }
 
     .tarjeta-card {
-      padding: 1.25rem;
+      padding: 1rem;
+    }
+
+    .tarjeta-card h2 {
+      font-size: 1.125rem;
+    }
+
+    .tarjeta-card p {
+      font-size: 0.8125rem;
     }
   }
 </style>

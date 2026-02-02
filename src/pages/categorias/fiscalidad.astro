@@ -1,8 +1,79 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const articulos = (await getCollection('blog', ({ data }) => data.category === 'fiscalidad'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <BaseLayout pageBg="categorias" title="Fiscalidad - Blog AdmiLogistic" description="Información sobre fiscalidad y normativa fiscal">
-  <h1>Fiscalidad</h1>
-  <p>Guías y artículos sobre fiscalidad, normativa fiscal y obligaciones tributarias del sector del transporte.</p>
+  <div class="section-inner" style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem 4rem;">
+    <h1>Fiscalidad</h1>
+    <p class="intro">Guías y artículos sobre fiscalidad, normativa fiscal y obligaciones tributarias del sector del transporte.</p>
+
+    {articulos.length === 0 ? (
+      <p class="empty">Próximamente publicaremos artículos sobre fiscalidad del transporte.</p>
+    ) : (
+      <ul class="lista-articulos">
+        {articulos.map((entry) => (
+          <li>
+            <a href={`/blog/${entry.id}`}>{entry.data.title}</a>
+            <time datetime={entry.data.pubDate.toISOString()}>
+              {entry.data.pubDate.toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' })}
+            </time>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
 </BaseLayout>
+
+<style>
+  h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  }
+  .intro, .empty {
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  }
+  .lista-articulos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .lista-articulos li {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .lista-articulos a {
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  .lista-articulos a:hover {
+    color: #a5b4fc;
+  }
+  .lista-articulos time {
+    display: block;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 0.25rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  }
+
+  @media (max-width: 768px) {
+    h1 { font-size: 1.75rem; }
+    .intro { font-size: 0.9375rem; }
+  }
+
+  @media (max-width: 480px) {
+    h1 { font-size: 1.5rem; }
+    .intro { font-size: 0.875rem; margin-bottom: 1.5rem; }
+    .lista-articulos li { padding: 0.75rem 0; }
+    .lista-articulos a { font-size: 0.9375rem; }
+    .lista-articulos time { font-size: 0.8125rem; }
+  }
+</style>
