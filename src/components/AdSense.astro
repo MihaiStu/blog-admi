@@ -17,10 +17,10 @@ interface Props {
 }
 
 const { adSlot, adClient = import.meta.env.PUBLIC_ADSENSE_CLIENT, format = 'auto', className = '', style = 'display:block' } = Astro.props;
-const showAd = adClient && adSlot;
+const showAd = Boolean(adClient && adSlot);
 ---
 
-{showAd && (
+{showAd ? (
   <div class={`adsense-wrapper ${className}`}>
     <ins
       class="adsbygoogle"
@@ -34,7 +34,7 @@ const showAd = adClient && adSlot;
       (window.adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   </div>
-)
+) : null}
 
 <style>
   .adsense-wrapper {
