@@ -5,29 +5,40 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 <BaseLayout pageBg="proyectos" title="Tacógrafo - Proyectos - Blog AdmiLogistic" description="Solución de gestión de tacógrafos digitales">
   <div class="project-page">
     <div class="project-page-inner">
+      <div class="construction-banner">
+        <span class="construction-icon">🚧</span>
+        <span>En construcción</span>
+      </div>
+
       <h1>Tacógrafo</h1>
 
-    <section class="what-is">
-      <h2>¿Qué es Tacógrafo?</h2>
-      <p>Tacógrafo es una aplicación especializada en la gestión y análisis de datos de tacógrafos digitales. Facilita el cumplimiento normativo, el análisis de tiempos de conducción y la generación de reportes para inspecciones.</p>
-    </section>
+      <section class="what-is">
+        <h2>¿Qué es Tacógrafo?</h2>
+        <p>Tacógrafo es una aplicación especializada en la gestión y análisis de datos de tacógrafos digitales. Facilita el cumplimiento normativo, el análisis de tiempos de conducción y la generación de reportes para inspecciones.</p>
+      </section>
 
-    <section class="problem">
-      <h2>¿Qué problema resuelve?</h2>
-      <ul>
-        <li>Lectura y análisis automático de datos de tacógrafos digitales</li>
-        <li>Cumplimiento de normativas europeas de tiempos de conducción</li>
-        <li>Detección automática de infracciones y alertas</li>
-        <li>Generación de reportes para inspecciones</li>
-        <li>Gestión de múltiples conductores y vehículos</li>
-        <li>Historial completo de actividades de conducción</li>
-      </ul>
-    </section>
+      <section class="problem">
+        <h2>¿Qué problema resuelve?</h2>
+        <ul>
+          <li>Lectura y análisis automático de datos de tacógrafos digitales</li>
+          <li>Cumplimiento de normativas europeas de tiempos de conducción</li>
+          <li>Detección automática de infracciones y alertas</li>
+          <li>Generación de reportes para inspecciones</li>
+          <li>Gestión de múltiples conductores y vehículos</li>
+          <li>Historial completo de actividades de conducción</li>
+        </ul>
+      </section>
 
-    <div class="cta-buttons">
-      <a href="#" class="btn btn-primary">Entrar a la app</a>
-      <a href="#" class="btn btn-secondary">Probar demo</a>
-    </div>
+      <section class="app-preview">
+        <h2>Vista previa</h2>
+        <div class="preview-placeholder">
+          <img src="/images/projects/tacografo-800.jpg" alt="Tacógrafo App Preview" />
+        </div>
+      </section>
+
+      <div class="cta-buttons">
+        <span class="btn btn-disabled">Próximamente disponible</span>
+      </div>
     </div>
   </div>
 </BaseLayout>
@@ -41,61 +52,78 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   .project-page-inner {
     max-width: 900px;
     margin: 0 auto;
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-    color: #1a1a1a;
   }
 
-  .project-page-inner h1,
-  .project-page-inner h2 {
-    color: #1a1a1a !important;
-    text-shadow: none !important;
+  .construction-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.3), rgba(245, 158, 11, 0.3));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(251, 191, 36, 0.5);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    margin-bottom: 2rem;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .project-page-inner p,
-  .project-page-inner li {
-    color: #222 !important;
-    text-shadow: none !important;
+  .construction-icon {
+    font-size: 1.25rem;
   }
 
-  .project-page-inner .problem li {
-    color: #1a1a1a !important;
-    font-weight: 500;
+  .construction-banner span:last-child {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   }
-
 
   .project-page-inner h1 {
-    font-size: clamp(1.75rem, 5vw, 3rem);
+    font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 2rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    text-align: center;
   }
 
   .project-page-inner section {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
   }
 
   .project-page-inner h2 {
-    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
     margin-bottom: 1rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
   }
 
   .project-page-inner p {
     font-size: clamp(1rem, 2vw, 1.125rem);
     line-height: 1.8;
     margin-bottom: 1rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
   }
 
   .what-is {
-    background: rgba(0, 0, 0, 0.04);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     padding: 1.5rem;
     border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
   }
 
   .problem {
-    background: rgba(99, 102, 241, 0.06);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     padding: 1.5rem;
     border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
   }
 
   .problem ul {
@@ -106,25 +134,45 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
   .problem li {
     padding: 0.6rem 0;
-    padding-left: 1.5rem;
+    padding-left: 1.75rem;
     position: relative;
-    color: #222 !important;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     line-height: 1.6;
+    font-weight: 500;
   }
 
   .problem li::before {
     content: "✓";
     position: absolute;
     left: 0;
-    color: #4f46e5;
+    color: #a5b4fc;
     font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   }
 
-  .screenshots {
-    background: rgba(251, 191, 36, 0.12);
+  .app-preview {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     padding: 1.5rem;
     border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
     text-align: center;
+  }
+
+  .preview-placeholder {
+    margin-top: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  .preview-placeholder img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.85;
   }
 
   .cta-buttons {
@@ -141,42 +189,20 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
-    transition: all 0.2s;
     font-size: clamp(0.9375rem, 2vw, 1.125rem);
   }
 
-  .btn-primary {
-    background-color: #1a1a1a;
-    color: white !important;
-  }
-
-  .btn-primary:hover {
-    background-color: #333;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-
-  .btn-secondary {
-    background-color: #ffffff !important;
-    color: #1a1a1a !important;
-    border: 2px solid #1a1a1a !important;
-  }
-
-  .btn-secondary:hover {
-    background-color: #1a1a1a !important;
-    color: white !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  .btn-disabled {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: rgba(255, 255, 255, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    cursor: not-allowed;
   }
 
   @media (max-width: 768px) {
     .project-page {
       padding: 1.5rem 0.75rem 3rem;
-    }
-
-    .project-page-inner {
-      padding: 1.25rem 1rem;
-      border-radius: 12px;
     }
 
     .project-page-inner h1 {
@@ -189,18 +215,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     }
 
     .what-is,
-    .problem {
+    .problem,
+    .app-preview {
       padding: 1.25rem;
     }
 
-    .cta-buttons {
-      flex-direction: column;
-      margin-top: 2rem;
-    }
-
-    .btn {
-      width: 100%;
-      text-align: center;
+    .construction-banner {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
     }
   }
 
@@ -209,8 +231,26 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       padding: 1rem 0.5rem 2rem;
     }
 
-    .project-page-inner {
-      padding: 1rem 0.75rem;
+    .project-page-inner h1 {
+      font-size: 1.5rem;
+    }
+
+    .project-page-inner h2 {
+      font-size: 1.125rem;
+    }
+
+    .project-page-inner p {
+      font-size: 0.9375rem;
+    }
+
+    .what-is,
+    .problem,
+    .app-preview {
+      padding: 1rem;
+    }
+
+    .problem li {
+      font-size: 0.9375rem;
     }
   }
 </style>
