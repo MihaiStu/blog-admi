@@ -89,39 +89,114 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <!-- Precios oficiales -->
   <section id="precios" class="herramientas-block precios-section">
     <h2>Precios oficiales – AdmiLogistic Suite</h2>
-    <p class="block-intro">Estructura de precios SaaS TMS para PYMES de transporte. Competitiva y escalable.</p>
-    <div class="plans-grid four-plans">
-      <div class="plan-card plan-free">
-        <h3>Free</h3>
-        <p class="plan-desc">TMS básico (5 registros, solo lectura)</p>
-        <div class="plan-price"><span class="price">0 €</span></div>
-        <p class="plan-cta">Ideal para probar la plataforma</p>
-      </div>
+    <p class="block-intro">Plataforma profesional todo-en-uno para flotas pequeñas y medianas. Precios transparentes.</p>
+
+    <div class="included-all-plans">
+      <h3>Todos los planes incluyen</h3>
+      <ul>
+        <li>Mantenimiento y soporte del sistema</li>
+        <li>Actualizaciones y mejoras continuas</li>
+        <li>Nuevos KPIs e informes estándar</li>
+        <li>Optimización progresiva del producto</li>
+        <li>Adaptaciones normativas</li>
+        <li>Evolución basada en el uso real de los clientes</li>
+      </ul>
+      <p class="excluded-note">No incluyen desarrollos a medida ni integraciones específicas bajo demanda.</p>
+    </div>
+
+    <div class="plans-grid products-grid">
       <div class="plan-card">
-        <h3>TMS Premium</h3>
-        <p class="plan-desc">Viajes, camiones, conductores, finanzas, mantenimiento y documentación ilimitados</p>
+        <h3>AdmiLogistic</h3>
+        <p class="plan-subtitle">Gestión + Finanzas + Compliance</p>
         <div class="plan-price">
-          <span class="price">29 €<span class="period">/mes</span></span>
-          <span class="price-annual">290 €/año</span>
+          <span class="price">129 €<span class="period">/mes</span></span>
+          <span class="price-annual">1.290 €/año (2 meses gratis)</span>
         </div>
+        <p class="plan-scope">Hasta 5 camiones incluidos.</p>
+        <ul class="plan-features">
+          <li>Gestión de camiones y conductores</li>
+          <li>Control documental con alertas de caducidad</li>
+          <li>Talleres, averías y mantenimiento predictivo</li>
+          <li>Registro de viajes</li>
+          <li>Facturación</li>
+          <li>Ingresos, gastos y cierres mensuales/trimestrales</li>
+          <li>KPIs operativos y financieros</li>
+          <li>Dashboard e informes</li>
+        </ul>
+        <p class="plan-extra">Camiones adicionales: <strong>+20 €/mes</strong> por unidad</p>
       </div>
       <div class="plan-card">
-        <h3>TMS + RoadMaster</h3>
-        <p class="plan-desc">Todo lo anterior + planificación avanzada de rutas</p>
+        <h3>RoadMaster</h3>
+        <p class="plan-subtitle">Operativa y producción</p>
+        <div class="plan-price">
+          <span class="price">79 €<span class="period">/mes</span></span>
+        </div>
+        <ul class="plan-features">
+          <li>Control operativo de viajes</li>
+          <li>Producción por camión y conductor</li>
+          <li>KPIs de actividad</li>
+          <li>Históricos y seguimiento de rendimiento</li>
+        </ul>
+      </div>
+      <div class="plan-card">
+        <h3>Módulo Tacógrafo y Cumplimiento</h3>
         <div class="plan-price">
           <span class="price">49 €<span class="period">/mes</span></span>
-          <span class="price-annual">490 €/año</span>
         </div>
+        <ul class="plan-features">
+          <li>Control de tiempos de conducción y descanso</li>
+          <li>Informes de cumplimiento</li>
+          <li>Preparación para inspecciones</li>
+          <li>Históricos de actividad</li>
+        </ul>
       </div>
-      <div class="plan-card plan-complete">
-        <span class="badge-plan">Suite completa</span>
-        <h3>TMS + RoadMaster + Tacógrafo</h3>
-        <p class="plan-desc">Gestión total + cumplimiento normativo</p>
+    </div>
+
+    <div class="plans-grid suites-grid">
+      <div class="plan-card suite-card">
+        <h3>Suite Operativa</h3>
+        <p class="plan-subtitle">AdmiLogistic + RoadMaster</p>
         <div class="plan-price">
-          <span class="price">69 €<span class="period">/mes</span></span>
-          <span class="price-annual">690 €/año</span>
+          <span class="price">189 €<span class="period">/mes</span></span>
+          <span class="price-annual">1.890 €/año</span>
         </div>
+        <ul class="plan-features">
+          <li>Gestión completa + producción de viajes</li>
+          <li>KPIs operativos y financieros integrados</li>
+          <li>Informes unificados</li>
+        </ul>
       </div>
+      <div class="plan-card suite-card plan-complete">
+        <span class="badge-plan">Recomendado</span>
+        <h3>Suite Completa</h3>
+        <p class="plan-subtitle">AdmiLogistic + RoadMaster + Tacógrafo</p>
+        <div class="plan-price">
+          <span class="price">249 €<span class="period">/mes</span></span>
+          <span class="price-annual">2.490 €/año</span>
+        </div>
+        <ul class="plan-features">
+          <li>Gestión integral de flota</li>
+          <li>Control financiero completo</li>
+          <li>Producción y rentabilidad de viajes</li>
+          <li>Cumplimiento legal y tacógrafo</li>
+          <li>Informes listos para inspecciones y gestoría</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="positioning-block">
+      <h3>Posicionamiento</h3>
+      <ul>
+        <li>Más completo que los FMS básicos del mercado (14–35 €/mes)</li>
+        <li>Sin coste de hardware frente a soluciones con GPS</li>
+        <li>Más accesible que ERP de transporte con implantaciones de miles de euros</li>
+        <li>Pensado específicamente para flotas pequeñas y medianas</li>
+      </ul>
+    </div>
+
+    <div class="conclusion-block">
+      <p>AdmiLogistic Suite es una plataforma profesional todo-en-uno para empresas de transporte que quieren <strong>control real de su flota</strong>, <strong>visibilidad financiera</strong>, <strong>cumplimiento legal</strong> y menos riesgos con más margen.</p>
+      <p class="tagline">Un solo sistema. Sin hardware. Sin software innecesario.</p>
     </div>
   </section>
 
@@ -465,35 +540,80 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     line-height: 1.6;
   }
 
-  .plans-grid.four-plans {
+  .included-all-plans {
+    margin-top: 1.25rem;
+    margin-bottom: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .included-all-plans h3 {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+
+  .included-all-plans ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.75rem 0;
+  }
+
+  .included-all-plans li {
+    padding: 0.25rem 0;
+    padding-left: 1.35rem;
+    position: relative;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 0.9375rem;
+    line-height: 1.45;
+  }
+
+  .included-all-plans li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #86efac;
+  }
+
+  .included-all-plans .excluded-note {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .plans-grid.products-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    margin-top: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .plans-grid.suites-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin-top: 1.25rem;
   }
 
   @media (max-width: 900px) {
-    .plans-grid.four-plans {
-      grid-template-columns: repeat(2, 1fr);
+    .plans-grid.products-grid {
+      grid-template-columns: 1fr;
     }
-  }
-
-  @media (max-width: 480px) {
-    .plans-grid.four-plans {
+    .plans-grid.suites-grid {
       grid-template-columns: 1fr;
     }
   }
 
   .precios-section .plan-card {
     background: rgba(255, 255, 255, 0.12);
-    padding: 1.25rem;
+    padding: 1.35rem;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     position: relative;
-  }
-
-  .precios-section .plan-card.plan-free {
-    border-style: dashed;
   }
 
   .precios-section .plan-card.plan-complete {
@@ -501,20 +621,24 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   }
 
   .precios-section .plan-card h3 {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: #ffffff;
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.25rem;
   }
 
-  .precios-section .plan-desc {
+  .precios-section .plan-subtitle {
     font-size: 0.8125rem;
-    color: rgba(255, 255, 255, 0.88);
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.4;
     margin-bottom: 0.75rem;
   }
 
+  .precios-section .plan-price {
+    margin-bottom: 0.5rem;
+  }
+
   .precios-section .plan-price .price {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #ffffff;
   }
@@ -531,10 +655,93 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     margin-top: 0.2rem;
   }
 
-  .precios-section .plan-cta {
+  .precios-section .plan-scope {
     font-size: 0.8125rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.88);
+    margin-bottom: 0.5rem;
+  }
+
+  .precios-section .plan-features {
+    list-style: none;
+    padding: 0;
     margin: 0.5rem 0 0 0;
+  }
+
+  .precios-section .plan-features li {
+    padding: 0.3rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.8125rem;
+    line-height: 1.4;
+  }
+
+  .precios-section .plan-features li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a5b4fc;
+  }
+
+  .precios-section .plan-extra {
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0.75rem 0 0 0;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .positioning-block {
+    margin-top: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+  }
+
+  .positioning-block h3 {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+
+  .positioning-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .positioning-block li {
+    padding: 0.35rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+
+  .positioning-block li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: #a5b4fc;
+  }
+
+  .conclusion-block {
+    margin-top: 1.5rem;
+    text-align: center;
+    padding: 1.25rem 1rem;
+  }
+
+  .conclusion-block p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+
+  .conclusion-block .tagline {
+    font-weight: 600;
+    margin-bottom: 0;
   }
 
   .badge-plan {
