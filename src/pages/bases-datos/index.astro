@@ -8,8 +8,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css" crossorigin="" />
 
   <div class="bases-hero">
-    <h1>Bases de Datos en el mapa</h1>
-    <p>Los mismos datos que usa RoadMaster: talleres, gasolineras, parkings y hoteles en toda España. Datos de fiar, actualizados y listos para planificar rutas.</p>
+    <h1>Bases de datos en el mapa para transporte profesional</h1>
+    <p>RoadMaster integra en un solo mapa talleres para camiones, gasolineras, parkings seguros y hoteles para transportistas en toda España.</p>
+    <p>Todos los datos están verificados, actualizados y listos para usarse en la planificación de rutas profesionales, reduciendo desvíos, pérdidas de tiempo y decisiones a ciegas.</p>
+    <div class="bases-hero-notice">
+      <strong>⚠️ Importante:</strong> esta visualización muestra solo una pequeña parte de nuestra base de datos real.<br />
+      RoadMaster trabaja con una base mucho más amplia, diseñada para cubrir las necesidades operativas diarias del transporte por carretera.
+    </div>
+    <p class="bases-hero-tagline">Porque en transporte, la información correcta marca la diferencia.</p>
     <div class="bases-stats" id="bases-stats">
       <span class="bases-stats-item" data-layer="talleres"><strong id="count-talleres">—</strong> talleres</span>
       <span class="bases-stats-item" data-layer="gasolineras"><strong id="count-gasolineras">—</strong> gasolineras</span>
@@ -202,6 +208,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     color: rgba(255,255,255,0.95);
     line-height: 1.65;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    margin-bottom: 0.75rem;
+  }
+  .bases-hero-notice {
+    margin: 1.25rem 0 0.75rem;
+    padding: 1rem 1.25rem;
+    background: rgba(251, 191, 36, 0.2);
+    border: 1px solid rgba(251, 191, 36, 0.5);
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    color: rgba(255,255,255,0.95);
+    line-height: 1.55;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    text-align: left;
+  }
+  .bases-hero-tagline {
+    font-weight: 600;
+    margin-bottom: 0 !important;
   }
   .bases-stats {
     display: flex;
