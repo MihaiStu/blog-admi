@@ -1,0 +1,501 @@
+---
+// Documento 2: Guía de Tiempos de Conducción y Descanso
+// Página imprimible a PDF
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía Maestra de Tiempos 2026 - AdmiLogistic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.5;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: #fff;
+      padding: 18mm 16mm;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page {
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+        padding: 12mm;
+        box-shadow: none;
+      }
+      .no-print { display: none !important; }
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 3px solid #2563eb;
+      margin-bottom: 16px;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      color: #1e293b;
+    }
+
+    .logo span { color: #2563eb; }
+
+    .year-badge {
+      background: linear-gradient(135deg, #ff6b35, #f59e0b);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 20px;
+    }
+
+    /* Title */
+    .title-section {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .title-section h1 {
+      font-size: 24px;
+      font-weight: 800;
+      color: #1e293b;
+      margin-bottom: 6px;
+    }
+
+    .title-section h1 span { color: #2563eb; }
+
+    .subtitle {
+      font-size: 11px;
+      color: #64748b;
+    }
+
+    .legal-ref {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #3730a3;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 15px;
+      margin-top: 8px;
+    }
+
+    /* Grid layout */
+    .blocks-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    /* Block cards */
+    .block-card {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 14px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .block-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid;
+    }
+
+    .block-icon {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      font-size: 18px;
+    }
+
+    .block-title {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* Block A - Conducción (Azul) */
+    .block-a .block-header { border-color: #2563eb; }
+    .block-a .block-icon { background: #dbeafe; }
+    .block-a .block-title { color: #1d4ed8; }
+
+    /* Block B - Pausas (Verde) */
+    .block-b .block-header { border-color: #22c55e; }
+    .block-b .block-icon { background: #dcfce7; }
+    .block-b .block-title { color: #15803d; }
+
+    /* Block C - Descanso Diario (Naranja) */
+    .block-c .block-header { border-color: #f59e0b; }
+    .block-c .block-icon { background: #fef3c7; }
+    .block-c .block-title { color: #b45309; }
+
+    /* Block D - Descanso Semanal (Púrpura) */
+    .block-d .block-header { border-color: #8b5cf6; }
+    .block-d .block-icon { background: #ede9fe; }
+    .block-d .block-title { color: #6d28d9; }
+
+    /* Time items */
+    .time-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px dashed #e2e8f0;
+    }
+
+    .time-item:last-child { border-bottom: none; }
+
+    .time-label {
+      font-size: 11px;
+      color: #475569;
+      font-weight: 500;
+    }
+
+    .time-value {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1e293b;
+      background: #fff;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .time-note {
+      font-size: 10px;
+      color: #64748b;
+      margin-top: 4px;
+    }
+
+    /* Alert box */
+    .alert-box {
+      background: linear-gradient(135deg, #fef2f2, #fee2e2);
+      border: 2px solid #fca5a5;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+    }
+
+    .alert-box h3 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #b91c1c;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .alert-list {
+      list-style: none;
+    }
+
+    .alert-list li {
+      font-size: 11px;
+      color: #7f1d1d;
+      padding: 6px 0;
+      padding-left: 20px;
+      position: relative;
+      border-bottom: 1px dashed #fca5a5;
+    }
+
+    .alert-list li:last-child { border-bottom: none; }
+
+    .alert-list li::before {
+      content: "⚠️";
+      position: absolute;
+      left: 0;
+      font-size: 10px;
+    }
+
+    /* Emergency section */
+    .emergency-section {
+      background: #f0fdf4;
+      border: 2px solid #86efac;
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+
+    .emergency-section h3 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #166534;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .emergency-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 10px;
+      color: #166534;
+    }
+
+    .step-num {
+      width: 20px;
+      height: 20px;
+      background: #22c55e;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 2px solid #e2e8f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-left {
+      font-size: 9px;
+      color: #94a3b8;
+    }
+
+    .footer-logo {
+      font-size: 11px;
+      font-weight: 700;
+      color: #64748b;
+    }
+
+    .footer-logo span { color: #2563eb; }
+
+    /* Print button */
+    .print-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      padding: 14px 24px;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+    }
+
+    .print-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="logo">Admi<span>Logistic</span></div>
+      <div class="year-badge">KIT 2026</div>
+    </header>
+
+    <div class="title-section">
+      <h1>Guía Maestra de <span>Tiempos</span> 2026</h1>
+      <p class="subtitle">Consulta técnica rápida sobre límites legales | Documento 2 de 4</p>
+      <span class="legal-ref">Reglamento (CE) 561/2006 actualizado</span>
+    </div>
+
+    <div class="blocks-grid">
+      <!-- Bloque A: Conducción -->
+      <div class="block-card block-a">
+        <div class="block-header">
+          <div class="block-icon">🚛</div>
+          <h2 class="block-title">BLOQUE A: CONDUCCIÓN</h2>
+        </div>
+        <div class="time-item">
+          <div>
+            <div class="time-label">Conducción DIARIA</div>
+            <div class="time-note">Ampliable a 10h máx. 2 veces/semana</div>
+          </div>
+          <div class="time-value">9 horas</div>
+        </div>
+        <div class="time-item">
+          <div>
+            <div class="time-label">Conducción SEMANAL</div>
+          </div>
+          <div class="time-value">56 horas</div>
+        </div>
+        <div class="time-item">
+          <div>
+            <div class="time-label">Conducción BISEMANAL</div>
+            <div class="time-note">Suma de 2 semanas consecutivas</div>
+          </div>
+          <div class="time-value">90 horas</div>
+        </div>
+      </div>
+
+      <!-- Bloque B: Pausas -->
+      <div class="block-card block-b">
+        <div class="block-header">
+          <div class="block-icon">☕</div>
+          <h2 class="block-title">BLOQUE B: PAUSAS</h2>
+        </div>
+        <div class="time-item">
+          <div>
+            <div class="time-label">Tras 4,5 horas de conducción</div>
+            <div class="time-note">Ininterrumpida obligatoria</div>
+          </div>
+          <div class="time-value">45 min</div>
+        </div>
+        <div class="time-item">
+          <div>
+            <div class="time-label">Pausa FRACCIONADA</div>
+            <div class="time-note">Siempre en este orden: primero 15, luego 30</div>
+          </div>
+          <div class="time-value">15 + 30 min</div>
+        </div>
+      </div>
+
+      <!-- Bloque C: Descanso Diario -->
+      <div class="block-card block-c">
+        <div class="block-header">
+          <div class="block-icon">🌙</div>
+          <h2 class="block-title">BLOQUE C: DESCANSO DIARIO</h2>
+        </div>
+        <div class="time-item">
+          <div>
+            <div class="time-label">Descanso NORMAL</div>
+            <div class="time-note">Seguidas en periodo de 24h</div>
+          </div>
+          <div class="time-value">11 horas</div>
+        </div>
+        <div class="time-item">
+          <div>
+            <div class="time-label">Descanso REDUCIDO</div>
+            <div class="time-note">Máx. 3 veces entre descansos semanales</div>
+          </div>
+          <div class="time-value">9 horas</div>
+        </div>
+        <div class="time-item">
+          <div>
+            <div class="time-label">Descanso FRACCIONADO</div>
+            <div class="time-note">Primera parte + segunda parte</div>
+          </div>
+          <div class="time-value">3h + 9h</div>
+        </div>
+      </div>
+
+      <!-- Bloque D: Descanso Semanal -->
+      <div class="block-card block-d">
+        <div class="block-header">
+          <div class="block-icon">🏠</div>
+          <h2 class="block-title">BLOQUE D: DESCANSO SEMANAL</h2>
+        </div>
+        <div class="time-item">
+          <div>
+            <div class="time-label">Descanso NORMAL</div>
+            <div class="time-note">¡Prohibido en cabina para transporte internacional!</div>
+          </div>
+          <div class="time-value">45 horas</div>
+        </div>
+        <div class="time-item">
+          <div>
+            <div class="time-label">Descanso REDUCIDO</div>
+            <div class="time-note">Recuperación antes de 3ª semana</div>
+          </div>
+          <div class="time-value">24 horas</div>
+        </div>
+        <div class="time-item">
+          <div>
+            <div class="time-label">Frecuencia</div>
+          </div>
+          <div class="time-value">Cada 6 días</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Alert: Regla de Oro -->
+    <div class="alert-box">
+      <h3>🚨 REGLA DE ORO: Control de 56 días</h3>
+      <ul class="alert-list">
+        <li><strong>Excesos de conducción bisemanal:</strong> Revisa que esta semana + anterior no superen 90h.</li>
+        <li><strong>Faltas de descanso semanal:</strong> Si hiciste 24h reducido hace 2 semanas, debes haber recuperado las 21h restantes.</li>
+        <li><strong>Compensación obligatoria:</strong> Las horas de reducción se recuperan "de un tirón" antes de la 3ª semana.</li>
+      </ul>
+    </div>
+
+    <!-- Emergency section -->
+    <div class="emergency-section">
+      <h3>🆘 ¿Dudas en mitad de la ruta? (Art. 12)</h3>
+      <div class="emergency-steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <span>Llega al primer lugar de parada seguro que permita la vía.</span>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <span>Imprime un ticket del tacógrafo inmediatamente.</span>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <span>Escribe en el reverso: "Justificación Art. 12 Reg. 561/2006 debido a [motivo]".</span>
+        </div>
+        <div class="step">
+          <span class="step-num">4</span>
+          <span>Firma el ticket y guárdalo 56 días para inspección.</span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-left">
+        © 2026 AdmiLogistic | Kit de Supervivencia del Transportista<br>
+        Este documento es una guía de referencia. Consulta siempre la normativa oficial vigente.
+      </div>
+      <span class="footer-logo">Admi<span>Logistic</span></span>
+    </footer>
+  </div>
+
+  <button class="print-btn no-print" onclick="window.print()">
+    🖨️ Imprimir / Guardar PDF
+  </button>
+</body>
+</html>

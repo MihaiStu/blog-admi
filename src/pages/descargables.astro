@@ -1,0 +1,1015 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqs = [
+  {
+    pregunta: "¿Es obligatorio el Tacógrafo G2V2?",
+    respuesta: "Sí, en 2026 es obligatorio para transporte internacional. Los vehículos nuevos deben incorporarlo de fábrica y los existentes tienen plazos de adaptación según la normativa europea. El G2V2 permite la inspección remota vía DSRC."
+  },
+  {
+    pregunta: "¿Cuántos días de registro debo llevar?",
+    respuesta: "56 días de datos obligatorios en cabina. Esto incluye los registros de la tarjeta del conductor y los tickets impresos con anotaciones manuales. Las autoridades pueden solicitar toda esta información en cualquier control."
+  },
+  {
+    pregunta: "¿Qué hago si no encuentro parking seguro?",
+    respuesta: "Aplicar el Artículo 12 con anotación manual en el ticket. Debes llegar al primer lugar seguro, imprimir un ticket del tacógrafo, anotar en el reverso la justificación detallada, firmar y guardar el documento durante 56 días."
+  },
+  {
+    pregunta: "¿Puedo dormir las 45h en el camión?",
+    respuesta: "No, el descanso semanal normal (45 horas) debe hacerse fuera del vehículo en alojamiento adecuado con instalaciones sanitarias. Solo el descanso semanal reducido (24h) puede realizarse en cabina si el vehículo está estacionado."
+  },
+  {
+    pregunta: "¿Cómo recuperar un descanso reducido?",
+    respuesta: "La compensación debe hacerse antes de finalizar la 3ª semana siguiente. Las horas de reducción (diferencia entre 45h y las horas tomadas) se recuperan 'de un tirón', anexas a otro descanso de al menos 9 horas."
+  },
+  {
+    pregunta: "¿Qué es la Inspección Remota?",
+    respuesta: "Las autoridades pueden leer tus datos vía DSRC (Dedicated Short-Range Communications) sin detener el camión. El tacógrafo G2V2 transmite información sobre tiempos de conducción, permitiendo a la policía identificar vehículos con posibles infracciones."
+  },
+  {
+    pregunta: "¿Sirven los tickets firmados como prueba?",
+    respuesta: "Sí, son fundamentales para justificar imprevistos. Un ticket del tacógrafo con anotación manuscrita en el reverso, fechado y firmado, es un documento legal válido para demostrar la aplicación del Artículo 12 ante las autoridades."
+  },
+  {
+    pregunta: "¿Cada cuánto descargar la tarjeta?",
+    respuesta: "Recomendado cada 15 días para evitar errores en el ciclo de 56 días. La normativa exige descarga mínima cada 28 días, pero hacerlo cada 15 días te permite detectar y corregir anomalías antes de una inspección."
+  },
+  {
+    pregunta: "¿Cómo registrar pasos de frontera?",
+    respuesta: "Manualmente si el tacógrafo no es inteligente de última generación. Al cruzar una frontera, debes introducir el símbolo del nuevo país en el tacógrafo. Los G2V2 con GNSS lo hacen automáticamente."
+  },
+  {
+    pregunta: "¿Dónde consigo ayuda técnica?",
+    respuesta: "Descargando nuestro Kit de Supervivencia gratuito. Incluye el Checklist de Cabina, la Guía de Tiempos, el Protocolo del Art. 12 y el Planificador de Mantenimiento. Todo diseñado por profesionales del sector."
+  }
+];
+---
+
+<BaseLayout pageBg="categorias" title="Kit de Supervivencia del Transportista 2026 - Evita Multas de 4.001€" description="Descarga gratis el Kit AdmiLogistic: checklist de cabina, guía de tiempos, protocolo Art. 12 y planificador de mantenimiento. Supera cualquier inspección de 56 días.">
+
+  <div class="descargables-page">
+
+    <!-- ============================================
+         BLOQUE 1: HERO / CAPTACIÓN
+         ============================================ -->
+    <section class="hero-captacion" id="descargar">
+      <div class="hero-grid">
+        <!-- Columna Izquierda: Contenido -->
+        <div class="hero-content">
+          <span class="hero-badge">KIT GRATUITO 2026</span>
+          <h1>Evita multas de hasta 4.001€ con el Kit de Supervivencia AdmiLogistic 2026</h1>
+          <p class="hero-subtitle">No dejes tu honorabilidad en manos del azar. Descarga gratis las herramientas que todo conductor y gestor necesita para superar cualquier inspección de 56 días.</p>
+
+          <div class="recursos-lista">
+            <div class="recurso-item">
+              <span class="recurso-icon">📋</span>
+              <div class="recurso-texto">
+                <strong>Checklist de Cabina</strong>
+                <span>Verificación de 2 minutos antes de arrancar</span>
+              </div>
+            </div>
+            <div class="recurso-item">
+              <span class="recurso-icon">⏱️</span>
+              <div class="recurso-texto">
+                <strong>Guía de Tiempos</strong>
+                <span>Esquema visual rápido del Reg. 561/2006</span>
+              </div>
+            </div>
+            <div class="recurso-item">
+              <span class="recurso-icon">🚨</span>
+              <div class="recurso-texto">
+                <strong>Protocolo Art. 12</strong>
+                <span>Cómo justificar excesos por fuerza mayor</span>
+              </div>
+            </div>
+            <div class="recurso-item">
+              <span class="recurso-icon">🔧</span>
+              <div class="recurso-texto">
+                <strong>Planificador de Mantenimiento</strong>
+                <span>Plantilla de previsión técnica de flota</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Formulario -->
+        <div class="hero-form-wrapper">
+          <div class="form-card">
+            <div class="form-header">
+              <h2>¡Lo quiero ahora!</h2>
+              <p>Introduce tu email y recibe el Kit completo gratis</p>
+            </div>
+            <div class="form-iframe-container">
+              <iframe
+                data-skip-lazy=""
+                src="https://admilogistic.ipzmarketing.com/f/LxR7etpOm_o"
+                frameborder="0"
+                scrolling="no"
+                width="100%"
+                height="380px"
+                class="ipz-iframe"
+                title="Formulario Kit AdmiLogistic"
+              ></iframe>
+            </div>
+            <p class="form-nota">Sin spam. Solo recursos para profesionales del transporte.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         BLOQUE 2: ESTADÍSTICAS / SOCIAL PROOF
+         ============================================ -->
+    <section class="stats-section">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-numero">4.001€</span>
+          <span class="stat-texto">Multa máxima evitable</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-numero">56</span>
+          <span class="stat-texto">Días de inspección</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-numero">G2V2</span>
+          <span class="stat-texto">Control remoto activo</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-numero">100%</span>
+          <span class="stat-texto">Gratis para siempre</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         BLOQUE 3: FAQ / PREGUNTAS FRECUENTES
+         ============================================ -->
+    <section class="faq-section">
+      <div class="faq-header">
+        <h2>Preguntas Frecuentes sobre Tacógrafo y Normativa 2026</h2>
+        <p>Resuelve tus dudas sobre tiempos de conducción, descansos e inspecciones</p>
+      </div>
+
+      <div class="faq-accordion">
+        {faqs.map((faq, index) => (
+          <div class="faq-item" data-faq-index={index}>
+            <button class="faq-pregunta" aria-expanded="false">
+              <span class="faq-numero">{(index + 1).toString().padStart(2, '0')}</span>
+              <span class="faq-texto">{faq.pregunta}</span>
+              <span class="faq-icono">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-respuesta">
+              <p>{faq.respuesta}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- ============================================
+         BLOQUE 4: CTA FINAL
+         ============================================ -->
+    <section class="cta-final-section">
+      <div class="cta-card">
+        <h2>¿Listo para circular sin preocupaciones?</h2>
+        <p>Descarga el Kit de Supervivencia y ten siempre la respuesta correcta ante cualquier inspección.</p>
+        <a href="#descargar" class="cta-boton">DESCARGAR KIT GRATIS</a>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============================================
+       BLOQUE 5: PÁGINA DE GRACIAS (Oculta por defecto)
+       Se activa con ?success=true desde Mailrelay
+       ============================================ -->
+  <div class="gracias-overlay" id="graciasOverlay">
+    <div class="gracias-modal">
+      <button class="gracias-cerrar" id="cerrarGracias" aria-label="Cerrar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="gracias-icono">🎉</div>
+      <h2>¡Tu Kit está listo!</h2>
+      <p>Gracias por confiar en AdmiLogistic. Aquí tienes acceso directo a todos los documentos:</p>
+
+      <div class="descargas-grid">
+        <a href="/kit/checklist-cabina" class="descarga-boton" target="_blank">
+          <span class="descarga-icono">📋</span>
+          <span class="descarga-texto">
+            <strong>Checklist de Cabina</strong>
+            <small>Verificación Pre-Ruta</small>
+          </span>
+        </a>
+        <a href="/kit/guia-tiempos" class="descarga-boton" target="_blank">
+          <span class="descarga-icono">⏱️</span>
+          <span class="descarga-texto">
+            <strong>Guía de Tiempos</strong>
+            <small>Conducción y Descanso</small>
+          </span>
+        </a>
+        <a href="/kit/protocolo-emergencia" class="descarga-boton" target="_blank">
+          <span class="descarga-icono">🚨</span>
+          <span class="descarga-texto">
+            <strong>Protocolo Art. 12</strong>
+            <small>Emergencias</small>
+          </span>
+        </a>
+        <a href="/kit/planificador-mantenimiento" class="descarga-boton" target="_blank">
+          <span class="descarga-icono">🔧</span>
+          <span class="descarga-texto">
+            <strong>Planificador</strong>
+            <small>Mantenimiento Flota</small>
+          </span>
+        </a>
+      </div>
+
+      <div class="gracias-nota">
+        <p><strong>Consejo:</strong> Guarda esta página en favoritos o accede siempre desde <a href="/kit/">admilogistic.es/kit</a></p>
+      </div>
+
+      <a href="/kit/" class="gracias-link">Ver todos los documentos del Kit →</a>
+    </div>
+  </div>
+
+</BaseLayout>
+
+<script data-cfasync="false" type="text/javascript" src="https://assets.ipzmarketing.com/assets/signup_form/iframe_v1.js"></script>
+
+<script>
+  // FAQ Accordion
+  document.querySelectorAll('.faq-pregunta').forEach(button => {
+    button.addEventListener('click', () => {
+      const faqItem = button.parentElement;
+      const isOpen = button.getAttribute('aria-expanded') === 'true';
+
+      // Cerrar todos los demás
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+        item.querySelector('.faq-pregunta')?.setAttribute('aria-expanded', 'false');
+      });
+
+      // Abrir/cerrar el actual
+      if (!isOpen) {
+        faqItem?.classList.add('active');
+        button.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // Página de Gracias - Detectar parámetro success
+  if (typeof window !== 'undefined') {
+    const urlParams = new URLSearchParams(window.location.search);
+    const isSuccess = urlParams.get('success') === 'true' || urlParams.get('welcome') === 'true';
+
+    if (isSuccess) {
+      const overlay = document.getElementById('graciasOverlay');
+      if (overlay) {
+        overlay.classList.add('visible');
+        document.body.style.overflow = 'hidden';
+      }
+      // Limpiar URL
+      window.history.replaceState({}, '', '/descargables/');
+    }
+  }
+
+  // Cerrar modal de gracias
+  document.getElementById('cerrarGracias')?.addEventListener('click', () => {
+    const overlay = document.getElementById('graciasOverlay');
+    if (overlay) {
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Cerrar con Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      const overlay = document.getElementById('graciasOverlay');
+      if (overlay?.classList.contains('visible')) {
+        overlay.classList.remove('visible');
+        document.body.style.overflow = '';
+      }
+    }
+  });
+
+  // Smooth scroll para anclas
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href') || '');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+<style>
+  /* ============================================
+     VARIABLES Y RESET
+     ============================================ */
+  :root {
+    --color-gris-oscuro: #1e293b;
+    --color-gris-medio: #475569;
+    --color-gris-claro: #94a3b8;
+    --color-azul: #2563eb;
+    --color-azul-hover: #1d4ed8;
+    --color-naranja: #FF5722;
+    --color-naranja-hover: #E64A19;
+    --color-verde: #22c55e;
+    --color-blanco: #ffffff;
+    --color-fondo: #f8fafc;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+    --shadow-md: 0 8px 24px rgba(0,0,0,0.12);
+    --shadow-lg: 0 16px 48px rgba(0,0,0,0.16);
+    --shadow-xl: 0 24px 64px rgba(0,0,0,0.2);
+  }
+
+  .descargables-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  /* ============================================
+     BLOQUE 1: HERO CAPTACIÓN
+     ============================================ */
+  .hero-captacion {
+    padding: 2rem 0 3rem;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--color-verde), #16a34a);
+    color: var(--color-blanco);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.625rem, 4vw, 2.375rem);
+    color: var(--color-blanco);
+    margin: 0 0 1.25rem 0;
+    line-height: 1.2;
+    font-weight: 800;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Lista de Recursos */
+  .recursos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+
+  .recurso-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+  }
+
+  .recurso-item:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateX(6px);
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .recurso-icon {
+    font-size: 1.75rem;
+    flex-shrink: 0;
+  }
+
+  .recurso-texto strong {
+    display: block;
+    color: var(--color-blanco);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    margin-bottom: 0.125rem;
+  }
+
+  .recurso-texto span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8125rem;
+  }
+
+  /* Formulario Card */
+  .hero-form-wrapper {
+    position: sticky;
+    top: 80px;
+  }
+
+  .form-card {
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: var(--radius-xl);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .form-header {
+    text-align: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .form-header h2 {
+    font-size: 1.5rem;
+    color: var(--color-gris-oscuro);
+    margin: 0 0 0.375rem 0;
+    font-weight: 800;
+  }
+
+  .form-header p {
+    color: var(--color-gris-medio);
+    font-size: 0.9375rem;
+    margin: 0;
+  }
+
+  .form-iframe-container {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    min-height: 320px;
+  }
+
+  .form-iframe-container iframe {
+    border: none !important;
+    width: 100% !important;
+    min-height: 320px;
+  }
+
+  .form-nota {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--color-gris-claro);
+    margin: 1rem 0 0 0;
+  }
+
+  /* ============================================
+     BLOQUE 2: ESTADÍSTICAS
+     ============================================ */
+  .stats-section {
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .stat-card {
+    background: rgba(255, 255, 255, 0.75) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-radius: var(--radius-lg) !important;
+    padding: 1.5rem 1rem !important;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    transition: all 0.3s ease;
+  }
+
+  .stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .stat-numero {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #FF5722 !important;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-texto {
+    font-size: 0.8125rem;
+    color: #475569 !important;
+    font-weight: 500;
+  }
+
+  /* ============================================
+     BLOQUE 3: FAQ ACCORDION
+     ============================================ */
+  .faq-section {
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .faq-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .faq-header h2 {
+    font-size: clamp(1.375rem, 3vw, 1.75rem);
+    color: var(--color-blanco);
+    margin: 0 0 0.75rem 0;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .faq-header p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .faq-accordion {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .faq-item {
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border-radius: var(--radius-md) !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+  }
+
+  .faq-item.active {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+  }
+
+  .faq-pregunta {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.125rem 1.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    transition: all 0.2s ease;
+  }
+
+  .faq-pregunta:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .faq-numero {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--color-azul);
+    color: var(--color-blanco);
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .faq-texto {
+    flex: 1;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #ffffff !important;
+    line-height: 1.4;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  .faq-icono {
+    flex-shrink: 0;
+    color: rgba(255, 255, 255, 0.7);
+    transition: transform 0.3s ease;
+  }
+
+  .faq-item.active .faq-icono {
+    transform: rotate(180deg);
+    color: #ffffff;
+  }
+
+  .faq-respuesta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+
+  .faq-item.active .faq-respuesta {
+    max-height: 500px;
+  }
+
+  .faq-respuesta p {
+    padding: 0 1.25rem 1.25rem 4rem;
+    margin: 0;
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.85) !important;
+    line-height: 1.7;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  /* ============================================
+     BLOQUE 4: CTA FINAL
+     ============================================ */
+  .cta-final-section {
+    padding: 2rem 0 4rem;
+  }
+
+  .cta-card {
+    background: linear-gradient(135deg, var(--color-naranja) 0%, var(--color-naranja-hover) 100%);
+    border-radius: var(--radius-xl);
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(255, 87, 34, 0.35);
+  }
+
+  .cta-card h2 {
+    font-size: clamp(1.375rem, 3vw, 1.75rem);
+    color: var(--color-blanco);
+    margin: 0 0 0.75rem 0;
+    font-weight: 700;
+  }
+
+  .cta-card p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.0625rem;
+    margin: 0 0 1.75rem 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-boton {
+    display: inline-block;
+    background: var(--color-blanco);
+    color: var(--color-naranja);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 2.5rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  .cta-boton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  /* ============================================
+     BLOQUE 5: PÁGINA DE GRACIAS (MODAL)
+     ============================================ */
+  .gracias-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .gracias-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .gracias-modal {
+    background: var(--color-blanco);
+    border-radius: var(--radius-xl);
+    padding: 2.5rem 2rem;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    text-align: center;
+    box-shadow: var(--shadow-xl);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+  }
+
+  .gracias-overlay.visible .gracias-modal {
+    transform: scale(1);
+  }
+
+  .gracias-cerrar {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    background: var(--color-fondo);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-gris-medio);
+    transition: all 0.2s ease;
+  }
+
+  .gracias-cerrar:hover {
+    background: #fee2e2;
+    color: #dc2626;
+  }
+
+  .gracias-icono {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .gracias-modal h2 {
+    font-size: 1.75rem;
+    color: var(--color-gris-oscuro);
+    margin: 0 0 0.75rem 0;
+    font-weight: 800;
+  }
+
+  .gracias-modal > p {
+    color: var(--color-gris-medio);
+    font-size: 1rem;
+    margin: 0 0 2rem 0;
+    line-height: 1.6;
+  }
+
+  .descargas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .descarga-boton {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    padding: 1rem;
+    background: var(--color-fondo);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .descarga-boton:hover {
+    background: #eff6ff;
+    border-color: var(--color-azul);
+    transform: translateY(-2px);
+  }
+
+  .descarga-icono {
+    font-size: 1.75rem;
+    flex-shrink: 0;
+  }
+
+  .descarga-texto {
+    text-align: left;
+  }
+
+  .descarga-texto strong {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 0.125rem;
+  }
+
+  .descarga-texto small {
+    font-size: 0.75rem;
+    color: var(--color-gris-claro);
+  }
+
+  .gracias-nota {
+    background: #fef3c7;
+    border-radius: var(--radius-sm);
+    padding: 0.875rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .gracias-nota p {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: #92400e;
+  }
+
+  .gracias-nota a {
+    color: #b45309;
+    font-weight: 600;
+  }
+
+  .gracias-link {
+    display: inline-block;
+    color: var(--color-azul);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    text-decoration: none;
+  }
+
+  .gracias-link:hover {
+    text-decoration: underline;
+  }
+
+  /* ============================================
+     RESPONSIVE - MOBILE FIRST
+     ============================================ */
+  @media (max-width: 1024px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .hero-form-wrapper {
+      position: relative;
+      top: 0;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .descargables-page {
+      padding: 0 0.75rem;
+    }
+
+    .hero-captacion {
+      padding: 1.5rem 0 2rem;
+    }
+
+    .hero-content h1 {
+      font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 0.9375rem;
+    }
+
+    .form-card {
+      padding: 1.5rem;
+    }
+
+    .form-header h2 {
+      font-size: 1.25rem;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+
+    .stat-card {
+      padding: 1.25rem 0.75rem;
+    }
+
+    .stat-numero {
+      font-size: 1.625rem;
+    }
+
+    .faq-section {
+      padding: 2rem 0;
+    }
+
+    .faq-pregunta {
+      padding: 1rem;
+    }
+
+    .faq-numero {
+      width: 28px;
+      height: 28px;
+      font-size: 0.6875rem;
+    }
+
+    .faq-texto {
+      font-size: 0.875rem;
+    }
+
+    .faq-respuesta p {
+      padding: 0 1rem 1rem 3.5rem;
+      font-size: 0.875rem;
+    }
+
+    .cta-card {
+      padding: 2rem 1.5rem;
+    }
+
+    .cta-boton {
+      width: 100%;
+      text-align: center;
+    }
+
+    .gracias-modal {
+      padding: 2rem 1.5rem;
+    }
+
+    .descargas-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-content h1 {
+      font-size: 1.375rem;
+    }
+
+    .recurso-item {
+      padding: 0.875rem 1rem;
+    }
+
+    .recurso-icon {
+      font-size: 1.5rem;
+    }
+
+    .recurso-texto strong {
+      font-size: 0.875rem;
+    }
+
+    .recurso-texto span {
+      font-size: 0.75rem;
+    }
+
+    .form-card {
+      padding: 1.25rem;
+      border-radius: var(--radius-lg);
+    }
+
+    .stats-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .stat-numero {
+      font-size: 1.5rem;
+    }
+
+    .stat-texto {
+      font-size: 0.75rem;
+    }
+
+    .faq-header h2 {
+      font-size: 1.25rem;
+    }
+
+    .gracias-modal h2 {
+      font-size: 1.375rem;
+    }
+
+    .gracias-icono {
+      font-size: 3rem;
+    }
+  }
+</style>

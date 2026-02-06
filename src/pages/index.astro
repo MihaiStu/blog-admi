@@ -1,6 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { socialLinks } from "../config/social";
+import { getCollection } from 'astro:content';
+
+// Obtener los últimos 6 artículos del blog
+const allPosts = await getCollection('blog');
+const ultimosArticulos = allPosts
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 6);
 ---
 
 <BaseLayout pageBg="home" title="Recursos y Herramientas para Transportistas | AdmiLogistic" description="Centro de recursos profesionales para transportistas y gestores de flotas. Noticias, fiscalidad, tacógrafo, rutas, bases de datos y herramientas de gestión logística.">
@@ -65,14 +72,25 @@ import { socialLinks } from "../config/social";
     </div>
   </section>
 
-  <!-- TEXTO AMBIENTE FLOTANTE -->
-  <div class="bg-ambient-text">
-    <p>
-      La plataforma que entiende el transporte profesional · normativa real ·
-      datos reales · herramientas del sector
-      <a href="/categorias"><strong>→ Ver herramientas</strong></a>
-    </p>
-  </div>
+  <!-- LEAD MAGNET BANNER -->
+  <section class="lead-magnet-banner">
+    <div class="lead-magnet-inner">
+      <div class="lead-magnet-content">
+        <span class="lead-magnet-badge">GRATIS</span>
+        <h2>Kit de Supervivencia del Transportista 2026</h2>
+        <p>Descarga gratis: Guía de tiempos de conducción, checklist pre-viaje, plantilla de gastos y calendario fiscal. Todo lo que necesitas en un solo pack.</p>
+        <a href="/descargables" class="lead-magnet-cta">Descargar Kit Gratuito</a>
+      </div>
+      <div class="lead-magnet-visual">
+        <div class="kit-preview">
+          <div class="kit-item">Guía Tiempos</div>
+          <div class="kit-item">Checklist</div>
+          <div class="kit-item">Plantilla Gastos</div>
+          <div class="kit-item">Calendario Fiscal</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- PROJECTS SECTION -->
   <section class="projects" data-editable="projects">
@@ -118,228 +136,35 @@ import { socialLinks } from "../config/social";
     </div>
   </section>
 
-  <!-- NEWS SECTION WITH SIDEBAR -->
-  <div class="news-container">
-    <section class="news" data-editable="news">
-      <h2>Actualidad y normativa del transporte</h2>
-      <p class="section-intro">Información actualizada sobre normativas, fiscalidad, tecnología y mejores prácticas del sector del transporte profesional.</p>
-      <article class="news-featured">
-        <div class="news-featured-image">
-          <div class="news-placeholder">
-            <svg width="300" height="200" viewBox="0 0 300 200" fill="none">
-              <rect width="300" height="200" fill="#e0e7ff" rx="8"/>
-              <text x="150" y="100" text-anchor="middle" fill="#6366f1" font-size="12">Featured News</text>
-            </svg>
-          </div>
-        </div>
-        <div class="news-featured-content">
-          <h3>Últimas actualizaciones normativas del sector transporte</h3>
-          <p>Conoce las nuevas regulaciones y cambios que afectan al transporte profesional en 2024.</p>
-          <a href="/categorias/noticias" class="news-link" aria-label="Leer noticias del transporte">Ver todas las noticias del transporte →</a>
-        </div>
-      </article>
-      <div class="news-list">
-        <article class="news-item">
-          <div class="news-item-image">
-            <div class="news-placeholder-small">
-              <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-                <rect width="120" height="80" fill="#f0f4ff" rx="4"/>
-              </svg>
-            </div>
-          </div>
-          <div class="news-item-content">
-            <h4>Fiscalidad del transporte</h4>
-            <p>Guías actualizadas sobre obligaciones fiscales para transportistas.</p>
-            <a href="/categorias/fiscalidad" class="news-item-link" aria-label="Ver artículos sobre fiscalidad del transporte">Ver fiscalidad →</a>
-          </div>
-        </article>
-        <article class="news-item">
-          <div class="news-item-image">
-            <div class="news-placeholder-small">
-              <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-                <rect width="120" height="80" fill="#f0f4ff" rx="4"/>
-              </svg>
-            </div>
-          </div>
-          <div class="news-item-content">
-            <h4>Tecnología en logística</h4>
-            <p>Últimas tendencias tecnológicas aplicadas al transporte.</p>
-            <a href="/categorias/tecnologia" class="news-item-link" aria-label="Ver artículos sobre tecnología en logística">Ver tecnología →</a>
-          </div>
-        </article>
-        <article class="news-item">
-          <div class="news-item-image">
-            <div class="news-placeholder-small">
-              <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-                <rect width="120" height="80" fill="#f0f4ff" rx="4"/>
-              </svg>
-            </div>
-          </div>
-          <div class="news-item-content">
-            <h4>Rutas optimizadas</h4>
-            <p>Mejores prácticas en planificación de rutas para transportistas.</p>
-            <a href="/categorias/rutas" class="news-item-link" aria-label="Ver artículos sobre planificación de rutas">Ver rutas →</a>
-          </div>
-        </article>
-      </div>
-      
-      <!-- CATEGORÍAS POPULARES HORIZONTAL -->
-      <div class="popular-categories">
-        <h3>Categorías más populares</h3>
-        <div class="categories-horizontal">
-          <a href="/categorias/fiscalidad" class="category-card" aria-label="Ver artículos sobre fiscalidad del transporte">
-            <span class="category-icon-large">📊</span>
-            <span class="category-name">Fiscalidad</span>
-          </a>
-          <a href="/categorias/tacografo" class="category-card" aria-label="Ver artículos sobre tacógrafo digital">
-            <span class="category-icon-large">⏱️</span>
-            <span class="category-name">Tacógrafo</span>
-          </a>
-          <a href="/categorias/rutas" class="category-card" aria-label="Ver artículos sobre planificación de rutas">
-            <span class="category-icon-large">🗺️</span>
-            <span class="category-name">Rutas</span>
-          </a>
-          <a href="/categorias/tecnologia" class="category-card" aria-label="Ver artículos sobre tecnología en el transporte">
-            <span class="category-icon-large">💻</span>
-            <span class="category-name">Tecnología</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <!-- Bloque Colaboradores/Patrocinadores -->
-      <div class="sidebar-card sidebar-sponsors">
-        <h3>🤝 Colaboradores y Patrocinadores</h3>
-        <p>Espacio reservado para empresas y promotores que colaboran con AdmiLogistic</p>
-        <div class="sponsors-placeholder">
-          <svg width="100%" height="180" viewBox="0 0 280 180" fill="none">
-            <rect width="280" height="180" fill="#e0e7ff" rx="8"/>
-            <text x="140" y="80" text-anchor="middle" fill="#6366f1" font-size="18" font-weight="700">COLABORADORES</text>
-            <text x="140" y="110" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="500">Tu empresa aquí</text>
-          </svg>
-        </div>
-        <a href="mailto:contacto@admilogistic.es?subject=Solicitud de colaboración&body=Hola, me gustaría colaborar con AdmiLogistic." class="sidebar-button">Quiero colaborar</a>
-      </div>
-      
-      <div class="sidebar-follow">
-        <h3>Síguenos</h3>
-        <div class="social-links">
-          {socialLinks.linkedin && (
-          <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link linkedin">
-            <svg class="icon-social" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/>
-            </svg>
-            <span>LinkedIn</span>
-          </a>
-          )}
-          {socialLinks.youtube && (
-          <a href={socialLinks.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-link youtube">
-            <svg class="icon-social" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="currentColor"/>
-            </svg>
-            <span>YouTube</span>
-          </a>
-          )}
-          {socialLinks.tiktok && (
-          <a href={socialLinks.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="social-link tiktok">
-            <svg class="icon-social" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" fill="currentColor"/>
-            </svg>
-            <span>TikTok</span>
-          </a>
-          )}
-          {socialLinks.instagram && (
-          <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link instagram">
-            <svg class="icon-social" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="currentColor"/>
-            </svg>
-            <span>Instagram</span>
-          </a>
-          )}
-          {socialLinks.facebook && (
-          <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-link facebook">
-            <svg class="icon-social" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="currentColor"/>
-            </svg>
-            <span>Facebook</span>
-          </a>
-          )}
-          {socialLinks.twitter && (
-          <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="social-link twitter">
-            <svg class="icon-social" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/>
-            </svg>
-            <span>X (Twitter)</span>
-          </a>
-          )}
-        </div>
-      </div>
-    </aside>
-  </div>
-
-  <!-- VIDEOS SECTION -->
-  <section class="videos" data-editable="videos">
+  <!-- ÚLTIMOS ARTÍCULOS DEL BLOG -->
+  <section class="ultimos-articulos">
     <div class="section-inner">
-      <h2>Videos y tutoriales para transportistas</h2>
-      <p class="section-intro">Contenido formativo sobre tacógrafo, fiscalidad, optimización de rutas y gestión de flotas.</p>
-      <div class="videos-grid">
-        <article class="video-card">
-          <div class="video-thumbnail">
-            <div class="video-placeholder">
-              <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-                <rect width="400" height="225" fill="#e0e7ff"/>
-                <circle cx="200" cy="112.5" r="30" fill="#6366f1"/>
-                <path d="M195 100 L215 112.5 L195 125 Z" fill="white"/>
-              </svg>
-            </div>
-          </div>
-          <h4>Tutorial: Gestión de tacógrafo</h4>
-          <a href="/categorias/tacografo" class="video-link" aria-label="Ver más sobre gestión de tacógrafo">Ver más sobre tacógrafo</a>
-        </article>
+      <h2>Últimos artículos del blog</h2>
+      <p class="section-intro">Guías prácticas, normativa actualizada y consejos para el día a día del transportista profesional.</p>
 
-        <article class="video-card">
-          <div class="video-thumbnail">
-            <div class="video-placeholder">
-              <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-                <rect width="400" height="225" fill="#e0e7ff"/>
-                <circle cx="200" cy="112.5" r="30" fill="#6366f1"/>
-                <path d="M195 100 L215 112.5 L195 125 Z" fill="white"/>
-              </svg>
-            </div>
-          </div>
-          <h4>Fiscalidad para transportistas</h4>
-          <a href="/categorias/fiscalidad" class="video-link" aria-label="Ver guías sobre fiscalidad del transporte">Ver guías de fiscalidad</a>
-        </article>
+      {ultimosArticulos.length > 0 ? (
+        <div class="articulos-grid-home">
+          {ultimosArticulos.map((entry) => (
+            <a href={`/blog/${entry.id}`} class="articulo-card-home">
+              {entry.data.image && (
+                <div class="articulo-image-home">
+                  <img src={entry.data.image} alt={entry.data.title} loading="lazy" />
+                </div>
+              )}
+              <div class="articulo-content-home">
+                <span class="articulo-categoria">{entry.data.category}</span>
+                <h3>{entry.data.title}</h3>
+                {entry.data.description && <p>{entry.data.description}</p>}
+              </div>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <p class="no-articulos">Próximamente publicaremos artículos.</p>
+      )}
 
-        <article class="video-card">
-          <div class="video-thumbnail">
-            <div class="video-placeholder">
-              <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-                <rect width="400" height="225" fill="#e0e7ff"/>
-                <circle cx="200" cy="112.5" r="30" fill="#6366f1"/>
-                <path d="M195 100 L215 112.5 L195 125 Z" fill="white"/>
-              </svg>
-            </div>
-          </div>
-          <h4>Optimización de rutas</h4>
-          <a href="/categorias/rutas" class="video-link" aria-label="Ver contenido sobre planificación de rutas">Ver planificación de rutas</a>
-        </article>
-
-        <article class="video-card">
-          <div class="video-thumbnail">
-            <div class="video-placeholder">
-              <svg width="100%" height="100%" viewBox="0 0 400 225" fill="none">
-                <rect width="400" height="225" fill="#e0e7ff"/>
-                <circle cx="200" cy="112.5" r="30" fill="#6366f1"/>
-                <path d="M195 100 L215 112.5 L195 125 Z" fill="white"/>
-              </svg>
-            </div>
-          </div>
-          <h4>Novedades del sector</h4>
-          <a href="/categorias/noticias" class="video-link" aria-label="Ver noticias del sector transporte">Ver noticias del transporte</a>
-        </article>
+      <div class="ver-todos-wrapper">
+        <a href="/categorias" class="ver-todos-btn">Ver todas las guías y artículos</a>
       </div>
     </div>
   </section>
@@ -1759,6 +1584,318 @@ import { socialLinks } from "../config/social";
     .bg-ambient-text {
       font-size: 0.8125rem;
       padding: 12px 8px;
+    }
+  }
+
+  /* ============================================
+     LEAD MAGNET BANNER
+     ============================================ */
+  .lead-magnet-banner {
+    max-width: 1200px;
+    margin: 0 auto var(--section-spacing);
+    padding: 0 var(--spacing-sm);
+  }
+
+  .lead-magnet-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem;
+    align-items: center;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ffb347 100%);
+    border-radius: var(--radius);
+    padding: 2.5rem 3rem;
+    box-shadow: 0 20px 60px rgba(255, 107, 53, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .lead-magnet-inner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .lead-magnet-badge {
+    display: inline-block;
+    background: #fff;
+    color: #ff6b35;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.375rem 0.75rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .lead-magnet-content h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .lead-magnet-content p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .lead-magnet-cta {
+    display: inline-block;
+    background: #fff;
+    color: #ff6b35;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  .lead-magnet-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .lead-magnet-visual {
+    position: relative;
+    z-index: 1;
+  }
+
+  .kit-preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .kit-item {
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+
+  .kit-item:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    .lead-magnet-inner {
+      grid-template-columns: 1fr;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    .lead-magnet-content h2 {
+      font-size: 1.5rem;
+    }
+
+    .lead-magnet-visual {
+      display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .lead-magnet-banner {
+      margin-bottom: 48px;
+    }
+
+    .lead-magnet-inner {
+      padding: 1.5rem 1rem;
+    }
+
+    .lead-magnet-content h2 {
+      font-size: 1.25rem;
+    }
+
+    .lead-magnet-content p {
+      font-size: 0.875rem;
+    }
+
+    .lead-magnet-cta {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  /* ============================================
+     ÚLTIMOS ARTÍCULOS GRID
+     ============================================ */
+  .ultimos-articulos {
+    max-width: 1200px;
+    margin: 0 auto var(--section-spacing);
+    padding-top: var(--section-padding-y);
+    padding-bottom: var(--section-padding-y);
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+  }
+
+  .ultimos-articulos h2 {
+    font-size: clamp(1.875rem, 4vw, 2.25rem);
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 16px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+  }
+
+  .articulos-grid-home {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .articulo-card-home {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(16px) saturate(1.1);
+    -webkit-backdrop-filter: blur(16px) saturate(1.1);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .articulo-card-home:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  }
+
+  .articulo-image-home {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+  }
+
+  .articulo-image-home img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .articulo-card-home:hover .articulo-image-home img {
+    transform: scale(1.05);
+  }
+
+  .articulo-content-home {
+    padding: 1.25rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .articulo-categoria {
+    display: inline-block;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #ff6b35;
+    background: rgba(255, 107, 53, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+    width: fit-content;
+  }
+
+  .articulo-content-home h3 {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+  }
+
+  .articulo-content-home p {
+    color: #666;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .ver-todos-wrapper {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
+  .ver-todos-btn {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    background: var(--accent-primary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .ver-todos-btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .no-articulos {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+    padding: 2rem;
+  }
+
+  @media (max-width: 1024px) {
+    .articulos-grid-home {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .articulos-grid-home {
+      grid-template-columns: 1fr;
+    }
+
+    .articulo-image-home {
+      height: 160px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .ultimos-articulos {
+      margin-bottom: 40px;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+
+    .articulo-content-home {
+      padding: 1rem;
+    }
+
+    .articulo-content-home h3 {
+      font-size: 0.9375rem;
     }
   }
 </style>
