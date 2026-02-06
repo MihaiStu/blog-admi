@@ -2,125 +2,80 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout pageBg="bases" title="Bases de Datos - Parkings - Blog AdmiLogistic" description="Base de datos de parkings">
-  <div class="database-page">
-    <h1>Base de Datos de Parkings</h1>
-    
-    <div class="info-box">
-      <p><strong>Datos orientativos</strong></p>
-      <p>Esta base de datos contiene información de parkings y áreas de descanso para vehículos industriales. Los datos son de carácter orientativo y se actualizan periódicamente.</p>
+<BaseLayout pageBg="bases" title="Base de Datos - Parkings | AdmiLogistic" description="Mapa y listado de parkings y áreas de descanso para camiones.">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <div class="db-page">
+    <header class="db-header">
+      <h1>Parkings y áreas de descanso</h1>
+      <p>Áreas de servicio, parkings seguros y certificados para vehículos industriales. Datos orientativos.</p>
+    </header>
+    <div class="db-map-wrap">
+      <div id="map-parkings" class="db-map"></div>
     </div>
-
-    <div class="cta-box">
-      <h2>¿Quieres usar esto en Roadmaster?</h2>
-      <p>Integra esta base de datos directamente en tu aplicación Roadmaster para acceder a información actualizada de parkings.</p>
-      <a href="/proyectos/roadmaster" class="cta-button">Ver Roadmaster</a>
+    <div class="db-list-wrap">
+      <h2>Listado</h2>
+      <div id="list-parkings" class="db-list"></div>
     </div>
-
-    <div class="coming-soon">
-      <p>Los datos se cargarán próximamente desde:</p>
-      <ul>
-        <li>JSON estático</li>
-        <li>Supabase</li>
-        <li>API externa</li>
-      </ul>
+    <div class="db-cta">
+      <a href="/proyectos/roadmaster" class="db-cta-btn">Usar parkings en RoadMaster</a>
     </div>
   </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    (function () {
+      const mapEl = document.getElementById('map-parkings');
+      const listEl = document.getElementById('list-parkings');
+      if (!mapEl) return;
+      fetch('/data/parkings.json')
+        .then(r => r.json())
+        .then(data => {
+          if (typeof L === 'undefined') return;
+          const map = L.map('map-parkings').setView([40.4, -3.7], 6);
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
+          const bounds = [];
+          data.forEach(p => {
+            const lat = p.lat, lng = p.lng;
+            if (lat == null || lng == null) return;
+            bounds.push([lat, lng]);
+            const name = p.nombre || '';
+            const info = [p.autopista && ` ${p.autopista} pk ${p.pk || ''}`, p.provincia].filter(Boolean).join(' · ');
+            L.marker([lat, lng]).addTo(map).bindPopup(`<strong>${escapeHtml(name)}</strong><br>${escapeHtml(info)}`);
+          });
+          if (bounds.length) map.fitBounds(bounds, { padding: [30, 30], maxZoom: 10 });
+          if (listEl && data.length) {
+            listEl.innerHTML = data.map(p => {
+              const info = [p.autopista, p.pk && 'pk ' + p.pk, p.provincia].filter(Boolean).join(' · ');
+              const plazas = p.plazas_camiones ? p.plazas_camiones + ' plazas' : '';
+              const precio = p.precio != null ? (p.precio === 0 ? 'Gratis' : p.precio + ' €') : '';
+              return `<div class="db-list-item"><strong>${escapeHtml(p.nombre)}</strong><br><span class="db-list-meta">${escapeHtml(info)}</span>${plazas ? '<br>' + plazas : ''}${precio ? ' · ' + precio : ''}</div>`;
+            }).join('');
+          }
+        })
+        .catch(() => { if (listEl) listEl.innerHTML = '<p>No se pudieron cargar los datos.</p>'; });
+      function escapeHtml(s) {
+        if (!s) return '';
+        const d = document.createElement('div');
+        d.textContent = s;
+        return d.innerHTML;
+      }
+    })();
+  </script>
 </BaseLayout>
 
 <style>
-  .database-page {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    background: transparent;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #1a1a1a;
-  }
-
-  .info-box {
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(6px);
-    border-left: 4px solid #0066cc;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    border-radius: 4px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-  }
-
-  .info-box p {
-    margin-bottom: 0.5rem;
-    color: #333;
-    line-height: 1.6;
-  }
-
-  .info-box p:last-child {
-    margin-bottom: 0;
-  }
-
-  .cta-box {
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(6px);
-    padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-  }
-
-  .cta-box h2 {
-    margin-bottom: 1rem;
-    color: #1a1a1a;
-  }
-
-  .cta-box p {
-    margin-bottom: 1.5rem;
-    color: #666;
-    line-height: 1.6;
-  }
-
-  .cta-button {
-    display: inline-block;
-    padding: 0.75rem 2rem;
-    background-color: #1a1a1a;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 500;
-    transition: background-color 0.2s;
-  }
-
-  .cta-button:hover {
-    background-color: #333;
-  }
-
-  .coming-soon {
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(6px);
-    border: 1px solid rgba(255, 215, 0, 0.5);
-    padding: 1.5rem;
-    border-radius: 4px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  }
-
-  .coming-soon p {
-    margin-bottom: 0.5rem;
-    color: #333;
-    font-weight: 500;
-  }
-
-  .coming-soon ul {
-    margin: 0.5rem 0 0 1.5rem;
-    color: #666;
-  }
-
-  .coming-soon li {
-    margin-bottom: 0.25rem;
-  }
+  .db-page { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+  .db-header { text-align: center; margin-bottom: 1.5rem; }
+  .db-header h1 { font-size: clamp(1.75rem, 3vw, 2.25rem); color: #1a1a1a; margin-bottom: 0.5rem; }
+  .db-header p { color: #555; font-size: 1rem; line-height: 1.6; }
+  .db-map-wrap { margin-bottom: 2rem; border-radius: 16px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.08); }
+  .db-map { height: 420px; background: #e5e7eb; }
+  .db-list-wrap h2 { font-size: 1.25rem; margin-bottom: 1rem; color: #1a1a1a; }
+  .db-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+  .db-list-item { padding: 1rem; background: rgba(255,255,255,0.9); border-radius: 10px; border-left: 4px solid #f59e0b; font-size: 0.9375rem; }
+  .db-list-item strong { display: block; margin-bottom: 0.25rem; color: #0f172a; }
+  .db-list-meta { color: #64748b; }
+  .db-cta { text-align: center; margin-top: 2rem; }
+  .db-cta-btn { display: inline-block; padding: 0.75rem 1.75rem; background: #1a1a1a; color: #fff; font-weight: 600; text-decoration: none; border-radius: 10px; transition: background 0.2s; }
+  .db-cta-btn:hover { background: #333; }
+  @media (max-width: 768px) { .db-map { height: 320px; } .db-list { grid-template-columns: 1fr; } }
 </style>

@@ -3,11 +3,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { socialLinks } from "../config/social";
 import { getCollection } from 'astro:content';
 
-// Obtener los últimos 6 artículos del blog
+// Obtener los últimos 6 artículos del blog y todos para el buscador
 const allPosts = await getCollection('blog');
-const ultimosArticulos = allPosts
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 6);
+const sortedPosts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const ultimosArticulos = sortedPosts.slice(0, 6);
+// Datos para búsqueda en cliente (título, descripción, categoría)
+const searchIndex = sortedPosts.map((p) => ({
+  id: p.id,
+  title: p.data.title,
+  description: (p.data.description || '').slice(0, 200),
+  category: p.data.category,
+}));
 ---
 
 <BaseLayout pageBg="home" title="Recursos y Herramientas para Transportistas | AdmiLogistic" description="Centro de recursos profesionales para transportistas y gestores de flotas. Noticias, fiscalidad, tacógrafo, rutas, bases de datos y herramientas de gestión logística.">
@@ -61,9 +67,72 @@ const ultimosArticulos = allPosts
       <div class="hero-text">
         <h1>Centro de recursos y herramientas para el transporte profesional</h1>
         <p>Información especializada, bases de datos públicas y herramientas de gestión para transportistas, gestores de flotas y empresas de logística.</p>
-        <div class="hero-search">
-          <input type="search" placeholder="Buscar en el blog..." aria-label="Buscar contenido">
+        <div class="hero-search" id="hero-search-wrap">
+          <input type="search" id="hero-search-input" placeholder="Buscar en el blog..." aria-label="Buscar contenido" autocomplete="off">
+          <div class="hero-search-results" id="hero-search-results" role="listbox" aria-hidden="true"></div>
         </div>
+        <script define:vars={{ searchIndex: searchIndex }}>
+          (function () {
+            const input = document.getElementById('hero-search-input');
+            const resultsEl = document.getElementById('hero-search-results');
+            const wrap = document.getElementById('hero-search-wrap');
+            if (!input || !resultsEl || !wrap || !Array.isArray(searchIndex)) return;
+
+            function escapeHtml(s) {
+              const div = document.createElement('div');
+              div.textContent = s;
+              return div.innerHTML;
+            }
+
+            function showResults(items) {
+              if (!items.length) {
+                resultsEl.innerHTML = '<p class="hero-search-empty">No hay resultados para tu búsqueda.</p>';
+              } else {
+                resultsEl.innerHTML = items.slice(0, 8).map(function (p) {
+                  const title = escapeHtml(p.title);
+                  const cat = escapeHtml(p.category);
+                  return '<a href="/blog/' + escapeHtml(p.id) + '" class="hero-search-item" role="option">' +
+                    '<span class="hero-search-item-cat">' + cat + '</span>' +
+                    '<span class="hero-search-item-title">' + title + '</span>' +
+                    (p.description ? '<span class="hero-search-item-desc">' + escapeHtml(p.description) + '</span>' : '') +
+                    '</a>';
+                }).join('');
+              }
+              resultsEl.setAttribute('aria-hidden', 'false');
+              resultsEl.classList.add('is-open');
+            }
+
+            function hideResults() {
+              resultsEl.classList.remove('is-open');
+              resultsEl.setAttribute('aria-hidden', 'true');
+              resultsEl.innerHTML = '';
+            }
+
+            function runSearch() {
+              const q = (input.value || '').trim().toLowerCase();
+              if (q.length < 2) {
+                hideResults();
+                return;
+              }
+              const filtered = searchIndex.filter(function (p) {
+                return (p.title && p.title.toLowerCase().indexOf(q) >= 0) ||
+                  (p.description && p.description.toLowerCase().indexOf(q) >= 0) ||
+                  (p.category && p.category.toLowerCase().indexOf(q) >= 0);
+              });
+              showResults(filtered);
+            }
+
+            input.addEventListener('input', runSearch);
+            input.addEventListener('focus', function () { if (input.value.trim().length >= 2) runSearch(); });
+            input.addEventListener('keydown', function (e) {
+              if (e.key === 'Escape') { hideResults(); input.blur(); }
+            });
+
+            document.addEventListener('click', function (e) {
+              if (!wrap.contains(e.target)) hideResults();
+            });
+          })();
+        </script>
       </div>
       <div class="hero-image">
         <img src="/images/hero/Portadaok2.png" alt="Centro de recursos y herramientas para el transporte profesional" class="hero-image-content" loading="eager" />
@@ -353,7 +422,81 @@ const ultimosArticulos = allPosts
     border-color: var(--accent-primary);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.36), 0 0 0 6px rgba(255, 255, 255, 0.06);
     transform: translateY(-1px);
-    background: rgba(0, 0, 0, 0.36);
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  /* Dropdown resultados búsqueda */
+  .hero-search-results {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 6px;
+    max-height: 380px;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    z-index: 100;
+  }
+
+  .hero-search-results.is-open {
+    display: block;
+  }
+
+  .hero-search-empty {
+    padding: 1.25rem 1.5rem;
+    margin: 0;
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+  }
+
+  .hero-search-item {
+    display: block;
+    padding: 0.875rem 1.25rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    transition: background 0.15s ease;
+  }
+
+  .hero-search-item:last-child {
+    border-bottom: none;
+  }
+
+  .hero-search-item:hover {
+    background: rgba(99, 102, 241, 0.08);
+  }
+
+  .hero-search-item-cat {
+    display: inline-block;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--accent-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .hero-search-item-title {
+    display: block;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 0.25rem;
+  }
+
+  .hero-search-item-desc {
+    display: block;
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
   }
 
   .hero-image {
@@ -1444,6 +1587,14 @@ const ultimosArticulos = allPosts
     .hero-search input {
       padding: 12px 16px;
       font-size: 0.9375rem;
+    }
+
+    .hero-search-results {
+      max-height: 280px;
+    }
+
+    .hero-search-item {
+      padding: 0.75rem 1rem;
     }
 
     .section-inner {

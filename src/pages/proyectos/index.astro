@@ -73,8 +73,104 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <p>Administración logística completa</p>
         <span class="manual-size">PDF • 3.2 MB</span>
       </a>
+
+      <a href="#evolucion" class="manual-card manual-card-evolucion">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+        </svg>
+        <h3>Centro de Evolución y Ayuda</h3>
+        <p>Consulta nuestra política de mejoras, dudas frecuentes y el roadmap del producto.</p>
+        <span class="manual-cta">Ver Detalles y FAQ →</span>
+      </a>
     </div>
   </div>
+
+  <!-- Precios oficiales -->
+  <section id="precios" class="herramientas-block precios-section">
+    <h2>Precios oficiales – AdmiLogistic Suite</h2>
+    <p class="block-intro">Estructura de precios SaaS TMS para PYMES de transporte. Competitiva y escalable.</p>
+    <div class="plans-grid four-plans">
+      <div class="plan-card plan-free">
+        <h3>Free</h3>
+        <p class="plan-desc">TMS básico (5 registros, solo lectura)</p>
+        <div class="plan-price"><span class="price">0 €</span></div>
+        <p class="plan-cta">Ideal para probar la plataforma</p>
+      </div>
+      <div class="plan-card">
+        <h3>TMS Premium</h3>
+        <p class="plan-desc">Viajes, camiones, conductores, finanzas, mantenimiento y documentación ilimitados</p>
+        <div class="plan-price">
+          <span class="price">29 €<span class="period">/mes</span></span>
+          <span class="price-annual">290 €/año</span>
+        </div>
+      </div>
+      <div class="plan-card">
+        <h3>TMS + RoadMaster</h3>
+        <p class="plan-desc">Todo lo anterior + planificación avanzada de rutas</p>
+        <div class="plan-price">
+          <span class="price">49 €<span class="period">/mes</span></span>
+          <span class="price-annual">490 €/año</span>
+        </div>
+      </div>
+      <div class="plan-card plan-complete">
+        <span class="badge-plan">Suite completa</span>
+        <h3>TMS + RoadMaster + Tacógrafo</h3>
+        <p class="plan-desc">Gestión total + cumplimiento normativo</p>
+        <div class="plan-price">
+          <span class="price">69 €<span class="period">/mes</span></span>
+          <span class="price-annual">690 €/año</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Política de mejoras y evolución -->
+  <section id="evolucion" class="herramientas-block policy-section">
+    <h2>Política de mejoras y evolución</h2>
+    <p class="policy-intro">AdmiLogistic es una plataforma SaaS en evolución continua, alineada con la realidad operativa del transporte.</p>
+    <div class="policy-includes">
+      <h3>¿Qué incluye tu suscripción?</h3>
+      <ul>
+        <li>Mantenimiento, corrección de errores y actualizaciones de seguridad.</li>
+        <li>Adaptación a cambios normativos y legales del sector.</li>
+        <li>Nuevas funcionalidades generales, KPIs y mejoras en dashboards.</li>
+        <li>Evolución basada en el uso real y feedback global de los clientes.</li>
+      </ul>
+    </div>
+    <div class="policy-excludes">
+      <h3>¿Qué no está incluido?</h3>
+      <ul>
+        <li>Adaptaciones o lógicas exclusivas para una única empresa.</li>
+        <li>Informes personalizados con reglas privadas o integraciones externas concretas.</li>
+        <li>Desarrollos a medida (se presupuestan por separado).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="herramientas-block faq-section">
+    <h2>Preguntas frecuentes</h2>
+    <p class="faq-intro">Respuestas para PYMES de transporte.</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>¿Qué pasa si necesito una función que no existe?</h3>
+        <p>Analizamos todas las propuestas. Si tu sugerencia beneficia a todos los usuarios, se incluirá en el roadmap sin coste extra. Si es exclusiva de tu empresa, te ofrecemos un presupuesto de desarrollo a medida.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Los precios incluyen actualizaciones por cambios en la ley?</h3>
+        <p>Sí. Todas las adaptaciones a normativas de transporte están incluidas en el mantenimiento de tu suscripción para que tu empresa siempre cumpla con la ley.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Puedo cambiar de plan en cualquier momento?</h3>
+        <p>Sí, el sistema es modular. Puedes empezar con el plan Premium y subir a RoadMaster o Tacógrafo cuando tu flota crezca o lo necesites.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Mis datos están seguros?</h3>
+        <p>Sí. Incluimos actualizaciones de seguridad constantes y mantenimiento del sistema para garantizar que tu información operativa y financiera esté protegida.</p>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
 
 <script>
@@ -257,12 +353,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
   .manuals-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-top: 2rem;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  @media (min-width: 900px) {
+    .manuals-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 
   .manual-card {
@@ -308,9 +410,207 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     margin-top: 0.5rem;
   }
 
+  .manual-card-evolucion {
+    border: 2px solid rgba(102, 126, 234, 0.4);
+  }
+
+  .manual-card-evolucion:hover {
+    border-color: rgba(102, 126, 234, 0.7);
+  }
+
+  .manual-card-evolucion svg {
+    color: #667eea;
+  }
+
+  .manual-cta {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #667eea;
+    margin-top: 0.5rem;
+  }
+
   /* Anular el margin-top de layout-controls.css que desalinea las tarjetas */
   .project-card + .project-card {
     margin-top: 0 !important;
+  }
+
+  /* Bloques Herramientas: Precios, Política, FAQ */
+  .herramientas-block {
+    margin-top: 4rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+  }
+
+  .herramientas-block h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .block-intro,
+  .policy-intro,
+  .faq-intro {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .plans-grid.four-plans {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  @media (max-width: 900px) {
+    .plans-grid.four-plans {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .plans-grid.four-plans {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .precios-section .plan-card {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 1.25rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+  }
+
+  .precios-section .plan-card.plan-free {
+    border-style: dashed;
+  }
+
+  .precios-section .plan-card.plan-complete {
+    border-color: rgba(165, 180, 252, 0.5);
+  }
+
+  .precios-section .plan-card h3 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 0.35rem;
+  }
+
+  .precios-section .plan-desc {
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+  }
+
+  .precios-section .plan-price .price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .precios-section .plan-price .period {
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+
+  .precios-section .plan-price .price-annual {
+    display: block;
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 0.2rem;
+  }
+
+  .precios-section .plan-cta {
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0.5rem 0 0 0;
+  }
+
+  .badge-plan {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 0.625rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #c7d2fe;
+    background: rgba(99, 102, 241, 0.4);
+    padding: 0.2rem 0.45rem;
+    border-radius: 6px;
+  }
+
+  .policy-section h3 {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+
+  .policy-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+  }
+
+  .policy-section li {
+    padding: 0.35rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+
+  .policy-includes li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #86efac;
+  }
+
+  .policy-excludes li::before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    color: #fca5a5;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .faq-item {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 1.25rem 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .faq-item h3 {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+
+  .faq-item p {
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin: 0;
   }
 
   @media (max-width: 768px) {
@@ -325,6 +625,15 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
     .manuals-section {
       margin-top: 3rem;
+    }
+
+    .herramientas-block {
+      margin-top: 3rem;
+      padding: 1.5rem;
+    }
+
+    .herramientas-block h2 {
+      font-size: 1.5rem;
     }
 
     /* En móvil sí queremos separación vertical entre tarjetas */

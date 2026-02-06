@@ -2,206 +2,331 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout pageBg="bases" title="Bases de Datos - Blog AdmiLogistic" description="Bases de datos públicas de talleres, gasolineras, parkings y hoteles">
-  <div class="header-section" style="text-align: center;">
-    <h1 style="text-align: center;">Bases de Datos</h1>
-    <p style="text-align: center;">Accede a nuestras bases de datos públicas con información útil para el sector del transporte.</p>
+<BaseLayout pageBg="bases" title="Bases de Datos - Blog AdmiLogistic" description="Bases de datos públicas de talleres, gasolineras, parkings y hoteles para el transporte profesional. Datos de RoadMaster.">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css" crossorigin="" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css" crossorigin="" />
+
+  <div class="bases-hero">
+    <h1>Bases de Datos en el mapa</h1>
+    <p>Los mismos datos que usa RoadMaster: talleres, gasolineras, parkings y hoteles en toda España. Datos de fiar, actualizados y listos para planificar rutas.</p>
+    <div class="bases-stats" id="bases-stats">
+      <span class="bases-stats-item" data-layer="talleres"><strong id="count-talleres">—</strong> talleres</span>
+      <span class="bases-stats-item" data-layer="gasolineras"><strong id="count-gasolineras">—</strong> gasolineras</span>
+      <span class="bases-stats-item" data-layer="parkings"><strong id="count-parkings">—</strong> parkings</span>
+      <span class="bases-stats-item" data-layer="hoteles"><strong id="count-hoteles">—</strong> hoteles</span>
+    </div>
   </div>
 
-  <div class="databases-grid">
-    <a href="/bases-datos/talleres" class="database-card">
-      <div class="database-image">
-        <img src="/images/bases-datos/talleresok.png" alt="Talleres" loading="lazy" />
-      </div>
+  <div class="bases-map-section">
+    <div class="bases-map-legend">
+      <span class="legend-dot legend-talleres"></span> Talleres
+      <span class="legend-dot legend-gasolineras"></span> Gasolineras
+      <span class="legend-dot legend-parkings"></span> Parkings
+      <span class="legend-dot legend-hoteles"></span> Hoteles
+    </div>
+    <div id="map-spain" class="bases-map"></div>
+    <p class="bases-map-hint">Activa o desactiva cada capa con el control de la esquina superior derecha del mapa.</p>
+  </div>
+
+  <div class="bases-grid">
+    <a href="/bases-datos/talleres" class="base-card base-card--talleres">
+      <span class="base-card-icon" aria-hidden="true">🔧</span>
       <h2>Talleres</h2>
-      <p>Base de datos de talleres especializados en vehículos industriales.</p>
-      <span class="badge">Datos orientativos</span>
+      <p>Talleres especializados en vehículos industriales. Mecánica, neumáticos, ITV, urgencias 24h.</p>
+      <span class="base-card-badge">Ver listado y mapa</span>
     </a>
-
-    <a href="/bases-datos/gasolineras" class="database-card">
-      <div class="database-image">
-        <img src="/images/bases-datos/gasolinerasok.png" alt="Gasolineras" loading="lazy" />
-      </div>
+    <a href="/bases-datos/gasolineras" class="base-card base-card--gasolineras">
+      <span class="base-card-icon" aria-hidden="true">⛽</span>
       <h2>Gasolineras</h2>
-      <p>Base de datos de gasolineras y estaciones de servicio.</p>
-      <span class="badge">Datos orientativos</span>
+      <p>Áreas de servicio y estaciones en las principales vías. Ideal para planificar repostajes.</p>
+      <span class="base-card-badge">Ver listado y mapa</span>
     </a>
-
-    <a href="/bases-datos/parkings" class="database-card">
-      <div class="database-image">
-        <img src="/images/bases-datos/parkingok.png" alt="Parkings" loading="lazy" />
-      </div>
+    <a href="/bases-datos/parkings" class="base-card base-card--parkings">
+      <span class="base-card-icon" aria-hidden="true">🅿️</span>
       <h2>Parkings</h2>
-      <p>Base de datos de parkings y áreas de descanso para vehículos industriales.</p>
-      <span class="badge">Datos orientativos</span>
+      <p>Áreas de descanso, parkings seguros y certificados para camiones en toda España.</p>
+      <span class="base-card-badge">Ver listado y mapa</span>
     </a>
-
-    <a href="/bases-datos/hoteles" class="database-card">
-      <div class="database-image">
-        <img src="/images/bases-datos/hotelesok.png" alt="Hoteles" loading="lazy" />
-      </div>
+    <a href="/bases-datos/hoteles" class="base-card base-card--hoteles">
+      <span class="base-card-icon" aria-hidden="true">🏨</span>
       <h2>Hoteles</h2>
-      <p>Base de datos de hoteles adaptados a transportistas con parking para camiones.</p>
-      <span class="badge">Datos orientativos</span>
+      <p>Alojamientos con parking para camiones. Hoteles, hostales y moteles en rutas nacionales.</p>
+      <span class="base-card-badge">Ver listado y mapa</span>
     </a>
   </div>
 
-  <div class="info-note">
-    <p><strong>Nota:</strong> Estas bases de datos son de carácter informativo y orientativo. Los datos se actualizan periódicamente.</p>
+  <div class="bases-cta">
+    <p>Estas bases están integradas en RoadMaster para planificar rutas y ver puntos cercanos en tiempo real.</p>
+    <a href="/proyectos/roadmaster" class="bases-cta-btn">Usar en RoadMaster</a>
   </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script is:inline>
+    (function () {
+      function runMap() {
+        if (typeof L === 'undefined') {
+          setTimeout(runMap, 30);
+          return;
+        }
+        if (typeof L.markerClusterGroup === 'undefined') {
+          var s = document.createElement('script');
+          s.src = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js';
+          s.crossOrigin = 'anonymous';
+          s.onload = runMap;
+          document.head.appendChild(s);
+          return;
+        }
+        var mapEl = document.getElementById('map-spain');
+        if (!mapEl) return;
+
+        var map = L.map('map-spain', { zoomControl: true }).setView([40.4, -3.7], 6);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
+        map.zoomControl.setPosition('bottomright');
+
+        function esc(s) {
+          if (!s) return '';
+          var d = document.createElement('div');
+          d.textContent = s;
+          return d.innerHTML;
+        }
+
+        var layers = {};
+        var counts = { talleres: 0, gasolineras: 0, parkings: 0, hoteles: 0 };
+
+        layers.talleres = L.markerClusterGroup({ maxClusterRadius: 40, spiderfyOnMaxZoom: true });
+        layers.gasolineras = L.markerClusterGroup({ maxClusterRadius: 35, spiderfyOnMaxZoom: true });
+        layers.parkings = L.markerClusterGroup({ maxClusterRadius: 40, spiderfyOnMaxZoom: true });
+        layers.hoteles = L.markerClusterGroup({ maxClusterRadius: 50, spiderfyOnMaxZoom: true });
+
+        function icon(color) {
+          return L.divIcon({
+        className: 'custom-marker',
+        html: '<span style="background:' + color + ';width:12px;height:12px;border-radius:50%;display:block;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,0.4);"></span>',
+            iconSize: [16, 16],
+            iconAnchor: [8, 8]
+          });
+        }
+
+      fetch('/data/talleres.json').then(r => r.json()).then(data => {
+        (data || []).forEach(p => {
+          const lat = p.coordenadas ? p.coordenadas.lat : p.lat;
+          const lng = p.coordenadas ? p.coordenadas.lng : p.lng;
+          if (lat == null || lng == null) return;
+          const name = p.nombre || '';
+          const addr = (p.direccion || p.provincia || '').slice(0, 60);
+          L.marker([lat, lng], { icon: icon('#0ea5e9') }).bindPopup('<strong>' + esc(name) + '</strong><br>' + esc(addr)).addTo(layers.talleres);
+        });
+        counts.talleres = (data || []).length;
+        document.getElementById('count-talleres').textContent = counts.talleres;
+      }).catch(() => {});
+
+      fetch('/data/gasolineras.geojson').then(r => r.json()).then(geojson => {
+        const features = (geojson && geojson.features) || [];
+        features.forEach(f => {
+          const coords = f.geometry && f.geometry.coordinates;
+          if (!coords || coords.length < 2) return;
+          const lng = coords[0], lat = coords[1];
+          const name = (f.properties && f.properties.name) || 'Área de servicio';
+          L.marker([lat, lng], { icon: icon('#22c55e') }).bindPopup(esc(name)).addTo(layers.gasolineras);
+        });
+        counts.gasolineras = features.length;
+        document.getElementById('count-gasolineras').textContent = counts.gasolineras;
+      }).catch(() => {});
+
+      fetch('/data/parkings.json').then(r => r.json()).then(data => {
+        (data || []).forEach(p => {
+          const lat = p.lat, lng = p.lng;
+          if (lat == null || lng == null) return;
+          const name = p.nombre || '';
+          const info = [p.autopista, p.pk && 'pk ' + p.pk, p.provincia].filter(Boolean).join(' · ');
+          L.marker([lat, lng], { icon: icon('#f59e0b') }).bindPopup('<strong>' + esc(name) + '</strong><br>' + esc(info)).addTo(layers.parkings);
+        });
+        counts.parkings = (data || []).length;
+        document.getElementById('count-parkings').textContent = counts.parkings;
+      }).catch(() => {});
+
+      fetch('/data/hoteles.json').then(r => r.json()).then(data => {
+        (data || []).forEach(p => {
+          const lat = p.lat, lng = p.lng;
+          if (lat == null || lng == null) return;
+          const name = p.nombre || '';
+          const info = (p.direccion || p.provincia || '') + (p.precio_desde != null ? ' · desde ' + p.precio_desde + ' €' : '');
+          L.marker([lat, lng], { icon: icon('#8b5cf6') }).bindPopup('<strong>' + esc(name) + '</strong><br>' + esc(info)).addTo(layers.hoteles);
+        });
+        counts.hoteles = (data || []).length;
+        document.getElementById('count-hoteles').textContent = counts.hoteles;
+      }).catch(() => {});
+
+      map.addLayer(layers.talleres);
+      map.addLayer(layers.gasolineras);
+      map.addLayer(layers.parkings);
+      map.addLayer(layers.hoteles);
+
+        L.control.layers(
+          {},
+          {
+            'Talleres': layers.talleres,
+            'Gasolineras': layers.gasolineras,
+            'Parkings': layers.parkings,
+            'Hoteles': layers.hoteles
+          },
+          { collapsed: false }
+        ).addTo(map);
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', runMap);
+      } else {
+        runMap();
+      }
+    })();
+  </script>
 </BaseLayout>
 
-<script>
-  // Forzar centrado de textos
-  document.addEventListener('DOMContentLoaded', () => {
-    const header = document.querySelector('.header-section');
-    
-    if (header) {
-      header.style.textAlign = 'center';
-      const h1 = header.querySelector('h1');
-      const p = header.querySelector('p');
-      if (h1) h1.style.textAlign = 'center';
-      if (p) p.style.textAlign = 'center';
-    }
-  });
-</script>
-
 <style>
-  .header-section {
-    text-align: center !important;
-    margin-bottom: 2rem;
-    padding-top: 1rem;
-    width: 100% !important;
-    display: block !important;
+  .bases-hero {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    padding: 0 1rem;
   }
-
-  .header-section * {
-    text-align: center !important;
+  .bases-hero h1 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+    margin-bottom: 0.75rem;
   }
-
-  h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    text-align: center !important;
-    width: 100% !important;
+  .bases-hero p {
+    font-size: 1.125rem;
+    color: rgba(255,255,255,0.95);
+    line-height: 1.65;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
   }
-
-  .header-section p {
-    font-size: 1.25rem;
-    color: #ffffff;
-    margin-bottom: 0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    text-align: center !important;
-    width: 100% !important;
-    display: block !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+  .bases-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem 2rem;
+    margin-top: 1.5rem;
+    padding: 1rem 1.5rem;
+    background: rgba(255,255,255,0.2);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
   }
-
-  .databases-grid {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
-    gap: 2rem !important;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: stretch !important;
+  .bases-stats-item {
+    font-size: 0.9375rem;
+    color: rgba(255,255,255,0.95);
   }
-
-  .database-card {
-    display: flex !important;
-    flex-direction: column !important;
-    padding: 2rem !important;
-    background: #f5f5f5;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
+  .bases-stats-item strong {
+    color: #fff;
+    font-weight: 700;
+  }
+  .bases-map-section {
+    max-width: 1100px;
+    margin: 0 auto 2.5rem;
+    padding: 0 1rem;
+  }
+  .bases-map-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    color: #374151;
+  }
+  .legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.25rem;
+  }
+  .legend-talleres { background: #0ea5e9; }
+  .legend-gasolineras { background: #22c55e; }
+  .legend-parkings { background: #f59e0b; }
+  .legend-hoteles { background: #8b5cf6; }
+  .bases-map {
+    height: 520px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    border: 1px solid rgba(0,0,0,0.08);
+    background: #e5e7eb;
+  }
+  .bases-map-hint {
+    margin-top: 0.75rem;
+    font-size: 0.8125rem;
+    color: #6b7280;
+    text-align: center;
+  }
+  .custom-marker { background: none !important; border: none !important; }
+  .bases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto 2.5rem;
+    padding: 0 1rem;
+  }
+  .base-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.75rem;
+    border-radius: 16px;
     text-decoration: none;
     color: inherit;
-    position: relative;
-    height: 100% !important;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.5);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
-
-  .database-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  .base-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
   }
-
-  .database-image {
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .database-image img {
-    max-width: 120px;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-  }
-
-  .database-card h2 {
-    margin-bottom: 1rem;
-    color: #1a1a1a;
-  }
-
-  .database-card p {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 1rem !important;
-    flex-grow: 1 !important;
-  }
-
-  .badge {
+  .base-card-icon { font-size: 2.5rem; margin-bottom: 1rem; line-height: 1; }
+  .base-card h2 { font-size: 1.35rem; font-weight: 700; color: #1a1a1a; margin: 0 0 0.5rem 0; }
+  .base-card p { font-size: 0.9375rem; color: #555; line-height: 1.6; margin: 0 0 1rem 0; flex-grow: 1; }
+  .base-card-badge {
     display: inline-block;
-    padding: 0.25rem 0.75rem;
-    background-color: #0066cc;
-    color: white;
-    border-radius: 12px;
-    font-size: 0.875rem;
-    font-weight: 500;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #6366f1;
+    background: rgba(99,102,241,0.12);
+    padding: 0.35rem 0.75rem;
+    border-radius: 8px;
   }
-
-  .info-note {
-    background: #f0f7ff;
-    border-left: 4px solid #0066cc;
-    padding: 1.5rem;
-    border-radius: 4px;
-    margin-top: 2rem;
+  .base-card--talleres { border-top: 4px solid #0ea5e9; }
+  .base-card--gasolineras { border-top: 4px solid #22c55e; }
+  .base-card--parkings { border-top: 4px solid #f59e0b; }
+  .base-card--hoteles { border-top: 4px solid #8b5cf6; }
+  .bases-cta {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(255,255,255,0.15);
+    border-radius: 16px;
+    max-width: 560px;
+    margin: 0 auto;
   }
-
-  .info-note p {
-    margin: 0;
-    color: #333;
-    line-height: 1.6;
+  .bases-cta p { margin: 0 0 1rem 0; color: #fff; font-size: 1rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); }
+  .bases-cta-btn {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    background: #6366f1;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.2s, transform 0.2s;
   }
-
-  @media (min-width: 1200px) {
-    .databases-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-
-  /* Anular margin-top de layout-controls.css que desalinea las tarjetas */
-  .database-card + .database-card {
-    margin-top: 0 !important;
-  }
-
+  .bases-cta-btn:hover { background: #4f46e5; transform: translateY(-2px); }
   @media (max-width: 768px) {
-    .databases-grid {
-      grid-template-columns: 1fr;
-    }
-
-    /* En móvil sí queremos separación vertical entre tarjetas */
-    .database-card + .database-card {
-      margin-top: 1.5rem !important;
-    }
+    .bases-grid { grid-template-columns: 1fr; }
+    .bases-map { height: 380px; }
   }
 </style>

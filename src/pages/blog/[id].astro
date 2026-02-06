@@ -35,7 +35,7 @@ const categoryLabel: Record<string, string> = {
 >
   <article class="article-page">
     {post.data.image && (
-      <figure class="article-image">
+      <figure class:list={["article-image", post.id === "2026-02-06-lona-frigo-contenedor-verdad-autoescuela" && "article-image--contain"]}>
         <img src={post.data.image.startsWith("/") ? post.data.image : `/${post.data.image}`} alt={post.data.title} loading="eager" />
       </figure>
     )}
@@ -110,6 +110,16 @@ const categoryLabel: Record<string, string> = {
     display: block;
     object-fit: cover;
     max-height: 500px;
+  }
+
+  /* Imagen comparativa: mostrar completa para que se lea el texto (sin recortar) */
+  .article-image--contain {
+    background: #1e293b;
+  }
+
+  .article-image--contain img {
+    object-fit: contain;
+    max-height: 580px;
   }
 
   .article-header {
@@ -285,6 +295,190 @@ const categoryLabel: Record<string, string> = {
     border-radius: 12px;
   }
 
+  /* ============================================
+     COMPARATIVA: Fichas plataforma (fondo oscuro)
+     ============================================ */
+  .article-body :global(.comparativa-intro) {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: #1e293b;
+    margin-bottom: 2rem;
+  }
+
+  .article-body :global(.fichas-plataforma) {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .article-body :global(.ficha-plataforma) {
+    background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+    color: #f1f5f9;
+    border-radius: 16px;
+    padding: 1.5rem 1.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .article-body :global(.ficha-plataforma h3) {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    color: #fff;
+    border-bottom: none;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .article-body :global(.ficha-plataforma .ficha-uso) {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+  }
+
+  .article-body :global(.ficha-plataforma .ficha-uso strong) {
+    color: #cbd5e1;
+  }
+
+  .article-body :global(.ficha-pro) {
+    background: rgba(34, 197, 94, 0.2);
+    border-left: 4px solid #22c55e;
+    color: #dcfce7;
+    padding: 0.75rem 1rem;
+    border-radius: 0 8px 8px 0;
+    margin: 0.75rem 0;
+    font-size: 0.9375rem;
+  }
+
+  .article-body :global(.ficha-pro strong) {
+    color: #86efac;
+  }
+
+  .article-body :global(.ficha-contra) {
+    background: rgba(239, 68, 68, 0.2);
+    border-left: 4px solid #ef4444;
+    color: #fecaca;
+    padding: 0.75rem 1rem;
+    border-radius: 0 8px 8px 0;
+    margin: 0.75rem 0;
+    font-size: 0.9375rem;
+  }
+
+  .article-body :global(.ficha-contra strong) {
+    color: #fca5a5;
+  }
+
+  .article-body :global(.ficha-dato) {
+    background: rgba(251, 191, 36, 0.15);
+    border-left: 4px solid #eab308;
+    color: #fef9c3;
+    padding: 0.75rem 1rem;
+    border-radius: 0 8px 8px 0;
+    margin: 0.75rem 0 0 0;
+    font-size: 0.9rem;
+  }
+
+  .article-body :global(.ficha-dato strong) {
+    color: #fde047;
+  }
+
+  /* Tabla comparativa AdmiLogistic (oscura) */
+  .article-body :global(.tabla-comparativa-admilogistic) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    font-size: 0.9375rem;
+  }
+
+  .article-body :global(.tabla-comparativa-admilogistic thead) {
+    background: #0f172a;
+    color: #fff;
+  }
+
+  .article-body :global(.tabla-comparativa-admilogistic th) {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-weight: 700;
+    border: none;
+  }
+
+  .article-body :global(.tabla-comparativa-admilogistic td) {
+    padding: 0.875rem 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    background: #1e293b;
+    color: #e2e8f0;
+  }
+
+  .article-body :global(.tabla-comparativa-admilogistic tbody tr:last-child td) {
+    border-bottom: none;
+  }
+
+  .article-body :global(.tabla-comparativa-admilogistic tbody tr:nth-child(even) td) {
+    background: #334155;
+  }
+
+  .article-body :global(.conclusion-directa) {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(139, 92, 246, 0.1) 100%);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem;
+    margin: 2rem 0;
+  }
+
+  .article-body :global(.conclusion-directa h3) {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.2rem;
+    color: #4338ca;
+  }
+
+  .article-body :global(.conclusion-directa p) {
+    margin: 0;
+    color: #374151;
+    line-height: 1.7;
+  }
+
+  .article-body :global(.cta-kit-banner) {
+    background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+    color: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    margin: 2.5rem 0 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .article-body :global(.cta-kit-banner h3) {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.35rem;
+    color: #fff;
+  }
+
+  .article-body :global(.cta-kit-banner p) {
+    margin: 0 0 1.25rem 0;
+    color: #cbd5e1;
+    font-size: 1rem;
+  }
+
+  .article-body :global(.cta-kit-banner .cta-kit-btn) {
+    display: inline-block;
+    background: #22c55e;
+    color: #0f172a;
+    font-weight: 700;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .article-body :global(.cta-kit-banner .cta-kit-btn:hover) {
+    background: #16a34a;
+    transform: translateY(-1px);
+  }
+
   /* Tablet */
   @media (max-width: 1024px) {
     .article-page {
@@ -341,6 +535,10 @@ const categoryLabel: Record<string, string> = {
       max-height: 250px;
     }
 
+    .article-image--contain img {
+      max-height: 340px;
+    }
+
     .article-body :global(table) {
       font-size: 0.875rem;
     }
@@ -353,6 +551,25 @@ const categoryLabel: Record<string, string> = {
     .article-body :global(blockquote) {
       padding: 0.875rem 1rem;
       margin: 1.25rem 0;
+    }
+
+    .article-body :global(.tabla-comparativa-admilogistic) {
+      font-size: 0.8125rem;
+      display: block;
+      overflow-x: auto;
+    }
+
+    .article-body :global(.tabla-comparativa-admilogistic th),
+    .article-body :global(.tabla-comparativa-admilogistic td) {
+      padding: 0.65rem 0.75rem;
+    }
+
+    .article-body :global(.cta-kit-banner) {
+      padding: 1.5rem;
+    }
+
+    .article-body :global(.cta-kit-banner h3) {
+      font-size: 1.15rem;
     }
   }
 
@@ -388,6 +605,10 @@ const categoryLabel: Record<string, string> = {
 
     .article-image img {
       max-height: 200px;
+    }
+
+    .article-image--contain img {
+      max-height: 280px;
     }
 
     .article-body :global(table) {
