@@ -31,7 +31,8 @@ const categoryLabel: Record<string, string> = {
 <BaseLayout
   pageBg="categorias"
   title={`${post.data.title} | Blog AdmiLogistic`}
-  description={post.data.description ?? post.data.title}
+  description={typeof post.data.description === 'string' ? (post.data.description.slice(0, 155).replace(/\s+\S*$/, '') || post.data.title.slice(0, 155)) : (post.data.title || '').slice(0, 155).replace(/\s+\S*$/, '')}
+  image={post.data.image}
 >
   <article class="article-page">
     {post.data.image && (

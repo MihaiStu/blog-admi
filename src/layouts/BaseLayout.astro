@@ -7,9 +7,15 @@ interface Props {
   title: string;
   description?: string;
   pageBg?: string;
+  image?: string;
 }
 
-const { title, description = "Blog de AdmiLogistic" } = Astro.props;
+const { title, description = "Blog de AdmiLogistic", image } = Astro.props;
+
+const site = Astro.site?.href ?? 'https://admilogistic.es';
+const canonicalUrl = new URL(Astro.url.pathname, site).href;
+const ogImage = image ? new URL(image.startsWith('/') ? image : `/${image}`, site).href : new URL('/images/hero/Portadaok2.png', site).href;
+const descTruncated = description.length > 155 ? description.slice(0, 152).replace(/\s+\S*$/, '') + '…' : description;
 
 // Self-determine page from URL pathname (more reliable than relying on props)
 const pathname = Astro.url.pathname;
@@ -35,11 +41,22 @@ const bgStyleTag = ``;
 <html lang="es" style={htmlStyle} class={import.meta.env.DEV ? "edit-mode" : ""}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
+    <meta name="description" content={descTruncated} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalUrl} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    {/* Open Graph / LinkedIn, Facebook */}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={descTruncated} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="es_ES" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={descTruncated} />
     {/* Google AdSense */}
     <script
       async
