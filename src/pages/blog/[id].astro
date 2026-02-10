@@ -36,7 +36,7 @@ const categoryLabel: Record<string, string> = {
 >
   <article class="article-page">
     {post.data.image && (
-      <figure class:list={["article-image", post.id === "2026-02-06-lona-frigo-contenedor-verdad-autoescuela" && "article-image--contain"]}>
+      <figure class:list={["article-image", post.id === "2026-02-06-lona-frigo-contenedor-verdad-autoescuela" && "article-image--contain", post.id === "2026-03-07-resolucion-consejo-acuses-recibo" && "article-image--slide"]}>
         <img src={post.data.image.startsWith("/") ? post.data.image : `/${post.data.image}`} alt={post.data.title} loading="eager" />
       </figure>
     )}
@@ -121,6 +121,22 @@ const categoryLabel: Record<string, string> = {
   .article-image--contain img {
     object-fit: contain;
     max-height: 580px;
+  }
+
+  /* Slide / banner: mostrar imagen completa, proporción ancha, sin recortar */
+  .article-image--slide {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    aspect-ratio: 16 / 9;
+    background: #1a1a2e;
+  }
+
+  .article-image--slide img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    max-height: 420px;
   }
 
   .article-header {
