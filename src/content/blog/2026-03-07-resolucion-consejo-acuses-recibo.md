@@ -26,4 +26,4 @@ Desde AdmiLogistic, recomendamos no confiar únicamente en las alertas por corre
 
 **Fuente:** [Referencia de la Resolución o Boletín Oficial] | **Categoría:** Normativa y Transporte | **Tags:** #AdmiLogistic #NormativaTransporte #AcusesRecibo #NotificacionesElectrónicas
 
-> Saber más en [www.admilogistic.es/actualidad](https://www.admilogistic.es/actualidad)
+> Saber más en [Actualidad](/categorias/actualidad)
