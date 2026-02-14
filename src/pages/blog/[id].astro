@@ -97,20 +97,26 @@ const categoryLabel: Record<string, string> = {
     padding: 2rem 2rem 4rem;
   }
 
+  /* Mismo tamaño para todas las imágenes destacadas (informe rentabilidad, base logística, etc.) */
   .article-image {
-    margin: 0 0 2rem 0;
+    margin: 0 auto 2rem;
     width: 100%;
+    max-width: 900px;
+    height: 500px;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    background: #1e293b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .article-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
-    object-fit: cover;
-    max-height: 500px;
+    object-fit: contain;
   }
 
   /* Imagen comparativa: mostrar completa para que se lea el texto (sin recortar) */
