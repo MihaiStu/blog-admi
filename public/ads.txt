@@ -1,0 +1,5 @@
+# ads.txt - Google AdSense
+# Obtén la línea exacta en: AdSense > Configuración > Cuenta > ads.txt
+# y sustituye si Google te muestra otra distinta.
+
+google.com, pub-6113965561021500, DIRECT, f08c47fec0942fa0
