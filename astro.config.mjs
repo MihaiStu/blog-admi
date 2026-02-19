@@ -5,7 +5,6 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://admilogistic.es',
-  trailingSlash: 'always',
   integrations: [sitemap()],
   vite: {
     plugins: [
