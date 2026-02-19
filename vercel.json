@@ -1,1 +1,9 @@
-{"redirects":[{"source":"/tacografo","destination":"https://admilogistic.es/proyectos/tacografo","permanent":true},{"source":"/:path*","has":[{"type":"host","value":"www.admilogistic.es"}],"destination":"https://admilogistic.es/:path*","permanent":true}]}
+{
+  "redirects": [
+    {
+      "source": "/tacografo",
+      "destination": "https://admilogistic.es/proyectos/tacografo",
+      "permanent": true
+    }
+  ]
+}
