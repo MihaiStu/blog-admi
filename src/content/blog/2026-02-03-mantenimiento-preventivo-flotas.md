@@ -33,6 +33,22 @@ Antes de iniciar cada ruta, el conductor debe verificar estos 5 puntos básicos:
 4. **Fugas:** Comprobar manchas bajo el vehículo tras el descanso nocturno.
 5. **Tacógrafo:** Verificar que hay papel suficiente y que no hay mensajes de error en el display.
 
+---
+
+> **Truckland Alcalá de Henares** — Taller oficial DAF y multimarca para vehículos industriales. Revisiones periódicas, diagnóstico electrónico y planes de mantenimiento para flotas. Servicio de recogida y entrega para flotas de la zona de Madrid y Guadalajara.
+> [Pedir cita de taller →](https://www.truckland.es/cita-de-taller)
+
+---
+
+## Recursos recomendados
+
+**Taller y mantenimiento de vehículos industriales**
+
+**Truckland Alcalá de Henares** — Concesionario oficial DAF. Taller para vehículos industriales, revisiones periódicas y mantenimiento de flotas con cobertura en Madrid y Guadalajara.
+[Pedir cita →](https://www.truckland.es/cita-de-taller)
+
+---
+
 ## Conclusión
 
 El mantenimiento preventivo no es un gasto, es una inversión. Cada euro invertido en prevención puede ahorrar tres en reparaciones de emergencia y días de inactividad.

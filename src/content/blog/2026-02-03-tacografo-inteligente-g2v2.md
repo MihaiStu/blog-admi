@@ -47,6 +47,9 @@ El G2V2 está diseñado para controlar el cumplimiento del Paquete de Movilidad:
 
 **Tarjetas de conductor:** Aunque las tarjetas antiguas son compatibles, para aprovechar todas las funciones del G2V2 (como el registro de posición cada 3 horas), se recomienda usar las tarjetas de conductor de nueva generación.
 
+> **Truckland Alcalá de Henares** dispone de servicio homologado para la instalación y calibración del tacógrafo G2V2 en vehículos pesados y ligeros. Concesionario y taller oficial DAF en Madrid y Guadalajara.
+> [Solicitar cita de taller →](https://www.truckland.es/cita-de-taller)
+
 ## Conclusión: Inversión vs. Multa
 
 El coste de instalar un G2V2 puede parecer elevado (entre 700€ y 1.200€ dependiendo del vehículo), pero palidece frente a una multa por carecer de tacógrafo homologado, que puede alcanzar los **4.001 €** y la pérdida de la honorabilidad de la empresa.
