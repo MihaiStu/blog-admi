@@ -1,0 +1,744 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Colaboradores — AdmiLogistic"
+  description="Empresas recomendadas para el transportista profesional. Seguros, talleres, gasoil, financiación y formación seleccionados por el equipo de AdmiLogistic."
+>
+
+  <!-- BLOQUE 1: Hero -->
+  <div class="colabs-hero">
+    <h1>Empresas recomendadas para el transportista profesional</h1>
+    <p>Empresas del sector transporte que el equipo de AdmiLogistic conoce y recomienda. Si trabajas en logística, aquí encuentras servicios con los que otros profesionales ya trabajan.</p>
+  </div>
+
+  <!-- BLOQUE 2: Filtro + Grid de colaboradores -->
+  <section class="colabs-block colabs-partners">
+
+    <!-- Filtro de categorías -->
+    <div class="filter-bar" role="group" aria-label="Filtrar colaboradores por categoría">
+      <button class="filter-btn active" data-filter="todos">Todos</button>
+      <button class="filter-btn" data-filter="seguros">Seguros</button>
+      <button class="filter-btn" data-filter="talleres">Talleres</button>
+      <button class="filter-btn" data-filter="gasoil">Gasoil</button>
+      <button class="filter-btn" data-filter="financiacion">Financiación</button>
+      <button class="filter-btn" data-filter="formacion">Formación</button>
+      <button class="filter-btn" data-filter="asesoria">Asesoría</button>
+      <button class="filter-btn" data-filter="repuestos">Repuestos</button>
+      <button class="filter-btn" data-filter="vehiculos">Vehículos V.O.</button>
+      <button class="filter-btn" data-filter="otros">Otros</button>
+    </div>
+
+    <!-- Grid de colaboradores -->
+    <div class="partner-grid" id="partner-grid">
+
+      <!-- SegurCamión — Seguros -->
+      <article class="partner-card" data-category="seguros">
+        <div class="partner-card-top">
+          <span class="partner-badge badge-seguros">Seguros</span>
+        </div>
+        <div class="partner-identity">
+          <div class="partner-logo">
+            <img
+              src="https://segurcamion.com/wp-content/uploads/2019/01/logo-segurcamion.png"
+              alt="SegurCamión"
+              class="logo-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+            />
+            <div class="logo-fallback logo-seguros" style="display:none">SC</div>
+          </div>
+          <div>
+            <h3 class="partner-name">SegurCamión</h3>
+            <p class="partner-tagline">Seguros de transporte de carretera</p>
+          </div>
+        </div>
+        <p class="partner-desc">
+          Especialistas en seguros para camiones, autónomos y flotas de transporte por carretera.
+          Más de 35 años en el sector con conocimiento profundo de las necesidades del transportista profesional.
+        </p>
+        <div class="partner-mentions">
+          <span class="mentions-label">Mencionado en</span>
+          <div class="mentions-list">
+            <span class="mention-tag">Guías de seguros</span>
+            <span class="mention-tag">Costes del autónomo</span>
+            <span class="mention-tag">Trámites y cumplimiento</span>
+          </div>
+        </div>
+        <a href="#" class="partner-cta cta-seguros" rel="noopener noreferrer" target="_blank">
+          Ver seguros de camión →
+        </a>
+      </article>
+
+      <!-- Talleres Hecza -->
+      <article class="partner-card" data-category="talleres">
+        <div class="partner-card-top">
+          <span class="partner-badge badge-talleres">Talleres</span>
+        </div>
+        <div class="partner-identity">
+          <div class="partner-logo">
+            <img
+              src="https://tallereshecza.com/wp-content/uploads/2019/04/logo-hecza.png"
+              alt="Talleres Hecza"
+              class="logo-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+            />
+            <div class="logo-fallback logo-talleres" style="display:none">HCZ</div>
+          </div>
+          <div>
+            <h3 class="partner-name">Talleres Hecza</h3>
+            <p class="partner-tagline">Reparación y mantenimiento de vehículos pesados</p>
+          </div>
+        </div>
+        <p class="partner-desc">
+          Taller especializado en reparación y mantenimiento de camiones y autobuses en la zona sur de Madrid.
+          Más de 20 años de experiencia. Servicio urgente y taller móvil disponible.
+        </p>
+        <div class="partner-mentions">
+          <span class="mentions-label">Mencionado en</span>
+          <div class="mentions-list">
+            <span class="mention-tag">Mantenimiento de flota</span>
+            <span class="mention-tag">Costes operativos</span>
+            <span class="mention-tag">Guías de mantenimiento</span>
+          </div>
+        </div>
+        <a href="https://tallereshecza.com" class="partner-cta cta-talleres" rel="noopener noreferrer" target="_blank">
+          Ver servicios de taller →
+        </a>
+      </article>
+
+      <!-- Repuestos Reyes -->
+      <article class="partner-card" data-category="repuestos">
+        <div class="partner-card-top">
+          <span class="partner-badge badge-repuestos">Repuestos</span>
+        </div>
+        <div class="partner-identity">
+          <div class="partner-logo">
+            <img
+              src="https://repuestosreyes.com/wp-content/uploads/logo-repuestos-reyes.png"
+              alt="Repuestos Reyes"
+              class="logo-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+            />
+            <div class="logo-fallback logo-repuestos" style="display:none">RR</div>
+          </div>
+          <div>
+            <h3 class="partner-name">Repuestos Reyes</h3>
+            <p class="partner-tagline">Mecánica, neumáticos y recambios industriales</p>
+          </div>
+        </div>
+        <p class="partner-desc">
+          Más de 50 años al servicio del transportista. 5 centros en la zona sur de Madrid especializados
+          en mecánica, neumáticos y recambios para vehículos industriales. Mantenimiento de flotas a domicilio.
+        </p>
+        <div class="partner-mentions">
+          <span class="mentions-label">Mencionado en</span>
+          <div class="mentions-list">
+            <span class="mention-tag">Mantenimiento de flota</span>
+            <span class="mention-tag">Neumáticos y seguridad</span>
+            <span class="mention-tag">Costes por kilómetro</span>
+          </div>
+        </div>
+        <a href="https://repuestosreyes.com" class="partner-cta cta-repuestos" rel="noopener noreferrer" target="_blank">
+          Ver centros y servicios →
+        </a>
+      </article>
+
+      <!-- DAF Used Trucks — Truckland Alcalá de Henares -->
+      <article class="partner-card" data-category="vehiculos">
+        <div class="partner-card-top">
+          <span class="partner-badge badge-vehiculos">Vehículos V.O.</span>
+        </div>
+        <div class="partner-identity">
+          <div class="partner-logo">
+            <img
+              src="https://www.dafusedtrucks.com/images/daf-used-trucks-logo.png"
+              alt="DAF Used Trucks"
+              class="logo-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+            />
+            <div class="logo-fallback logo-vehiculos" style="display:none">DAF</div>
+          </div>
+          <div>
+            <h3 class="partner-name">DAF Used Trucks España</h3>
+            <p class="partner-tagline">Concesionario oficial DAF — Alcalá de Henares</p>
+          </div>
+        </div>
+        <p class="partner-desc">
+          Venta de camiones DAF nuevos y de ocasión con garantía First Choice de hasta 36 meses.
+          Recambios originales y taller oficial. Concesionario DAF en Alcalá de Henares.
+        </p>
+        <div class="partner-mentions">
+          <span class="mentions-label">Mencionado en</span>
+          <div class="mentions-list">
+            <span class="mention-tag">Compra de camión</span>
+            <span class="mention-tag">Renovación de flota</span>
+            <span class="mention-tag">Financiación de vehículos</span>
+          </div>
+        </div>
+        <a href="https://www.truckland.es/centros/alcala-de-henares" class="partner-cta cta-vehiculos" rel="noopener noreferrer" target="_blank">
+          Ver camiones disponibles →
+        </a>
+      </article>
+
+      <!-- OKAsesores -->
+      <article class="partner-card" data-category="asesoria">
+        <div class="partner-card-top">
+          <span class="partner-badge badge-asesoria">Asesoría</span>
+        </div>
+        <div class="partner-identity">
+          <div class="partner-logo">
+            <img
+              src="https://okasesores.es/wp-content/uploads/logo-okasesores.png"
+              alt="OKAsesores"
+              class="logo-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+            />
+            <div class="logo-fallback logo-asesoria" style="display:none">OK</div>
+          </div>
+          <div>
+            <h3 class="partner-name">OKAsesores</h3>
+            <p class="partner-tagline">Asesoría y gestoría online para autónomos y pymes</p>
+          </div>
+        </div>
+        <p class="partner-desc">
+          Gestión fiscal, contable, laboral y jurídica sin intermediarios.
+          Atención personalizada por asesores fiscales desde el primer contacto.
+          Servicio online y presencial en Madrid.
+        </p>
+        <div class="partner-mentions">
+          <span class="mentions-label">Mencionado en</span>
+          <div class="mentions-list">
+            <span class="mention-tag">Fiscalidad del autónomo</span>
+            <span class="mention-tag">IRPF y declaraciones</span>
+            <span class="mention-tag">Trámites y alta autónomo</span>
+          </div>
+        </div>
+        <a href="https://okasesores.es/planes-precios-online-tarifas-asesoria-web-autonomos-sociedades/" class="partner-cta cta-asesoria" rel="noopener noreferrer" target="_blank">
+          Ver planes y precios →
+        </a>
+      </article>
+
+    </div>
+
+    <!-- Mensaje si no hay resultados en el filtro -->
+    <p class="no-results" id="no-results" aria-live="polite">
+      Todavía no hay colaboradores en esta categoría.
+    </p>
+
+  </section>
+
+  <!-- BLOQUE 3: CTA para nuevos colaboradores -->
+  <section class="colabs-block colabs-cta">
+    <h2 class="cta-title">¿Quieres llegar a miles de transportistas profesionales?</h2>
+    <p class="cta-desc">
+      AdmiLogistic es leído por gestores de flota, autónomos del transporte y responsables de logística.
+      Si tu empresa ofrece servicios relevantes para este sector, cuéntanoslo.
+    </p>
+
+    <div class="blog-metrics">
+      <div class="metric">
+        <span class="metric-value">50+</span>
+        <span class="metric-label">Artículos publicados</span>
+      </div>
+      <div class="metric">
+        <span class="metric-value">4</span>
+        <span class="metric-label">Bases de datos activas</span>
+      </div>
+      <div class="metric">
+        <span class="metric-value">3</span>
+        <span class="metric-label">Herramientas de gestión</span>
+      </div>
+      <div class="metric">
+        <span class="metric-value">6</span>
+        <span class="metric-label">Categorías de contenido</span>
+      </div>
+    </div>
+
+    <div class="cta-footer">
+      <p class="cta-note">
+        Audiencia cualificada de profesionales del transporte por carretera. Sin formatos de publicidad masiva — solo recomendaciones editoriales contextuales.
+      </p>
+      <a
+        href="mailto:info@admilogistic.es?subject=Colaboraci%C3%B3n%20AdmiLogistic"
+        class="cta-button"
+      >
+        Contactar para colaborar →
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<script>
+  // Filtro de categorías
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+  const cards = document.querySelectorAll<HTMLElement>('.partner-card');
+  const noResults = document.getElementById('no-results');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+
+      // Actualizar botón activo
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Filtrar cards
+      let visible = 0;
+      cards.forEach(card => {
+        const match = filter === 'todos' || card.dataset.category === filter;
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+
+      // Mostrar mensaje si no hay resultados
+      if (noResults) {
+        noResults.style.display = visible === 0 ? 'block' : 'none';
+      }
+    });
+  });
+</script>
+
+<style>
+  /* ─── HERO ─── */
+  .colabs-hero {
+    max-width: 780px;
+    margin: 3rem auto 2rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.52) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .colabs-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
+    margin: 0 0 1rem;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .colabs-hero p {
+    font-size: 1.0625rem;
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.65;
+    max-width: 580px;
+    margin: 0 auto;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  }
+
+  /* ─── BLOQUE BASE ─── */
+  .colabs-block {
+    max-width: 1100px;
+    margin: 0 auto 2rem;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* ─── FILTRO ─── */
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .filter-btn {
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.07);
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    font-family: inherit;
+  }
+
+  .filter-btn:hover {
+    background: rgba(255, 255, 255, 0.13);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+
+  .filter-btn.active {
+    background: rgba(99, 102, 241, 0.3);
+    border-color: rgba(99, 102, 241, 0.6);
+    color: #c7d2fe;
+    font-weight: 600;
+  }
+
+  /* ─── PARTNER GRID ─── */
+  .partner-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  /* ─── PARTNER CARD ─── */
+  .partner-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    padding: 1.375rem;
+    background: rgba(255, 255, 255, 0.07) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+  }
+
+  .partner-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.24);
+    background: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  /* ─── BADGE DE CATEGORÍA ─── */
+  .partner-card-top {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .partner-badge {
+    display: inline-block;
+    padding: 0.2rem 0.65rem;
+    border-radius: 20px;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .badge-seguros     { background: rgba(14, 165, 233, 0.18); border: 1px solid rgba(14, 165, 233, 0.4); color: #7dd3fc; }
+  .badge-talleres    { background: rgba(245, 158, 11, 0.18); border: 1px solid rgba(245, 158, 11, 0.4); color: #fcd34d; }
+  .badge-gasoil      { background: rgba(34, 197, 94, 0.18);  border: 1px solid rgba(34, 197, 94, 0.4);  color: #86efac; }
+  .badge-financiacion { background: rgba(139, 92, 246, 0.18); border: 1px solid rgba(139, 92, 246, 0.4); color: #c4b5fd; }
+  .badge-formacion   { background: rgba(99, 102, 241, 0.18); border: 1px solid rgba(99, 102, 241, 0.4); color: #a5b4fc; }
+  .badge-asesoria    { background: rgba(16, 185, 129, 0.18); border: 1px solid rgba(16, 185, 129, 0.4); color: #6ee7b7; }
+  .badge-repuestos   { background: rgba(251, 146, 60, 0.18); border: 1px solid rgba(251, 146, 60, 0.4); color: #fdba74; }
+  .badge-vehiculos   { background: rgba(100, 116, 139, 0.25); border: 1px solid rgba(100, 116, 139, 0.5); color: #cbd5e1; }
+  .badge-otros       { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: rgba(255,255,255,0.7); }
+
+  /* ─── IDENTITY ─── */
+  .partner-identity {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+  }
+
+  /* Contenedor del logo — fondo blanco para mostrar logos reales */
+  .partner-logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.95);
+    overflow: hidden;
+  }
+
+  /* Imagen del logo real */
+  .logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 6px;
+  }
+
+  /* Fallback de iniciales — se activa si la imagen falla */
+  .logo-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.03em;
+    border-radius: 10px;
+  }
+
+  .logo-seguros     { background: linear-gradient(135deg, #0ea5e9, #0369a1); }
+  .logo-talleres    { background: linear-gradient(135deg, #f59e0b, #d97706); }
+  .logo-gasoil      { background: linear-gradient(135deg, #22c55e, #16a34a); }
+  .logo-financiacion { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+  .logo-formacion   { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+  .logo-asesoria    { background: linear-gradient(135deg, #10b981, #059669); }
+  .logo-repuestos   { background: linear-gradient(135deg, #fb923c, #ea580c); }
+  .logo-vehiculos   { background: linear-gradient(135deg, #1e3a5f, #2563eb); }
+  .logo-otros       { background: linear-gradient(135deg, #64748b, #475569); }
+
+  .partner-name {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 0.15rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .partner-tagline {
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.58);
+    margin: 0;
+  }
+
+  /* ─── DESCRIPCIÓN ─── */
+  .partner-desc {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ─── MENCIONES ─── */
+  .partner-mentions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .mentions-label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .mentions-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+
+  .mention-tag {
+    display: inline-block;
+    padding: 0.175rem 0.55rem;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  /* ─── CTA CARD ─── */
+  .partner-cta {
+    display: inline-block;
+    padding: 0.6rem 1.1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: auto;
+    align-self: flex-start;
+  }
+
+  .cta-seguros {
+    background: linear-gradient(135deg, #0ea5e9, #0369a1);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.25);
+  }
+  .cta-seguros:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(14, 165, 233, 0.42); }
+
+  .cta-talleres {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
+  }
+  .cta-talleres:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(245, 158, 11, 0.42); }
+
+  .cta-gasoil {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.25);
+  }
+  .cta-gasoil:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(34, 197, 94, 0.42); }
+
+  .cta-financiacion {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
+  }
+  .cta-financiacion:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(139, 92, 246, 0.42); }
+
+  .cta-formacion {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+  }
+  .cta-formacion:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(99, 102, 241, 0.42); }
+
+  .cta-asesoria {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+  }
+  .cta-asesoria:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(16, 185, 129, 0.42); }
+
+  .cta-repuestos {
+    background: linear-gradient(135deg, #fb923c, #ea580c);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(251, 146, 60, 0.25);
+  }
+  .cta-repuestos:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(251, 146, 60, 0.42); }
+
+  .cta-vehiculos {
+    background: linear-gradient(135deg, #1e3a5f, #2563eb);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+  }
+  .cta-vehiculos:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(37, 99, 235, 0.42); }
+
+  /* ─── SIN RESULTADOS ─── */
+  .no-results {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9375rem;
+  }
+
+  /* ─── CTA SECTION ─── */
+  .cta-title {
+    font-size: 1.625rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 0.75rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .cta-desc {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.65;
+    max-width: 640px;
+    margin: 0 0 2rem;
+  }
+
+  /* ─── MÉTRICAS ─── */
+  .blog-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+
+  .metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.3rem;
+  }
+
+  .metric-value {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1;
+  }
+
+  .metric-label {
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.62);
+    line-height: 1.3;
+  }
+
+  /* ─── CTA FOOTER ─── */
+  .cta-footer {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-note {
+    flex: 1;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.62);
+    line-height: 1.55;
+    margin: 0;
+    min-width: 220px;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 0.85rem 1.75rem;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    color: #ffffff;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(255, 107, 53, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(255, 107, 53, 0.5);
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 1024px) {
+    .blog-metrics {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .colabs-hero {
+      margin: 1.5rem 1rem 1.5rem;
+      padding: 1.75rem 1.25rem;
+    }
+
+    .colabs-hero h1 {
+      font-size: 1.875rem;
+    }
+
+    .colabs-block {
+      margin: 0 1rem 1.5rem;
+      padding: 1.5rem;
+    }
+
+    .partner-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .colabs-hero h1 {
+      font-size: 1.625rem;
+    }
+
+    .blog-metrics {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+</style>

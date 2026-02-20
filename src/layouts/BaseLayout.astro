@@ -23,12 +23,14 @@ let page = "home";
 if (pathname.startsWith("/categorias")) page = "categorias";
 else if (pathname.startsWith("/bases")) page = "bases";
 else if (pathname.startsWith("/proyectos")) page = "proyectos";
+else if (pathname.startsWith("/colaboradores")) page = "colaboradores";
 
 const BG_MAP = {
   home: '/images/backgrounds/bg-home-boost.webp',
   categorias: '/images/backgrounds/bg-categorias-boost.webp',
   bases: '/images/backgrounds/bg-bases-boost.webp',
-  proyectos: '/images/backgrounds/bg-proyectos-boost.webp'
+  proyectos: '/images/backgrounds/bg-proyectos-boost.webp',
+  colaboradores: '/images/backgrounds/bg-proyectos-boost.webp'
 };
 
 const htmlStyle = `--bg-image: url('${BG_MAP[page] || '/images/backgrounds/bg-editorial-boost.webp'}');`;
@@ -87,6 +89,7 @@ const bgStyleTag = ``;
           if (pathname.includes('/categorias')) currentPage = 'categorias';
           else if (pathname.includes('/bases')) currentPage = 'bases';
           else if (pathname.includes('/proyectos')) currentPage = 'proyectos';
+          else if (pathname.includes('/colaboradores')) currentPage = 'colaboradores';
           document.body.setAttribute('data-current-page', currentPage);
 
           // Per-page default values
@@ -94,7 +97,8 @@ const bgStyleTag = ``;
             home: { opacity: 0.83, blur: '13px', saturate: 1.2, brightness: 1, scale: 1.05 },
             categorias: { opacity: 0.74, blur: '0px', saturate: 0.6, brightness: 1, scale: 1.05 },
             bases: { opacity: 0.93, blur: '0px', saturate: 0.9, brightness: 1, scale: 1.05 },
-            proyectos: { opacity: 0.62, blur: '1px', saturate: 0.7, brightness: 1, scale: 1.05 }
+            proyectos: { opacity: 0.62, blur: '1px', saturate: 0.7, brightness: 1, scale: 1.05 },
+            colaboradores: { opacity: 0.62, blur: '1px', saturate: 0.7, brightness: 1, scale: 1.05 }
           };
 
           const defaults = pageDefaults[currentPage] || pageDefaults.home;
@@ -104,7 +108,8 @@ const bgStyleTag = ``;
             home: '/images/backgrounds/bg-home-boost.webp',
             categorias: '/images/backgrounds/bg-categorias-boost.webp',
             bases: '/images/backgrounds/bg-bases-boost.webp',
-            proyectos: '/images/backgrounds/bg-proyectos-boost.webp'
+            proyectos: '/images/backgrounds/bg-proyectos-boost.webp',
+            colaboradores: '/images/backgrounds/bg-proyectos-boost.webp'
           };
 
           const bgUrl = bgMap[currentPage] || bgMap.home;
