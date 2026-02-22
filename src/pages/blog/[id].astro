@@ -52,6 +52,38 @@ const categoryLabel: Record<string, string> = {
     "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.admilogistic.es/blog/${post.id}` },
     "inLanguage": "es-ES"
   })} />
+  {post.id === "2026-02-03-interpretar-ticket-tacografo" && (
+    <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué hora aparece en el ticket del tacógrafo, la local o la UTC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El ticket del tacógrafo siempre muestra la hora UTC (tiempo universal coordinado), no la hora local. En España esto supone 1 hora de diferencia en invierno y 2 horas en verano. Confundirlas ante un inspector es un error frecuente que puede derivar en sanciones por registros incorrectos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué significa el símbolo ! o X en un ticket de tacógrafo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El símbolo ! indica un incidente registrado y la X señala un fallo del sistema. Ambos son lo primero que revisa el inspector: debes tener una justificación documentada, un informe de taller o la anotación manual firmada en el reverso del ticket. Sin esa prueba, el inspector puede levantar acta de infracción."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es obligatorio llevar papel de repuesto para el tacógrafo en el camión?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. La normativa exige llevar siempre rollos de papel homologados de repuesto en el vehículo. No poder imprimir el ticket cuando lo solicita un inspector es una infracción leve. Si además hay otros incumplimientos, la sanción puede escalarse. Usa solo papel homologado: el papel no homologado puede borrarse con el calor."
+          }
+        }
+      ]
+    })} />
+  )}
   {post.id === "2026-02-03-pictogramas-tacografo" && (
     <script type="application/ld+json" slot="head" set:html={JSON.stringify({
       "@context": "https://schema.org",
