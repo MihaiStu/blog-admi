@@ -53,3 +53,11 @@ Aquí tienes la **lista definitiva** para que no te falte nada en 2026.
 ## El consejo de oro de AdmiLogistic
 
 **"La actitud cuenta."** Si cuando te paran tienes toda esta documentación organizada en una carpeta limpia y profesional, el inspector percibe que la empresa es seria. A menudo, un camión ordenado recibe una inspección mucho más rápida que uno donde los papeles salen debajo del asiento.
+
+---
+
+**Artículos relacionados**
+
+- [¿Lona, Frigo o Contenedor? La verdad que no te cuentan en la autoescuela](/blog/2026-02-06-lona-frigo-contenedor-verdad-autoescuela)
+- [Multas por infracción del tacógrafo 2026: baremo completo](/blog/2026-02-03-infracciones-multas-tacografo)
+- [Cómo leer un ticket de tacógrafo: qué mira el inspector](/blog/2026-02-03-interpretar-ticket-tacografo)

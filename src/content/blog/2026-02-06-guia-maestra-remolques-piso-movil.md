@@ -60,3 +60,11 @@ A medida que la carga sale, el remolque se vuelve más ligero y la carga empuja 
 **Consejo AdmiLogistic para el novato:** Si notas que el motor del camión se viene abajo o el sonido del sistema hidráulico cambia de repente (un silbido agudo), PARA de inmediato. Es probable que la carga se haya compactado y esté bloqueando los listones. Si sigues, romperás una biela del sistema hidráulico.
 
 </div>
+
+---
+
+**Artículos relacionados**
+
+- [¿Lona, Frigo o Contenedor? La verdad que no te cuentan en la autoescuela](/blog/2026-02-06-lona-frigo-contenedor-verdad-autoescuela)
+- [Guía Maestra: Dominando la lona (Tauliner) paso a paso](/blog/2026-02-06-guia-maestra-dominando-lona-tauliner)
+- [Checklist de cabina: las 15 cosas que la inspección te pedirá](/blog/2026-02-07-checklist-cabina-15-cosas-inspeccion)

@@ -73,3 +73,11 @@ Ocupan toda la plataforma. Vigila la altura total (algunos contenedores "High Cu
 **Consejo AdmiLogistic para el novato:** Antes de salir de la terminal, da una vuelta caminando alrededor de todo el conjunto. Toca cada twist-lock con la mano para confirmar que está bloqueado. Un contenedor que se cae en una rotonda supone la pérdida automática de tu honorabilidad y una multa de miles de euros.
 
 </div>
+
+---
+
+**Artículos relacionados**
+
+- [¿Lona, Frigo o Contenedor? La verdad que no te cuentan en la autoescuela](/blog/2026-02-06-lona-frigo-contenedor-verdad-autoescuela)
+- [Guía Maestra: Mi primer día con un frigorífico (paso a paso)](/blog/2026-02-06-guia-maestra-primer-dia-frigorifico)
+- [Checklist de cabina: las 15 cosas que la inspección te pedirá](/blog/2026-02-07-checklist-cabina-15-cosas-inspeccion)

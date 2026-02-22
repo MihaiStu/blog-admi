@@ -52,6 +52,45 @@ const categoryLabel: Record<string, string> = {
     "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.admilogistic.es/blog/${post.id}` },
     "inLanguage": "es-ES"
   })} />
+  {post.id === "2026-02-07-autonomo-o-sociedad-rentabilidad-ruta" && (
+    <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Es mejor ser autónomo o crear una sociedad para el transporte?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Depende del volumen de facturación y la situación personal. Como autónomo pagas IRPF sobre el beneficio (puede llegar al 47%) y cuota fija a la Seguridad Social. Con una SL tributas al 25% de IS y puedes optimizar el salario del socio. En general, a partir de 40.000–50.000€ de beneficio neto anual suele compensar la SL, pero hay que analizar cada caso con un asesor fiscal." }},
+        { "@type": "Question", "name": "¿Cuándo compensa crear una SL siendo transportista?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Crear una SL compensa cuando el beneficio neto supera los 40.000–50.000€ anuales, cuando se quiere limitar la responsabilidad personal ante deudas, cuando se van a incorporar socios o se quiere transmitir la empresa. También si se prevé reinvertir beneficios en la empresa, ya que el IS al 25% es más ventajoso que el IRPF en tramos altos." }},
+        { "@type": "Question", "name": "¿Qué impuestos paga un autónomo transportista en España?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un autónomo transportista paga: IRPF sobre el rendimiento neto de la actividad (estimación directa o módulos), IVA trimestral (21% en servicios de transporte, con las deducciones aplicables), cuota de autónomos a la Seguridad Social (sistema de cotización por ingresos reales desde 2023) y retenciones del 15% en facturas a empresas si supera el umbral." }}
+      ]
+    })} />
+  )}
+  {post.id === "2026-02-06-lona-frigo-contenedor-verdad-autoescuela" && (
+    <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Qué diferencia hay entre una lona (tauliner) y un frigorífico en el transporte?",
+          "acceptedAnswer": { "@type": "Answer", "text": "La lona o tauliner es un semirremolque de carga general con lonas laterales corredizas, ideal para palets y mercancía seca. El frigorífico es un semirremolque con caja cerrada y sistema de temperatura controlada (entre -25°C y +25°C), obligatorio para alimentación perecedera, medicamentos o flores. Tienen normativas de carga, documentación y mantenimiento completamente distintas." }},
+        { "@type": "Question", "name": "¿Qué documentación necesita un conductor para transportar en contenedor?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Para transportar en contenedor se necesita: CMR o carta de porte, booking de la naviera, packing list de la carga, certificado de estiba del contenedor (VGM en tráfico marítimo), y en algunos casos, declaración de mercancías peligrosas si aplica el ADR. El conductor debe verificar que los twist-locks estén bloqueados antes de salir de la terminal." }},
+        { "@type": "Question", "name": "¿Qué es un remolque de piso móvil y para qué se usa?",
+          "acceptedAnswer": { "@type": "Answer", "text": "El remolque de piso móvil (walking floor) tiene el suelo formado por listones que se desplazan hidráulicamente hacia atrás, expulsando la carga sin necesidad de volcar ni usar carretilla. Se usa para residuos, biomasa, madera, chatarra o cualquier mercancía a granel que no puede descargarse de otra forma. Requiere formación específica para evitar averías graves en el sistema hidráulico." }}
+      ]
+    })} />
+  )}
+  {post.id === "2026-02-02-tarjetas-gasoil-profesionales-ahorro-control-flota" && (
+    <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Qué es una tarjeta de gasoil profesional y para qué sirve?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Una tarjeta de gasoil profesional es un instrumento de pago específico para combustible y servicios de carretera (peajes, lavados, adblue) que ofrece descuentos por volumen, control de gasto por vehículo o conductor, y facturación unificada para facilitar la deducción del IVA y el IRPF. Está diseñada para autónomos, PYMES y flotas de transporte." }},
+        { "@type": "Question", "name": "¿Cuánto ahorro puede conseguir un transportista con una tarjeta de gasoil profesional?",
+          "acceptedAnswer": { "@type": "Answer", "text": "El ahorro medio oscila entre 3 y 8 céntimos por litro según la tarjeta, el volumen mensual y la red de gasolineras utilizadas. Para un camión con consumo de 35 L/100km y 10.000 km mensuales (3.500 L/mes), un descuento de 5 ct/L supone un ahorro de 175€/mes, o más de 2.000€ anuales por vehículo." }},
+        { "@type": "Question", "name": "¿Qué tarjeta de gasoil profesional tiene más red de gasolineras en España?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Repsol tiene la mayor red propia en España con más de 3.500 estaciones. DKV destaca por su cobertura europea y la posibilidad de pagar peajes en varios países. GALP ofrece una buena cobertura en la Península Ibérica incluyendo Portugal. BP tiene red propia más limitada pero con descuentos competitivos en sus estaciones. La elección óptima depende de las rutas habituales de cada flota." }}
+      ]
+    })} />
+  )}
   {post.id === "2026-02-03-infracciones-multas-tacografo" && (
     <script type="application/ld+json" slot="head" set:html={JSON.stringify({
       "@context": "https://schema.org", "@type": "FAQPage",

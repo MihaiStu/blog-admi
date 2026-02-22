@@ -55,3 +55,11 @@ Si la lona va floja, hará un ruido insoportable y gastarás más gasoil por la 
 **Consejo AdmiLogistic para el novato:** Llevar una lona es llevar un paquete abierto. Cada vez que pares en un área de descanso, da una vuelta al remolque y comprueba que nadie ha rajado la lona para robar y que las cinchas no se han aflojado con el movimiento del camión.
 
 </div>
+
+---
+
+**Artículos relacionados**
+
+- [¿Lona, Frigo o Contenedor? La verdad que no te cuentan en la autoescuela](/blog/2026-02-06-lona-frigo-contenedor-verdad-autoescuela)
+- [Guía Maestra: Operativa con remolques de piso móvil](/blog/2026-02-06-guia-maestra-remolques-piso-movil)
+- [Checklist de cabina: las 15 cosas que la inspección te pedirá](/blog/2026-02-07-checklist-cabina-15-cosas-inspeccion)

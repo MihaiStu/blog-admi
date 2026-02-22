@@ -98,3 +98,9 @@ Es la base administrativa de cualquier negocio. El error es pensar que con eso b
 ---
 
 [Volver a Fiscalidad →](/categorias/fiscalidad)
+
+**Artículos relacionados**
+
+- [¿Autónomo o Sociedad? La decisión que define la rentabilidad de tu ruta](/blog/2026-02-07-autonomo-o-sociedad-rentabilidad-ruta)
+- [Gestoría vs asesoría: diferencias reales y cuál necesita tu negocio](/blog/2026-02-03-gestoria-vs-asesoria)
+- [Alta autónomo transportista 2026: requisitos y trámites paso a paso](/blog/2026-02-20-alta-autonomo-transportista-2026)

@@ -72,3 +72,13 @@ image: "/uploads/Comparativa.png"
 <p>No salgas sin tu Kit de Supervivencia 2026: guías, checklist y plantillas para no dejarte nada en el camino.</p>
 <a href="/descargables" class="cta-kit-btn">Descargar Kit Gratuito</a>
 </div>
+
+---
+
+**Elige tu tipo de remolque — Guías maestras paso a paso**
+
+- [Guía Maestra: Mi primer día con un frigorífico (paso a paso)](/blog/2026-02-06-guia-maestra-primer-dia-frigorifico)
+- [Guía Maestra: Operativa con plataformas portacontenedores](/blog/2026-02-06-guia-maestra-plataformas-portacontenedores)
+- [Guía Maestra: Dominando la lona (Tauliner) paso a paso](/blog/2026-02-06-guia-maestra-dominando-lona-tauliner)
+- [Guía Maestra: Operativa con remolques de piso móvil](/blog/2026-02-06-guia-maestra-remolques-piso-movil)
+- [Checklist de cabina: las 15 cosas que la inspección te pedirá](/blog/2026-02-07-checklist-cabina-15-cosas-inspeccion)

@@ -47,3 +47,13 @@ Independientemente de la forma que elijas, el secreto está en la **deducción c
 ---
 
 **Toma el control de tus números.** En AdmiLogistic, no solo te ayudamos con las tarjetas y el tacógrafo; queremos que tu empresa sea rentable y segura.
+
+---
+
+**Guías relacionadas — Fiscalidad y estructura empresarial**
+
+- [¿Qué es una gestoría y para qué sirve realmente?](/blog/2026-02-03-que-es-una-gestoria)
+- [¿Qué es una asesoría y por qué es clave para tu negocio?](/blog/2026-02-03-que-es-una-asesoria)
+- [Gestoría vs asesoría: diferencias reales y cuál necesita tu negocio](/blog/2026-02-03-gestoria-vs-asesoria)
+- [Alta autónomo transportista 2026: requisitos, costes y trámites paso a paso](/blog/2026-02-20-alta-autonomo-transportista-2026)
+- [Seguros obligatorios transportista 2026: cómo blindar tu margen y desgravar el 100%](/blog/2026-02-20-seguros-obligatorios-transportista-2026)
