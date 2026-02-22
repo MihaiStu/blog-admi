@@ -3,7 +3,7 @@ title: "RD 88/2026: Cómo convertir tu base logística en una fuente de ingresos
 description: "El Real Decreto 88/2026 y el Agregador Independiente: vender flexibilidad eléctrica desde hubs y flotas. Ingresos por demanda, PVPC y exigencia técnica (Orden TED/82/2026)."
 pubDate: 2026-03-12
 category: actualidad
-image: /uploads/base logistica.png
+image: /uploads/base logistica.webp
 ---
 
 # RD 88/2026: Cómo convertir tu base logística en una fuente de ingresos gracias a la Agregación de Demanda

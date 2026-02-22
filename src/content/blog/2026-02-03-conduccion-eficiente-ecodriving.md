@@ -3,7 +3,7 @@ title: "Conducción eficiente: El factor humano como motor del ahorro profesiona
 description: "Técnicas de conducción eficiente (Eco-driving) para camiones. Formación, incentivos y beneficios más allá del ahorro de combustible."
 pubDate: 2026-02-03
 category: "operaciones"
-image: "/uploads/consumo%20gasoil.png"
+image: "/uploads/consumo gasoil.webp"
 ---
 
 El conductor es el responsable final del consumo del vehículo. Un camión idéntico, en la misma ruta, puede variar su consumo hasta en un 20% dependiendo de quién esté al volante. La conducción eficiente en camiones (Eco-driving) es una habilidad técnica que toda flota profesional debería incentivar en 2026.

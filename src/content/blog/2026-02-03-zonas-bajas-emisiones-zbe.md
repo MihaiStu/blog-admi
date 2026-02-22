@@ -3,7 +3,7 @@ title: "Nuevas Zonas de Bajas Emisiones (ZBE) 2026: Guía de supervivencia para 
 description: "Guía completa de las ZBE en España 2026. Restricciones en Madrid, Barcelona, etiqueta B y novedades DGT para el transporte profesional."
 pubDate: 2026-02-03
 category: "actualidad"
-image: "/uploads/mapa%20españa.png"
+image: "/uploads/mapa españa.webp"
 ---
 
 A partir del 1 de enero de 2026, las Zonas de Bajas Emisiones (ZBE) dejan de ser una excepción de las grandes capitales para convertirse en un estándar en España. Si tu negocio depende del reparto urbano o el acceso a núcleos de población de más de 50.000 habitantes, este es el mapa de restricciones que debes conocer para evitar sanciones que pueden alcanzar los 200 euros por acceso indebido.

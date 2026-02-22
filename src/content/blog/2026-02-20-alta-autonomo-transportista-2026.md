@@ -3,7 +3,7 @@ title: "Alta Autónomo Transportista 2026: Requisitos, Costes y Trámites Paso a
 description: "Guía completa para darse de alta como transportista autónomo en 2026. Módulos, ROTT, eCMR obligatorio, ZBE y costes reales de equipamiento."
 pubDate: 2026-02-20
 category: fiscalidad
-image: /uploads/alta autonomo 2026.png
+image: /uploads/alta autonomo 2026.webp
 ---
 
 Darse de alta como transportista autónomo en 2026 no es lo que era hace tres años. El sector se enfrenta a una acumulación de cambios normativos que afectan simultáneamente a la fiscalidad, el acceso a la profesión, la documentación digital y los requisitos medioambientales. Esta guía recoge todo lo que necesitas confirmar antes de invertir en el vehículo.

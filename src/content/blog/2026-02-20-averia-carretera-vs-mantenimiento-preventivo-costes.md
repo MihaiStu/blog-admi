@@ -3,7 +3,7 @@ title: "Avería en Carretera vs. Mantenimiento Preventivo: El Coste Real que Nad
 description: "Análisis de costes reales: cuánto cuesta una avería en carretera frente a un plan de mantenimiento preventivo. Datos reales para transportistas autónomos y flotas."
 pubDate: 2026-02-20
 category: operaciones
-image: /uploads/El coste real de una averia.png
+image: /uploads/El coste real de una averia.webp
 ---
 
 Una avería en carretera no es solo el coste de la reparación. Es el camión parado, la carga que no llega, la grúa, el hotel, la multa por retraso y el cliente que no vuelve. Cuando sumas todo, el número que sale explica por qué el mantenimiento preventivo no es un gasto — es la inversión con mejor retorno en el transporte por carretera.
