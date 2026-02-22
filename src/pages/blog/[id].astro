@@ -52,6 +52,38 @@ const categoryLabel: Record<string, string> = {
     "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.admilogistic.es/blog/${post.id}` },
     "inLanguage": "es-ES"
   })} />
+  {post.id === "2026-02-03-pictogramas-tacografo" && (
+    <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué significa el símbolo de la llave en el tacógrafo digital?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El símbolo de la llave indica que el tacógrafo requiere calibración o revisión técnica en un taller autorizado. Es obligatorio acudir al taller antes de continuar operando: ignorarlo puede derivar en una infracción grave por tacógrafo defectuoso o descalibrado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué hacer si aparece un símbolo de error en el tacógrafo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Imprime un ticket del tacógrafo en cuanto puedas y anota el tipo de error en el reverso. Si el error afecta al sensor de movimiento, a la alimentación eléctrica o al GNSS, acude a un taller autorizado antes de continuar la ruta. No ignorar el aviso evita sanciones por equipo defectuoso."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuándo es obligatorio revisar el tacógrafo digital?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La revisión técnica del tacógrafo es obligatoria cada 2 años en taller autorizado, o cuando el vehículo supere los 100.000 km entre revisiones. También es obligatoria tras cualquier avería grave, después de una manipulación del equipo o cuando aparezca el símbolo de calibración en pantalla."
+          }
+        }
+      ]
+    })} />
+  )}
   <article class="article-page">
     {post.data.image && (
       <figure class:list={["article-image", post.id === "2026-02-06-lona-frigo-contenedor-verdad-autoescuela" && "article-image--contain", post.id === "2026-03-10-informe-tecnico-mercado-transporte-2026" && "article-image--same-size-contain"]}>
