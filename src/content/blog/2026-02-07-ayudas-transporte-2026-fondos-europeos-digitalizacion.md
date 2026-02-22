@@ -3,7 +3,7 @@ title: "Ayudas al Transporte 2026: Fondos Europeos y Plan de Digitalización"
 description: "No pierdas el tren de las subvenciones. Guía actualizada sobre fondos para modernización de flota, Kit Digital y renovación de tacógrafos."
 pubDate: 2026-02-07
 category: actualidad
-image: /uploads/ayudas2026.webp
+image: /uploads/ayudas2026.png
 ---
 
 Este artículo detalla las **oportunidades de financiación vigentes** para que las empresas no pierdan competitividad.

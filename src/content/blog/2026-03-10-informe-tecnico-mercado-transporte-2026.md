@@ -3,7 +3,7 @@ title: "Informe técnico sobre el mercado de transporte 2026"
 description: "Marco regulatorio CNMC, peajes eléctricos y gasistas, hidrocarburos, 44 toneladas, digitalización y DCDT. Análisis completo del sector transporte 2026."
 pubDate: 2026-03-10
 category: actualidad
-image: /uploads/Informe.webp
+image: /uploads/Informe.png
 ---
 
 # Informe técnico sobre el mercado de transporte 2026

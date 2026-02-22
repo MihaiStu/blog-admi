@@ -3,7 +3,7 @@ title: "La trinchera logística: El lado humano detrás del contenedor"
 description: "Entrevista con Mario, gestor de tráfico marítimo en Mosca Marítimo (Molina de Segura). Realidad operativa, digitalización mal aplicada y el alma que el sector no puede perder."
 pubDate: 2026-03-20
 category: actualidad
-image: /uploads/Mario3.webp
+image: /uploads/Mario3.png
 ---
 
 # La trinchera logística: El lado humano detrás del contenedor

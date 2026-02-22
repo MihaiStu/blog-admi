@@ -3,7 +3,7 @@ title: "¿Qué es una Asesoría y Por Qué es Clave para tu Negocio?"
 description: "Descubre qué es una asesoría, qué hace realmente, cuándo la necesitas y por qué marca la diferencia entre cumplir y ganar dinero."
 pubDate: 2026-02-03
 category: fiscalidad
-image: /uploads/fiscalidad-asesoria.webp
+image: /uploads/fiscalidad-asesoria.jpg
 ---
 
 **Una asesoría no presenta papeles. Toma decisiones.** Y esa diferencia es la que separa a los negocios que sobreviven… de los que crecen y ganan dinero de verdad.

@@ -3,7 +3,7 @@ title: "Análisis Estratégico y Hoja de Ruta Operativa para la Constitución de
 description: "Marco normativo, CAP, título de competencia, fiscalidad, capacidad financiera, honorabilidad, 44t y TMS. Guía 2026 para crear tu empresa de transporte desde cero."
 pubDate: 2026-03-12
 category: fiscalidad
-image: /uploads/autonomo desde cero.webp
+image: /uploads/autonomo desde cero.png
 ---
 
 # Análisis Estratégico y Hoja de Ruta Operativa para la Constitución del Operador de Transporte en el Mercado Español: Proyecciones y Requerimientos 2026

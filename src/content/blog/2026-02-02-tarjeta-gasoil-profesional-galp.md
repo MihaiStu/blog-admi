@@ -3,7 +3,7 @@ title: "Tarjeta Gasoil Profesional GALP: Guía Completa 2026"
 description: "Descubre la Tarjeta Gasoil Profesional GALP: descuentos exclusivos, GALP FLOTA, red de estaciones en España y cómo solicitarla para tu empresa."
 pubDate: 2026-02-02
 category: tarjetas-gasoil
-image: /uploads/galp-tarjeta-principal.webp
+image: /uploads/galp-tarjeta-principal.jpg
 ---
 
 La **tarjeta gasoil profesional** de GALP es clave para manejar flotas en el transporte. Ayuda a empresas y profesionales a reducir costos y a mejorar la gestión de sus vehículos. Es una solución completa para optimizar gastos.
@@ -146,7 +146,7 @@ GALP FLOTA se actualiza constantemente, añadiendo nuevas funciones como la inte
 
 GALP tiene muchas estaciones de servicio en España, diseñadas para dar combustible de forma eficiente y segura.
 
-![Estaciones GALP en España](/uploads/galp-estaciones.webp)
+![Estaciones GALP en España](/uploads/galp-estaciones.jpg)
 
 ### Mapa actualizado de estaciones de servicio
 
@@ -203,7 +203,7 @@ GALP ha establecido protocolos de seguridad robustos que incluyen:
 
 Empresas de diferentes sectores han encontrado en GALP una solución para bajar sus gastos de combustible.
 
-![Casos de éxito GALP](/uploads/galp-casos-exito.webp)
+![Casos de éxito GALP](/uploads/galp-casos-exito.jpg)
 
 ### Testimonios de Clientes Satisfechos
 

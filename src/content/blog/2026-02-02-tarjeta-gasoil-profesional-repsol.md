@@ -3,7 +3,7 @@ title: "Tarjeta Gasoil Profesional REPSOL: Guía Completa 2026"
 description: "Descubre todos los beneficios de la Tarjeta Gasoil Profesional REPSOL: descuentos exclusivos, facturación digital, red de estaciones y cómo solicitarla."
 pubDate: 2026-02-02
 category: tarjetas-gasoil
-image: /uploads/repsol-tarjeta-principal.webp
+image: /uploads/repsol-tarjeta-principal.jpg
 ---
 
 La **Tarjeta Gasoil Profesional REPSOL** es una solución innovadora para el **sector del transporte** en España. Ofrece **beneficios exclusivos** y **descuentos** especiales para transportistas, ayudándoles a reducir sus gastos en combustible.
@@ -135,7 +135,7 @@ La aplicación también analiza el *consumo y rendimiento* de los vehículos, pe
 
 La tarjeta gasoil profesional REPSOL es única en España. Veamos cómo se compara con otras opciones para profesionales del transporte.
 
-![Análisis comparativo tarjeta REPSOL](/uploads/repsol-analisis-comparativo.webp)
+![Análisis comparativo tarjeta REPSOL](/uploads/repsol-analisis-comparativo.jpg)
 
 ### Ventajas competitivas en el sector español de combustibles
 
@@ -179,7 +179,7 @@ Empresas transportistas hablan de **ahorro** y eficiencia con la tarjeta REPSOL.
 
 REPSOL tiene una Tarjeta Gasoil Profesional que muestra su compromiso con el medio ambiente, buscando reducir el impacto ambiental en el transporte.
 
-![REPSOL sostenibilidad](/uploads/repsol-sostenibilidad.webp)
+![REPSOL sostenibilidad](/uploads/repsol-sostenibilidad.jpg)
 
 ### Iniciativas de reducción de huella de carbono
 

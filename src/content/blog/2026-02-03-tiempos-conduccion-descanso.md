@@ -3,7 +3,7 @@ title: "Tiempos de Conducción y Descanso 2026: Horas Máximas, Pausas y Descans
 description: "¿Cuántas horas puede conducir un camionero al día? Límites del Reglamento CE 561/2006: 9h diarias, pausa de 45 min, 11h de descanso. Guía actualizada con las excepciones vigentes en 2026."
 pubDate: 2026-02-03
 category: "cumplimiento"
-image: "/uploads/Tiempos Conducción y Descanso.webp"
+image: "/uploads/Tiempos%20Conducción%20y%20Descanso.png"
 ---
 
 Dominar los tiempos de conducción y descanso no es solo una cuestión de cumplir la ley; es la base de la seguridad vial y la eficiencia operativa de cualquier empresa de transporte. En 2026, con el control digital estricto sobre los últimos 56 días, un error de 5 minutos en una pausa puede desencadenar una inspección de oficio a toda la flota.

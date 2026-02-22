@@ -3,7 +3,7 @@ title: "¿Qué es una Gestoría y Para Qué Sirve Realmente?"
 description: "Descubre qué es una gestoría, qué funciones tiene, cuándo la necesitas y qué problemas evita en autónomos y empresas. Guía clara y profesional."
 pubDate: 2026-02-03
 category: fiscalidad
-image: /uploads/fiscalidad-gestoria.webp
+image: /uploads/fiscalidad-gestoria.jpg
 ---
 
 **Una gestoría no hace crecer tu negocio, pero evita que lo hundas.** Y entender esto marca la diferencia entre cumplir con Hacienda… o acabar pagando multas, recargos y sustos innecesarios.

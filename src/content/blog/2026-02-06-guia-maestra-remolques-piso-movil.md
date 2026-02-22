@@ -3,7 +3,7 @@ title: "Guía Maestra: Operativa con Remolques de Piso Móvil"
 description: "Cómo funciona el walking floor, limpieza antes de cargar, conexión hidráulica, operación de descarga paso a paso y seguridad."
 pubDate: 2026-02-06
 category: "vehiculos"
-image: "/uploads/Hidraulico.webp"
+image: "/uploads/Hidraulico.png"
 ---
 
 Si es tu primera vez con un piso móvil, recuerda: la paciencia es tu mejor herramienta. Un error en la secuencia de descarga puede romper el sistema hidráulico o rajar el remolque.

@@ -3,7 +3,7 @@ title: "Tacógrafo G2V2: Fechas de Cambio Obligatorio, Funciones GNSS/DSRC y San
 description: "¿Cuándo es obligatorio el tacógrafo inteligente G2V2? Plazos de retrofit por tipo de vehículo, qué registra automáticamente y las multas por circular en transporte internacional sin él."
 pubDate: 2026-02-03
 category: "cumplimiento"
-image: "/uploads/tacografo_stoneridge.webp"
+image: "/uploads/tacografo_stoneridge.png"
 ---
 
 El mapa del transporte por carretera en Europa ha cambiado de forma irreversible. Si el paso del tacógrafo analógico al digital fue un salto administrativo, la transición al Tacógrafo Inteligente de Segunda Generación (G2V2) es una revolución en el control policial y la gestión de flotas.

@@ -3,7 +3,7 @@ title: "Guía Maestra: Mi Primer Día con un Frigorífico (Paso a Paso)"
 description: "Guía paso a paso para el chofer que nunca ha enganchado un frigo: desde el enganche en el parking hasta el cierre en el muelle de carga."
 pubDate: 2026-02-06
 category: "vehiculos"
-image: "/uploads/FRIGORIFICO.webp"
+image: "/uploads/FRIGORIFICO.png"
 ---
 
 Este artículo es la biblia para el chofer que nunca ha enganchado un frigo. Desde que entras al parking hasta que cierras las puertas en el muelle de carga.

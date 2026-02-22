@@ -3,7 +3,7 @@ title: "Guía Maestra: Dominando la Lona (Tauliner) paso a paso"
 description: "Cómo manejar un tauliner: tipos de lonas, apertura y cierre, carga y estiba, cierre sin flameo y revisión antes de arrancar."
 pubDate: 2026-02-06
 category: "vehiculos"
-image: "/uploads/Lonas.webp"
+image: "/uploads/Lonas.png"
 ---
 
 Si eres nuevo, la lona te va a parecer un "rompecabezas" de barras y correas. Aquí tienes cómo manejarla para que la carga no se mueva y la lona no sufra.
