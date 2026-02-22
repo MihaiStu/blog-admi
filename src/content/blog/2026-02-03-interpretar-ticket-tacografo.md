@@ -3,7 +3,7 @@ title: "Cómo Leer un Ticket de Tacógrafo: Qué Mira el Inspector y Cómo Defen
 description: "¿Sabes qué busca el inspector en tu ticket de tacógrafo? Aprende a leer cabecera, símbolos de actividad, totales y reverso legal. Evita sanciones por errores de forma que se pueden prevenir."
 pubDate: 2026-02-03
 category: "cumplimiento"
-image: "/uploads/ticket1.png"
+image: "/uploads/ticket1.webp"
 ---
 
 Para un conductor profesional o un gestor de flotas, un ticket de tacógrafo no es solo un trozo de papel térmico; es el documento legal que resume toda la actividad de los últimos días ante una inspección. En 2026, con la llegada de los nuevos tacógrafos G2V2, la cantidad de información ha aumentado y saber leerla correctamente es la mejor defensa contra las sanciones por "errores de forma".
@@ -44,7 +44,7 @@ En los tickets de Tacógrafos Inteligentes, verás coordenadas geográficas o no
 
 Al final de la tira de papel, el tacógrafo suma todas las horas de cada actividad.
 
-![Pie del ticket de tacógrafo](/uploads/pie-ticket.png)
+![Pie del ticket de tacógrafo](/uploads/pie-ticket.webp)
 
 - **Total de conducción:** Debe coincidir con tus cálculos para no superar las 9 o 10 horas.
 - **Total de descanso:** Asegúrate de que suma las 11h (o 9h reducidas) obligatorias.

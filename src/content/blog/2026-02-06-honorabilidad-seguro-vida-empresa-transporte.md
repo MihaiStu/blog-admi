@@ -3,7 +3,7 @@ title: "La Honorabilidad: El Seguro de Vida de tu Empresa de Transporte"
 description: "Qué es la pérdida de honorabilidad, el Índice de Infracciones (IRI), las amenazas más comunes en 2026 y cómo proteger tu empresa."
 pubDate: 2026-02-06
 category: "cumplimiento"
-image: "/uploads/honorabilidad.png"
+image: "/uploads/honorabilidad.webp"
 ---
 
 En el sector del transporte, puedes perder dinero, camiones o clientes, y recuperarte. Pero si pierdes la **Honorabilidad**, estás fuera del juego. En 2026, con la digitalización total de la inspección, el riesgo es más alto que nunca.

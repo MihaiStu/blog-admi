@@ -3,7 +3,7 @@ title: "¿Lona, Frigo o Contenedor? La Verdad que no te cuentan en la Autoescuel
 description: "Pros y contras reales del frigorífico, la lona, el portacontenedores y el piso móvil: esfuerzo, estrés y qué esperar en cada rama."
 pubDate: 2026-02-06
 category: "vehiculos"
-image: "/uploads/Comparativa.png"
+image: "/uploads/Comparativa.webp"
 ---
 
 <p class="comparativa-intro">No todas las plataformas son iguales. Cada una tiene su cara B: una te hará sudar, otra no te dejará dormir y otra te convertirá en experto en hidráulica. Si estás pensando en cambiar de rama o acabas de sacar el carnet, aquí tienes la verdad sin filtros.</p>

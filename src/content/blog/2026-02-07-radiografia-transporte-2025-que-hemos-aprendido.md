@@ -3,7 +3,7 @@ title: "Radiografía del Transporte 2025: ¿Qué hemos aprendido?"
 description: "Analizamos el cierre de un año marcado por la volatilidad y el control de los 56 días. ¿Estás preparado para los retos que dejó el 2025?"
 pubDate: 2026-02-07
 category: actualidad
-image: /uploads/radiografia.png
+image: /uploads/radiografia.webp
 ---
 
 Este artículo analiza el año que acaba de cerrar, sirviendo como base para entender hacia dónde vamos en 2026.

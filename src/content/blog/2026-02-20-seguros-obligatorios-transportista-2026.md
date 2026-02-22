@@ -3,7 +3,7 @@ title: "Seguros Obligatorios Transportista 2026: Cómo Blindar tu Margen y Desgr
 description: "Guía completa de seguros obligatorios para transportistas en 2026. Ley 5/2025, límites LOTT y CMR, deducibilidad fiscal y costes reales por tipo de póliza."
 pubDate: 2026-02-20
 category: fiscalidad
-image: /uploads/seguros.png
+image: /uploads/seguros.webp
 ---
 
 En 2026, el seguro ha dejado de ser un gasto administrativo para convertirse en una herramienta de optimización fiscal. Si eres transportista autónomo, cada póliza que contratas es deducible al 100% en IRPF e IVA al tratarse de vehículos industriales. El problema no es el coste — es no tener la cobertura correcta cuando la necesitas.

@@ -3,7 +3,7 @@ title: "Artículo 12 del Reglamento 561/2006: Cómo Justificar Legalmente un Exc
 description: "¿Te pasaste de horas por un imprevisto? El Artículo 12 te protege si lo aplicas bien. Las 3 condiciones, el protocolo exacto de anotación en el ticket y por qué los 56 días son clave."
 pubDate: 2026-02-06
 category: "cumplimiento"
-image: "/uploads/articulo.png"
+image: "/uploads/articulo.webp"
 ---
 
 En la carretera, lo imprevisto es la única norma. Un accidente, una nevada o un parking colapsado pueden obligarte a pasarte de horas. Aquí es donde entra el **Artículo 12 del Reglamento (CE) n.º 561/2006**, tu mejor defensa legal.

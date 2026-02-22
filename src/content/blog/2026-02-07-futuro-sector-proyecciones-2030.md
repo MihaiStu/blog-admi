@@ -3,7 +3,7 @@ title: "El Futuro del Sector: Proyecciones y Tendencias hacia 2030"
 description: "¿Cómo será el transporte en 5 años? De la descarbonización a la IA aplicada. Prepárate para el cambio estructural que viene de Europa."
 pubDate: 2026-02-07
 category: actualidad
-image: /uploads/futuro2030.png
+image: /uploads/futuro2030.webp
 ---
 
 Este artículo proyecta las **tendencias que transformarán el transporte** en los próximos años, permitiendo a las flotas tomar decisiones de inversión inteligentes hoy.

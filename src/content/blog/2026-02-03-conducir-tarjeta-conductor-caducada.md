@@ -3,7 +3,7 @@ title: "Tarjeta de Conductor Caducada: Sanción de Hasta 4.000€, la Única Exc
 description: "Conducir con la tarjeta del tacógrafo caducada es infracción muy grave. Conoce la única excepción que da 15 días más, el protocolo exacto para no ser multado y cómo renovarla urgente."
 pubDate: 2026-02-03
 category: "cumplimiento"
-image: "/uploads/inmobilizado.png"
+image: "/uploads/inmobilizado.webp"
 ---
 
 La respuesta corta y tajante de la normativa española es **NO**. A diferencia de lo que ocurre con el robo o la pérdida, la caducidad es un evento previsible. La ley no ofrece flexibilidad porque considera responsabilidad del conductor gestionar su renovación con antelación.

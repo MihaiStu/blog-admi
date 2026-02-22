@@ -3,7 +3,7 @@ title: "Gestoría vs Asesoría: Diferencias Reales y Cuál Necesita tu Negocio"
 description: "Comparativa definitiva entre gestoría y asesoría. Descubre diferencias reales, cuándo necesitas cada una y cómo evitar errores que cuestan miles de euros."
 pubDate: 2026-02-03
 category: fiscalidad
-image: /uploads/fiscalidad-gestoria-vs-asesoria.jpg
+image: /uploads/fiscalidad-gestoria-vs-asesoria.webp
 ---
 
 **Confundir gestoría con asesoría es uno de los errores más caros en un negocio.** No porque una sea mala y la otra buena, sino porque **cumplen funciones totalmente distintas**.
