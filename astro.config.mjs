@@ -5,7 +5,15 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://admilogistic.es',
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      filter: (page) =>
+        !page.includes('/admin') &&
+        !page.includes('/categorias/camiones') &&
+        !page.includes('/categorias/tacografo') &&
+        !page.includes('/categorias/rutas'),
+    }),
+  ],
   vite: {
     plugins: [
       {
