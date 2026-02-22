@@ -109,3 +109,4 @@ Si no tienes claro cuál necesitas, es muy probable que necesites asesoría.
 - [¿Autónomo o Sociedad? La decisión que define la rentabilidad de tu ruta](/blog/2026-02-07-autonomo-o-sociedad-rentabilidad-ruta)
 - [¿Qué es una gestoría y para qué sirve realmente?](/blog/2026-02-03-que-es-una-gestoria)
 - [¿Qué es una asesoría y por qué es clave para tu negocio?](/blog/2026-02-03-que-es-una-asesoria)
+- [Cumplimiento del tacógrafo: obligaciones legales que toda empresa debe conocer](/blog/2026-02-03-que-es-el-tacografo)

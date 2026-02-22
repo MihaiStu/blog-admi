@@ -100,3 +100,5 @@ En 2026, el tacógrafo es el corazón legal de tu empresa. Tratarlo como un simp
 - [Pictogramas del tacógrafo digital: qué significa cada símbolo](/blog/2026-02-03-pictogramas-tacografo)
 - [Tiempos de conducción y descanso: horas máximas y pausas obligatorias](/blog/2026-02-03-tiempos-conduccion-descanso)
 - [Conducir con tarjeta de conductor caducada: sanciones y excepción legal](/blog/2026-02-03-conducir-tarjeta-conductor-caducada)
+- [Honorabilidad en transporte: cómo las multas del tacógrafo afectan a tu empresa](/blog/2026-02-06-honorabilidad-seguro-vida-empresa-transporte)
+- [Seguros obligatorios transportista 2026: coberturas que debes conocer](/blog/2026-02-20-seguros-obligatorios-transportista-2026)

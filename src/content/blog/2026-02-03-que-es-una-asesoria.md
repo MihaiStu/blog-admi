@@ -97,3 +97,4 @@ Si tu negocio se mueve, factura o crece, la pregunta no es si necesitas asesorí
 - [¿Autónomo o Sociedad? La decisión que define la rentabilidad de tu ruta](/blog/2026-02-07-autonomo-o-sociedad-rentabilidad-ruta)
 - [Gestoría vs asesoría: diferencias reales y cuál necesita tu negocio](/blog/2026-02-03-gestoria-vs-asesoria)
 - [¿Qué es una gestoría y para qué sirve realmente?](/blog/2026-02-03-que-es-una-gestoria)
+- [Cumplimiento del tacógrafo: obligaciones legales que toda empresa debe conocer](/blog/2026-02-03-que-es-el-tacografo)

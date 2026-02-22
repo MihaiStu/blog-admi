@@ -105,3 +105,13 @@ Y cuando haces cuentas… ya es tarde.
 - Más beneficio neto
 
 Esto no es teoría: es gestión profesional aplicada al transporte real.
+
+---
+
+**Artículos relacionados**
+
+- [Mantenimiento preventivo de flotas: checklist y calendario](/blog/2026-02-03-mantenimiento-preventivo-flotas)
+- [Avería en carretera vs mantenimiento preventivo: el coste real de cada decisión](/blog/2026-02-20-averia-carretera-vs-mantenimiento-preventivo-costes)
+- [Checklist de cabina: las 15 cosas que la inspección te pedirá](/blog/2026-02-07-checklist-cabina-15-cosas-inspeccion)
+- [Tarjetas de gasoil profesional: ahorro y control para tu flota](/blog/2026-02-02-tarjetas-gasoil-profesionales-ahorro-control-flota)
+- [Tacógrafo inteligente G2V2: fechas de cambio obligatorio y sanciones](/blog/2026-02-03-tacografo-inteligente-g2v2)

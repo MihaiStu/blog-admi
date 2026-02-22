@@ -46,3 +46,11 @@ El cambio al eléctrico es hoy rentable para:
 ## Conclusión
 
 El camión eléctrico no es el futuro, ya es el presente para ciertos perfiles de transporte. La clave está en analizar tu operativa: si tus rutas son predecibles y urbanas, el ahorro a largo plazo compensa la inversión inicial. Si haces larga distancia internacional, el diésel (o el hidrógeno en un futuro cercano) sigue siendo la opción más práctica.
+
+---
+
+**Artículos relacionados**
+
+- [Zonas de Bajas Emisiones (ZBE): qué camiones pueden entrar y cuáles no](/blog/2026-02-03-zonas-bajas-emisiones-zbe)
+- [Conducción eficiente y ecodriving: cómo reducir el consumo sin cambiar de camión](/blog/2026-02-03-conduccion-eficiente-ecodriving)
+- [Tarjetas de gasoil profesional: ahorro y control para tu flota](/blog/2026-02-02-tarjetas-gasoil-profesionales-ahorro-control-flota)

@@ -63,3 +63,4 @@ Si la lona va floja, hará un ruido insoportable y gastarás más gasoil por la 
 - [¿Lona, Frigo o Contenedor? La verdad que no te cuentan en la autoescuela](/blog/2026-02-06-lona-frigo-contenedor-verdad-autoescuela)
 - [Guía Maestra: Operativa con remolques de piso móvil](/blog/2026-02-06-guia-maestra-remolques-piso-movil)
 - [Checklist de cabina: las 15 cosas que la inspección te pedirá](/blog/2026-02-07-checklist-cabina-15-cosas-inspeccion)
+- [Mantenimiento preventivo de flotas: cómo evitar averías y reducir costes](/blog/2026-02-03-mantenimiento-preventivo-flotas)

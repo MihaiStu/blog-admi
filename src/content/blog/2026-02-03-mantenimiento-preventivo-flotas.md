@@ -52,3 +52,12 @@ Antes de iniciar cada ruta, el conductor debe verificar estos 5 puntos básicos:
 ## Conclusión
 
 El mantenimiento preventivo no es un gasto, es una inversión. Cada euro invertido en prevención puede ahorrar tres en reparaciones de emergencia y días de inactividad.
+
+---
+
+**Artículos relacionados**
+
+- [Plan de mantenimiento integral para PYMES del transporte](/blog/2026-02-03-plan-mantenimiento-integral-pymes)
+- [Avería en carretera vs mantenimiento preventivo: el coste real](/blog/2026-02-20-averia-carretera-vs-mantenimiento-preventivo-costes)
+- [Tarjetas de gasoil profesional: ahorro y control para tu flota](/blog/2026-02-02-tarjetas-gasoil-profesionales-ahorro-control-flota)
+- [Tacógrafo inteligente G2V2: revisión periódica obligatoria](/blog/2026-02-03-tacografo-inteligente-g2v2)

@@ -138,3 +138,4 @@ No tener la cobertura correcta no es solo un riesgo legal — es un riesgo patri
 - [¿Autónomo o Sociedad? La decisión que define la rentabilidad de tu ruta](/blog/2026-02-07-autonomo-o-sociedad-rentabilidad-ruta)
 - [Alta autónomo transportista 2026: requisitos y trámites paso a paso](/blog/2026-02-20-alta-autonomo-transportista-2026)
 - [Gestoría vs asesoría: cuál necesita tu negocio](/blog/2026-02-03-gestoria-vs-asesoria)
+- [Multas del tacógrafo 2026: sanciones que afectan directamente a tu seguro](/blog/2026-02-03-infracciones-multas-tacografo)

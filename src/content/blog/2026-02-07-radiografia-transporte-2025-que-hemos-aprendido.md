@@ -29,3 +29,15 @@ Las empresas empezaron a valorar más la **digitalización de procesos** para re
 ## 4. Conclusión: Hacia un modelo más profesionalizado
 
 El 2025 nos enseñó que el transportista que no controla sus datos (tacógrafo, consumos, pesos) está destinado a desaparecer ante la presión fiscal y normativa.
+
+---
+
+**Profundiza en los temas clave de 2025 y 2026**
+
+- [56 días de registros del tacógrafo: el cambio que multiplicó las multas](/blog/2026-02-06-de-28-a-56-dias-cambio-multas-2026)
+- [Multas por infracción del tacógrafo 2026: baremo completo](/blog/2026-02-03-infracciones-multas-tacografo)
+- [¿Autónomo o Sociedad? La decisión que define la rentabilidad de tu ruta](/blog/2026-02-07-autonomo-o-sociedad-rentabilidad-ruta)
+- [Alta autónomo transportista 2026: requisitos, costes y trámites](/blog/2026-02-20-alta-autonomo-transportista-2026)
+- [Tarjetas de gasoil profesional: ahorro y control para tu flota](/blog/2026-02-02-tarjetas-gasoil-profesionales-ahorro-control-flota)
+- [Plan de mantenimiento integral para PYMES del transporte](/blog/2026-02-03-plan-mantenimiento-integral-pymes)
+- [Camiones eléctricos vs diésel: análisis de rentabilidad](/blog/2026-02-03-camiones-electricos-vs-diesel)

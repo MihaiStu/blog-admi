@@ -81,3 +81,4 @@ Ocupan toda la plataforma. Vigila la altura total (algunos contenedores "High Cu
 - [¿Lona, Frigo o Contenedor? La verdad que no te cuentan en la autoescuela](/blog/2026-02-06-lona-frigo-contenedor-verdad-autoescuela)
 - [Guía Maestra: Mi primer día con un frigorífico (paso a paso)](/blog/2026-02-06-guia-maestra-primer-dia-frigorifico)
 - [Checklist de cabina: las 15 cosas que la inspección te pedirá](/blog/2026-02-07-checklist-cabina-15-cosas-inspeccion)
+- [Mantenimiento preventivo de flotas: cómo evitar averías y reducir costes](/blog/2026-02-03-mantenimiento-preventivo-flotas)

@@ -71,3 +71,8 @@ Las tarjetas de gasoil profesionales son el primer paso para digitalizar tu nego
 - [Tarjeta Gasoil Profesional GALP: guía completa 2026](/blog/2026-02-02-tarjeta-gasoil-profesional-galp)
 - [Tarjeta BP Profesional 2026: ahorro y control total del combustible](/blog/2026-02-02-tarjeta-gasoil-profesional-bp)
 - [Tarjeta DKV Gasoil Profesional: control, ahorro y ventaja fiscal en España](/blog/2026-02-02-tarjeta-gasoil-profesional-dkv)
+
+**Reduce tu consumo en la misma ruta**
+
+- [Conducción eficiente y ecodriving: cómo reducir el consumo sin cambiar de camión](/blog/2026-02-03-conduccion-eficiente-ecodriving)
+- [Optimización de rutas: tecnología y estrategia para reducir km y gasoil](/blog/2026-02-03-optimizacion-rutas)

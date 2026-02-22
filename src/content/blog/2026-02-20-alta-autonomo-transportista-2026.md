@@ -108,3 +108,5 @@ La diferencia entre un alta bien planificada y una improvisada puede ser de 3.00
 - [¿Autónomo o Sociedad? La decisión que define la rentabilidad de tu ruta](/blog/2026-02-07-autonomo-o-sociedad-rentabilidad-ruta)
 - [Seguros obligatorios transportista 2026: cómo blindar tu margen](/blog/2026-02-20-seguros-obligatorios-transportista-2026)
 - [Gestoría vs asesoría: cuál necesita tu negocio](/blog/2026-02-03-gestoria-vs-asesoria)
+- [¿Qué es el tacógrafo digital? Obligatorio desde el primer día de actividad](/blog/2026-02-03-que-es-el-tacografo)
+- [Ayudas y fondos europeos para el transporte en 2026](/blog/2026-02-07-ayudas-transporte-2026-fondos-europeos-digitalizacion)

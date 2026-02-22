@@ -78,3 +78,4 @@ Asegúrate de que el papel del termógrafo tiene rollo. Si te piden un ticket de
 - [¿Lona, Frigo o Contenedor? La verdad que no te cuentan en la autoescuela](/blog/2026-02-06-lona-frigo-contenedor-verdad-autoescuela)
 - [Guía Maestra: Operativa con plataformas portacontenedores](/blog/2026-02-06-guia-maestra-plataformas-portacontenedores)
 - [Checklist de cabina: las 15 cosas que la inspección te pedirá](/blog/2026-02-07-checklist-cabina-15-cosas-inspeccion)
+- [Mantenimiento preventivo de flotas: cómo evitar averías y reducir costes](/blog/2026-02-03-mantenimiento-preventivo-flotas)

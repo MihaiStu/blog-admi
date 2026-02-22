@@ -139,3 +139,11 @@ La diferencia entre el transportista que llega a fin de año con margen y el que
 
 ---
 *Artículo publicado por el equipo de AdmiLogistic. Última actualización: febrero 2026.*
+
+---
+
+**Artículos relacionados**
+
+- [Plan de mantenimiento integral para PYMES del transporte](/blog/2026-02-03-plan-mantenimiento-integral-pymes)
+- [Mantenimiento preventivo de flotas: checklist y calendario](/blog/2026-02-03-mantenimiento-preventivo-flotas)
+- [Checklist de cabina: las 15 cosas que la inspección te pedirá](/blog/2026-02-07-checklist-cabina-15-cosas-inspeccion)
