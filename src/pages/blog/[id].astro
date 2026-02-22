@@ -52,6 +52,97 @@ const categoryLabel: Record<string, string> = {
     "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.admilogistic.es/blog/${post.id}` },
     "inLanguage": "es-ES"
   })} />
+  {post.id === "2026-02-03-infracciones-multas-tacografo" && (
+    <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Cuánto es la multa por no llevar el tacógrafo en regla?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Depende de la gravedad. Las infracciones leves van de 100€ a 400€, las graves de 401€ a 2.000€ y las muy graves de 2.001€ a 6.000€. La manipulación del tacógrafo tiene una sanción fija aproximada de 4.001€ y puede conllevar la pérdida de la honorabilidad de la empresa." }},
+        { "@type": "Question", "name": "¿Qué es una infracción muy grave del tacógrafo y qué consecuencias tiene?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Son infracciones muy graves: manipular el sistema, conducir sin tarjeta o con tarjeta ajena, superar el 50% del tiempo máximo de conducción (más de 13,5h) y negarse a facilitar datos al inspector. Además de la multa económica, restan puntos de honorabilidad, que es el requisito legal para mantener la licencia de transporte." }},
+        { "@type": "Question", "name": "¿Cuántos días de registros del tacógrafo puede pedir la Guardia Civil en una inspección?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Desde el 1 de enero de 2025, la Guardia Civil puede exigir los registros de los últimos 56 días en una inspección en carretera. Esto incluye los datos de la tarjeta del conductor y de la unidad del vehículo. No tenerlos disponibles se considera infracción grave." }}
+      ]
+    })} />
+  )}
+  {post.id === "2026-02-03-tiempos-conduccion-descanso" && (
+    <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Cuántas horas seguidas puede conducir un camionero?",
+          "acceptedAnswer": { "@type": "Answer", "text": "El límite diario de conducción es de 9 horas, ampliable a 10 horas un máximo de 2 veces por semana. Tras 4,5 horas de conducción continuada es obligatorio hacer una pausa de al menos 45 minutos (o dos pausas de 15 y 30 minutos en ese orden)." }},
+        { "@type": "Question", "name": "¿Cuándo se puede reducir el descanso diario a 9 horas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "El descanso diario normal es de 11 horas consecutivas. Se puede reducir a 9 horas (descanso reducido) un máximo de 3 veces entre dos descansos semanales. No requiere compensación posterior, pero debe quedar correctamente registrado en el tacógrafo." }},
+        { "@type": "Question", "name": "¿Qué pasa si no hago la pausa de 45 minutos en el tacógrafo?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No respetar la pausa obligatoria de 45 minutos tras 4,5 horas de conducción es una infracción grave que puede suponer una multa de entre 401€ y 2.000€. Además, queda registrado en el tacógrafo y es visible en cualquier inspección de los últimos 56 días." }}
+      ]
+    })} />
+  )}
+  {post.id === "2026-02-03-que-es-el-tacografo" && (
+    <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Qué vehículos están obligados a llevar tacógrafo?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Están obligados a llevar tacógrafo todos los vehículos de transporte de mercancías con una masa máxima autorizada superior a 3,5 toneladas y los vehículos de transporte de viajeros con más de 9 plazas (incluido el conductor), cuando se usen para transporte profesional por carretera." }},
+        { "@type": "Question", "name": "¿Cuál es la diferencia entre el tacógrafo digital y el tacógrafo inteligente G2V2?",
+          "acceptedAnswer": { "@type": "Answer", "text": "El tacógrafo digital registra tiempos y velocidades en una tarjeta de conductor. El tacógrafo inteligente G2V2 añade posicionamiento GNSS (GPS) automático, comunicación DSRC con los controles de tráfico sin necesidad de parar el vehículo, y registro automático de cruces de frontera. Es obligatorio en nuevos vehículos y en transporte internacional." }},
+        { "@type": "Question", "name": "¿Qué pasa si el tacógrafo se estropea durante la ruta?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Si el tacógrafo falla en ruta, el conductor debe anotar manualmente sus actividades en hojas de registro manual o en el reverso de los tickets impresos. Debe acudir a un taller autorizado para la reparación en un plazo máximo de 7 días desde el regreso a la base. Continuar sin registros equivale a una infracción muy grave." }}
+      ]
+    })} />
+  )}
+  {post.id === "2026-02-06-articulo-12-escudo-legal-excesos-conduccion" && (
+    <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Cuándo se puede aplicar el Artículo 12 del Reglamento 561/2006?",
+          "acceptedAnswer": { "@type": "Answer", "text": "El Artículo 12 permite superar los límites de conducción únicamente cuando sea necesario para garantizar la seguridad de personas, vehículo o carga, y para llegar a un punto de parada adecuado. La causa debe ser imprevista: un accidente en la vía, cierre de puerto por nieve o parking lleno. Una mala planificación de ruta no es válida." }},
+        { "@type": "Question", "name": "¿Cómo se hace la anotación manual del Artículo 12 en el tacógrafo?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Al llegar al punto de parada: imprime un ticket del tacógrafo digital. En el reverso escribe 'Invoco Art. 12 Reg. 561/2006', el motivo concreto (ej: 'Retención por accidente A-1 km 142'), la hora y tu firma. Guarda el ticket durante los próximos 56 días. Sin esta anotación firmada, el exceso es sancionable." }},
+        { "@type": "Question", "name": "¿Una retención de tráfico justifica el Artículo 12?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí, si es imprevista y te impide llegar a un área de descanso a tiempo. Una retención por accidente o corte de carretera es válida. Sin embargo, el inspector puede pedir pruebas externas: informe de la DGT, nota de tráfico o captura del GPS con la retención. La retención por obras programadas o tráfico denso habitual no suele aceptarse." }}
+      ]
+    })} />
+  )}
+  {post.id === "2026-02-06-de-28-a-56-dias-cambio-multas-2026" && (
+    <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Cuántos días de registros del tacógrafo debo llevar en el camión?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Desde 2025 debes llevar contigo los registros del día en curso más los 56 días anteriores. Esto incluye los datos de tu tarjeta de conductor y, para el jefe de tráfico, también los de la unidad del vehículo. Es obligatorio presentarlos cuando lo solicite un agente de inspección." }},
+        { "@type": "Question", "name": "¿Qué son las fechas en blanco en el tacógrafo y por qué son sancionables?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Las fechas en blanco son días sin actividad registrada en el tacógrafo que no están justificados con descanso o con el Certificado de Actividades del conductor. Si hay varios días consecutivos sin datos y sin documentación que lo explique, el inspector lo interpreta como falta de registros obligatorios, lo que puede derivar en una infracción grave." }},
+        { "@type": "Question", "name": "¿Qué es el DSRC del tacógrafo y cómo funciona?",
+          "acceptedAnswer": { "@type": "Answer", "text": "El DSRC (Dedicated Short-Range Communication) es la tecnología del tacógrafo G2V2 que permite a los equipos de inspección leer datos básicos del tacógrafo mientras el vehículo circula a velocidad normal, sin necesidad de parar. Si detectan anomalías, coordinan con patrullas más adelante para interceptar el vehículo y solicitar la documentación completa." }}
+      ]
+    })} />
+  )}
+  {post.id === "2026-02-03-tacografo-inteligente-g2v2" && (
+    <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Cuándo es obligatorio instalar el tacógrafo inteligente G2V2?",
+          "acceptedAnswer": { "@type": "Answer", "text": "El G2V2 es obligatorio desde agosto de 2023 para los vehículos nuevos matriculados. Los vehículos ya en circulación con tacógrafo digital de primera generación deben hacer el retrofit (actualización) para el transporte internacional. Consulta los plazos específicos según la fecha de primera matriculación de tu vehículo, ya que varían." }},
+        { "@type": "Question", "name": "¿Qué diferencia hay entre el tacógrafo G1 y el G2V2?",
+          "acceptedAnswer": { "@type": "Answer", "text": "El tacógrafo G1 (digital de primera generación) registra tiempos y velocidades pero requiere inspecciones físicas para leer los datos. El G2V2 añade tres funciones clave: posicionamiento GNSS automático, comunicación DSRC para inspecciones remotas sin parar el vehículo, y registro automático de cruces de frontera internacional." }},
+        { "@type": "Question", "name": "¿Qué multa hay por circular en transporte internacional sin el tacógrafo G2V2 obligatorio?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Circular en transporte internacional sin el tacógrafo G2V2 cuando es obligatorio se considera infracción muy grave, con sanción aproximada de 4.001€ y posible inmovilización del vehículo en el acto. Además, puede afectar a la honorabilidad de la empresa y poner en riesgo la licencia de transporte internacional." }}
+      ]
+    })} />
+  )}
+  {post.id === "2026-02-03-conducir-tarjeta-conductor-caducada" && (
+    <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Es legal conducir con la tarjeta de conductor caducada?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Conducir con la tarjeta de conductor caducada equivale legalmente a conducir sin tarjeta, lo que se tipifica como infracción muy grave. La única excepción es si la tarjeta se ha pedido renovar y han pasado más de 15 días hábiles sin recibirla: en ese caso existe una ventana legal documentada." }},
+        { "@type": "Question", "name": "¿Cuánto es la multa por conducir con tarjeta del tacógrafo caducada?",
+          "acceptedAnswer": { "@type": "Answer", "text": "La sanción por conducir sin tarjeta válida es una infracción muy grave que puede oscilar entre 2.001€ y 4.001€. Además, puede conllevar la inmovilización del vehículo en el momento de la inspección hasta que se acredite una tarjeta válida o se aplique la excepción legal correspondiente." }},
+        { "@type": "Question", "name": "¿Qué debo hacer si me caduca la tarjeta de conductor durante la ruta?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Si la tarjeta caduca durante la ruta, debes anotar manualmente tus tiempos de actividad en el reverso de los tickets del tacógrafo o en hojas de registro manual. Debes además acreditar que solicitaste la renovación antes de la fecha de vencimiento. Contacta con tu empresa o gestoría de inmediato para gestionar la documentación." }}
+      ]
+    })} />
+  )}
   {post.id === "2026-02-03-interpretar-ticket-tacografo" && (
     <script type="application/ld+json" slot="head" set:html={JSON.stringify({
       "@context": "https://schema.org",

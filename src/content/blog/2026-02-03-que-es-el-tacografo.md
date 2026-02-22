@@ -1,6 +1,6 @@
 ---
-title: "¿Qué es el tacógrafo y por qué es clave en el transporte profesional?"
-description: "Qué es el tacógrafo, cómo funciona y por qué es clave en el transporte profesional. Guía clara y actualizada para empresas y conductores."
+title: "¿Qué es el Tacógrafo Digital? Tipos, Funcionamiento y Obligaciones en 2026"
+description: "Guía completa: qué es el tacógrafo, cómo funciona, tipos (analógico, digital, inteligente G2V2) y qué vehículos están obligados a llevarlo. Todo lo que conductor y empresa necesitan saber."
 pubDate: 2026-02-03
 category: "cumplimiento"
 image: "/uploads/que es el tacografo.png"
@@ -90,3 +90,13 @@ La diferencia entre una empresa profesional y una que vive a base de sustos est�
 El tacógrafo es una pieza central del transporte profesional moderno. No entenderlo bien es caro. Dominarlo es una ventaja competitiva.
 
 Este artículo es la base. A partir de aquí, profundizaremos en infracciones, pictogramas y gestión avanzada.
+
+---
+
+**Artículos relacionados**
+
+- [Pictogramas del tacógrafo digital: qué significa cada símbolo](/blog/2026-02-03-pictogramas-tacografo)
+- [Cómo leer un ticket de tacógrafo: qué mira el inspector](/blog/2026-02-03-interpretar-ticket-tacografo)
+- [Multas por infracción del tacógrafo 2026: baremo completo](/blog/2026-02-03-infracciones-multas-tacografo)
+- [Tacógrafo G2V2: fechas de cambio obligatorio y sanciones](/blog/2026-02-03-tacografo-inteligente-g2v2)
+- [Tiempos de conducción y descanso: horas máximas y pausas](/blog/2026-02-03-tiempos-conduccion-descanso)

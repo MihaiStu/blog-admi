@@ -1,6 +1,6 @@
 ---
-title: "¿Se puede conducir con la tarjeta de conductor caducada? Guía de riesgos y excepciones en 2026"
-description: "Qué dice la ley sobre conducir con tarjeta de conductor caducada, sanciones, excepciones legales y protocolo paso a paso para evitar multas."
+title: "Tarjeta de Conductor Caducada: Sanción de Hasta 4.000€, la Única Excepción Legal y Protocolo"
+description: "Conducir con la tarjeta del tacógrafo caducada es infracción muy grave. Conoce la única excepción que da 15 días más, el protocolo exacto para no ser multado y cómo renovarla urgente."
 pubDate: 2026-02-03
 category: "cumplimiento"
 image: "/uploads/inmobilizado.png"
@@ -62,3 +62,13 @@ Si no solicitaste la renovación a tiempo, no hay trucos legales. Tu mejor opci�
 ## Conclusión
 
 En 2026, la vigilancia digital no deja espacio para la improvisación. La mejor estrategia es programar una alerta en el calendario **60 días antes del vencimiento** de tu tarjeta.
+
+---
+
+**Artículos relacionados**
+
+- [Multas por infracción del tacógrafo 2026: baremo completo](/blog/2026-02-03-infracciones-multas-tacografo)
+- [Tacógrafo G2V2: fechas de cambio obligatorio y sanciones](/blog/2026-02-03-tacografo-inteligente-g2v2)
+- [56 días de registros: el cambio que multiplica las multas](/blog/2026-02-06-de-28-a-56-dias-cambio-multas-2026)
+- [Pictogramas del tacógrafo digital: qué significa cada símbolo](/blog/2026-02-03-pictogramas-tacografo)
+- [Tiempos de conducción y descanso: horas máximas y pausas](/blog/2026-02-03-tiempos-conduccion-descanso)

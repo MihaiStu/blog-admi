@@ -1,6 +1,6 @@
 ---
-title: "El Artículo 12: Tu Escudo Legal ante Excesos de Conducción"
-description: "Qué dice el Artículo 12 del Reglamento 561/2006, las 3 reglas de oro, cómo hacer la anotación manual y por qué importan los 56 días."
+title: "Artículo 12 del Reglamento 561/2006: Cómo Justificar Legalmente un Exceso de Conducción"
+description: "¿Te pasaste de horas por un imprevisto? El Artículo 12 te protege si lo aplicas bien. Las 3 condiciones, el protocolo exacto de anotación en el ticket y por qué los 56 días son clave."
 pubDate: 2026-02-06
 category: "cumplimiento"
 image: "/uploads/articulo.png"
@@ -47,3 +47,13 @@ Recuerda que desde 2025, la inspección en carretera revisa los **últimos 56 d�
 ## ¿Quieres proteger tus puntos?
 
 Dominar el Artículo 12 es la diferencia entre una empresa que prospera y una que vive asfixiada por sanciones. En AdmiLogistic queremos que conduzcas con seguridad y sin miedo.
+
+---
+
+**Artículos relacionados**
+
+- [56 días de registros: el cambio que multiplica las multas en 2026](/blog/2026-02-06-de-28-a-56-dias-cambio-multas-2026)
+- [Multas por infracción del tacógrafo 2026: baremo completo](/blog/2026-02-03-infracciones-multas-tacografo)
+- [Tiempos de conducción y descanso: horas máximas y pausas](/blog/2026-02-03-tiempos-conduccion-descanso)
+- [Cómo leer un ticket de tacógrafo: qué mira el inspector](/blog/2026-02-03-interpretar-ticket-tacografo)
+- [Pictogramas del tacógrafo digital: qué significa cada símbolo](/blog/2026-02-03-pictogramas-tacografo)

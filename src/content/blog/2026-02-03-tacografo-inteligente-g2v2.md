@@ -1,6 +1,6 @@
 ---
-title: "Tacógrafo Inteligente de Segunda Generación (G2V2): La nueva era del control en 2026"
-description: "Todo sobre el tacógrafo G2V2: fechas de retrofit obligatorio, nuevas funcionalidades GNSS y DSRC, y cómo evitar sanciones en 2026."
+title: "Tacógrafo G2V2: Fechas de Cambio Obligatorio, Funciones GNSS/DSRC y Sanciones en 2026"
+description: "¿Cuándo es obligatorio el tacógrafo inteligente G2V2? Plazos de retrofit por tipo de vehículo, qué registra automáticamente y las multas por circular en transporte internacional sin él."
 pubDate: 2026-02-03
 category: "cumplimiento"
 image: "/uploads/tacografo_stoneridge.png"
@@ -53,3 +53,13 @@ El G2V2 está diseñado para controlar el cumplimiento del Paquete de Movilidad:
 ## Conclusión: Inversión vs. Multa
 
 El coste de instalar un G2V2 puede parecer elevado (entre 700€ y 1.200€ dependiendo del vehículo), pero palidece frente a una multa por carecer de tacógrafo homologado, que puede alcanzar los **4.001 €** y la pérdida de la honorabilidad de la empresa.
+
+---
+
+**Artículos relacionados**
+
+- [Multas por infracción del tacógrafo 2026: baremo completo](/blog/2026-02-03-infracciones-multas-tacografo)
+- [56 días de registros: el cambio que multiplica las multas](/blog/2026-02-06-de-28-a-56-dias-cambio-multas-2026)
+- [Pictogramas del tacógrafo digital: qué significa cada símbolo](/blog/2026-02-03-pictogramas-tacografo)
+- [Cómo leer un ticket de tacógrafo: qué mira el inspector](/blog/2026-02-03-interpretar-ticket-tacografo)
+- [¿Qué es el tacógrafo digital? Tipos y obligaciones en 2026](/blog/2026-02-03-que-es-el-tacografo)

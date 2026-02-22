@@ -1,6 +1,6 @@
 ---
-title: "Tiempos de Conducción y Descanso: Manual definitivo para el transporte profesional en 2026"
-description: "Guía completa de tiempos de conducción y descanso según el Reglamento CE 561/2006. Límites diarios, semanales, pausas y descansos obligatorios."
+title: "Tiempos de Conducción y Descanso 2026: Horas Máximas, Pausas y Descansos Obligatorios"
+description: "¿Cuántas horas puede conducir un camionero al día? Límites del Reglamento CE 561/2006: 9h diarias, pausa de 45 min, 11h de descanso. Guía actualizada con las excepciones vigentes en 2026."
 pubDate: 2026-02-03
 category: "cumplimiento"
 image: "/uploads/Tiempos%20Conducción%20y%20Descanso.png"
@@ -60,3 +60,13 @@ Para evitar que una inspección detecte infracciones graves, asegúrate de cumpl
 Las multas por exceso de conducción o falta de descanso se encuentran entre las más caras de la LOTT y restan puntos de honorabilidad de forma inmediata. Una buena planificación de rutas no solo cuida al conductor, sino que protege el patrimonio de la empresa.
 
 ![Conductor descansando en área de servicio](/uploads/conductor%20descansando%20.png)
+
+---
+
+**Artículos relacionados**
+
+- [Multas por infracción del tacógrafo 2026: baremo completo](/blog/2026-02-03-infracciones-multas-tacografo)
+- [56 días de registros: el cambio que multiplica las multas](/blog/2026-02-06-de-28-a-56-dias-cambio-multas-2026)
+- [Artículo 12: cómo justificar legalmente un exceso de conducción](/blog/2026-02-06-articulo-12-escudo-legal-excesos-conduccion)
+- [Cómo leer un ticket de tacógrafo: qué mira el inspector](/blog/2026-02-03-interpretar-ticket-tacografo)
+- [Tacógrafo G2V2: fechas de cambio obligatorio y sanciones](/blog/2026-02-03-tacografo-inteligente-g2v2)

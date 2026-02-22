@@ -1,6 +1,6 @@
 ---
-title: "De 28 a 56 días: El cambio que está disparando las multas en 2026"
-description: "Por qué la inspección ahora pide 56 días de registros, el peligro de las fechas en blanco, el DSRC y cómo evitar sanciones."
+title: "56 Días de Registros del Tacógrafo: El Cambio que Multiplica las Multas en 2026"
+description: "Desde 2025 la Guardia Civil revisa tus últimos 56 días de tacógrafo en un solo control. Qué son las fechas en blanco, cómo funciona el DSRC y la estrategia semanal para no tener sorpresas."
 pubDate: 2026-02-06
 category: "cumplimiento"
 image: "/uploads/dia56.png"
@@ -38,3 +38,13 @@ La clave es la **descarga y custodia de datos**.
 ## No dejes que el pasado te pase factura
 
 En AdmiLogistic, hemos actualizado todos nuestros protocolos para cubrir esta ventana de 56 días. No te la juegues por un despiste de hace un mes.
+
+---
+
+**Artículos relacionados**
+
+- [Multas por infracción del tacógrafo 2026: baremo completo](/blog/2026-02-03-infracciones-multas-tacografo)
+- [Artículo 12: cómo justificar legalmente un exceso de conducción](/blog/2026-02-06-articulo-12-escudo-legal-excesos-conduccion)
+- [Tiempos de conducción y descanso: horas máximas y pausas](/blog/2026-02-03-tiempos-conduccion-descanso)
+- [Tacógrafo G2V2: fechas de cambio obligatorio y DSRC](/blog/2026-02-03-tacografo-inteligente-g2v2)
+- [Cómo leer un ticket de tacógrafo: qué mira el inspector](/blog/2026-02-03-interpretar-ticket-tacografo)
