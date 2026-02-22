@@ -160,8 +160,8 @@ const articulos = (await getCollection('blog', ({ data }) => data.category === '
   }
 
   @media (max-width: 600px) {
-    .articulos-grid { grid-template-columns: 1fr; }
-    .articulo-image { height: 160px; }
+    .articulos-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+    .articulo-image { height: 110px; }
   }
 
   @media (max-width: 480px) {
@@ -169,9 +169,11 @@ const articulos = (await getCollection('blog', ({ data }) => data.category === '
     .categoria-header h1 { font-size: 1.5rem; }
     .categoria-intro { font-size: 0.875rem; }
     .categoria-header { margin-bottom: 1.5rem; }
-    .articulo-content { padding: 0.75rem; }
-    .articulo-content h3 { font-size: 0.875rem; }
-    .articulo-content p { font-size: 0.75rem; }
-    .articulo-content time { font-size: 0.6875rem; }
+    .articulos-grid { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+    .articulo-image { height: 95px; }
+    .articulo-content { padding: 0.6rem; }
+    .articulo-content h3 { font-size: 0.8rem; }
+    .articulo-content p { font-size: 0.7rem; }
+    .articulo-content time { font-size: 0.6rem; }
   }
 </style>
