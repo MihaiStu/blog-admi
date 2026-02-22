@@ -34,6 +34,24 @@ const categoryLabel: Record<string, string> = {
   description={typeof post.data.description === 'string' ? (post.data.description.slice(0, 155).replace(/\s+\S*$/, '') || post.data.title.slice(0, 155)) : (post.data.title || '').slice(0, 155).replace(/\s+\S*$/, '')}
   image={post.data.image}
 >
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.data.title,
+    "description": post.data.description ?? post.data.title,
+    "datePublished": post.data.pubDate.toISOString(),
+    "dateModified": post.data.pubDate.toISOString(),
+    "image": post.data.image ? `https://www.admilogistic.es${post.data.image}` : "https://www.admilogistic.es/images/hero/Portadaok2.png",
+    "author": { "@type": "Organization", "name": "AdmiLogistic", "url": "https://www.admilogistic.es" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AdmiLogistic",
+      "url": "https://www.admilogistic.es",
+      "logo": { "@type": "ImageObject", "url": "https://www.admilogistic.es/favicon.svg" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.admilogistic.es/blog/${post.id}` },
+    "inLanguage": "es-ES"
+  })} />
   <article class="article-page">
     {post.data.image && (
       <figure class:list={["article-image", post.id === "2026-02-06-lona-frigo-contenedor-verdad-autoescuela" && "article-image--contain", post.id === "2026-03-10-informe-tecnico-mercado-transporte-2026" && "article-image--same-size-contain"]}>

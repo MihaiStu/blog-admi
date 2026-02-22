@@ -1,6 +1,6 @@
 ---
-title: "Pictogramas, símbolos y averías del tacógrafo – Guía visual completa"
-description: "Guía visual completa de pictogramas, símbolos, errores y averías del tacógrafo. Identifica el icono que aparece y aplica la solución correcta."
+title: "Pictogramas del Tacógrafo Digital: Qué Significa Cada Símbolo y Qué Hacer"
+description: "¿Ves un símbolo en el tacógrafo y no sabes qué significa? Guía completa: iconos de actividad, errores de tarjeta, averías y fallos GNSS. Identifica el icono y actúa antes de que sea una infracción."
 pubDate: 2026-02-03
 category: "cumplimiento"
 image: "/uploads/tacografo.png"
@@ -106,3 +106,13 @@ Regla clave: **el tacógrafo no corrige, registra**. Ante cualquier símbolo, la
 Este artículo sirve como **guía visual de referencia** para conductores y empresas. Si sabes identificar el símbolo y actuar correctamente, evitas problemas antes de que aparezcan.
 
 Los pictogramas del tacógrafo son un lenguaje. Quien los entiende trabaja con tranquilidad. Quien los ignora improvisa y paga después.
+
+---
+
+**Artículos relacionados**
+
+- [Infracciones y multas del tacógrafo: cuánto cuesta cada error en 2026](/blog/2026-02-03-infracciones-multas-tacografo)
+- [Tiempos de conducción y descanso: la guía completa](/blog/2026-02-03-tiempos-conduccion-descanso)
+- [Qué es el tacógrafo y cómo funciona](/blog/2026-02-03-que-es-el-tacografo)
+- [El Artículo 12: tu escudo legal ante excesos de conducción imprevistos](/blog/2026-02-06-articulo-12-escudo-legal-excesos-conduccion)
+- [De 28 a 56 días: el cambio que está disparando las multas en 2026](/blog/2026-02-06-de-28-a-56-dias-cambio-multas-2026)

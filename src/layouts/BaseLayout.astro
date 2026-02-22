@@ -65,6 +65,7 @@ const bgStyleTag = ``;
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6113965561021500"
       crossorigin="anonymous"
     />
+    <slot name="head" />
   </head>
   <body class={`bg-${page} amp-mask`} data-page={page}>
     <Header />
