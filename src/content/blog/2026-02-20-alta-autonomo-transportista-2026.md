@@ -19,7 +19,7 @@ El Gobierno ha prorrogado el límite de 125.000 € de facturación para tributa
 - Si tu previsión supera los 80.000-90.000 € el primer año, consulta con un asesor antes de elegir régimen. La diferencia entre módulos y estimación directa simplificada puede ser de miles de euros anuales.
 
 > **Recurso recomendado:** OKAsesores ofrece una primera consulta gratuita para autónomos que necesitan decidir entre módulos y estimación directa según su volumen de negocio previsto.
-> [Ver planes y consulta gratuita →](https://okasesores.es/planes-precios-online-tarifas-asesoria-web-autonomos-sociedades/)
+> [Ver planes y consulta gratuita →](https://okasesores.es/planes-precios-online-tarifas-asesoria-web-autonomos-sociedades/?ref=admilogistic)
 
 ---
 
@@ -72,7 +72,7 @@ Estos son los costes mínimos que debes presupuestar además del vehículo:
 - **CAP y formación**: si no lo tienes en vigor, entre 300-600 €
 
 > **Para el seguro del vehículo y la mercancía:** SegurCamión lleva más de 35 años especializados en seguros para transportistas autónomos. Camión rígido desde 117 €/trimestre, mercancías desde 96 €/año.
-> [Comparar precios de seguro →](https://segurcamion.com)
+> [Comparar precios de seguro →](https://segurcamion.com?ref=admilogistic)
 
 ---
 
@@ -83,12 +83,12 @@ Estas son las empresas que AdmiLogistic recomienda para los trámites más crít
 **Gestoría y fiscalidad**
 
 **OKAsesores** — Asesoría online y presencial para autónomos. Primera consulta gratuita. Gestión completa del alta en Hacienda, Seguridad Social, IRPF y contabilidad mensual.
-[Ver planes →](https://okasesores.es/planes-precios-online-tarifas-asesoria-web-autonomos-sociedades/)
+[Ver planes →](https://okasesores.es/planes-precios-online-tarifas-asesoria-web-autonomos-sociedades/?ref=admilogistic)
 
 **Seguro del vehículo y mercancías**
 
 **SegurCamión** — Especialistas en seguros de transporte con más de 35 años en el sector. Comparador online inmediato.
-[Ver seguros →](https://segurcamion.com)
+[Ver seguros →](https://segurcamion.com?ref=admilogistic)
 
 ---
 

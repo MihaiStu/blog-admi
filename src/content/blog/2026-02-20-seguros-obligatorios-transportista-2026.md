@@ -25,7 +25,7 @@ El seguro de responsabilidad civil del vehículo es obligatorio por ley para cua
 La diferencia entre contratar con una aseguradora genérica y una especializada en transporte puede ser de 300-600 € anuales en la prima, y mucho más en la gestión de un siniestro.
 
 > **SegurCamión** lleva más de 35 años especializados en seguros para transportistas autónomos y flotas. Su comparador online permite obtener precio en minutos con compañías especializadas en el sector.
-> [Comparar precio de seguro de camión →](https://segurcamion.com)
+> [Comparar precio de seguro de camión →](https://segurcamion.com?ref=admilogistic)
 
 ---
 
@@ -43,7 +43,7 @@ Esto significa que si transportas electrónica, maquinaria o cualquier carga de 
 **Coste aproximado:** entre 150 € y 400 € anuales según tipo de mercancía, rutas y valor asegurado.
 
 > Para mercancías refrigeradas, peligrosas o de alto valor, SegurCamión ofrece pólizas específicas adaptadas a cada tipo de carga.
-> [Ver seguros de mercancías →](https://segurcamion.com/seguros-de-mercancias/)
+> [Ver seguros de mercancías →](https://segurcamion.com/seguros-de-mercancias/?ref=admilogistic)
 
 ---
 
@@ -77,7 +77,7 @@ En 2026 la base de cotización de autónomos ha subido, pero la cobertura públi
 **Coste:** entre 18 € y 60 €/mes según edad, base de cotización y días de carencia. Es la póliza con mejor ratio coste/protección para el transportista autónomo.
 
 > SegurCamión ofrece seguro de baja laboral específico para transportistas.
-> [Ver seguro de baja laboral →](https://segurcamion.com/seguro-de-baja-laboral/)
+> [Ver seguro de baja laboral →](https://segurcamion.com/seguro-de-baja-laboral/?ref=admilogistic)
 
 ---
 
@@ -104,7 +104,7 @@ Para llevarlo correctamente necesitas:
 - Contabilizarlo como gasto de explotación, no como gasto personal
 
 > **Para gestionar la deducibilidad correctamente:** OKAsesores ofrece asesoría fiscal completa para autónomos del transporte, incluyendo la gestión de todas las pólizas como gasto deducible.
-> [Ver asesoría para autónomos →](https://okasesores.es/planes-precios-online-tarifas-asesoria-web-autonomos-sociedades/)
+> [Ver asesoría para autónomos →](https://okasesores.es/planes-precios-online-tarifas-asesoria-web-autonomos-sociedades/?ref=admilogistic)
 
 ---
 
@@ -113,12 +113,12 @@ Para llevarlo correctamente necesitas:
 **Seguros de transporte**
 
 **SegurCamión** — Especialistas en seguros para transportistas autónomos y flotas. Vehículo, mercancías, RC, baja laboral y flotas. Más de 35 años en el sector. Comparador online inmediato.
-[Ver todos los seguros →](https://segurcamion.com)
+[Ver todos los seguros →](https://segurcamion.com?ref=admilogistic)
 
 **Gestión fiscal de pólizas**
 
 **OKAsesores** — Asesoría online para autónomos. Gestión completa de la deducibilidad de seguros en IRPF e IVA. Primera consulta gratuita.
-[Ver planes →](https://okasesores.es/planes-precios-online-tarifas-asesoria-web-autonomos-sociedades/)
+[Ver planes →](https://okasesores.es/planes-precios-online-tarifas-asesoria-web-autonomos-sociedades/?ref=admilogistic)
 
 ---
 

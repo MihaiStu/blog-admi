@@ -39,7 +39,7 @@ El cambio al eléctrico es hoy rentable para:
 ---
 
 > **Truckland Alcalá de Henares** es concesionario oficial DAF con sede en Alcalá de Henares, con cobertura en Madrid y Guadalajara. Disponen de vehículos nuevos y de ocasión, incluyendo la gama DAF eléctrica (XD Electric y XF Electric) con financiación y gestión de subvenciones MOVES III incluida.
-> [Ver gama DAF eléctrica →](https://www.truckland.es/daf)
+> [Ver gama DAF eléctrica →](https://www.truckland.es/daf?ref=admilogistic)
 
 ---
 
@@ -54,3 +54,4 @@ El camión eléctrico no es el futuro, ya es el presente para ciertos perfiles d
 - [Zonas de Bajas Emisiones (ZBE): qué camiones pueden entrar y cuáles no](/blog/2026-02-03-zonas-bajas-emisiones-zbe)
 - [Conducción eficiente y ecodriving: cómo reducir el consumo sin cambiar de camión](/blog/2026-02-03-conduccion-eficiente-ecodriving)
 - [Tarjetas de gasoil profesional: ahorro y control para tu flota](/blog/2026-02-02-tarjetas-gasoil-profesionales-ahorro-control-flota)
+- [→ Ver todos los artículos sobre Camiones y Vehículos](/categorias/camiones)

@@ -36,7 +36,7 @@ Antes de iniciar cada ruta, el conductor debe verificar estos 5 puntos básicos:
 ---
 
 > **Truckland Alcalá de Henares** — Taller oficial DAF y multimarca para vehículos industriales. Revisiones periódicas, diagnóstico electrónico y planes de mantenimiento para flotas. Servicio de recogida y entrega para flotas de la zona de Madrid y Guadalajara.
-> [Pedir cita de taller →](https://www.truckland.es/cita-de-taller)
+> [Pedir cita de taller →](https://www.truckland.es/cita-de-taller?ref=admilogistic)
 
 ---
 
@@ -45,7 +45,7 @@ Antes de iniciar cada ruta, el conductor debe verificar estos 5 puntos básicos:
 **Taller y mantenimiento de vehículos industriales**
 
 **Truckland Alcalá de Henares** — Concesionario oficial DAF. Taller para vehículos industriales, revisiones periódicas y mantenimiento de flotas con cobertura en Madrid y Guadalajara.
-[Pedir cita →](https://www.truckland.es/cita-de-taller)
+[Pedir cita →](https://www.truckland.es/cita-de-taller?ref=admilogistic)
 
 ---
 

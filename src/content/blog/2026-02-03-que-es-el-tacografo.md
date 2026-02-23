@@ -100,3 +100,4 @@ Este artículo es la base. A partir de aquí, profundizaremos en infracciones, p
 - [Multas por infracción del tacógrafo 2026: baremo completo](/blog/2026-02-03-infracciones-multas-tacografo)
 - [Tacógrafo G2V2: fechas de cambio obligatorio y sanciones](/blog/2026-02-03-tacografo-inteligente-g2v2)
 - [Tiempos de conducción y descanso: horas máximas y pausas](/blog/2026-02-03-tiempos-conduccion-descanso)
+- [→ Ver todos los artículos sobre Tacógrafo](/categorias/tacografo)

@@ -102,7 +102,7 @@ Un plan básico para un camión pesado en uso intensivo debería contemplar tres
 - Comprobación de documentación al día
 
 > **Repuestos Reyes** ofrece planes de mantenimiento integral para vehículos industriales con servicio a domicilio para flotas en la zona sur de Madrid. Más de 50 años manteniendo camiones en la carretera.
-> [Ver planes de mantenimiento →](https://repuestosreyes.com)
+> [Ver planes de mantenimiento →](https://repuestosreyes.com?ref=admilogistic)
 
 ---
 
@@ -127,7 +127,7 @@ Los puntos que más fallan en la ITV de vehículos pesados:
 **Mantenimiento y reparación de vehículos industriales**
 
 **Repuestos Reyes** — Más de 50 años al servicio del transportista. 5 centros en la zona sur de Madrid. Mecánica, neumáticos y recambios para vehículos industriales. Servicio de mantenimiento de flotas a domicilio.
-[Ver servicios →](https://repuestosreyes.com)
+[Ver servicios →](https://repuestosreyes.com?ref=admilogistic)
 
 ---
 

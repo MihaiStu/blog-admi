@@ -29,3 +29,11 @@ Mediante la implementación de software de planificación, empresas pequeñas ha
 ## Conclusión
 
 La optimización de rutas no es solo para grandes flotas. Con las herramientas actuales, cualquier empresa de transporte puede analizar sus rutas, eliminar ineficiencias y convertir cada kilómetro en beneficio.
+
+---
+
+**Artículos relacionados**
+
+- [Conducción eficiente y ecodriving: factor humano y ahorro en ruta](/blog/2026-02-03-conduccion-eficiente-ecodriving)
+- [Mantenimiento preventivo de flotas: reducir averías y costes 2026](/blog/2026-02-03-mantenimiento-preventivo-flotas)
+- [→ Ver todos los artículos sobre Rutas de Transporte](/categorias/rutas)
