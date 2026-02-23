@@ -1,9 +1,9 @@
 ---
-title: "La nueva Resolución del Consejo: Acuses de recibo digital y tu defensa legal"
+title: "Resolución del Consejo: Acuse Digital y Defensa Legal"
 description: "Análisis técnico de la nueva Resolución del Consejo sobre acuses de recibo y notificaciones digitales en el sector transporte. Evita sanciones por plazos vencidos."
 pubDate: 2026-03-07
 category: actualidad
-image: /uploads/slide1.png
+image: /uploads/slide1.webp
 ---
 
 # La nueva Resolución del Consejo: Cómo el "Acuse de Recibo" digital puede condicionar tu defensa legal

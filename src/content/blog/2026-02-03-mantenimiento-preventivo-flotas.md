@@ -1,9 +1,9 @@
 ---
-title: "Mantenimiento preventivo de flotas: La estrategia para reducir averías y costes en 2026"
+title: "Mantenimiento Preventivo de Flotas: Reduce Averías 2026"
 description: "Guía de mantenimiento preventivo para flotas de camiones. Sistemas críticos, software de gestión y checklist diario para conductores."
 pubDate: 2026-02-03
 category: "vehiculos"
-image: "/uploads/Mecánico%20trabajando%20en%20motor%20de%20camión.png"
+image: "/uploads/Mecánico%20trabajando%20en%20motor%20de%20camión.webp"
 ---
 
 En el transporte profesional, un camión parado es un camión que pierde dinero. El mantenimiento correctivo (reparar cuando ya se ha roto) es hasta tres veces más caro que un buen mantenimiento preventivo de flotas de camiones. En 2026, la tecnología nos permite pasar de la intuición a los datos, logrando reducir las averías imprevistas en un 20% mediante una gestión técnica rigurosa.

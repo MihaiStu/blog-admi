@@ -1,9 +1,9 @@
 ---
-title: "Cómo Leer un Ticket de Tacógrafo: Qué Mira el Inspector y Cómo Defenderte"
+title: "Cómo Leer el Ticket del Tacógrafo: Guía del Inspector"
 description: "¿Sabes qué busca el inspector en tu ticket de tacógrafo? Aprende a leer cabecera, símbolos de actividad, totales y reverso legal. Evita sanciones por errores de forma que se pueden prevenir."
 pubDate: 2026-02-03
 category: "cumplimiento"
-image: "/uploads/ticket1.png"
+image: "/uploads/ticket1.webp"
 ---
 
 Para un conductor profesional o un gestor de flotas, un ticket de tacógrafo no es solo un trozo de papel térmico; es el documento legal que resume toda la actividad de los últimos días ante una inspección. En 2026, con la llegada de los nuevos tacógrafos G2V2, la cantidad de información ha aumentado y saber leerla correctamente es la mejor defensa contra las sanciones por "errores de forma".
@@ -14,7 +14,7 @@ En este artículo desglosamos un ticket estándar para que sepas exactamente qu�
 
 La parte superior del ticket identifica el origen de la información. Es vital verificar que estos datos coinciden con tu documentación.
 
-![Cabecera del ticket de tacógrafo](/uploads/cabeza%20ticket.png)
+![Cabecera del ticket de tacógrafo](/uploads/cabeza%20ticket.webp)
 
 - **Fecha y hora de impresión:** Siempre aparece en formato UTC (tiempo universal), no en hora local.
 - **Tipo de impresión:** Indica si es un ticket de 24h del conductor o de la unidad del vehículo.
@@ -24,7 +24,7 @@ La parte superior del ticket identifica el origen de la información. Es vital v
 
 Aquí es donde se detalla minuto a minuto qué has estado haciendo. Los símbolos (pictogramas) son universales:
 
-![Cuerpo del ticket de tacógrafo](/uploads/cuerpo%20ticket.png)
+![Cuerpo del ticket de tacógrafo](/uploads/cuerpo%20ticket.webp)
 
 - **◯ (Disponibilidad):** Tiempo en el que estás a la espera (ej. copiloto o carga).
 - **✕ (Otros trabajos):** Cualquier actividad que no sea conducir (limpieza, carga manual, repostaje).
@@ -44,7 +44,7 @@ En los tickets de Tacógrafos Inteligentes, verás coordenadas geográficas o no
 
 Al final de la tira de papel, el tacógrafo suma todas las horas de cada actividad.
 
-![Pie del ticket de tacógrafo](/uploads/pie-ticket.png)
+![Pie del ticket de tacógrafo](/uploads/pie-ticket.webp)
 
 - **Total de conducción:** Debe coincidir con tus cálculos para no superar las 9 o 10 horas.
 - **Total de descanso:** Asegúrate de que suma las 11h (o 9h reducidas) obligatorias.

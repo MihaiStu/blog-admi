@@ -1,9 +1,9 @@
 ---
-title: "56 Días de Registros del Tacógrafo: El Cambio que Multiplica las Multas en 2026"
+title: "56 Días de Registros Tacógrafo: Nuevas Multas 2026"
 description: "Desde 2025 la Guardia Civil revisa tus últimos 56 días de tacógrafo en un solo control. Qué son las fechas en blanco, cómo funciona el DSRC y la estrategia semanal para no tener sorpresas."
 pubDate: 2026-02-06
 category: "cumplimiento"
-image: "/uploads/dia56.png"
+image: "/uploads/dia56.webp"
 ---
 
 Si todavía piensas que solo te pueden pedir los registros del último mes, tienes un problema serio de honorabilidad. Desde la entrada en vigor del **Paquete de Movilidad**, la inspección en carretera ha duplicado su capacidad de control: ahora van a por tus **últimos 56 días**.

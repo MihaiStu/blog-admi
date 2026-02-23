@@ -1,9 +1,9 @@
 ---
-title: "Tarjeta BP Profesional 2026: Ahorro y Control Total del Combustible"
+title: "Tarjeta BP Profesional 2026: Ahorro y Control"
 description: "Guía 2026 sobre la Tarjeta BP Profesional: descuentos actualizados, control de gasto, facturación y ventajas fiscales para transportistas."
 pubDate: 2026-02-02
 category: tarjetas-gasoil
-image: /uploads/bp-tarjeta-principal.jpg
+image: /uploads/bp-tarjeta-principal.webp
 ---
 
 El combustible sigue siendo uno de los mayores costes para el transporte por carretera. En 2026, la **Tarjeta BP Profesional** se mantiene como una de las soluciones más utilizadas por autónomos y empresas que buscan **descuentos reales, control de gasto y facturación clara**.
@@ -26,7 +26,7 @@ La Tarjeta BP Profesional es una tarjeta de combustible orientada a empresas, au
 - Empresas con flotas de camiones o furgonetas
 - Negocios con consumo mensual elevado de gasoil
 
-![Camión repostando en estación BP](/uploads/bp-repostaje-camion.jpg)
+![Camión repostando en estación BP](/uploads/bp-repostaje-camion.webp)
 
 ## Descuentos BP Actualizados en 2026
 

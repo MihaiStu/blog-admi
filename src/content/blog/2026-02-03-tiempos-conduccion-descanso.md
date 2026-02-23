@@ -1,9 +1,9 @@
 ---
-title: "Tiempos de Conducción y Descanso 2026: Horas Máximas, Pausas y Descansos Obligatorios"
+title: "Tiempos de Conducción y Descanso 2026: Guía Completa"
 description: "¿Cuántas horas puede conducir un camionero al día? Límites del Reglamento CE 561/2006: 9h diarias, pausa de 45 min, 11h de descanso. Guía actualizada con las excepciones vigentes en 2026."
 pubDate: 2026-02-03
 category: "cumplimiento"
-image: "/uploads/Tiempos%20Conducción%20y%20Descanso.png"
+image: "/uploads/Tiempos%20Conducción%20y%20Descanso.webp"
 ---
 
 Dominar los tiempos de conducción y descanso no es solo una cuestión de cumplir la ley; es la base de la seguridad vial y la eficiencia operativa de cualquier empresa de transporte. En 2026, con el control digital estricto sobre los últimos 56 días, un error de 5 minutos en una pausa puede desencadenar una inspección de oficio a toda la flota.
@@ -26,7 +26,7 @@ Tras 4 horas y media de conducción, el conductor debe realizar una pausa ininte
 
 > **Nota:** El orden no puede alterarse; primero 15 y luego 30.
 
-![Pausa de 45 min vs. Pausa fraccionada](/uploads/Pausa%20de%2045%20min%20vs.%20Pausa%20fraccionada.png)
+![Pausa de 45 min vs. Pausa fraccionada](/uploads/Pausa%20de%2045%20min%20vs.%20Pausa%20fraccionada.webp)
 
 ## 3. Periodos de Descanso Diario
 
@@ -45,7 +45,7 @@ Es el descanso que debe tomarse tras un máximo de seis periodos de 24 horas.
 
 > **Importante en 2026:** Está terminantemente prohibido realizar el descanso semanal normal (45h) en la cabina del vehículo. La empresa debe costear un alojamiento digno fuera del camión.
 
-![Esquema de un ciclo bisemanal](/uploads/Esquema%20de%20un%20ciclo%20bisemanal.png)
+![Esquema de un ciclo bisemanal](/uploads/Esquema%20de%20un%20ciclo%20bisemanal.webp)
 
 ## 5. El "Checklist" de Cumplimiento en 2026
 
@@ -59,7 +59,7 @@ Para evitar que una inspección detecte infracciones graves, asegúrate de cumpl
 
 Las multas por exceso de conducción o falta de descanso se encuentran entre las más caras de la LOTT y restan puntos de honorabilidad de forma inmediata. Una buena planificación de rutas no solo cuida al conductor, sino que protege el patrimonio de la empresa.
 
-![Conductor descansando en área de servicio](/uploads/conductor%20descansando%20.png)
+![Conductor descansando en área de servicio](/uploads/conductor%20descansando%20.webp)
 
 ---
 

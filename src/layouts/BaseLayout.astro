@@ -14,7 +14,7 @@ const { title, description = "Blog de AdmiLogistic", image } = Astro.props;
 
 const site = Astro.site?.href ?? 'https://admilogistic.es';
 const canonicalUrl = new URL(Astro.url.pathname, site).href;
-const ogImage = image ? new URL(image.startsWith('/') ? image : `/${image}`, site).href : new URL('/images/hero/Portadaok2.png', site).href;
+const ogImage = image ? new URL(image.startsWith('/') ? image : `/${image}`, site).href : new URL('/images/hero/Portadaok2.webp', site).href;
 const descTruncated = description.length > 155 ? description.slice(0, 152).replace(/\s+\S*$/, '') + '…' : description;
 
 // Self-determine page from URL pathname (more reliable than relying on props)

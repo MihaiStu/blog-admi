@@ -1,9 +1,9 @@
 ---
-title: "Multas por Infracción del Tacógrafo 2026: Cuánto Cuesta Cada Error y Cómo Recurrir"
+title: "Multas Tacógrafo 2026: Importes por Infracción y Recurso"
 description: "¿Cuánto es la multa por tacógrafo en España? Baremo completo 2026: leves (100€–400€), graves (hasta 2.000€) y muy graves (hasta 6.000€). Cómo evitar sanciones y qué hacer si te inspeccionan."
 pubDate: 2026-02-03
 category: "cumplimiento"
-image: "/uploads/guardia civil.png"
+image: "/uploads/guardia civil.webp"
 ---
 
 En 2026, el transporte por carretera en España no solo se enfrenta a una presión de costes histórica, sino a una vigilancia tecnológica sin precedentes. Con la consolidación del Tacógrafo Inteligente de Segunda Generación (G2V2) y la obligación de portar registros de los últimos 56 días, una gestión deficiente de los tiempos de conducción ya no es un riesgo asumible: es una amenaza directa a la supervivencia de la empresa.

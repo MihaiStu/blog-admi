@@ -1,9 +1,9 @@
 ---
-title: "Informe de Rentabilidad Transporte 2026: El desafío de las 44 toneladas y el nuevo escenario de costes"
+title: "Informe Rentabilidad Transporte 2026: Las 44 Toneladas"
 description: "Análisis AdmiLogistic: 44 toneladas, costes operativos +8,91%, diésel y peajes al alza. Renegociar cláusulas de combustible y controlar el dato para facturar mejor."
 pubDate: 2026-03-10
 category: actualidad
-image: /uploads/44 toneladas.png
+image: /uploads/44 toneladas.webp
 ---
 
 # Informe de Rentabilidad Transporte 2026: El desafío de las 44 toneladas y el nuevo escenario de costes

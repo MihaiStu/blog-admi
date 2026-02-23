@@ -1,9 +1,9 @@
 ---
-title: "La IA en el transporte: De la teoría a la rentabilidad real en 2026"
+title: "IA en el Transporte 2026: De la Teoría a la Práctica"
 description: "Cómo la Inteligencia Artificial está transformando el transporte en 2026. Mantenimiento predictivo, ayudas Kit Digital y primeros pasos en digitalización."
 pubDate: 2026-02-03
 category: "actualidad"
-image: "/uploads/dashboard.png"
+image: "/uploads/dashboard.webp"
 ---
 
 En 2026, la Inteligencia Artificial ha dejado de ser una tecnología del futuro para convertirse en el motor de la eficiencia operativa. Cerca del 70% de las tareas operativas de una empresa de transporte ya pueden automatizarse, permitiendo a los gestores centrarse en lo que realmente importa: la rentabilidad y el servicio al cliente.

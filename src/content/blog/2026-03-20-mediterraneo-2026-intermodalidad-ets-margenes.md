@@ -1,9 +1,9 @@
 ---
-title: "El Mediterráneo en 2026: Cómo la intermodalidad y el ETS están reescribiendo tus márgenes"
+title: "Mediterráneo 2026: Intermodalidad, ETS y Márgenes"
 description: "Short Sea Shipping, ETS variable y 44 toneladas: análisis AdmiLogistic sobre cómo la intermodalidad Ro-Ro es hoy la palanca de rentabilidad y descarbonización en el transporte marítimo."
 pubDate: 2026-03-20
 category: operaciones
-image: /uploads/El Mediteraneo en 2026.png
+image: /uploads/El Mediteraneo en 2026.webp
 ---
 
 # El Mediterráneo en 2026: Cómo la intermodalidad y el ETS están reescribiendo tus márgenes

@@ -1,9 +1,9 @@
 ---
-title: "Tarjeta DKV Gasoil Profesional: Control, Ahorro y Ventaja Fiscal en España"
+title: "Tarjeta DKV Gasoil Profesional: Ahorro y Fiscalidad"
 description: "Descubre cómo las tarjetas DKV de gasoil profesional ayudan a transportistas en España a ahorrar combustible, controlar gastos y optimizar la fiscalidad."
 pubDate: 2026-02-02
 category: tarjetas-gasoil
-image: /uploads/dkv-tarjeta-principal.jpg
+image: /uploads/dkv-tarjeta-principal.webp
 ---
 
 **Facturar más no siempre significa ganar más.** En transporte, el margen se decide en los costes, y el gasoil es el principal. Aquí es donde las **tarjetas DKV de gasoil profesional** marcan una diferencia real en España.

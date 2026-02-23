@@ -3,7 +3,7 @@ title: "Guía Maestra: Operativa con Plataformas Portacontenedores"
 description: "Manejo de contenedores con plataformas: tipos, enganche con twist-locks, revisión en puerto, precintado y configuración de cargas y pesos."
 pubDate: 2026-02-06
 category: "vehiculos"
-image: "/uploads/Contenedor.png"
+image: "/uploads/Contenedor.webp"
 ---
 
 Manejar contenedores requiere conocer la física del remolque. No es solo "cargar una caja", es asegurar que esa caja no se mueva ni un milímetro en la carretera.

@@ -1,9 +1,9 @@
 ---
-title: "Vectores de Supervivencia Logística 2026: Por qué el 8,91% de tus costes están fuera de control"
+title: "Vectores de Supervivencia Logística 2026: Costes Ocultos"
 description: "44 toneladas, RD 88/2026 agregación de demanda, RD 85/2026 certificación. Análisis AdmiLogistic sobre costes, blindaje jurídico y vectores de riesgo en 2026."
 pubDate: 2026-03-15
 category: actualidad
-image: /uploads/vectores.png
+image: /uploads/vectores.webp
 ---
 
 # Vectores de Supervivencia Logística 2026: Por qué el 8,91% de tus costes están fuera de control

@@ -1,9 +1,9 @@
 ---
-title: "¿Qué es el Tacógrafo Digital? Tipos, Funcionamiento y Obligaciones en 2026"
+title: "Tacógrafo Digital: Tipos, Funcionamiento y Obligaciones"
 description: "Guía completa: qué es el tacógrafo, cómo funciona, tipos (analógico, digital, inteligente G2V2) y qué vehículos están obligados a llevarlo. Todo lo que conductor y empresa necesitan saber."
 pubDate: 2026-02-03
 category: "cumplimiento"
-image: "/uploads/que es el tacografo.png"
+image: "/uploads/que es el tacografo.webp"
 ---
 
 El **tacógrafo** es un dispositivo obligatorio en el transporte profesional por carretera que registra la actividad del vehículo y del conductor. No es un simple requisito legal: es una **herramienta clave de control, seguridad y gestión empresarial**.
