@@ -38,6 +38,10 @@
         {
           "key": "X-Permitted-Cross-Domain-Policies",
           "value": "none"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'none'; script-src 'self' 'unsafe-inline' pagead2.googlesyndication.com adservice.google.com *.googlesyndication.com *.google.com analytics.ahrefs.com unpkg.com cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' unpkg.com cdnjs.cloudflare.com; img-src 'self' data: blob: *.tile.openstreetmap.org tile.openstreetmap.org *.googlesyndication.com *.google.com *.gstatic.com unpkg.com; frame-src www.youtube.com youtube.com *.googlesyndication.com *.google.com; connect-src 'self' analytics.ahrefs.com *.googlesyndication.com api.github.com github.com; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self';"
         }
       ]
     }

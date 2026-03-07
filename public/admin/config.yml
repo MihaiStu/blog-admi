@@ -1,6 +1,7 @@
-# En localhost, Decap usa el proxy local (npx decap-server) y escribe en tu repo Git local.
-# En producción sigue usando GitHub.
-local_backend: true
+# local_backend solo activo en desarrollo local (npx decap-server).
+# En producción Decap lo ignora automáticamente y usa GitHub OAuth.
+local_backend:
+  url: http://localhost:8081/api/v1
 
 backend:
   name: github
