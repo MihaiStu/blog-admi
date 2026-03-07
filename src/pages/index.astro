@@ -188,7 +188,10 @@ const searchIndex = sortedPosts.map((p) => ({
         </div>
         <h3>RoadMaster</h3>
         <p>Solución integral de gestión para empresas de transporte y logística. Integrada con el resto del ecosistema AdmiLogistic.</p>
-        <a href="/proyectos/roadmaster" class="project-button" aria-label="Ver información de RoadMaster">Ver RoadMaster</a>
+        <div class="project-card-actions">
+          <a href="https://roadmaster.admilogistic.es/register" class="project-button project-button-primary" target="_blank" rel="noopener noreferrer" aria-label="Probar RoadMaster gratis 14 días">Probar gratis 14 días</a>
+          <a href="/proyectos/roadmaster" class="project-button project-button-secondary" aria-label="Ver información de RoadMaster">Ver más</a>
+        </div>
       </article>
 
       <article class="project-card">
@@ -666,6 +669,32 @@ const searchIndex = sortedPosts.map((p) => ({
     background: var(--accent-hover);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
+  }
+
+  .project-card-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto;
+    flex-wrap: wrap;
+  }
+
+  .project-button-primary {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  }
+
+  .project-button-primary:hover {
+    background: linear-gradient(135deg, #4f46e5, #4338ca) !important;
+    box-shadow: 0 6px 18px rgba(99, 102, 241, 0.45) !important;
+  }
+
+  .project-button-secondary {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+  }
+
+  .project-button-secondary:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
   }
 
   /* NEWS SECTION WITH SIDEBAR */
