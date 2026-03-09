@@ -42,15 +42,15 @@ const categoryLabel: Record<string, string> = {
     "description": post.data.description ?? post.data.title,
     "datePublished": postDate.toISOString(),
     "dateModified": postDate.toISOString(),
-    "image": post.data.image ? `https://www.admilogistic.es${post.data.image}` : "https://www.admilogistic.es/images/hero/Portadaok2.webp",
-    "author": { "@type": "Organization", "name": "AdmiLogistic", "url": "https://www.admilogistic.es" },
+    "image": post.data.image ? `https://admilogistic.es${post.data.image}` : "https://admilogistic.es/images/hero/Portadaok2.webp",
+    "author": { "@type": "Organization", "name": "AdmiLogistic", "url": "https://admilogistic.es" },
     "publisher": {
       "@type": "Organization",
       "name": "AdmiLogistic",
-      "url": "https://www.admilogistic.es",
-      "logo": { "@type": "ImageObject", "url": "https://www.admilogistic.es/favicon.svg" }
+      "url": "https://admilogistic.es",
+      "logo": { "@type": "ImageObject", "url": "https://admilogistic.es/favicon.svg" }
     },
-    "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.admilogistic.es/blog/${post.id}` },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": `https://admilogistic.es/blog/${post.id}/` },
     "inLanguage": "es-ES"
   })} />
   {post.id === "2026-02-07-autonomo-o-sociedad-rentabilidad-ruta" && (
