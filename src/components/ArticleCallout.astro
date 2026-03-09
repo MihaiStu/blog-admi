@@ -1,0 +1,55 @@
+---
+interface Props {
+  type?: "alerta" | "consejo" | "info";
+}
+
+const { type = "info" } = Astro.props;
+
+const config = {
+  alerta: { icon: "⚠️", label: "Atención", color: "#c0392b", bg: "rgba(192, 57, 43, 0.08)", border: "#c0392b" },
+  consejo: { icon: "💡", label: "Consejo", color: "#e67e00", bg: "rgba(230, 126, 0, 0.08)", border: "#e67e00" },
+  info:    { icon: "ℹ️", label: "Info",    color: "#1a6fa8", bg: "rgba(26, 111, 168, 0.08)", border: "#1a6fa8" },
+};
+
+const { icon, label, color, bg, border } = config[type];
+---
+
+<aside class="callout" style={`--callout-color:${color};--callout-bg:${bg};--callout-border:${border}`}>
+  <span class="callout__badge">{icon} {label}</span>
+  <div class="callout__body">
+    <slot />
+  </div>
+</aside>
+
+<style>
+  .callout {
+    border-left: 4px solid var(--callout-border);
+    background: var(--callout-bg);
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+  }
+
+  .callout__badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--callout-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .callout__body {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .callout__body :global(p) {
+    margin: 0;
+  }
+
+  .callout__body :global(strong) {
+    color: var(--callout-color);
+  }
+</style>

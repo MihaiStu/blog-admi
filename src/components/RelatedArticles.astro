@@ -1,0 +1,87 @@
+---
+interface Article {
+  slug: string;
+  title: string;
+  description?: string;
+}
+
+interface Props {
+  title?: string;
+  articles: Article[];
+}
+
+const { title = "Artículos relacionados", articles } = Astro.props;
+---
+
+<section class="related-articles">
+  <h2 class="related-articles__title">{title}</h2>
+  <div class="related-articles__grid">
+    {articles.map((article) => (
+      <a href={`/blog/${article.slug}`} class="related-articles__card">
+        <strong class="related-articles__card-title">{article.title}</strong>
+        {article.description && (
+          <p class="related-articles__card-desc">{article.description}</p>
+        )}
+      </a>
+    ))}
+  </div>
+</section>
+
+<style>
+  .related-articles {
+    margin: 2.5rem 0 1rem;
+  }
+
+  .related-articles__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a2c4e;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e0e0e0;
+  }
+
+  .related-articles__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .related-articles__card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    text-decoration: none;
+    transition: box-shadow 0.2s, transform 0.15s;
+  }
+
+  .related-articles__card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+  }
+
+  .related-articles__card-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #1a2c4e;
+    line-height: 1.35;
+  }
+
+  .related-articles__card-desc {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #555;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 480px) {
+    .related-articles__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

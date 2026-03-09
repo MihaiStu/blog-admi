@@ -1,0 +1,106 @@
+---
+interface Article {
+  order: number;
+  title: string;
+  slug?: string;
+}
+
+interface Props {
+  series: string;
+  title: string;
+  current: number;
+  articles: Article[];
+}
+
+const { title, current, articles } = Astro.props;
+---
+
+<nav class="series-nav" aria-label="Navegación de la serie">
+  <p class="series-nav__label">{title}</p>
+  <ol class="series-nav__list">
+    {articles.map((article) => (
+      <li class={`series-nav__item ${article.order === current ? "series-nav__item--current" : ""}`}>
+        {article.slug ? (
+          <a href={`/blog/${article.slug}`} class="series-nav__link">
+            <span class="series-nav__num">{article.order}</span>
+            {article.title}
+          </a>
+        ) : (
+          <span class="series-nav__link series-nav__link--active">
+            <span class="series-nav__num">{article.order}</span>
+            {article.title}
+          </span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<style>
+  .series-nav {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .series-nav__label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #666;
+    margin: 0 0 0.75rem 0;
+  }
+
+  .series-nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .series-nav__link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    color: #1a6fa8;
+    text-decoration: none;
+    padding: 0.25rem 0;
+    transition: color 0.15s;
+  }
+
+  .series-nav__link:hover {
+    color: #ff8c00;
+  }
+
+  .series-nav__item--current .series-nav__link,
+  .series-nav__link--active {
+    color: #1a2c4e;
+    font-weight: 700;
+    cursor: default;
+  }
+
+  .series-nav__num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    background: #1a2c4e;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .series-nav__item--current .series-nav__num {
+    background: #ff8c00;
+  }
+</style>

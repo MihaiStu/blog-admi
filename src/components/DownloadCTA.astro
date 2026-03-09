@@ -1,0 +1,99 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  label: string;
+}
+
+const { title, description, href, label } = Astro.props;
+---
+
+<div class="download-cta">
+  <div class="download-cta__icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+      <polyline points="14 2 14 8 20 8"/>
+      <line x1="12" y1="18" x2="12" y2="12"/>
+      <polyline points="9 15 12 18 15 15"/>
+    </svg>
+  </div>
+  <div class="download-cta__content">
+    <strong>{title}</strong>
+    <p>{description}</p>
+  </div>
+  <a href={href} download class="download-cta__button">{label}</a>
+</div>
+
+<style>
+  .download-cta {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    background: linear-gradient(135deg, #1a2c4e 0%, #0f1e35 100%);
+    border: 1px solid rgba(255, 140, 0, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  .download-cta__icon {
+    flex-shrink: 0;
+    color: #ff8c00;
+    display: flex;
+    align-items: center;
+  }
+
+  .download-cta__content {
+    flex: 1;
+  }
+
+  .download-cta__content strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+    color: #fff;
+  }
+
+  .download-cta__content p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.4;
+  }
+
+  .download-cta__button {
+    flex-shrink: 0;
+    display: inline-block;
+    background: #ff8c00;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.65rem 1.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .download-cta__button:hover {
+    background: #e67e00;
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 768px) {
+    .download-cta {
+      flex-direction: column;
+      text-align: center;
+      padding: 1.25rem;
+    }
+
+    .download-cta__button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>

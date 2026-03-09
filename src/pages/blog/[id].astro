@@ -18,6 +18,7 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content, headings } = await render(post);
+const postDate = post.data.pubDate ?? post.data.date ?? new Date();
 const categoryLabel: Record<string, string> = {
   operaciones: "Operaciones",
   cumplimiento: "Cumplimiento",
@@ -39,8 +40,8 @@ const categoryLabel: Record<string, string> = {
     "@type": "Article",
     "headline": post.data.title,
     "description": post.data.description ?? post.data.title,
-    "datePublished": post.data.pubDate.toISOString(),
-    "dateModified": post.data.pubDate.toISOString(),
+    "datePublished": postDate.toISOString(),
+    "dateModified": postDate.toISOString(),
     "image": post.data.image ? `https://www.admilogistic.es${post.data.image}` : "https://www.admilogistic.es/images/hero/Portadaok2.webp",
     "author": { "@type": "Organization", "name": "AdmiLogistic", "url": "https://www.admilogistic.es" },
     "publisher": {
@@ -257,8 +258,8 @@ const categoryLabel: Record<string, string> = {
         {categoryLabel[post.data.category] ?? post.data.category}
       </a>
       <h1>{post.data.title}</h1>
-      <time datetime={post.data.pubDate.toISOString()}>
-        {post.data.pubDate.toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" })}
+      <time datetime={postDate.toISOString()}>
+        {postDate.toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" })}
       </time>
     </header>
 

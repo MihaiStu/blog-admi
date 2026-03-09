@@ -12,13 +12,25 @@ const categoriasPermitidas = [
 ] as const;
 
 const blog = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/blog" }),
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/blog" }),
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
-    pubDate: z.coerce.date(),
-    category: z.enum(categoriasPermitidas),
+    pubDate: z.coerce.date().optional(),
+    date: z.coerce.date().optional(),
+    lastUpdated: z.coerce.date().optional(),
+    author: z.string().optional(),
+    category: z.enum(categoriasPermitidas).optional(),
     image: z.string().optional(),
+    imageAlt: z.string().optional(),
+    readingTime: z.string().optional(),
+    tags: z.array(z.string()).optional(),
+    series: z.string().optional(),
+    seriesOrder: z.number().optional(),
+    slug: z.string().optional(),
+    downloadPdf: z.string().optional(),
+    downloadLabel: z.string().optional(),
+    relatedArticles: z.array(z.string()).optional(),
   }),
 });
 
