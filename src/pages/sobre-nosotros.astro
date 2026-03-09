@@ -1,0 +1,165 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  pageBg="categorias"
+  title="Sobre Nosotros | AdmiLogistic"
+  description="AdmiLogistic es el centro de recursos profesionales para transportistas, gestores de flota y empresas de logística en España. Conoce nuestro equipo y misión."
+>
+  <section class="about-page">
+    <div class="about-inner">
+
+      <header class="about-header">
+        <h1>Sobre AdmiLogistic</h1>
+        <p class="about-lead">Información profesional para quienes mueven España.</p>
+      </header>
+
+      <div class="about-body">
+
+        <div class="about-block">
+          <h2>¿Quiénes somos?</h2>
+          <p>AdmiLogistic es un proyecto editorial especializado en el sector del transporte por carretera y la logística profesional en España. Nacimos con una idea sencilla: que los transportistas autónomos, los gestores de flota y los responsables de empresas de logística tuvieran acceso fácil a información rigurosa, actualizada y útil en su día a día.</p>
+          <p>Detrás de AdmiLogistic está <strong>ADMI LOGISTIC SL</strong> (NIF B22571921), empresa española con actividad en el sector del transporte y la gestión administrativa logística.</p>
+        </div>
+
+        <div class="about-block">
+          <h2>¿A quién va dirigido?</h2>
+          <ul class="about-list">
+            <li><strong>Transportistas autónomos</strong> que necesitan entender la normativa, el tacógrafo, las multas o los trámites fiscales.</li>
+            <li><strong>Gestores de flota</strong> que buscan optimizar costes, mantener vehículos y cumplir con la regulación vigente.</li>
+            <li><strong>Empresas de logística</strong> que quieren estar al día de las novedades del sector: combustibles, sostenibilidad, digitalización.</li>
+            <li><strong>Nuevos conductores</strong> que empiezan en el sector y necesitan formación práctica.</li>
+          </ul>
+        </div>
+
+        <div class="about-block">
+          <h2>Qué encontrarás aquí</h2>
+          <p>Publicamos contenido original en seis áreas clave:</p>
+          <div class="about-cats">
+            <span class="cat-pill">Operaciones</span>
+            <span class="cat-pill">Cumplimiento normativo</span>
+            <span class="cat-pill">Fiscalidad</span>
+            <span class="cat-pill">Vehículos</span>
+            <span class="cat-pill">Tarjetas de gasoil</span>
+            <span class="cat-pill">Actualidad del sector</span>
+          </div>
+          <p>Además, mantenemos <strong>bases de datos públicas</strong> de talleres especializados, gasolineras con mejor precio, parkings para camiones y hoteles de carretera; y desarrollamos <strong>herramientas de gestión</strong> propias para el sector.</p>
+        </div>
+
+        <div class="about-block">
+          <h2>Nuestro compromiso editorial</h2>
+          <p>Todo el contenido publicado en AdmiLogistic se elabora con rigor, contrastando fuentes oficiales (BOE, DGT, Ministerio de Transportes, reglamentos UE) y la experiencia práctica del sector. No publicamos contenido meramente decorativo ni artículos de relleno.</p>
+          <p>Cuando colaboramos con marcas o incluimos enlaces de afiliación, lo indicamos de forma transparente. Nuestra independencia editorial es innegociable.</p>
+        </div>
+
+        <div class="about-block about-contact-cta">
+          <h2>¿Tienes alguna pregunta?</h2>
+          <p>Si quieres contactar con nosotros, proponer un tema, reportar un error o explorar una colaboración, escríbenos a <a href="mailto:contacto@admilogistic.es">contacto@admilogistic.es</a> o visita nuestra <a href="/contacto">página de contacto</a>.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-page {
+    padding: 3rem 1rem 5rem;
+  }
+
+  .about-inner {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .about-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .about-header h1 {
+    font-size: clamp(1.75rem, 4vw, 2.4rem);
+    font-weight: 700;
+    color: var(--text-primary, #111);
+    margin-bottom: 0.5rem;
+  }
+
+  .about-lead {
+    font-size: 1.15rem;
+    color: #555;
+  }
+
+  .about-block {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 14px;
+    padding: 1.75rem 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  }
+
+  .about-block h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 0.85rem;
+  }
+
+  .about-block p {
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 0.85rem;
+  }
+
+  .about-block p:last-child {
+    margin-bottom: 0;
+  }
+
+  .about-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .about-list li {
+    color: #333;
+    line-height: 1.6;
+    padding-left: 1.25rem;
+    position: relative;
+  }
+
+  .about-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #6366f1;
+    font-weight: 700;
+  }
+
+  .about-cats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.75rem 0 1rem;
+  }
+
+  .cat-pill {
+    background: rgba(99, 102, 241, 0.1);
+    color: #4f46e5;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    padding: 0.3rem 0.75rem;
+    border-radius: 99px;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+  }
+
+  .about-contact-cta a {
+    color: #4f46e5;
+    font-weight: 600;
+  }
+</style>
