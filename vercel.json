@@ -2,6 +2,12 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.admilogistic.es" }],
+      "destination": "https://admilogistic.es/:path*",
+      "permanent": true
+    },
+    {
       "source": "/tacografo",
       "destination": "https://admilogistic.es/proyectos/tacografo",
       "permanent": true
