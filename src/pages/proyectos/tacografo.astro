@@ -2,43 +2,42 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout pageBg="proyectos" title="Tacógrafo - Proyectos - Blog AdmiLogistic" description="Solución de gestión de tacógrafos digitales">
+<BaseLayout pageBg="proyectos" title="Tacógrafo - Proyectos - Blog AdmiLogistic" description="Solución de gestión de tacógrafos digitales para el cumplimiento normativo europeo">
   <div class="project-page">
     <div class="project-page-inner">
-      <div class="construction-banner">
-        <span class="construction-icon">🚧</span>
-        <span>En construcción</span>
-      </div>
-
       <h1>Tacógrafo</h1>
 
       <section class="what-is">
         <h2>¿Qué es Tacógrafo?</h2>
-        <p>Tacógrafo es una aplicación especializada en la gestión y análisis de datos de tacógrafos digitales. Facilita el cumplimiento normativo, el análisis de tiempos de conducción y la generación de reportes para inspecciones.</p>
+        <p>Tacógrafo es una aplicación web especializada en la gestión y análisis de datos de tacógrafos digitales para empresas de transporte. Facilita el cumplimiento de la normativa europea CE 561/2006, el seguimiento de tiempos de conducción y descanso, y la preparación de inspecciones de tráfico.</p>
+        <p>Diseñada para flotas de cualquier tamaño que necesitan control real sobre los tiempos de sus conductores sin depender de software de escritorio ni procesos manuales.</p>
       </section>
 
       <section class="problem">
-        <h2>¿Qué problema resuelve?</h2>
+        <h2>Lo que incluye</h2>
         <ul>
-          <li>Lectura y análisis automático de datos de tacógrafos digitales</li>
-          <li>Cumplimiento de normativas europeas de tiempos de conducción</li>
-          <li>Detección automática de infracciones y alertas</li>
-          <li>Generación de reportes para inspecciones</li>
-          <li>Gestión de múltiples conductores y vehículos</li>
-          <li>Historial completo de actividades de conducción</li>
+          <li><strong>Lectura de ficheros .ddd y XML</strong> — importación automática de datos de tacógrafo digital y tarjeta de conductor</li>
+          <li><strong>Análisis IA de infracciones</strong> — detección automática de superaciones de tiempos con análisis inteligente por conductor</li>
+          <li><strong>Control de tiempos en tiempo real</strong> — conducción continua, diaria y semanal con alertas antes de superar los límites</li>
+          <li><strong>Cumplimiento CE 561/2006</strong> — informes listos para inspecciones de la Dirección General de Transporte</li>
+          <li><strong>Gestión de conductores</strong> — ficha completa con tarjeta tacógrafo, permiso de conducir y alertas de caducidad</li>
+          <li><strong>Histórico de actividad</strong> — registros detallados de conducción, descanso y disponibilidad por conductor</li>
         </ul>
       </section>
 
-      <section class="app-preview">
-        <h2>Vista previa</h2>
-        <div class="preview-placeholder">
-          <img src="/images/projects/tacografo-800.webp" alt="Tacógrafo App Preview" width="800" height="600" loading="lazy" />
+      <section class="access-flow">
+        <h2>Cómo empezar</h2>
+        <p>Puedes explorar la aplicación en <strong>modo demo</strong> sin registrarte. Si quieres usar la app con tus propios datos y conductores, el acceso completo requiere registro y suscripción.</p>
+        <div class="cta-buttons">
+          <a href="https://tacho.admilogistic.es/login" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Probar la demo</a>
+          <a href="https://tacho.admilogistic.es/login" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Registrarse / Acceso completo</a>
         </div>
+        <div class="demo-credentials">
+          <p class="demo-label">Para explorar sin registro:</p>
+          <p>Entra en <strong>tacho.admilogistic.es/login</strong> y haz clic en <strong>"Entrar en modo demo"</strong></p>
+        </div>
+        <p class="access-note">El acceso completo requiere suscripción. <a href="https://tacho.admilogistic.es/precios" target="_blank" rel="noopener noreferrer">Ver planes y precios →</a></p>
       </section>
-
-      <div class="cta-buttons">
-        <span class="btn btn-disabled">Próximamente disponible</span>
-      </div>
     </div>
   </div>
 </BaseLayout>
@@ -52,33 +51,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   .project-page-inner {
     max-width: 900px;
     margin: 0 auto;
-  }
-
-  .construction-banner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    background: linear-gradient(135deg, rgba(251, 191, 36, 0.3), rgba(245, 158, 11, 0.3));
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(251, 191, 36, 0.5);
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    margin-bottom: 2rem;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .construction-icon {
-    font-size: 1.25rem;
-  }
-
-  .construction-banner span:last-child {
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 1rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   }
 
   .project-page-inner h1 {
@@ -151,28 +123,40 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   }
 
-  .app-preview {
-    background: rgba(255, 255, 255, 0.1);
+  .access-flow {
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     padding: 1.5rem;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.25);
-    text-align: center;
   }
 
-  .preview-placeholder {
-    margin-top: 1rem;
+  .demo-credentials {
+    margin-top: 1.25rem;
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    padding: 0.875rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
   }
 
-  .preview-placeholder img {
-    width: 100%;
-    height: auto;
-    display: block;
-    opacity: 0.85;
+  .demo-label {
+    font-size: 0.8rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.7;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .access-note {
+    margin-top: 1rem !important;
+    font-size: 0.875rem !important;
+    opacity: 0.8;
+  }
+
+  .access-note a {
+    color: #a5b4fc;
+    text-decoration: underline;
   }
 
   .cta-buttons {
@@ -192,12 +176,30 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     font-size: clamp(0.9375rem, 2vw, 1.125rem);
   }
 
-  .btn-disabled {
-    background: rgba(255, 255, 255, 0.2);
+  .btn-primary {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: #ffffff;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 28px rgba(99, 102, 241, 0.55);
+  }
+
+  .btn-secondary {
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
-    color: rgba(255, 255, 255, 0.7);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    cursor: not-allowed;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.6);
   }
 
   @media (max-width: 768px) {
@@ -215,14 +217,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     }
 
     .what-is,
-    .problem,
-    .app-preview {
+    .problem {
       padding: 1.25rem;
-    }
-
-    .construction-banner {
-      padding: 0.5rem 1rem;
-      font-size: 0.875rem;
     }
   }
 
@@ -244,8 +240,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     }
 
     .what-is,
-    .problem,
-    .app-preview {
+    .problem {
       padding: 1rem;
     }
 
