@@ -2,7 +2,55 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout pageBg="proyectos" title="Proyectos - Blog AdmiLogistic" description="Conoce nuestros proyectos y trabajos realizados">
+<BaseLayout pageBg="proyectos" title="Herramientas para Transportistas y Gestores de Flota | AdmiLogistic" description="Descubre las herramientas de AdmiLogistic: software de gestión de flotas, tacógrafo digital y bases de datos de infraestructura para el transporte profesional en España.">
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Planes AdmiLogistic",
+    "url": "https://admilogistic.es/proyectos#precios",
+    "itemListElement": [
+      {
+        "@type": "ListItem", "position": 1,
+        "item": {
+          "@type": "Product",
+          "name": "AdmiLogistic",
+          "description": "Plataforma de gestión logística: camiones, conductores, documentación, facturación y finanzas.",
+          "url": "https://admilogistic.es/proyectos/admin-logistic",
+          "offers": { "@type": "Offer", "price": "129", "priceCurrency": "EUR", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "129", "priceCurrency": "EUR", "unitText": "mes" }, "availability": "https://schema.org/InStock", "seller": { "@type": "Organization", "name": "AdmiLogistic" } }
+        }
+      },
+      {
+        "@type": "ListItem", "position": 2,
+        "item": {
+          "@type": "Product",
+          "name": "RoadMaster",
+          "description": "App de gestión operativa de viajes, producción y KPIs para empresas de transporte.",
+          "url": "https://admilogistic.es/proyectos/roadmaster",
+          "offers": { "@type": "Offer", "price": "79", "priceCurrency": "EUR", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "79", "priceCurrency": "EUR", "unitText": "mes" }, "availability": "https://schema.org/InStock", "seller": { "@type": "Organization", "name": "AdmiLogistic" } }
+        }
+      },
+      {
+        "@type": "ListItem", "position": 3,
+        "item": {
+          "@type": "Product",
+          "name": "Módulo Tacógrafo y Cumplimiento",
+          "description": "Control de tiempos de conducción y descanso, cumplimiento normativo europeo e informes para inspecciones.",
+          "url": "https://admilogistic.es/proyectos/tacografo",
+          "offers": { "@type": "Offer", "price": "49", "priceCurrency": "EUR", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "49", "priceCurrency": "EUR", "unitText": "mes" }, "availability": "https://schema.org/InStock", "seller": { "@type": "Organization", "name": "AdmiLogistic" } }
+        }
+      },
+      {
+        "@type": "ListItem", "position": 4,
+        "item": {
+          "@type": "Product",
+          "name": "Suite Completa",
+          "description": "AdmiLogistic + RoadMaster + Tacógrafo: gestión integral de flota, finanzas, producción y cumplimiento legal.",
+          "url": "https://admilogistic.es/proyectos#precios",
+          "offers": { "@type": "Offer", "price": "249", "priceCurrency": "EUR", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "249", "priceCurrency": "EUR", "unitText": "mes" }, "availability": "https://schema.org/InStock", "seller": { "@type": "Organization", "name": "AdmiLogistic" } }
+        }
+      }
+    ]
+  })} />
   <div class="page-wrapper">
   <div class="header-section">
     <h1>Proyectos</h1>
