@@ -3,7 +3,7 @@ title: "Guía de Mitigación de Riesgos Aduaneros (Orden PJC/161/2026)"
 description: "Qué revisar en partidas arancelarias, protocolo en 3 pasos sin departamento de aduanas y tabla operativa 2026. SOIVRE, NC y gestión de tiempos."
 pubDate: 2026-03-06
 category: actualidad
-image: /uploads/RIESGO ADUANERO.png
+image: /uploads/riesgo-aduanero.webp
 ---
 
 # Guía de Mitigación de Riesgos Aduaneros (Orden PJC/161/2026)

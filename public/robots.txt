@@ -1,7 +1,25 @@
 User-agent: *
 Allow: /
-
 Disallow: /admin
 Disallow: /admin/
+
+# Permitir rastreadores de IA (para citaciones en ChatGPT, Perplexity, Gemini)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
 
 Sitemap: https://admilogistic.es/sitemap-index.xml

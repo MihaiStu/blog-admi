@@ -10,10 +10,25 @@ export default defineConfig({
     mdx(),
     sitemap({
       filter: (page) =>
-        !page.includes('/admin') &&
-        !page.includes('/categorias/camiones') &&
-        !page.includes('/categorias/tacografo') &&
-        !page.includes('/categorias/rutas'),
+        !page.includes('/admin'),
+      changefreq: 'weekly',
+      priority: 0.7,
+      serialize(item) {
+        // Homepage y herramientas: máxima prioridad
+        if (item.url === 'https://admilogistic.es/') {
+          return { ...item, changefreq: 'daily', priority: 1.0 };
+        }
+        if (item.url.includes('/proyectos')) {
+          return { ...item, changefreq: 'weekly', priority: 0.9 };
+        }
+        if (item.url.includes('/blog/')) {
+          return { ...item, changefreq: 'monthly', priority: 0.8 };
+        }
+        if (item.url.includes('/categorias/') || item.url.includes('/bases-datos/')) {
+          return { ...item, changefreq: 'weekly', priority: 0.75 };
+        }
+        return { ...item, changefreq: 'monthly', priority: 0.6 };
+      },
     }),
   ],
   vite: {

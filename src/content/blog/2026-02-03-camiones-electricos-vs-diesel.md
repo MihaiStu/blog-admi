@@ -3,7 +3,7 @@ title: "Camión Eléctrico vs. Diésel 2026: ¿Vale la Pena?"
 description: "Comparativa completa entre camiones eléctricos y diésel en 2026. Autonomía, costes, mantenimiento y acceso a ZBE para decidir tu próxima inversión."
 pubDate: 2026-02-03
 category: "vehiculos"
-image: "/uploads/Camión%20eléctrico%20cargando.webp"
+image: "/uploads/camion-electrico-cargando.webp"
 ---
 
 El año 2026 marca un punto de inflexión en la movilidad pesada en España. Con las nuevas Zonas de Bajas Emisiones (ZBE) en pleno funcionamiento y el avance en la autonomía de los camiones eléctricos, muchos autónomos y empresas se preguntan: ¿Sale rentable abandonar el diésel? Analizamos el Coste Total de Propiedad (TCO) para despejar dudas.

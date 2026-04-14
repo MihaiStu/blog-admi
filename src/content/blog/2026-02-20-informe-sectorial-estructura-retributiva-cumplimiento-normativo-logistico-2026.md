@@ -3,7 +3,7 @@ title: "INFORME SECTORIAL: Estructura Retributiva y Cumplimiento Normativo Logí
 description: "Suelo salarial RD 126/2026, disparidad regional Toledo-Murcia-Henares, digitalización como baremo y matriz de valoración de puestos logísticos 2026."
 pubDate: 2026-02-20
 category: actualidad
-image: /uploads/estructura retributiva.png
+image: /uploads/estructura-retributiva.webp
 ---
 
 # INFORME SECTORIAL: Estructura Retributiva y Cumplimiento Normativo Logístico 2026

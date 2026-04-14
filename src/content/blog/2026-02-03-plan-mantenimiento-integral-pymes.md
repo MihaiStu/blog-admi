@@ -3,7 +3,7 @@ title: "Plan de Mantenimiento Integral para PYMES del Transporte"
 description: "Sistema completo de mantenimiento preventivo y predictivo para flotas pequeñas y medianas. Control de costes, componentes críticos y rentabilidad."
 pubDate: 2026-02-03
 category: "vehiculos"
-image: "/uploads/Flota%20de%20camiones%20estacionados.webp"
+image: "/uploads/flota-camiones-estacionados.webp"
 ---
 
 En el transporte profesional hay una verdad incómoda que muchos descubren tarde: facturar más no siempre significa ganar más.

@@ -3,7 +3,7 @@ title: "Optimización de Rutas 2026: Maximizar el Margen"
 description: "Guía de optimización de rutas de transporte. Reducción de kilómetros en vacío, telemetría, control de ralentí y casos de éxito en PYMES."
 pubDate: 2026-02-03
 category: "operaciones"
-image: "/uploads/ruta%20optimizada.webp"
+image: "/uploads/ruta-optimizada.webp"
 ---
 
 En un mercado globalizado donde los márgenes del transporte son cada vez más ajustados, la optimización de rutas de transporte se ha convertido en la herramienta más potente para mejorar la competitividad de las empresas. No siempre es necesario invertir en vehículos nuevos para ahorrar; a menudo, el mayor ahorro se encuentra en la forma en que planificamos cada kilómetro.

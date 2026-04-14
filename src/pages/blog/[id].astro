@@ -51,9 +51,18 @@ const categoryLabel: Record<string, string> = {
     "headline": post.data.title,
     "description": post.data.description ?? post.data.title,
     "datePublished": postDate.toISOString(),
-    "dateModified": postDate.toISOString(),
-    "image": post.data.image ? `https://admilogistic.es${post.data.image}` : "https://admilogistic.es/images/hero/Portadaok2.webp",
-    "author": { "@type": "Organization", "name": "AdmiLogistic", "url": "https://admilogistic.es" },
+    "dateModified": (post.data.lastUpdated ?? post.data.pubDate ?? post.data.date ?? new Date()).toISOString(),
+    "image": {
+      "@type": "ImageObject",
+      "url": post.data.image ? `https://admilogistic.es${post.data.image}` : "https://admilogistic.es/images/hero/Portadaok2.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Equipo AdmiLogistic",
+      "url": "https://admilogistic.es/sobre-nosotros"
+    },
     "publisher": {
       "@type": "Organization",
       "name": "AdmiLogistic",
@@ -257,6 +266,31 @@ const categoryLabel: Record<string, string> = {
       ]
     })} />
   )}
+  <!-- BreadcrumbList schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://admilogistic.es/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://admilogistic.es/categorias/" },
+      ...(post.data.category ? [{
+        "@type": "ListItem",
+        "position": 3,
+        "name": categoryLabel[post.data.category] ?? post.data.category,
+        "item": `https://admilogistic.es/categorias/${post.data.category}/`
+      }, {
+        "@type": "ListItem",
+        "position": 4,
+        "name": post.data.title,
+        "item": `https://admilogistic.es/blog/${post.id}/`
+      }] : [{
+        "@type": "ListItem",
+        "position": 3,
+        "name": post.data.title,
+        "item": `https://admilogistic.es/blog/${post.id}/`
+      }])
+    ]
+  })} />
   <!-- Breadcrumb -->
   <nav class="breadcrumb" aria-label="Ruta de navegación">
     <ol>
