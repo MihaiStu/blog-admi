@@ -1,5 +1,5 @@
 ---
-title: "Auditoría de Inteligencia Normativa Q1-2026: Vectores de Riesgo y Oportunidad en el Ecosistema Logístico"
+title: "Análisis Normativo Q1-2026: Riesgos y Oportunidades en Logística"
 description: "Orden PJC/161/2026 aduanas y SOIVRE, Orden TED/162/2026 fondos Next Generation, A-21 Zaragoza como infraestructura 4.0. Análisis AdmiLogistic."
 pubDate: 2026-03-05
 category: actualidad
