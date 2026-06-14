@@ -7,6 +7,14 @@ import { getCollection } from 'astro:content';
 const allPosts = await getCollection('blog');
 const sortedPosts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const ultimosArticulos = sortedPosts.slice(0, 6);
+const fallbackCardImages = [
+  "/images/blog/Novedades y desafíos en el transporte por carretera en 2026.png",
+  "/images/blog/mediteraneo 2026.png",
+  "/images/blog/Base Logística y Agregación de Demanda.png",
+  "/images/hero/Portadaok2.webp",
+];
+const getCardImage = (entry: (typeof ultimosArticulos)[number], index: number) =>
+  entry.data.image || fallbackCardImages[index % fallbackCardImages.length];
 // Datos para búsqueda en cliente (título, descripción, categoría)
 const searchIndex = sortedPosts.map((p) => ({
   id: p.id,
@@ -222,10 +230,10 @@ const searchIndex = sortedPosts.map((p) => ({
 
       {ultimosArticulos.length > 0 ? (
         <div class="articulos-grid-home">
-          {ultimosArticulos.map((entry) => (
+          {ultimosArticulos.map((entry, index) => (
             <a href={`/blog/${entry.id}`} class="articulo-card-home">
               <div class="articulo-image-home">
-                <img src={entry.data.image || "/images/hero/Portadaok2.webp"} alt={entry.data.title} loading="lazy" />
+                <img src={getCardImage(entry, index)} alt={entry.data.title} loading="lazy" />
               </div>
               <div class="articulo-content-home">
                 <span class="articulo-categoria">{entry.data.category}</span>
