@@ -1,140 +1,205 @@
 ---
-title: "Informe técnico sobre el mercado de transporte 2026"
-description: "Marco regulatorio CNMC, peajes eléctricos y gasistas, hidrocarburos, 44 toneladas, digitalización y DCDT. Análisis completo del sector transporte 2026."
-pubDate: 2026-03-10
+title: "Novedades y desafíos en el transporte por carretera en 2026: regulación, crisis energética y transformación tecnológica"
+description: "Informe técnico sobre inspección 2026, control digital, ayudas por crisis energética, innovación industrial y formación para la transición ecológica en el transporte por carretera."
+pubDate: 2026-06-09
 category: actualidad
-image: /uploads/Informe.webp
+image: /images/blog/Novedades y desafíos en el transporte por carretera en 2026.png
 ---
 
-# Informe técnico sobre el mercado de transporte 2026
+# Novedades y desafíos en el transporte por carretera en 2026
 
-La evolución del sector del transporte de mercancías por carretera en España durante el ejercicio 2026 se define por una reestructuración profunda de las bases operativas, impulsada por la convergencia de nuevas normativas de masas y dimensiones, una digitalización administrativa obligatoria y una volatilidad energética que, aunque moderada, exige una gestión analítica de alta precisión. La Comisión Nacional de los Mercados y la Competencia (CNMC) ha establecido un marco tarifario para el acceso a las redes de transporte y distribución eléctrica que, sumado a la actualización de los peajes en las infraestructuras de titularidad estatal, configura un escenario de costes directos que impacta frontalmente en la rentabilidad de las flotas. Este documento analiza pormenorizadamente los indicadores publicados por los organismos reguladores y transforma dicha información técnica en activos estratégicos para la toma de decisiones y la difusión de conocimiento especializado a través del ecosistema AdmiLogistic.
+El sector del transporte por carretera en España afronta a mediados de 2026 una de las coyunturas más complejas y transformadoras de su historia reciente. La confluencia de un control normativo cada vez más tecnificado, una crisis energética derivada de las tensiones geopolíticas en Oriente Medio y la necesidad de acelerar la transición ecológica obliga a los operadores a redefinir sus modelos de negocio.
 
-## Marco regulatorio y estadístico de la CNMC para el ejercicio 2026
+Este informe técnico analiza los vectores regulatorios, financieros, industriales y formativos que están reconfigurando la logística nacional.
 
-La planificación financiera del transporte pesado requiere un análisis detallado de los costes energéticos, que representan aproximadamente un tercio de la estructura operativa total. Según la resolución de la CNMC que establece los precios de los peajes de transporte y distribución para 2026, el sistema eléctrico experimenta un incremento medio del 0,5% en comparación con el ejercicio anterior. Este dato global, sin embargo, debe ser desagregado para comprender su impacto real en las bases logísticas y los puntos de recarga de alta potencia.
+## El Plan de Inspección 2026: rigor digital, control de tiempos y ofensiva contra el fraude laboral
 
-## Dinámicas de demanda y variables de facturación
+Aprobado por la Comisión de Directores Generales de Transporte el 29 de enero de 2026, el Plan de Inspección de Transporte por Carretera 2026 constituye el marco de control del ejercicio. Su objetivo es erradicar distorsiones de competencia y elevar los estándares de seguridad vial mediante fiscalización presencial y herramientas de control algorítmico.
 
-Las proyecciones para 2026 indican un fortalecimiento generalizado de la demanda eléctrica, reflejando una recuperación de la actividad industrial y un avance en la electrificación de los procesos logísticos. La CNMC prevé incrementos significativos en las variables de facturación que sostienen la retribución de las redes de transporte y distribución.
+### El combate frontal a las falsas cooperativas de trabajo asociado
 
-| Variable de Análisis de Demanda | Incremento Estimado 2026 (%) | Relevancia para el Transportista |
-|----------------------------------|------------------------------|-----------------------------------|
-| Número de puntos de suministro   | 1,2%                         | Mayor capilaridad de la red de recarga pública y privada. |
-| Potencia contratada              | 2,3%                         | Incremento en los costes fijos de bases operativas electrificadas. |
-| Energía neta consumida           | 3,6%                         | Aumento del consumo variable derivado de la actividad operativa. |
-| Retribución de redes (Total)     | 4,1%                         | Necesidad de financiar inversiones en estabilidad de tensión. |
+La lucha contra la competencia desleal tiene como eje prioritario la persecución de las falsas cooperativas de trabajo asociado. Durante 2025, la inspección actuó sobre 27 cooperativas y abrió más de 1.200 expedientes sancionadores.
 
-*Fuente: Elaboración propia a partir de datos de la CNMC.*
+El hito más relevante fue la campaña especial de junio de 2025 en el área metropolitana de Barcelona, con apoyo de la Agrupación de Tráfico de la Guardia Civil y su GIAT Central:
 
-Este aumento en la potencia contratada es un indicador crítico para las empresas que están iniciando la transición hacia el camión eléctrico de larga distancia. La presión sobre la retribución de las redes, que asciende a una media del 4% hasta alcanzar los 6.608 millones de euros, responde a la necesidad de estabilizar las tensiones en un sistema cada vez más descentralizado y con mayor presencia de energías renovables intermitentes. La CNMC, a través de sus actuaciones para mejorar la estabilidad de las tensiones, busca garantizar que el incremento en la demanda no comprometa la calidad del suministro para las industrias críticas y los centros de distribución de alta densidad.
+- 552.276 euros en multas a 16 cooperativas.
+- 1.104.276 euros en multas a 276 socios que facturaban individualmente sin título habilitante.
 
-## El sector gasista y la paradoja de los peajes
+La LOTT tipifica con severidad el uso instrumental de estas figuras. En cooperativas de trabajo asociado, la titularidad de la autorización recae en la cooperativa y la retribución al socio se articula mediante anticipos societarios; no mediante facturación individual del transporte.
 
-El mercado del gas natural presenta una dinámica divergente en 2026. Mientras que la retribución del sector gasista se ha recortado en 103 millones de euros, los peajes de acceso han sufrido un incremento sustancial del 11,2%. Esta subida técnica se explica por la caída de la demanda global, que obliga a repercutir los costes fijos de la infraestructura entre un menor volumen de gas transportado. Para el transportista que opera con flotas de Gas Natural Licuado (GNL), este incremento en el peaje se traduce en una presión alcista sobre el precio en surtidor, mitigada parcialmente por el nuevo esquema de comercialización de GNL.
+| Tipo de cooperativa | Titular de la autorización | Mecanismo legal de retribución | Práctica fraudulenta habitual |
+|---|---|---|---|
+| Cooperativa de transportistas | Cada socio individualmente | Facturación directa del socio | Inexistente si cada socio mantiene su autorización vigente |
+| Cooperativa de trabajo asociado | La cooperativa | Anticipo societario interno | Socios actuando como autónomos encubiertos y facturando de forma individual |
 
-A partir de 2026, la importación y comercialización de GNL para el sistema nacional se ha trasladado al sector privado bajo un modelo competitivo, eliminando la intermediación estatal directa. Este cambio, formalizado mediante la Resolución 33/2026, busca optimizar la eficiencia de costes a través de licitaciones basadas en el precio internacional y la eficiencia operativa de las terminales de regasificación, como la de Escobar, cuya gestión ahora depende de la solvencia técnica y financiera de operadores privados seleccionados.
+Las autoridades recomiendan desconfiar de ofertas que prometen facturación por módulos sin autorización de transporte y recuerdan la posibilidad de denunciar anónimamente en el buzón ministerial.
 
-## Análisis de hidrocarburos: Volatilidad y tendencias en febrero de 2026
+### Control digital, tacógrafo inteligente y cooperación internacional
 
-El precio del gasóleo A sigue siendo el termómetro principal de la salud financiera del transporte por carretera. Durante la primera mitad de febrero de 2026, el mercado de carburantes en España ha mostrado una tendencia al alza que rompe con la serie de descensos registrados a finales del año anterior.
+La inspección en 2026 se apoya en una plataforma tecnológica que integra datos de Seguridad Social y del REAT para contrastar altas laborales con tiempos de conducción y descanso del tacógrafo.
 
-### Evolución semanal y comparativa interanual
+La vigilancia se extiende al ámbito internacional mediante:
 
-Según los datos procesados del Boletín Petrolero de la Unión Europea, el precio medio del litro de gasóleo en España se situó en 1,412 euros durante la semana del 3 al 9 de febrero de 2026, lo que supone un incremento del 0,64% respecto a la semana precedente. Por su parte, la gasolina alcanzó precios medios de entre 1,437 € y 1,459 € por litro.
+- Cruce de datos con el registro europeo de empresas de transporte.
+- Colaboración con la Autoridad Laboral Europea en inspecciones conjuntas sobre empresas buzón.
 
-| Indicador de Precio (Feb 2026) | Valor Promedio (€/L) | Variación Semanal (%) | Variación Interanual (%) |
-|--------------------------------|----------------------|------------------------|---------------------------|
-| Gasóleo A (Diésel)              | 1,412                | +0,64%                 | -5,8%                     |
-| Gasolina 95 (E5)                | 1,437 - 1,459        | +0,72%                 | -7,2%                     |
+Además:
 
-*Fuente: Boletín Petrolero de la Unión Europea y series históricas.*
+- Conductores que entren desde Marruecos deben justificar al menos un descanso diario reducido de 9 horas antes de la entrada en España.
+- Se admiten tacógrafos analógicos si cumplen normativa de control.
 
-A pesar del repunte semanal, la perspectiva interanual ofrece un alivio estructural para las empresas de transporte, con un diésel un 5,8% más barato que en el mismo periodo de 2025. Esta corrección interanual ha permitido absorber parte de la subida de otros costes operativos, como los seguros y la financiación, que han mostrado una tendencia persistente al alza según los informes de ASTIC. La rentabilidad del transportista, por tanto, depende en 2026 de su capacidad para monitorizar estas variaciones semanales y ajustar sus cláusulas de revisión de combustible con base en datos oficiales y actualizados.
+La obligatoriedad de digitalización es otro pilar:
 
-### Impacto del objetivo de biocarburantes del 14%
+- Ley 9/2025 de Movilidad Sostenible: documento de control de mercancías y hoja de ruta de viajeros en formato digital.
+- Desde el 1 de enero de 2026, licencias CEMT y logbooks exclusivamente digitales.
+- Desde el 31 de marzo de 2026 finaliza la coexistencia papel-digital.
+- Controles electrónicos con TRAMO (Guardia Civil) y EMCT TLS (policías autonómicas).
 
-Un factor determinante en la composición del precio del carburante para 2026 es la elevación del objetivo obligatorio de biocarburantes y combustibles renovables del 12% al 14%. La CNMC ha valorado positivamente este incremento, alineado con las directivas europeas de descarbonización, pero ha advertido al Gobierno sobre el escaso plazo de adaptación para la industria refinadora y de distribución.
+En capacidad de carga:
 
-Para el transportista, esta medida tiene dos implicaciones directas:
+- 44 toneladas para conjuntos de cinco o más ejes desde el 23 de octubre de 2025.
+- Extensión a cisternas el 23 de enero de 2026.
 
-- **Coste del Producto:** Los biocarburantes avanzados y los combustibles sintéticos mantienen una prima de precio sobre el diésel fósil tradicional, lo que podría presionar el precio final en surtidor a medida que aumenta su porcentaje de mezcla obligatorio.
-- **Mantenimiento Preventivo:** El incremento en la proporción de biocomponentes exige un control más estricto de los filtros de combustible y los sistemas de inyección, especialmente en motores Euro VI de última generación, para evitar depósitos y asegurar el rendimiento óptimo del motor.
+## Despliegue de inspecciones en viajeros y mercancías peligrosas
 
-## La revolución operativa de las 44 toneladas: Costes vs. Productividad
+El plan no se limita a carga general. En viajeros, refuerza controles en estaciones, terminales, aeropuertos y puertos, con foco en derechos europeos del viajero y transporte escolar.
 
-El despliegue de la Orden PJC/780/2025, que autoriza la circulación de vehículos con una Masa Máxima Autorizada (MMA) de 44 toneladas, representa el cambio más profundo en la logística española de la última década. Aunque el objetivo es mejorar la eficiencia por trayecto y reducir las emisiones de CO₂, el análisis de rentabilidad para el transportista arroja datos que exigen una renegociación urgente de los contratos de transporte.
+En mercancías, establece inspecciones específicas en sedes de empresas que operan mercancías peligrosas, con especial vigilancia del cumplimiento de protocolos de seguridad industrial.
 
-### Desglose del incremento de costes operativos
+El volumen de control se dimensiona sobre 492.643 vehículos con tacógrafo obligatorio:
 
-La Confederación Española de Transporte de Mercancías (CETM) ha cuantificado el impacto económico de pasar de 40 a 44 toneladas, especialmente en segmentos críticos como el transporte en cisternas. Los resultados indican que los costes operativos directos del transportista se incrementan en un 8,91%.
+| Parámetro operativo | Exigencia mínima (Directiva 2006/22/CE) | Volumen objetivo |
+|---|---|---|
+| Total de jornadas controladas | 3% de jornadas de conducción anuales | 3.325.340 jornadas |
+| Control en carretera | >=30% del total inspeccionado | 997.602 jornadas |
+| Control en sede de empresa | >=50% del total inspeccionado | 1.662.670 jornadas |
 
-La varianza de costes se distribuye de la siguiente manera según los parámetros técnicos de operación:
+### Coordinación regional y control de costes mínimos
 
-| Concepto de Gasto Directo   | Variación Técnica con 44t              | Implicación Operativa                                      |
-|-----------------------------|----------------------------------------|------------------------------------------------------------|
-| Consumo de Gasóleo          | +8,18% (de 34,5 a 37,32 L/100km)      | Necesidad de recalibrar rutas de montaña y carga.          |
-| Consumo de Urea (AdBlue)    | +7,4%                                 | Mayor demanda del sistema SCR para cumplir Euro VI.        |
-| Desgaste de Neumáticos      | +6,0% - 8,5%                          | Aceleración de los ciclos de recauchutado o sustitución.   |
-| Mantenimiento (Frenos/Ejes) | +5,2%                                 | Mayor estrés térmico en discos y fatiga en suspensiones.  |
+La ejecución se coordina con comunidades autónomas. Como ejemplo, Castilla y León fija remisión de resultados antes del 15 de enero de 2027.
 
-*Fuente: Análisis basado en estudios de CETM y CNTC.*
+También se controla:
 
-En términos de rentabilidad neta, existe una asimetría preocupante: mientras el transportista soporta un aumento de costes cercano al 9%, los cargadores logran ahorros logísticos superiores al 9% por cada tonelada transportada. Esta transferencia de valor pone en riesgo a las empresas más atomizadas del sector, cuyos márgenes ya se encuentran extremadamente ajustados. Además, en el ámbito de la intermodalidad, se permite alcanzar las 46 toneladas para incentivar el transporte combinado, lo que supone un ahorro estimado de 3 toneladas de CO₂ por vehículo, pero profundiza en el desgaste mecánico de la unidad tractora.
+- Cumplimiento de condiciones contractuales y precio por encima de costes de explotación.
+- Supervisión de plataformas de paquetería y reparto que operan en nombre propio para verificar autorización de operador de transporte.
 
-### El factor de cumplimiento y las tolerancias de peso
+## Impacto de la crisis de Oriente Medio: ayudas extraordinarias y liquidez
 
-Un detalle técnico crucial aclarado por el Ministerio de Transportes para el Plan de Inspección 2026 es la eliminación de los márgenes de tolerancia de la LOTT cuando el vehículo supere su masa máxima técnicamente admisible. Durante 2026, se facilitarán procesos de homologación más sencillos para las nuevas configuraciones, pero la inspección será severa con el exceso de carga sobre los ejes, ya que el impacto en la infraestructura vial es exponencial respecto al peso bruto. Las empresas deben utilizar sistemas de pesaje a bordo integrados en su gestión de flotas para evitar sanciones que podrían neutralizar el beneficio de la carga adicional.
+La inestabilidad en Oriente Medio, agravada por el conflicto con Irán y el cierre del Estrecho de Ormuz, mantiene el Brent en torno a 100 USD/barril, con encarecimientos superiores al 60% frente a comienzos de año.
 
-## Infraestructura y peajes: La nueva política tarifaria de 2026
+### Incremento de costes y marco temporal de ayudas
 
-El coste de uso de las vías de alta capacidad experimenta en 2026 una actualización basada en el Índice de Precios al Consumo (IPC) y la amortización de subvenciones excepcionales aplicadas en años anteriores. La estrategia del Ministerio de Transportes y Movilidad Sostenible diferencia claramente entre las autopistas gestionadas directamente por el Estado (SEITT) y las concesiones administrativas.
+El Gobierno aprobó el Real Decreto-ley 7/2026 bajo el marco METSAF, autorizado por la Comisión Europea el 29 de abril de 2026 y vigente hasta el 31 de diciembre de 2026.
 
-### El esquema tarifario de las autopistas SEITT
+Medida central:
 
-Para las vías bajo gestión de la Sociedad Estatal de Infraestructuras de Transporte Terrestre (SEITT), que incluyen las radiales de acceso a Madrid y tramos de la AP-7, AP-36 y AP-41, el incremento aprobado es del 2% para todas las categorías de vehículos.
+- Bonificación extraordinaria de 0,20 EUR/L de gasóleo profesional del 22 de marzo al 30 de junio de 2026.
+- Límite acumulado de 50.000 EUR por empresa (ayuda de Estado).
+- Compatible con devolución ordinaria del Impuesto sobre Hidrocarburos (0,049 EUR/L).
+- Reintegro total máximo durante vigencia: 0,249 EUR/L.
 
-Un elemento de competitividad para el transporte profesional en estas vías es el mantenimiento de la gratuidad nocturna. Entre las 0:00 y las 6:00 horas, todos los días del año, la circulación por estas autopistas no conlleva coste de peaje. Esta medida incentiva el desplazamiento de flotas pesadas hacia horarios de baja densidad de tráfico, reduciendo el riesgo de congestión y el consumo de combustible derivado de las paradas frecuentes.
+### Mecánica de cobro e impacto por tamaño de flota
 
-### Concesiones administrativas y el fin de la subvención extraordinaria
+La bonificación se gestiona vía Censo de Beneficiarios de Gasóleo Profesional (AEAT). Las suministradoras remiten datos de repostaje semanalmente y Hacienda abona por transferencia a mes vencido.
 
-En el caso de las autopistas bajo concesión (AP-6, AP-9, AP-66, etc.), el aumento tarifario es significativamente superior, situándose entre el 3,64% y el 4,68%. Este incremento responde a una corrección técnica necesaria tras la subvención extraordinaria de finales de 2022, que limitó el alza al 4% en 2023. El importe no abonado por los usuarios en aquel ejercicio se está recuperando de forma escalonada, finalizando este proceso en 2026.
+Requisito crítico:
 
-| Concesionaria / Tramo        | Incremento Tarifario 2026 | Política de Mitigación / Ayudas                          |
-|-----------------------------|---------------------------|----------------------------------------------------------|
-| SEITT (Radiales/AP-36/AP-41)| 2,00%                     | Gratuidad nocturna (00:00 - 06:00).                      |
-| AP-9 (Autopista del Atlántico) | Hasta 4,68%            | Bonificaciones por uso recurrente y tramos gratuitos estatales. |
-| AP-6 / AP-66 / AP-68        | 3,64% - 4,68%            | Mantenimiento de ayudas por uso habitual.                |
-| AP-7 (Circunvalación Alicante) | 0,00%                  | Paso a uso libre y gratuito tras acuerdo gubernamental.  |
+- Pago con tarjetas de combustible autorizadas.
+- Excluidos pagos en efectivo o tarjetas convencionales.
 
-*Fuente: Resoluciones del Ministerio de Transportes y Movilidad Sostenible.*
+| Estructura de flota | Consumo estimado periodo | Ayuda teórica | Ayuda real | Impacto de la limitación |
+|---|---|---|---|---|
+| Flota pequeña (hasta 20) | <250.000 L | <50.000 EUR | 100% | Cobro íntegro |
+| Flota mediana (25 a 30) | ~250.000 L | ~50.000 EUR | ~50.000 EUR | Límite alcanzado |
+| Flota grande (>30) | >250.000 L | >50.000 EUR | 50.000 EUR | Pérdida sobre litros excedentes |
+| Megaflota (>100) | >>250.000 L | 160.000-200.000 EUR | 50.000 EUR | Compensación severamente recortada |
 
-Para evitar un impacto aún mayor, el Ministerio ha destinado una partida de 15 millones de euros en 2026. De no existir esta subvención ministerial, los transportistas habrían enfrentado subidas de hasta el 5,86%, lo que demuestra la vulnerabilidad del sector ante la actualización de las tarifas vinculadas al IPC.
+A esta medida se añaden ayudas directas por vehículo (solicitudes entre 1 de mayo y 30 de junio de 2026; pagos previstos desde el 30 de julio):
 
-## Digitalización y tacógrafo inteligente: El fin de la transición
+| Tipología de vehículo | Ayuda directa por unidad | Condición técnica principal |
+|---|---|---|
+| Camión pesado | 1.800 EUR | GLP/GNC/GNL y MMA > 7,5 t |
+| Camión ligero | 665 EUR | MMA < 7,5 t |
+| Furgonetas de mercancías | 300 EUR | Distribución comercial |
+| Autobuses | 975 a 1.000 EUR | Transporte colectivo de viajeros |
+| Taxi/VTC/Ambulancia | 200 a 300 EUR | Transporte ligero y asistencial |
 
-El ejercicio 2026 marca la fecha límite para la adaptación digital de las empresas de transporte en España. Dos hitos fundamentales configuran este escenario: el tacógrafo en vehículos ligeros y la obligatoriedad del Documento de Control Digital de Transporte (DCDT).
+Se añadieron además:
 
-### El tacógrafo en vehículos de 2,5 a 3,5 toneladas
+- Rebaja temporal del IVA de carburantes al 10%.
+- Líneas ICO para financiación de combustible.
 
-A partir del 1 de julio de 2026, los vehículos ligeros dedicados al transporte de mercancías con un peso de entre 2,5 y 3,5 toneladas que operen en trayectos internacionales o cabotaje deben instalar obligatoriamente el tacógrafo inteligente de segunda generación.
+### Interlocución patronal y reclamaciones
 
-Esta medida busca erradicar la competencia desleal y mejorar la seguridad vial, obligando a los conductores de furgonetas internacionales a cumplir los mismos tiempos de conducción y descanso que los conductores de camiones pesados. Aunque no afecta al transporte nacional exclusivo, las empresas que operan en mercados transfronterizos deben prever una inversión en equipamiento y una reorganización de sus turnos de personal, ya que la capacidad operativa de estas flotas se verá reducida por el estricto cumplimiento de los descansos reglamentarios.
+Federaciones como Fenadismer, CETM y ASTIC denuncian retrasos en el desembolso de ayudas devengadas desde marzo de 2026.
 
-### El Documento de Control Digital obligatorio (5 de octubre de 2026)
+Fenadismer prevé reunión con el Ministerio de Economía para exigir:
 
-La Ley de Movilidad Sostenible establece el 5 de octubre de 2026 como la fecha en la que el documento de control dejará de tener validez en formato papel para el transporte público de mercancías por carretera.
+- Pago inmediato de ayudas pendientes.
+- Prórroga de bonificaciones tras el 30 de junio, amparada en la vigencia de METSAF hasta diciembre.
 
-Las especificaciones técnicas requeridas por la administración para el DCDT son las siguientes:
+## Innovación industrial, seguridad vial y dinámicas laborales
 
-- **Formato de Archivo:** PDF/A, garantizando la conservación a largo plazo y la integridad de los datos.
-- **Peso del Archivo:** Limitado a un máximo de 4 MB por documento.
-- **Acceso e Inspección:** El documento debe ser accesible mediante un código identificador único o un código QR que permita a la inspección de transporte verificar los datos en tiempo real desde un repositorio digital.
+El sector también evoluciona por la vía tecnológica y laboral.
 
-Este cambio no es meramente administrativo; representa una herramienta de control antifraude. Las empresas que se adapten con antelación utilizando plataformas integradas como RoadMaster evitarán sanciones que, según la normativa vigente, pueden ascender a importes considerables por la falta de un documento válido en el momento de la carga o durante el tránsito.
+### Nuevos estándares de seguridad y eficiencia
 
----
+España fija por primera vez profundidad mínima obligatoria para neumáticos de camiones y autobuses.
 
-**Categoría:** Actualidad | **Tags:** #AdmiLogistic #MercadoTransporte #CNMC #44Toneladas #DCDT #Peajes
+Movimientos destacados de fabricantes:
 
-> Saber más en [Actualidad](/categorias/actualidad)
+- Renault Trucks: nueva cadena cinemática con reducción de consumo de hasta 4%.
+- Scania: mejora térmica en eléctricos pesados con autonomías homologadas de hasta 800 km.
+- DAF: programa de mantenimiento preventivo para reducir paradas imprevistas.
+- JAC Motors Iberia: impulso comercial de eléctricos para distribución urbana y última milla.
+
+### Conflictos laborales y jubilación anticipada
+
+En 2026 se registraron tensiones laborales con paros sectoriales en distribución. A nivel nacional, se desactivó una huelga tras acuerdo sobre coeficientes reductores para jubilación anticipada de conductores profesionales.
+
+## Capacitación en transición energética como palanca competitiva
+
+El cumplimiento de objetivos de descarbonización exige recualificación técnica.
+
+### Proyecto formativo de Moeve y Fundae
+
+El 8 de junio de 2026, Moeve y Fundae anunciaron 15 cursos nuevos en Digitalízate, elevando la oferta a 27 cursos gratuitos.
+
+Datos clave:
+
+- Más de 2.000 alumnos en el primer año del programa.
+- Formato modular, multimedia y corto.
+- Disponibilidad en castellano e inglés.
+
+Áreas prioritarias:
+
+- Cadena de valor del hidrógeno verde.
+- Combustibles sintéticos y renovables (biogás, biometano, e-fuels, diésel renovable).
+- Planificación energética sostenible y flexibilidad de red.
+
+Proyecciones sectoriales:
+
+- Las moléculas verdes podrían cubrir un tercio del mix energético de la UE en 2050.
+- Reducción potencial del 50% en dependencia de fósiles importados para 2040.
+
+### Liderazgo corporativo de Moeve en descarbonización
+
+Iniciativas destacadas:
+
+- Hidrógeno verde: decisión final de inversión en uno de los mayores proyectos del sur de Europa, con tecnología de electrólisis de thyssenkrupp nucera.
+- SAF: suministro pionero de diésel renovable en aeropuertos en España.
+- IA responsable: certificación AENOR sobre uso transparente y responsable de algoritmos.
+- Reconocimiento industrial: premio Best in Class en Expoquimia 2026 por la planta IPA de Palos de la Frontera.
+
+## Conclusiones para la toma de decisiones empresariales
+
+El transporte por carretera en 2026 penaliza la ineficiencia y recompensa la adaptación tecnológica y regulatoria.
+
+Para asegurar la viabilidad de las flotas en esta coyuntura:
+
+1. **Garantizar conformidad societaria total.** Auditar subcontratación y evitar esquemas de falsa cooperativa o facturación irregular bajo autorización ajena.
+2. **Acelerar digitalización documental obligatoria.** Completar transición a documento de control digital, hoja de ruta electrónica y licencias CEMT digitales.
+3. **Proteger tesorería frente al shock energético.** Centralizar repostajes en tarjetas profesionales homologadas, activar instrumentos ICO y vigilar límites de ayuda.
+4. **Invertir en recualificación del equipo.** Formar a gestores y conductores en hidrógeno, biocombustibles y nuevas exigencias operativas.
+
+La competitividad de 2026 no depende solo del tamaño de la flota, sino de la capacidad para combinar cumplimiento normativo, inteligencia financiera y ejecución tecnológica.
