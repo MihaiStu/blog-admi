@@ -224,11 +224,9 @@ const searchIndex = sortedPosts.map((p) => ({
         <div class="articulos-grid-home">
           {ultimosArticulos.map((entry) => (
             <a href={`/blog/${entry.id}`} class="articulo-card-home">
-              {entry.data.image && (
-                <div class="articulo-image-home">
-                  <img src={entry.data.image} alt={entry.data.title} loading="lazy" />
-                </div>
-              )}
+              <div class="articulo-image-home">
+                <img src={entry.data.image || "/images/hero/Portadaok2.webp"} alt={entry.data.title} loading="lazy" />
+              </div>
               <div class="articulo-content-home">
                 <span class="articulo-categoria">{entry.data.category}</span>
                 <h3>{entry.data.title}</h3>
