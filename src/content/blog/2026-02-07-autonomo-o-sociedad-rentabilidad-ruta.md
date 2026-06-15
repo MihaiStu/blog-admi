@@ -3,7 +3,7 @@ title: "¿Autónomo o Sociedad? Rentabilidad en el Transporte"
 description: "Autónomo vs S.L. en el transporte: ventajas fiscales, responsabilidad y cuándo dar el salto. Con los costes al alza en 2026, elegir bien es supervivencia financiera."
 pubDate: 2026-02-07
 category: fiscalidad
-image: /uploads/Autonomo o sociedad.webp
+image: /uploads/autonomo-o-sociedad.webp
 ---
 
 Muchos transportistas empiezan como autónomos por la sencillez, pero llega un punto en que el crecimiento de la facturación convierte al IRPF en tu peor enemigo. En 2026, con los costes de combustible y mantenimiento al alza, **elegir la estructura correcta es pura supervivencia financiera**.

@@ -211,6 +211,20 @@ const searchIndex = sortedPosts.map((p) => ({
         <p>Aplicación especializada en la gestión y análisis de datos de tacógrafos digitales. Compatible con RoadMaster y Admi Logistic.</p>
         <a href="/proyectos/tacografo" class="project-button" aria-label="Ver información de la herramienta Tacógrafo">Ver Tacógrafo</a>
       </article>
+
+      <article class="project-card">
+        <div class="project-image">
+          <picture>
+            <img src="/images/factura-digital-portada.png" alt="Factura Digital" loading="lazy" width="800" />
+          </picture>
+        </div>
+        <h3>Factura Digital</h3>
+        <p>Facturación española (VeriFactu, Facturae, modelos 303/347) y gestión de transporte en una sola app, con lectura de facturas por IA y banca automática.</p>
+        <div class="project-card-actions">
+          <a href="https://factura.admilogistic.es" class="project-button project-button-primary" target="_blank" rel="noopener noreferrer" aria-label="Probar Factura Digital gratis">Probar gratis</a>
+          <a href="/proyectos/factura-digital" class="project-button project-button-secondary" aria-label="Ver información de Factura Digital">Ver más</a>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -246,6 +260,25 @@ const searchIndex = sortedPosts.map((p) => ({
   </section>
 
   <!-- DATABASES SECTION -->
+  <section class="lead-magnet-banner">
+    <div class="lead-magnet-inner">
+      <div class="lead-magnet-content">
+        <span class="lead-magnet-badge">NUEVO</span>
+        <h2>Factura Digital — facturación y transporte en una app</h2>
+        <p>Facturación española conforme (VeriFactu, Facturae, modelos 303/347) y gestión de transporte (CMR, flota, albaranes, jornada) en un solo sitio, con lectura de facturas por IA y banca automática. Empieza gratis.</p>
+        <a href="https://factura.admilogistic.es" class="lead-magnet-cta" target="_blank" rel="noopener noreferrer">Probar Factura Digital</a>
+      </div>
+      <div class="lead-magnet-visual">
+        <div class="kit-preview">
+          <div class="kit-item">VeriFactu</div>
+          <div class="kit-item">CMR &amp; Flota</div>
+          <div class="kit-item">IA de gastos</div>
+          <div class="kit-item">Banca auto</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="databases" data-editable="databases">
     <div class="section-inner">
       <h2>Bases de datos públicas para transportistas</h2>
@@ -584,7 +617,7 @@ const searchIndex = sortedPosts.map((p) => ({
 
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
     align-items: stretch !important;
     justify-items: center;

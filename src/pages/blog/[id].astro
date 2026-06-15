@@ -343,6 +343,14 @@ const categoryLabel: Record<string, string> = {
       <!-- Article Content -->
       <div class="article-body">
         <Content />
+        {post.data.downloadPdf && (
+          <p style="margin:2.5rem 0 0;text-align:center">
+            <a href={post.data.downloadPdf} download
+               style="display:inline-block;background:#2563eb;color:#fff;padding:0.95rem 1.8rem;border-radius:8px;font-weight:700;text-decoration:none;box-shadow:0 4px 16px rgba(37,99,235,.35)">
+              ⬇ {post.data.downloadLabel ?? "Descargar PDF"}
+            </a>
+          </p>
+        )}
       </div>
     </div>
 

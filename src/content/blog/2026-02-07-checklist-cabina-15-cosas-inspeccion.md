@@ -3,7 +3,7 @@ title: "Checklist de Cabina: 15 Puntos Clave de Inspección"
 description: "Lista definitiva para la inspección de transporte en 2026: documentación vehículo y conductor, seguridad, tacógrafo, CMR y detalles que suelen fallar."
 pubDate: 2026-02-07
 category: vehiculos
-image: /uploads/checklist cabina.webp
+image: /uploads/checklist-cabina.webp
 ---
 
 No hay nada que ponga más nervioso a un conductor que ver la paleta roja de la Guardia Civil indicándole que entre en el área de descanso. La diferencia entre salir en 10 minutos o con una receta de 2.000€ suele estar en los pequeños detalles.
