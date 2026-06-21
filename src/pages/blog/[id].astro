@@ -306,7 +306,7 @@ const categoryLabel: Record<string, string> = {
   <article class="article-page">
     {post.data.image && (
       <figure class:list={["article-image", post.id === "2026-02-06-lona-frigo-contenedor-verdad-autoescuela" && "article-image--contain", post.id === "2026-03-10-informe-tecnico-mercado-transporte-2026" && "article-image--same-size-contain"]}>
-        <img src={encodeURI(post.data.image.startsWith("/") ? post.data.image : `/${post.data.image}`)} alt={post.data.title} loading="eager" />
+        <img src={encodeURI(post.data.image.startsWith("/") ? post.data.image : `/${post.data.image}`)} alt={post.data.title} loading="eager" fetchpriority="high" decoding="async" width="900" height="500" />
       </figure>
     )}
     <header class="article-header">
@@ -378,7 +378,7 @@ const categoryLabel: Record<string, string> = {
             <a href={`/blog/${p.id}`} class="related-card">
               {p.data.image && (
                 <div class="related-card-img">
-                  <img src={p.data.image} alt={p.data.title} loading="lazy" />
+                  <img src={p.data.image} alt={p.data.title} loading="lazy" decoding="async" />
                 </div>
               )}
               <div class="related-card-body">
