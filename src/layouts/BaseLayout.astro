@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import CookieConsent from '../components/CookieConsent.astro';
 import '../styles/layout-controls.css';
 
 interface Props {
@@ -45,11 +46,48 @@ const bgStyleTag = ``;
 <!doctype html>
 <html lang="es" style={htmlStyle} class={import.meta.env.DEV ? "edit-mode" : ""}>
   <head>
+    {/* Google Consent Mode v2 — estado por defecto (denegado) antes de GTM */}
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+      try {
+        if (localStorage.getItem('cookie-consent') === 'granted') {
+          gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'analytics_storage': 'granted'
+          });
+        }
+      } catch (e) {}
+    </script>
+    {/* Google Tag Manager */}
+    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PRXS3ZJZ');</script>
+    {/* End Google Tag Manager */}
     <meta charset="UTF-8" />
     <meta name="description" content={descTruncated} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {/* Resource hints: acelera la conexión con scripts de terceros */}
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin />
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+    <link rel="dns-prefetch" href="https://analytics.ahrefs.com" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalUrl} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="theme-color" content="#0f172a" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     {/* Open Graph / LinkedIn, Facebook */}
@@ -74,11 +112,16 @@ const bgStyleTag = ``;
     <slot name="head" />
   </head>
   <body class={`bg-${page} amp-mask`} data-page={page}>
+    {/* Google Tag Manager (noscript) */}
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRXS3ZJZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    {/* End Google Tag Manager (noscript) */}
     <Header />
     <main>
       <slot />
     </main>
     <Footer />
+    <CookieConsent />
     
     <script>
       (function(){
@@ -168,25 +211,13 @@ const bgStyleTag = ``;
     font-family: system-ui, sans-serif;
   }
 
-  /* PASO 1: MATA EL FONDO EN main (CLAVE) */
-  html,
-  body,
-  main {
-    background: transparent !important;
-  }
-
+  /* Fondos transparentes (html/body/main/secciones) en <style is:global> al final.
+     El fondo editorial se pinta en body::before. */
   body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
-
-  /* PASO 2: FONDO EDITORIAL — fondo movido a ::before para permitir transparencias en wrappers */
-  body {
-    background: transparent !important;
-  }
-
-
 
   main {
     flex: 1;
@@ -415,50 +446,8 @@ const bgStyleTag = ``;
     background: #4f46e5;
   }
 
-  /* PASO 3: ELIMINA FONDOS DE SECCIONES RAÍZ (NO CARDS) */
-  main > section,
-  main > div {
-    background: transparent !important;
-  }
-
-  /* QUITA "CAPAS FALSAS" EN SECCIONES */
-  main section {
-    background: transparent !important;
-  }
-
-  section,
-  section > .container,
-  section > .content,
-  section > div,
-  .projects,
-  .videos,
-  .databases,
-  .news-container,
-  .section-inner {
-    background: transparent !important;
-  }
-
-  .hero {
-    background: transparent !important;
-  }
-
-  /* CAMBIO CLAVE: FONDO REAL TIPO GLASS (NO BLANCO) */
-  .card,
-  .project-card,
-  .video-card,
-  .database-card,
-  .database-item,
-  .news-item,
-  .news-featured,
-  .news-list > article,
-  .sidebar-follow,
-  .sidebar-card {
-    background: rgba(255, 255, 255, 0.55) !important;
-    backdrop-filter: blur(14px) saturate(1.2) !important;
-    -webkit-backdrop-filter: blur(14px) saturate(1.2) !important;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
-    border: 1px solid rgba(255, 255, 255, 0.35) !important;
-  }
+  /* Reset estructural de fondos y glass cards: ver bloque <style is:global> al
+     final del layout (aplica a contenido slotted de las páginas hijas). */
 
   /* Páginas de proyecto: texto y botones siempre visibles sobre fondo claro */
   main .project-page-inner p,
@@ -475,73 +464,48 @@ const bgStyleTag = ``;
 
 </style>
 
-<!-- RESET ESTRUCTURAL FINAL (sobrescribe todo) -->
-<script is:inline>
-  (function() {
-    const style = document.createElement('style');
-    style.textContent = `
-      /* PASO 1: MATA FONDOS ESTRUCTURALES */
-      html,
-      body,
-      main {
-        background: transparent !important;
-      }
-      /* PASO 3: ELIMINA FONDOS DE SECCIONES RAÍZ */
-      main > section,
-      main > div {
-        background: transparent !important;
-      }
-      section,
-      section > .container,
-      section > .content,
-      section > div,
-      .projects,
-      .videos,
-      .databases,
-      .news-container,
-      .section-inner {
-        background: transparent !important;
-      }
-      .hero {
-        background: transparent !important;
-      }
-      /* CAMBIO CLAVE: FONDO REAL TIPO GLASS */
-      .card,
-      .project-card,
-      .video-card,
-      .database-card,
-      .database-item,
-      .news-item,
-      .news-featured,
-      .news-list > article,
-      .sidebar-card,
-      .sidebar-follow,
-      section .project-card,
-      section .video-card,
-      section .database-card,
-      section .database-item,
-      main .project-card,
-      main .video-card,
-      main .database-card,
-      main .database-item {
-        background: rgba(255, 255, 255, 0.55) !important;
-        backdrop-filter: blur(14px) saturate(1.2) !important;
-        -webkit-backdrop-filter: blur(14px) saturate(1.2) !important;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
-        border: 1px solid rgba(255, 255, 255, 0.35) !important;
-      }
-      /* QUITA "CAPAS FALSAS" EN SECCIONES */
-      main section {
-        background: transparent !important;
-      }
-      /* 🧪 DEBUG FINAL (TEMPORAL - QUITAR DESPUÉS) */
-      /* * {
-        background-color: transparent !important;
-      } */
-    `;
-    document.head.appendChild(style);
-  })();
-</script>
+<!-- RESET ESTRUCTURAL GLOBAL — aplica a contenido slotted de las páginas hijas -->
+<style is:global>
+  /* PASO 1: MATA FONDOS ESTRUCTURALES */
+  html,
+  body,
+  main {
+    background: transparent !important;
+  }
+  /* PASO 3: ELIMINA FONDOS DE SECCIONES RAÍZ */
+  main > section,
+  main > div,
+  section,
+  section > .container,
+  section > .content,
+  section > div,
+  .projects,
+  .videos,
+  .databases,
+  .news-container,
+  .section-inner,
+  main section,
+  .hero {
+    background: transparent !important;
+  }
+  /* CAMBIO CLAVE: FONDO REAL TIPO GLASS */
+  .card,
+  .project-card,
+  .video-card,
+  .database-card,
+  .database-item,
+  .news-item,
+  .news-featured,
+  .news-list > article,
+  .sidebar-card,
+  .sidebar-follow {
+    background: rgba(255, 255, 255, 0.55) !important;
+    backdrop-filter: blur(14px) saturate(1.2) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(1.2) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  }
+</style>
 
 <script>
   // Solo ejecutar en modo desarrollo
