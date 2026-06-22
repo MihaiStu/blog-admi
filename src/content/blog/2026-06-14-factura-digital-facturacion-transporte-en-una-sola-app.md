@@ -1,5 +1,5 @@
 ---
-title: "Factura Digital: facturación española y gestión de transporte en una sola app"
+title: "Factura Digital: facturación y transporte en una sola app"
 description: "Nueva app para autónomos y pymes de transporte: facturación compatible con VeriFactu, modelos 303/347, CMR, albaranes digitales e IA para automatizar gastos."
 pubDate: 2026-06-14
 author: Admilogistic

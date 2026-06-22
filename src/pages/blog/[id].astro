@@ -20,6 +20,13 @@ const { post } = Astro.props;
 const { Content, headings } = await render(post);
 const postDate = post.data.pubDate ?? post.data.date ?? new Date();
 
+// Título SEO: añade el sufijo de marca solo si el total cabe en 60 chars (límite de Google).
+// Si el título ya es largo, se usa tal cual para no truncar lo importante.
+const BRAND_SUFFIX = " | AdmiLogistic";
+const seoTitle = (post.data.title.length + BRAND_SUFFIX.length) <= 60
+  ? `${post.data.title}${BRAND_SUFFIX}`
+  : post.data.title;
+
 // Artículos relacionados: misma categoría, excluir el actual, máx 4
 const allPosts = await getCollection("blog");
 const related = allPosts
@@ -38,7 +45,7 @@ const categoryLabel: Record<string, string> = {
 
 <BaseLayout
   pageBg="categorias"
-  title={`${post.data.title} | AdmiLogistic`}
+  title={seoTitle}
   description={typeof post.data.description === 'string' ? (post.data.description.slice(0, 155).replace(/\s+\S*$/, '') || post.data.title.slice(0, 155)) : (post.data.title || '').slice(0, 155).replace(/\s+\S*$/, '')}
   image={post.data.image}
   ogType="article"
