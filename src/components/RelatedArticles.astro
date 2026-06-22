@@ -17,7 +17,7 @@ const { title = "Artículos relacionados", articles } = Astro.props;
   <h2 class="related-articles__title">{title}</h2>
   <div class="related-articles__grid">
     {articles.map((article) => (
-      <a href={`/blog/${article.slug}`} class="related-articles__card">
+      <a href={`/blog/${article.slug}/`} class="related-articles__card">
         <strong class="related-articles__card-title">{article.title}</strong>
         {article.description && (
           <p class="related-articles__card-desc">{article.description}</p>

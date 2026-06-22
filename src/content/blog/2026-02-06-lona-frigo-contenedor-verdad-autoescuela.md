@@ -70,7 +70,7 @@ image: "/uploads/Comparativa.webp"
 <div class="cta-kit-banner">
 <h3>¿Te vas a estrenar con una de estas?</h3>
 <p>No salgas sin tu Kit de Supervivencia 2026: guías, checklist y plantillas para no dejarte nada en el camino.</p>
-<a href="/descargables" class="cta-kit-btn">Descargar Kit Gratuito</a>
+<a href="/descargables/" class="cta-kit-btn">Descargar Kit Gratuito</a>
 </div>
 
 ---

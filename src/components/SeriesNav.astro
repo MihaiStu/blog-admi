@@ -21,7 +21,7 @@ const { title, current, articles } = Astro.props;
     {articles.map((article) => (
       <li class={`series-nav__item ${article.order === current ? "series-nav__item--current" : ""}`}>
         {article.slug ? (
-          <a href={`/blog/${article.slug}`} class="series-nav__link">
+          <a href={`/blog/${article.slug}/`} class="series-nav__link">
             <span class="series-nav__num">{article.order}</span>
             {article.title}
           </a>

@@ -3,7 +3,7 @@
   "redirects": [
     {
       "source": "/tacografo",
-      "destination": "https://admilogistic.es/proyectos/tacografo",
+      "destination": "https://admilogistic.es/proyectos/tacografo/",
       "permanent": true
     }
   ],

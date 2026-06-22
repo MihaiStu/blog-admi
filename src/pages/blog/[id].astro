@@ -295,9 +295,9 @@ const categoryLabel: Record<string, string> = {
   <nav class="breadcrumb" aria-label="Ruta de navegación">
     <ol>
       <li><a href="/">Inicio</a></li>
-      <li><a href="/categorias">Blog</a></li>
+      <li><a href="/categorias/">Blog</a></li>
       {post.data.category && (
-        <li><a href={`/categorias/${post.data.category}`}>{categoryLabel[post.data.category] ?? post.data.category}</a></li>
+        <li><a href={`/categorias/${post.data.category}/`}>{categoryLabel[post.data.category] ?? post.data.category}</a></li>
       )}
       <li aria-current="page">{post.data.title}</li>
     </ol>
@@ -310,7 +310,7 @@ const categoryLabel: Record<string, string> = {
       </figure>
     )}
     <header class="article-header">
-      <a href={`/categorias/${post.data.category === "tarjetas-gasoil" ? "tarjetas-gasoil" : post.data.category}`} class="article-category">
+      <a href={`/categorias/${post.data.category === "tarjetas-gasoil" ? "tarjetas-gasoil" : post.data.category}/`} class="article-category">
         {categoryLabel[post.data.category] ?? post.data.category}
       </a>
       <h1>{post.data.title}</h1>
@@ -361,7 +361,7 @@ const categoryLabel: Record<string, string> = {
       <div class="cta-content">
         <h3>Descarga gratis el Kit del Transportista 2026</h3>
         <p>Guía de tiempos, checklist pre-viaje, plantilla de gastos y calendario fiscal.</p>
-        <a href="/descargables" class="cta-button">Descargar Kit Gratuito</a>
+        <a href="/descargables/" class="cta-button">Descargar Kit Gratuito</a>
       </div>
     </div>
   </article>
@@ -375,7 +375,7 @@ const categoryLabel: Record<string, string> = {
         </h2>
         <div class="related-grid">
           {related.map(p => (
-            <a href={`/blog/${p.id}`} class="related-card">
+            <a href={`/blog/${p.id}/`} class="related-card">
               {p.data.image && (
                 <div class="related-card-img">
                   <img src={p.data.image} alt={p.data.title} loading="lazy" decoding="async" />
@@ -391,7 +391,7 @@ const categoryLabel: Record<string, string> = {
             </a>
           ))}
         </div>
-        <a href={`/categorias/${post.data.category}`} class="related-all">
+        <a href={`/categorias/${post.data.category}/`} class="related-all">
           Ver todos los artículos de {categoryLabel[post.data.category] ?? post.data.category} →
         </a>
       </div>
