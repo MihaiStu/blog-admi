@@ -19,7 +19,7 @@ const articulos = (await getCollection('blog', ({ data }) => data.category === '
     ) : (
       <div class="articulos-grid">
         {articulos.map((entry) => (
-          <a href={`/blog/${entry.id}`} class="articulo-card">
+          <a href={`/blog/${entry.id}/`} class="articulo-card">
             {entry.data.image && (
               <div class="articulo-image">
                 <img src={entry.data.image} alt={entry.data.title} loading="lazy" />

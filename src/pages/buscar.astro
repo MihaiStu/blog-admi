@@ -107,7 +107,7 @@ const categoryLabel: Record<string, string> = {
         const cat = categoryLabel[p.category] || p.category;
         return (
           '<li class="search-result-item">' +
-          '<a href="/blog/' + escapeHtml(p.id) + '" class="search-result-link">' +
+          '<a href="/blog/' + escapeHtml(p.id) + '/" class="search-result-link">' +
           (cat ? '<span class="result-cat">' + escapeHtml(cat) + "</span>" : "") +
           '<h2 class="result-title">' + highlight(p.title, q) + "</h2>" +
           (p.description

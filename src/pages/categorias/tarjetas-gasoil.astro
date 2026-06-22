@@ -16,22 +16,22 @@ const articulos = (await getCollection('blog', ({ data }) => data.category === '
     </header>
 
     <section class="tarjetas-grid">
-      <a href="/blog/2026-02-02-tarjeta-gasoil-profesional-repsol" class="tarjeta-card">
+      <a href="/blog/2026-02-02-tarjeta-gasoil-profesional-repsol/" class="tarjeta-card">
         <h2>Repsol Profesional</h2>
         <p>Análisis completo de la tarjeta Repsol para flotas profesionales. Descuentos por volumen, red de estaciones y ventajas comerciales.</p>
       </a>
 
-      <a href="/blog/2026-02-02-tarjeta-gasoil-profesional-galp" class="tarjeta-card">
+      <a href="/blog/2026-02-02-tarjeta-gasoil-profesional-galp/" class="tarjeta-card">
         <h2>Galp Frota</h2>
         <p>Tarjeta Galp para gestión de flotas. Cobertura peninsular, descuentos y servicios adicionales para transportistas.</p>
       </a>
 
-      <a href="/blog/2026-02-02-tarjeta-gasoil-profesional-bp" class="tarjeta-card">
+      <a href="/blog/2026-02-02-tarjeta-gasoil-profesional-bp/" class="tarjeta-card">
         <h2>BP Profesional</h2>
         <p>Tarjeta BP para transporte profesional. Descuentos por volumen, control de gasto y facturación detallada.</p>
       </a>
 
-      <a href="/blog/2026-02-02-tarjeta-gasoil-profesional-dkv" class="tarjeta-card">
+      <a href="/blog/2026-02-02-tarjeta-gasoil-profesional-dkv/" class="tarjeta-card">
         <h2>DKV Card</h2>
         <p>Tarjeta multimarca para transporte internacional. Amplia red europea, peajes y servicios complementarios.</p>
       </a>
@@ -47,7 +47,7 @@ const articulos = (await getCollection('blog', ({ data }) => data.category === '
       ) : (
         <div class="articulos-grid">
           {articulos.map((entry) => (
-            <a href={`/blog/${entry.id}`} class="articulo-card">
+            <a href={`/blog/${entry.id}/`} class="articulo-card">
               {entry.data.image && (
                 <div class="articulo-image">
                   <img src={entry.data.image} alt={entry.data.title} loading="lazy" />

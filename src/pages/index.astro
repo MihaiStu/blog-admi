@@ -97,7 +97,7 @@ const searchIndex = sortedPosts.map((p) => ({
                 resultsEl.innerHTML = items.slice(0, 8).map(function (p) {
                   const title = escapeHtml(p.title);
                   const cat = escapeHtml(p.category);
-                  return '<a href="/blog/' + escapeHtml(p.id) + '" class="hero-search-item" role="option">' +
+                  return '<a href="/blog/' + escapeHtml(p.id) + '/" class="hero-search-item" role="option">' +
                     '<span class="hero-search-item-cat">' + cat + '</span>' +
                     '<span class="hero-search-item-title">' + title + '</span>' +
                     (p.description ? '<span class="hero-search-item-desc">' + escapeHtml(p.description) + '</span>' : '') +
@@ -154,7 +154,7 @@ const searchIndex = sortedPosts.map((p) => ({
         <span class="lead-magnet-badge">GRATIS</span>
         <h2>Kit de Supervivencia del Transportista 2026</h2>
         <p>Descarga gratis: Guía de tiempos de conducción, checklist pre-viaje, plantilla de gastos y calendario fiscal. Todo lo que necesitas en un solo pack.</p>
-        <a href="/descargables" class="lead-magnet-cta">Descargar Kit Gratuito</a>
+        <a href="/descargables/" class="lead-magnet-cta">Descargar Kit Gratuito</a>
       </div>
       <div class="lead-magnet-visual">
         <div class="kit-preview">
@@ -182,7 +182,7 @@ const searchIndex = sortedPosts.map((p) => ({
         </div>
         <h3>Admi Logistic Tools</h3>
         <p>Plataforma completa de administración y gestión logística para empresas de transporte. Parte del ecosistema AdmiLogistic.</p>
-        <a href="/proyectos/admin-logistic" class="project-button" aria-label="Ver información de Admi Logistic Tools">Ver Admi Logistic Tools</a>
+        <a href="/proyectos/admin-logistic/" class="project-button" aria-label="Ver información de Admi Logistic Tools">Ver Admi Logistic Tools</a>
       </article>
 
       <article class="project-card">
@@ -196,7 +196,7 @@ const searchIndex = sortedPosts.map((p) => ({
         <p>Solución integral de gestión para empresas de transporte y logística. Integrada con el resto del ecosistema AdmiLogistic.</p>
         <div class="project-card-actions">
           <a href="https://roadmaster.admilogistic.es/register" class="project-button project-button-primary" target="_blank" rel="noopener noreferrer" aria-label="Probar RoadMaster gratis 14 días">Probar gratis 14 días</a>
-          <a href="/proyectos/roadmaster" class="project-button project-button-secondary" aria-label="Ver información de RoadMaster">Ver más</a>
+          <a href="/proyectos/roadmaster/" class="project-button project-button-secondary" aria-label="Ver información de RoadMaster">Ver más</a>
         </div>
       </article>
 
@@ -209,7 +209,7 @@ const searchIndex = sortedPosts.map((p) => ({
         </div>
         <h3>Tacógrafo</h3>
         <p>Aplicación especializada en la gestión y análisis de datos de tacógrafos digitales. Compatible con RoadMaster y Admi Logistic.</p>
-        <a href="/proyectos/tacografo" class="project-button" aria-label="Ver información de la herramienta Tacógrafo">Ver Tacógrafo</a>
+        <a href="/proyectos/tacografo/" class="project-button" aria-label="Ver información de la herramienta Tacógrafo">Ver Tacógrafo</a>
       </article>
 
       <article class="project-card">
@@ -222,7 +222,7 @@ const searchIndex = sortedPosts.map((p) => ({
         <p>Facturación española (VeriFactu, Facturae, modelos 303/347) y gestión de transporte en una sola app, con lectura de facturas por IA y banca automática.</p>
         <div class="project-card-actions">
           <a href="https://factura.admilogistic.es" class="project-button project-button-primary" target="_blank" rel="noopener noreferrer" aria-label="Probar Factura Digital gratis">Probar gratis</a>
-          <a href="/proyectos/factura-digital" class="project-button project-button-secondary" aria-label="Ver información de Factura Digital">Ver más</a>
+          <a href="/proyectos/factura-digital/" class="project-button project-button-secondary" aria-label="Ver información de Factura Digital">Ver más</a>
         </div>
       </article>
     </div>
@@ -237,7 +237,7 @@ const searchIndex = sortedPosts.map((p) => ({
       {ultimosArticulos.length > 0 ? (
         <div class="articulos-grid-home">
           {ultimosArticulos.map((entry) => (
-            <a href={`/blog/${entry.id}`} class="articulo-card-home">
+            <a href={`/blog/${entry.id}/`} class="articulo-card-home">
               <div class="articulo-image-home">
                 <img src={entry.data.image} alt={entry.data.title} loading="lazy" />
               </div>
@@ -254,7 +254,7 @@ const searchIndex = sortedPosts.map((p) => ({
       )}
 
       <div class="ver-todos-wrapper">
-        <a href="/categorias" class="ver-todos-btn">Ver todas las guías y artículos</a>
+        <a href="/categorias/" class="ver-todos-btn">Ver todas las guías y artículos</a>
       </div>
     </div>
   </section>
@@ -284,22 +284,22 @@ const searchIndex = sortedPosts.map((p) => ({
       <h2>Bases de datos públicas para transportistas</h2>
       <p class="section-intro">Acceso gratuito a información de talleres, gasolineras, parkings y hoteles adaptados para vehículos industriales.</p>
       <div class="databases-grid">
-        <a href="/bases-datos/talleres" class="database-item" aria-label="Ver base de datos de talleres especializados">
+        <a href="/bases-datos/talleres/" class="database-item" aria-label="Ver base de datos de talleres especializados">
           <div class="database-icon">🔧</div>
           <span>Talleres</span>
           <p class="database-desc">Talleres especializados</p>
         </a>
-        <a href="/bases-datos/gasolineras" class="database-item" aria-label="Ver base de datos de gasolineras">
+        <a href="/bases-datos/gasolineras/" class="database-item" aria-label="Ver base de datos de gasolineras">
           <div class="database-icon">⛽</div>
           <span>Gasolineras</span>
           <p class="database-desc">Estaciones servicio</p>
         </a>
-        <a href="/bases-datos/parkings" class="database-item" aria-label="Ver base de datos de áreas de descanso">
+        <a href="/bases-datos/parkings/" class="database-item" aria-label="Ver base de datos de áreas de descanso">
           <div class="database-icon">🅿️</div>
           <span>Parkings</span>
           <p class="database-desc">Áreas de descanso</p>
         </a>
-        <a href="/bases-datos/hoteles" class="database-item" aria-label="Ver base de datos de alojamiento para transportistas">
+        <a href="/bases-datos/hoteles/" class="database-item" aria-label="Ver base de datos de alojamiento para transportistas">
           <div class="database-icon">🏨</div>
           <span>Hoteles</span>
           <p class="database-desc">Alojamiento camiones</p>
