@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Página no encontrada (404) | AdmiLogistic"
+  description="La página que buscas no existe o ha cambiado de dirección. Vuelve al inicio o explora nuestras guías, herramientas y bases de datos para transportistas."
+>
+  <meta name="robots" content="noindex, follow" slot="head" />
+  <section class="error-404">
+    <p class="error-code">404</p>
+    <h1>Esta página se ha ido de ruta</h1>
+    <p class="error-text">
+      La dirección que buscas no existe o ha cambiado. No te preocupes, te llevamos de vuelta al buen camino.
+    </p>
+    <div class="error-links">
+      <a href="/" class="error-btn error-btn--primary">Volver al inicio</a>
+      <a href="/categorias/" class="error-btn">Guías y normativa</a>
+      <a href="/proyectos/" class="error-btn">Herramientas</a>
+      <a href="/bases-datos/" class="error-btn">Bases de datos</a>
+      <a href="/buscar/" class="error-btn">Buscar artículos</a>
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  .error-404 {
+    max-width: 640px;
+    margin: 4rem auto;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  .error-code {
+    font-size: clamp(4rem, 12vw, 7rem);
+    font-weight: 800;
+    line-height: 1;
+    margin: 0;
+    color: #0f172a;
+    letter-spacing: -0.04em;
+  }
+  .error-404 h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin: 0.5rem 0 1rem;
+    color: #0f172a;
+  }
+  .error-text {
+    color: #334155;
+    font-size: 1.05rem;
+    max-width: 460px;
+    margin: 0 auto 2rem;
+  }
+  .error-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+  .error-btn {
+    display: inline-block;
+    padding: 0.7rem 1.3rem;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.08);
+    color: #0f172a;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid rgba(15, 23, 42, 0.15);
+    transition: background 0.2s ease;
+  }
+  .error-btn:hover {
+    background: rgba(15, 23, 42, 0.16);
+  }
+  .error-btn--primary {
+    background: #0f172a;
+    color: #fff;
+    border-color: #0f172a;
+  }
+  .error-btn--primary:hover {
+    background: #1e293b;
+  }
+  @media (max-width: 480px) {
+    .error-404 { margin: 2rem 1rem; padding: 2rem 1.25rem; }
+  }
+</style>
