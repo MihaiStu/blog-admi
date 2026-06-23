@@ -59,7 +59,7 @@ Para evitar que una inspección detecte infracciones graves, asegúrate de cumpl
 
 Las multas por exceso de conducción o falta de descanso se encuentran entre las más caras de la LOTT y restan puntos de honorabilidad de forma inmediata. Una buena planificación de rutas no solo cuida al conductor, sino que protege el patrimonio de la empresa.
 
-![Conductor descansando en área de servicio](/uploads/conductor%20descansando%20.webp)
+![Conductor descansando en área de servicio](/uploads/conductor-descansando.webp)
 
 ---
 
