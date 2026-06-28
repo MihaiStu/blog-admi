@@ -55,8 +55,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <div class="contact-form-wrap">
           <h2>Envíanos un mensaje</h2>
           <form
+            id="contactForm"
             class="contact-form"
-            action="https://formspree.io/f/contacto@admilogistic.es"
+            action="https://formspree.io/f/maqgjqnl"
             method="POST"
           >
             <div class="form-field">
@@ -84,6 +85,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               <textarea id="message" name="message" required rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
             </div>
             <button type="submit" class="btn-submit">Enviar mensaje</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
           </form>
         </div>
 
@@ -91,6 +93,46 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  // Envío AJAX a Formspree: el usuario no abandona la web y ve el resultado al instante.
+  const form = document.getElementById('contactForm') as HTMLFormElement | null;
+  const status = document.getElementById('formStatus');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!status) return;
+
+    const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+    if (submitBtn) submitBtn.disabled = true;
+    status.className = 'form-status';
+    status.textContent = 'Enviando…';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+
+      if (response.ok) {
+        form.reset();
+        status.className = 'form-status form-status--ok';
+        status.textContent = '✅ ¡Mensaje enviado! Te responderemos lo antes posible.';
+      } else {
+        const data = await response.json().catch(() => null);
+        const msg = data?.errors?.map((err: { message: string }) => err.message).join(', ');
+        status.className = 'form-status form-status--error';
+        status.textContent = msg || '❌ No se pudo enviar. Inténtalo de nuevo o escríbenos a contacto@admilogistic.es.';
+      }
+    } catch {
+      status.className = 'form-status form-status--error';
+      status.textContent = '❌ Error de conexión. Revisa tu red e inténtalo de nuevo.';
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
+    }
+  });
+</script>
 
 <style>
   .contact-page {
@@ -295,5 +337,26 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   .btn-submit:hover {
     opacity: 0.9;
     transform: translateY(-1px);
+  }
+
+  .btn-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .form-status {
+    margin: 0.25rem 0 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    min-height: 1.2em;
+  }
+
+  .form-status--ok {
+    color: #15803d;
+  }
+
+  .form-status--error {
+    color: #dc2626;
   }
 </style>
