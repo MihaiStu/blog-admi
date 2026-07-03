@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import datos from '../../../data/gasolineras-provincias.json';
+
+export function getStaticPaths() {
+  return datos.provincias.map((p) => ({
+    params: { provincia: p.slug },
+    props: { p },
+  }));
+}
+
+const { p } = Astro.props;
+
+// Fecha fuente "03/07/2026 6:22:07" -> "3 de julio de 2026"
+function fechaBonita(f) {
+  if (!f) return '';
+  const m = String(f).match(/(\d{2})\/(\d{2})\/(\d{4})/);
+  if (!m) return f;
+  const meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  return `${parseInt(m[1], 10)} de ${meses[parseInt(m[2], 10) - 1]} de ${m[3]}`;
+}
+const fecha = fechaBonita(datos.fecha);
+const masBarata = p.estaciones[0];
+
+const title = `Precio del gasóleo A en ${p.provincia} hoy — ${p.numEstaciones} gasolineras | AdmiLogistic`;
+const description = `Precio del gasóleo (diésel) en ${p.provincia}: desde ${p.dieselMin.toFixed(3)} €/L (media ${p.dieselMedia.toFixed(3)} €/L). Listado de ${p.numEstaciones} gasolineras para camiones, actualizado a ${fecha}.`;
+
+const fmt = (n) => (n == null ? '—' : n.toFixed(3) + ' €');
+
+// Schema ItemList (las 10 más baratas) para rich results
+const itemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `Gasolineras más baratas de gasóleo A en ${p.provincia}`,
+  itemListElement: p.estaciones.slice(0, 10).map((e, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: `${e.rotulo} — ${e.municipio}`,
+    description: `Gasóleo A a ${e.diesel.toFixed(3)} €/L`,
+  })),
+};
+---
+
+<BaseLayout pageBg="bases" title={title} description={description}>
+  <div class="gas-page">
+    <nav class="gas-breadcrumb">
+      <a href="/bases-datos/">Bases de datos</a> ·
+      <a href="/bases-datos/gasolineras/">Gasolineras</a> ·
+      <span>{p.provincia}</span>
+    </nav>
+
+    <header class="gas-header">
+      <h1>Precio del gasóleo A en {p.provincia}</h1>
+      <p class="gas-intro">
+        Comparativa de precios del <strong>gasóleo A (diésel)</strong> en
+        <strong>{p.numEstaciones} gasolineras</strong> de la provincia de {p.provincia},
+        pensada para transportistas y flotas. Datos oficiales actualizados a <strong>{fecha}</strong>.
+      </p>
+    </header>
+
+    <div class="gas-stats">
+      <div class="gas-stat gas-stat--best">
+        <span class="gas-stat-label">Más barato</span>
+        <span class="gas-stat-value">{p.dieselMin.toFixed(3)} €/L</span>
+      </div>
+      <div class="gas-stat">
+        <span class="gas-stat-label">Precio medio</span>
+        <span class="gas-stat-value">{p.dieselMedia.toFixed(3)} €/L</span>
+      </div>
+      <div class="gas-stat">
+        <span class="gas-stat-label">Más caro</span>
+        <span class="gas-stat-value">{p.dieselMax.toFixed(3)} €/L</span>
+      </div>
+      <div class="gas-stat">
+        <span class="gas-stat-label">Gasolineras</span>
+        <span class="gas-stat-value">{p.numEstaciones}</span>
+      </div>
+    </div>
+
+    {masBarata && (
+      <p class="gas-highlight">
+        ⛽ La gasolinera más barata para repostar diésel en {p.provincia} ahora mismo es
+        <strong>{masBarata.rotulo}</strong> en <strong>{masBarata.municipio}</strong>,
+        a <strong>{masBarata.diesel.toFixed(3)} €/L</strong>.
+      </p>
+    )}
+
+    <h2>Gasolineras más baratas de diésel en {p.provincia}</h2>
+    <div class="gas-table-wrap">
+      <table class="gas-table">
+        <thead>
+          <tr>
+            <th>Gasolinera</th>
+            <th>Municipio</th>
+            <th>Horario</th>
+            <th class="gas-num">Gasóleo A</th>
+            <th class="gas-num">AdBlue</th>
+          </tr>
+        </thead>
+        <tbody>
+          {p.estaciones.map((e) => (
+            <tr>
+              <td><strong>{e.rotulo || '—'}</strong><br /><span class="gas-dir">{e.direccion}</span></td>
+              <td>{e.municipio}</td>
+              <td class="gas-horario">{e.horario || '—'}</td>
+              <td class="gas-num gas-price">{fmt(e.diesel)}</td>
+              <td class="gas-num">{fmt(e.adblue)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <p class="gas-nota">
+      Precios orientativos publicados por el Ministerio para la Transición Ecológica
+      (Geoportal de Hidrocarburos). Mostramos las {p.estaciones.length} gasolineras más baratas de la provincia.
+    </p>
+
+    <div class="gas-cta">
+      <h3>¿Gestionas una flota?</h3>
+      <p>Con <strong>RoadMaster</strong> controlas repostajes, gastos por vehículo y planificas rutas con las gasolineras más baratas en ruta.</p>
+      <a href="/proyectos/roadmaster/" class="gas-cta-btn">Probar RoadMaster gratis 14 días</a>
+    </div>
+  </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify(itemList)} />
+</BaseLayout>
+
+<style>
+  .gas-page { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+  .gas-breadcrumb { font-size: 0.85rem; color: #cbd5e1; margin-bottom: 1rem; }
+  .gas-breadcrumb a { color: #f59e0b; text-decoration: none; }
+  .gas-breadcrumb a:hover { text-decoration: underline; }
+  .gas-header { margin-bottom: 1.5rem; }
+  .gas-header h1 { font-size: clamp(1.6rem, 3vw, 2.25rem); color: #fff; margin-bottom: 0.75rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
+  .gas-intro { color: rgba(255,255,255,0.92); font-size: 1.05rem; line-height: 1.6; max-width: 800px; }
+  .gas-intro strong { color: #fff; }
+
+  .gas-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 1.5rem 0; }
+  .gas-stat { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.18); border-radius: 12px; padding: 1rem; text-align: center; }
+  .gas-stat--best { background: rgba(245,158,11,0.2); border-color: rgba(245,158,11,0.5); }
+  .gas-stat-label { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+  .gas-stat-value { display: block; font-size: 1.35rem; font-weight: 700; color: #fff; }
+
+  .gas-highlight { background: rgba(255,255,255,0.08); border-left: 4px solid #f59e0b; border-radius: 8px; padding: 0.9rem 1.1rem; color: rgba(255,255,255,0.95); line-height: 1.5; margin-bottom: 2rem; }
+  .gas-highlight strong { color: #fff; }
+
+  .gas-page h2 { color: #fff; font-size: 1.4rem; margin: 1.5rem 0 1rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
+
+  .gas-table-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid rgba(255,255,255,0.15); background: rgba(15,23,42,0.55); backdrop-filter: blur(8px); }
+  .gas-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 640px; }
+  .gas-table thead th { background: rgba(15,23,42,0.85); color: #fff; text-align: left; padding: 0.75rem 0.9rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.03em; }
+  .gas-table td { padding: 0.7rem 0.9rem; border-bottom: 1px solid rgba(255,255,255,0.12); color: #fff; vertical-align: top; }
+  .gas-table td strong { color: #fff; }
+  .gas-table tbody tr:nth-child(even) { background: rgba(255,255,255,0.05); }
+  .gas-table tbody tr:first-child { background: rgba(245,158,11,0.22); }
+  .gas-dir { font-size: 0.78rem; color: rgba(255,255,255,0.65); }
+  .gas-horario { font-size: 0.8rem; color: rgba(255,255,255,0.8); }
+  .gas-num { text-align: right; white-space: nowrap; }
+  .gas-price { font-weight: 700; color: #fbbf24; }
+
+  .gas-nota { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin-top: 0.9rem; line-height: 1.5; }
+
+  .gas-cta { margin-top: 2.5rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 16px; padding: 1.5rem; text-align: center; }
+  .gas-cta h3 { color: #fff; font-size: 1.25rem; margin-bottom: 0.5rem; }
+  .gas-cta p { color: rgba(255,255,255,0.9); margin-bottom: 1.1rem; line-height: 1.5; max-width: 560px; margin-left: auto; margin-right: auto; }
+  .gas-cta-btn { display: inline-block; padding: 0.8rem 1.9rem; background: #f59e0b; color: #1a1a1a; font-weight: 700; text-decoration: none; border-radius: 10px; transition: background 0.2s; }
+  .gas-cta-btn:hover { background: #fbbf24; }
+
+  @media (max-width: 640px) {
+    .gas-stats { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>

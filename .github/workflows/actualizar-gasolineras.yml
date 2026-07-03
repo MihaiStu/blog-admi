@@ -1,0 +1,43 @@
+name: Actualizar precios de gasolineras
+
+# Baja los precios oficiales de carburante (API del Gobierno) cada día y,
+# si han cambiado, hace commit del JSON. El push dispara el redeploy en Vercel,
+# así las páginas de /bases-datos/gasolineras/ salen con precios frescos a diario.
+
+on:
+  schedule:
+    # 06:40 UTC ~ 08:40 hora España. La API publica los precios cada mañana.
+    - cron: '40 6 * * *'
+  workflow_dispatch: {} # permite lanzarlo a mano desde la pestaña Actions
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Descargar precios oficiales
+        run: node scripts/fetch-gasolineras.mjs
+
+      - name: Commit si hay cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- src/data/gasolineras-provincias.json; then
+            echo "Sin cambios en los precios. Nada que commitear."
+          else
+            fecha=$(date +'%Y-%m-%d')
+            git add src/data/gasolineras-provincias.json
+            git commit -m "chore(gasolineras): actualización automática de precios ${fecha}"
+            git push
+            echo "Precios actualizados y push hecho. Vercel redeplegará."
+          fi
