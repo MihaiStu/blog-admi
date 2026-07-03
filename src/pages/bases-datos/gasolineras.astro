@@ -1,106 +1,102 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import datos from '../../data/gasolineras-provincias.json';
+
+function fechaBonita(f) {
+  if (!f) return '';
+  const m = String(f).match(/(\d{2})\/(\d{2})\/(\d{4})/);
+  if (!m) return f;
+  const meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  return `${parseInt(m[1], 10)} de ${meses[parseInt(m[2], 10) - 1]} de ${m[3]}`;
+}
+const fecha = fechaBonita(datos.fecha);
+const provincias = datos.provincias;
+const totalDiesel = provincias.reduce((a, p) => a + p.numEstaciones, 0);
+// precio medio nacional ponderado
+const mediaNacional = (
+  provincias.reduce((a, p) => a + p.dieselMedia * p.numEstaciones, 0) / totalDiesel
+).toFixed(3);
+// provincia más barata (por mínimo)
+const masBarata = [...provincias].sort((a, b) => a.dieselMin - b.dieselMin)[0];
+
+const title = `Precio del gasóleo A por provincias — ${totalDiesel.toLocaleString('es-ES')} gasolineras | AdmiLogistic`;
+const description = `Precio del gasóleo (diésel) en España por provincias: media nacional ${mediaNacional} €/L. Compara ${totalDiesel.toLocaleString('es-ES')} gasolineras para camiones, actualizado a ${fecha}.`;
 ---
 
-<BaseLayout pageBg="bases" title="Base de Datos - Gasolineras | AdmiLogistic" description="Mapa de áreas de servicio y gasolineras en las principales vías.">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-  <div class="db-page">
-    <header class="db-header">
-      <h1>Gasolineras y áreas de servicio</h1>
-      <p>Áreas de servicio en autopistas y vías principales. Datos de carácter orientativo (OpenStreetMap).</p>
+<BaseLayout pageBg="bases" title={title} description={description}>
+  <div class="gas-idx">
+    <header class="gas-idx-header">
+      <h1>Precio del gasóleo A por provincias</h1>
+      <p>
+        Compara el precio del <strong>gasóleo (diésel)</strong> en
+        <strong>{totalDiesel.toLocaleString('es-ES')} gasolineras</strong> de toda España,
+        pensado para transportistas y flotas. Datos oficiales actualizados a <strong>{fecha}</strong>.
+      </p>
     </header>
-    <div class="db-map-wrap">
-      <div id="map-gasolineras" class="db-map">
-        <p class="db-map-loading" id="map-gasolineras-loading">Cargando gasolineras…</p>
+
+    <div class="gas-idx-stats">
+      <div class="gas-idx-stat">
+        <span class="v">{mediaNacional} €/L</span>
+        <span class="l">Media nacional</span>
+      </div>
+      <div class="gas-idx-stat gas-idx-stat--best">
+        <span class="v">{masBarata.dieselMin.toFixed(3)} €/L</span>
+        <span class="l">Más barato ({masBarata.provincia})</span>
+      </div>
+      <div class="gas-idx-stat">
+        <span class="v">{provincias.length}</span>
+        <span class="l">Provincias</span>
       </div>
     </div>
-    <div class="db-cta">
-      <a href="/proyectos/roadmaster/" class="db-cta-btn">Usar gasolineras en RoadMaster</a>
+
+    <h2>Elige tu provincia</h2>
+    <div class="gas-idx-grid">
+      {provincias.map((p) => (
+        <a href={`/bases-datos/gasolineras/${p.slug}/`} class="gas-idx-card">
+          <span class="gas-idx-prov">{p.provincia}</span>
+          <span class="gas-idx-price">desde {p.dieselMin.toFixed(3)} €/L</span>
+          <span class="gas-idx-meta">{p.numEstaciones} gasolineras · media {p.dieselMedia.toFixed(3)} €</span>
+        </a>
+      ))}
+    </div>
+
+    <p class="gas-idx-nota">
+      Precios orientativos publicados por el Ministerio para la Transición Ecológica
+      (Geoportal de Hidrocarburos). Se actualizan periódicamente.
+    </p>
+
+    <div class="gas-idx-cta">
+      <a href="/proyectos/roadmaster/" class="gas-idx-cta-btn">Planifica repostajes con RoadMaster →</a>
     </div>
   </div>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
-  <script is:inline>
-    (function () {
-      function init() {
-        if (typeof L === 'undefined') {
-          setTimeout(init, 50);
-          return;
-        }
-        const mapEl = document.getElementById('map-gasolineras');
-        if (!mapEl) return;
-        const map = L.map('map-gasolineras').setView([40.4, -3.7], 6);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
-        fetch('/data/gasolineras.geojson')
-          .then(function (r) {
-            if (!r.ok) throw new Error('No se pudo cargar el archivo');
-            return r.json();
-          })
-          .then(function (geojson) {
-            var loadingEl = document.getElementById('map-gasolineras-loading');
-            if (loadingEl) loadingEl.classList.add('hidden');
-            var features = (geojson && geojson.features) || [];
-            if (features.length === 0) return;
-            var maxPoints = 3000;
-            var toUse = features.length <= maxPoints ? geojson : { type: 'FeatureCollection', features: features.slice(0, maxPoints) };
-            var layer = L.geoJSON(toUse, {
-              pointToLayer: function (f, latlng) {
-                return L.circleMarker(latlng, {
-                  radius: 6,
-                  fillColor: '#22c55e',
-                  color: '#16a34a',
-                  weight: 1,
-                  fillOpacity: 0.85
-                });
-              },
-              onEachFeature: function (f, layer) {
-                var name = (f.properties && f.properties.name) || 'Área de servicio';
-                layer.bindPopup(name);
-              }
-            });
-            layer.addTo(map);
-            map.invalidateSize();
-            try {
-              var b = layer.getBounds();
-              if (b && b.isValid()) map.fitBounds(b, { padding: [40, 40], maxZoom: 10 });
-            } catch (e) {}
-          })
-          .catch(function () {
-            var loadingEl = document.getElementById('map-gasolineras-loading');
-            if (loadingEl) {
-              loadingEl.classList.add('hidden');
-              loadingEl.outerHTML = '<p class="db-map-loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);margin:0;color:#64748b;">No se pudieron cargar los datos. Comprueba que existe <code>public/data/gasolineras.geojson</code>.</p>';
-            }
-          });
-      }
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-      } else {
-        init();
-      }
-    })();
-  </script>
 </BaseLayout>
 
 <style>
-  .db-page { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
-  .db-header { text-align: center; margin-bottom: 1.5rem; }
-  .db-header h1 { font-size: clamp(1.75rem, 3vw, 2.25rem); color: #1a1a1a; margin-bottom: 0.5rem; }
-  .db-header p { color: #555; font-size: 1rem; line-height: 1.6; }
-  .db-map-wrap { margin-bottom: 2rem; border-radius: 16px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.08); }
-  .db-map { height: 480px; background: #e5e7eb; position: relative; }
-  .db-map-loading {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    color: #64748b;
-    font-size: 1rem;
-    z-index: 1000;
-  }
-  .db-map-loading.hidden { display: none; }
-  .db-cta { text-align: center; margin-top: 2rem; }
-  .db-cta-btn { display: inline-block; padding: 0.75rem 1.75rem; background: #22c55e; color: #fff; font-weight: 600; text-decoration: none; border-radius: 10px; transition: background 0.2s; }
-  .db-cta-btn:hover { background: #16a34a; }
-  @media (max-width: 768px) { .db-map { height: 360px; } }
+  .gas-idx { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+  .gas-idx-header { text-align: center; margin-bottom: 1.5rem; }
+  .gas-idx-header h1 { font-size: clamp(1.75rem, 3vw, 2.4rem); color: #fff; margin-bottom: 0.6rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
+  .gas-idx-header p { color: rgba(255,255,255,0.9); font-size: 1.05rem; line-height: 1.6; max-width: 780px; margin: 0 auto; }
+  .gas-idx-header strong { color: #fff; }
+
+  .gas-idx-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.75rem auto; max-width: 720px; }
+  .gas-idx-stat { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 12px; padding: 1rem; text-align: center; }
+  .gas-idx-stat--best { background: rgba(245,158,11,0.2); border-color: rgba(245,158,11,0.5); }
+  .gas-idx-stat .v { display: block; font-size: 1.3rem; font-weight: 700; color: #fff; }
+  .gas-idx-stat .l { display: block; font-size: 0.78rem; color: rgba(255,255,255,0.72); margin-top: 0.3rem; }
+
+  .gas-idx h2 { color: #fff; font-size: 1.35rem; margin: 1.5rem 0 1rem; text-align: center; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
+
+  .gas-idx-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.9rem; }
+  .gas-idx-card { display: flex; flex-direction: column; gap: 0.25rem; padding: 1rem 1.1rem; background: rgba(15,23,42,0.55); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.15); border-left: 4px solid #f59e0b; border-radius: 12px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s, background 0.2s; }
+  .gas-idx-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,0.3); background: rgba(15,23,42,0.7); }
+  .gas-idx-prov { font-weight: 700; color: #ffffff; font-size: 1.05rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+  .gas-idx-price { color: #ffffff; font-weight: 700; font-size: 0.95rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+  .gas-idx-meta { color: rgba(255,255,255,0.75); font-size: 0.8rem; }
+
+  .gas-idx-nota { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin-top: 1.25rem; text-align: center; line-height: 1.5; }
+  .gas-idx-cta { text-align: center; margin-top: 1.75rem; }
+  .gas-idx-cta-btn { display: inline-block; padding: 0.8rem 1.9rem; background: #f59e0b; color: #1a1a1a; font-weight: 700; text-decoration: none; border-radius: 10px; transition: background 0.2s; }
+  .gas-idx-cta-btn:hover { background: #fbbf24; }
+
+  @media (max-width: 600px) { .gas-idx-stats { grid-template-columns: 1fr; } }
 </style>

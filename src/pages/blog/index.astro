@@ -1,0 +1,193 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+// Todos los artículos del blog, ordenados por fecha (pubDate o date) descendente.
+const articulos = (await getCollection('blog'))
+  .map((entry) => ({
+    ...entry,
+    _fecha: entry.data.pubDate ?? entry.data.date ?? null,
+  }))
+  .sort((a, b) => {
+    const av = a._fecha ? a._fecha.valueOf() : 0;
+    const bv = b._fecha ? b._fecha.valueOf() : 0;
+    return bv - av;
+  });
+---
+
+<BaseLayout
+  pageBg="categorias"
+  title="Blog AdmiLogistic — Guías y noticias del transporte por carretera"
+  description="Guías prácticas, normativa actualizada, tacógrafo, fiscalidad y noticias para transportistas y gestores de flota. Todos los artículos de AdmiLogistic."
+>
+  <div class="categoria-container">
+    <header class="categoria-header">
+      <h1>Blog AdmiLogistic</h1>
+      <p class="categoria-intro">Guías prácticas, normativa actualizada y consejos para el día a día del transportista profesional y el gestor de flotas.</p>
+    </header>
+
+    {articulos.length === 0 ? (
+      <p class="no-articulos">Próximamente publicaremos nuevos artículos.</p>
+    ) : (
+      <div class="articulos-grid">
+        {articulos.map((entry) => (
+          <a href={`/blog/${entry.id}/`} class="articulo-card">
+            {entry.data.image && (
+              <div class="articulo-image">
+                <img src={entry.data.image} alt={entry.data.imageAlt ?? entry.data.title} loading="lazy" />
+              </div>
+            )}
+            <div class="articulo-content">
+              <h3>{entry.data.title}</h3>
+              {entry.data.description && <p>{entry.data.description}</p>}
+              {entry._fecha && (
+                <time datetime={entry._fecha.toISOString()}>
+                  {entry._fecha.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}
+                </time>
+              )}
+            </div>
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+</BaseLayout>
+
+<style>
+  .categoria-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+  }
+
+  .categoria-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .categoria-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .categoria-intro {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .no-articulos {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+  }
+
+  .articulos-grid {
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 1.25rem !important;
+  }
+
+  .articulo-card {
+    display: flex !important;
+    flex-direction: column !important;
+    background: rgba(255, 255, 255, 0.55) !important;
+    backdrop-filter: blur(16px) saturate(1.1) !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(255,255,255,0.35) !important;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08) !important;
+    overflow: hidden !important;
+    text-decoration: none !important;
+    transition: transform .35s ease, box-shadow .35s ease !important;
+    padding: 0 !important;
+  }
+
+  .articulo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+  }
+
+  .articulo-image {
+    width: 100% !important;
+    height: 140px !important;
+    overflow: hidden !important;
+  }
+
+  .articulo-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .articulo-card:hover .articulo-image img {
+    transform: scale(1.05);
+  }
+
+  .articulo-content {
+    padding: 1rem !important;
+  }
+
+  .articulo-content h3 {
+    font-size: 1rem !important;
+    margin-bottom: 0.4rem !important;
+    color: #ffffff !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5) !important;
+    line-height: 1.3 !important;
+  }
+
+  .articulo-content p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.5rem !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  .articulo-content time {
+    display: block !important;
+    font-size: 0.75rem !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+
+  @media (max-width: 1400px) {
+    .articulos-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  @media (max-width: 1024px) {
+    .articulos-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (max-width: 768px) {
+    .categoria-container { padding: 1.5rem 0.75rem 3rem; }
+    .categoria-header h1 { font-size: 1.75rem; }
+    .categoria-intro { font-size: 1rem; }
+    .articulos-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  }
+
+  @media (max-width: 600px) {
+    .articulos-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+    .articulo-image { height: 110px; }
+  }
+
+  @media (max-width: 480px) {
+    .categoria-container { padding: 1rem 0.5rem 2rem; }
+    .categoria-header h1 { font-size: 1.5rem; }
+    .categoria-intro { font-size: 0.875rem; }
+    .categoria-header { margin-bottom: 1.5rem; }
+    .articulos-grid { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+    .articulo-image { height: 95px; }
+    .articulo-content { padding: 0.6rem; }
+    .articulo-content h3 { font-size: 0.8rem; }
+    .articulo-content p { font-size: 0.7rem; }
+    .articulo-content time { font-size: 0.6rem; }
+  }
+</style>
