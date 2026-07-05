@@ -1,0 +1,1587 @@
+{
+  "fecha": "2026-07-05",
+  "fuente": "RoadMaster",
+  "totalHoteles": 44,
+  "provincias": [
+    {
+      "slug": "a-coruna",
+      "provincia": "A Coruña",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 27,
+          "nombre": "Hostal A Coruña Trans",
+          "tipo": "hostal",
+          "lat": 43.3567,
+          "lng": -8.4089,
+          "provincia": "A Coruña",
+          "comunidad": "Galicia",
+          "direccion": "Pol. Ind. Pocomaco",
+          "precio_desde": 32,
+          "parking_camiones": true,
+          "plazas_parking": 45,
+          "servicios": [
+            "Parking gratuito",
+            "WiFi",
+            "Desayuno",
+            "Duchas"
+          ],
+          "horario_recepcion": "6:00-24:00",
+          "telefono": "",
+          "valoracion": 3.8
+        }
+      ],
+      "precioMin": 32,
+      "precioMax": 32,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hostal": 1
+      }
+    },
+    {
+      "slug": "albacete",
+      "provincia": "Albacete",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 25,
+          "nombre": "Motel Albacete Ruta",
+          "tipo": "motel",
+          "lat": 38.9945,
+          "lng": -1.8567,
+          "provincia": "Albacete",
+          "comunidad": "Castilla-La Mancha",
+          "direccion": "Ctra. N-301 km 250",
+          "precio_desde": 35,
+          "parking_camiones": true,
+          "plazas_parking": 45,
+          "servicios": [
+            "Parking amplio",
+            "WiFi",
+            "Bar",
+            "Duchas",
+            "TV"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "valoracion": 3.8
+        }
+      ],
+      "precioMin": 35,
+      "precioMax": 35,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "motel": 1
+      }
+    },
+    {
+      "slug": "alicante",
+      "provincia": "Alicante",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 8,
+          "nombre": "Hostal La Ruta Alicante",
+          "tipo": "hostal",
+          "lat": 38.3456,
+          "lng": -0.4812,
+          "provincia": "Alicante",
+          "comunidad": "Comunidad Valenciana",
+          "direccion": "Ctra. Nacional 340",
+          "precio_desde": 35,
+          "parking_camiones": true,
+          "plazas_parking": 35,
+          "servicios": [
+            "Parking gratuito",
+            "WiFi",
+            "Bar",
+            "Duchas"
+          ],
+          "horario_recepcion": "7:00-23:00",
+          "telefono": "",
+          "valoracion": 3.6
+        }
+      ],
+      "precioMin": 35,
+      "precioMax": 35,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hostal": 1
+      }
+    },
+    {
+      "slug": "asturias",
+      "provincia": "Asturias",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 33,
+          "nombre": "Hotel Puerto Gijón",
+          "tipo": "hotel",
+          "estrellas": 2,
+          "lat": 43.5312,
+          "lng": -5.6689,
+          "provincia": "Asturias",
+          "comunidad": "Asturias",
+          "direccion": "Zona Portuaria El Musel",
+          "precio_desde": 42,
+          "parking_camiones": true,
+          "plazas_parking": 60,
+          "servicios": [
+            "Parking vigilado",
+            "WiFi",
+            "Restaurante",
+            "Duchas",
+            "TV",
+            "Sidrería"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "valoracion": 4.0
+        }
+      ],
+      "precioMin": 42,
+      "precioMax": 42,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hotel": 1
+      }
+    },
+    {
+      "slug": "badajoz",
+      "provincia": "Badajoz",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 28,
+          "nombre": "Hotel Plata Mérida",
+          "tipo": "hotel",
+          "estrellas": 2,
+          "lat": 38.9123,
+          "lng": -6.3389,
+          "provincia": "Badajoz",
+          "comunidad": "Extremadura",
+          "direccion": "Ctra. N-V km 340",
+          "precio_desde": 38,
+          "parking_camiones": true,
+          "plazas_parking": 50,
+          "servicios": [
+            "Parking vigilado",
+            "WiFi",
+            "Restaurante",
+            "Piscina",
+            "Duchas",
+            "TV"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "valoracion": 4.0
+        }
+      ],
+      "precioMin": 38,
+      "precioMax": 38,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hotel": 1
+      }
+    },
+    {
+      "slug": "barcelona",
+      "provincia": "Barcelona",
+      "numHoteles": 3,
+      "items": [
+        {
+          "id": 4,
+          "nombre": "Hotel Transportista Barcelona",
+          "tipo": "hotel",
+          "estrellas": 2,
+          "lat": 41.4312,
+          "lng": 2.0912,
+          "provincia": "Barcelona",
+          "comunidad": "Cataluña",
+          "direccion": "Pol. Ind. Zona Franca",
+          "precio_desde": 55,
+          "parking_camiones": true,
+          "plazas_parking": 100,
+          "servicios": [
+            "Parking seguro",
+            "WiFi",
+            "Restaurante 24h",
+            "Duchas",
+            "TV",
+            "Gimnasio"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "valoracion": 4.3
+        },
+        {
+          "id": 43,
+          "nombre": "Descanso Mowiz Montseny",
+          "tipo": "hostal",
+          "lat": 41.7667,
+          "lng": 2.4167,
+          "provincia": "Barcelona",
+          "comunidad": "Cataluña",
+          "direccion": "Parking Mowiz Truck, Montseny",
+          "precio_desde": 38,
+          "parking_camiones": true,
+          "plazas_parking": 117,
+          "servicios": [
+            "Parking ESPORG GOLD 117 plazas",
+            "Certificado TAPA PSR1",
+            "Vigilancia 24h",
+            "WiFi",
+            "Restaurante",
+            "Duchas",
+            "Lavandería",
+            "Tienda",
+            "Control acceso",
+            "Videovigilancia"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "web": "https://www.mowiztruck.com/",
+          "valoracion": 4.3
+        },
+        {
+          "id": 44,
+          "nombre": "Alojamiento Mowiz Porta Barcelona",
+          "tipo": "hostal",
+          "lat": 41.4833,
+          "lng": 2.0833,
+          "provincia": "Barcelona",
+          "comunidad": "Cataluña",
+          "direccion": "Parking Mowiz Truck, Zona Portuaria Barcelona",
+          "precio_desde": 45,
+          "parking_camiones": true,
+          "plazas_parking": 50,
+          "servicios": [
+            "Parking ESPORG GOLD 50 plazas",
+            "Certificado TAPA PSR1",
+            "Vigilancia 24h",
+            "WiFi",
+            "Restaurante",
+            "Duchas",
+            "Alojamiento disponible",
+            "Tienda",
+            "Control acceso",
+            "Videovigilancia",
+            "Cerca Puerto Barcelona"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "web": "https://www.mowiztruck.com/",
+          "valoracion": 4.2
+        }
+      ],
+      "precioMin": 38,
+      "precioMax": 55,
+      "numParkingCamiones": 3,
+      "numConTelefono": 0,
+      "tipos": {
+        "hotel": 1,
+        "hostal": 2
+      }
+    },
+    {
+      "slug": "burgos",
+      "provincia": "Burgos",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 20,
+          "nombre": "Hostal Ruta Norte Burgos",
+          "tipo": "hostal",
+          "lat": 42.3412,
+          "lng": -3.6978,
+          "provincia": "Burgos",
+          "comunidad": "Castilla y León",
+          "direccion": "Ctra. N-I km 240",
+          "precio_desde": 32,
+          "parking_camiones": true,
+          "plazas_parking": 40,
+          "servicios": [
+            "Parking gratuito",
+            "WiFi",
+            "Bar",
+            "Duchas"
+          ],
+          "horario_recepcion": "6:00-24:00",
+          "telefono": "",
+          "valoracion": 3.8
+        }
+      ],
+      "precioMin": 32,
+      "precioMax": 32,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hostal": 1
+      }
+    },
+    {
+      "slug": "cantabria",
+      "provincia": "Cantabria",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 32,
+          "nombre": "Hotel Bahía Santander",
+          "tipo": "hotel",
+          "estrellas": 2,
+          "lat": 43.4567,
+          "lng": -3.8089,
+          "provincia": "Cantabria",
+          "comunidad": "Cantabria",
+          "direccion": "Zona Industrial Raos",
+          "precio_desde": 45,
+          "parking_camiones": true,
+          "plazas_parking": 50,
+          "servicios": [
+            "Parking vigilado",
+            "WiFi",
+            "Restaurante",
+            "Duchas",
+            "TV"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "valoracion": 4.1
+        }
+      ],
+      "precioMin": 45,
+      "precioMax": 45,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hotel": 1
+      }
+    },
+    {
+      "slug": "castellon",
+      "provincia": "Castellón",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 9,
+          "nombre": "Hotel Castellón Transporte",
+          "tipo": "hotel",
+          "estrellas": 2,
+          "lat": 39.9856,
+          "lng": -0.0412,
+          "provincia": "Castellón",
+          "comunidad": "Comunidad Valenciana",
+          "direccion": "Pol. Ind. El Serrallo",
+          "precio_desde": 40,
+          "parking_camiones": true,
+          "plazas_parking": 60,
+          "servicios": [
+            "Parking vigilado",
+            "WiFi",
+            "Restaurante",
+            "Duchas",
+            "TV"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "valoracion": 4.0
+        }
+      ],
+      "precioMin": 40,
+      "precioMax": 40,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hotel": 1
+      }
+    },
+    {
+      "slug": "ciudad-real",
+      "provincia": "Ciudad Real",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 24,
+          "nombre": "Hostal Quijote Ciudad Real",
+          "tipo": "hostal",
+          "lat": 38.9845,
+          "lng": -3.9278,
+          "provincia": "Ciudad Real",
+          "comunidad": "Castilla-La Mancha",
+          "direccion": "Ctra. N-420",
+          "precio_desde": 28,
+          "parking_camiones": true,
+          "plazas_parking": 30,
+          "servicios": [
+            "Parking gratuito",
+            "WiFi",
+            "Desayuno",
+            "Duchas"
+          ],
+          "horario_recepcion": "7:00-23:00",
+          "telefono": "",
+          "valoracion": 3.6
+        }
+      ],
+      "precioMin": 28,
+      "precioMax": 28,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hostal": 1
+      }
+    },
+    {
+      "slug": "cuenca",
+      "provincia": "Cuenca",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 34,
+          "nombre": "Pensión El Descanso",
+          "tipo": "pension",
+          "lat": 39.5612,
+          "lng": -1.8923,
+          "provincia": "Cuenca",
+          "comunidad": "Castilla-La Mancha",
+          "direccion": "Motilla del Palancar",
+          "precio_desde": 25,
+          "parking_camiones": true,
+          "plazas_parking": 20,
+          "servicios": [
+            "Parking gratuito",
+            "WiFi",
+            "Desayuno"
+          ],
+          "horario_recepcion": "8:00-22:00",
+          "telefono": "",
+          "valoracion": 3.5
+        }
+      ],
+      "precioMin": 25,
+      "precioMax": 25,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "pension": 1
+      }
+    },
+    {
+      "slug": "caceres",
+      "provincia": "Cáceres",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 29,
+          "nombre": "Hostal Cáceres Ruta",
+          "tipo": "hostal",
+          "lat": 39.4712,
+          "lng": -6.3678,
+          "provincia": "Cáceres",
+          "comunidad": "Extremadura",
+          "direccion": "Ctra. N-630",
+          "precio_desde": 28,
+          "parking_camiones": true,
+          "plazas_parking": 35,
+          "servicios": [
+            "Parking gratuito",
+            "WiFi",
+            "Desayuno",
+            "Duchas"
+          ],
+          "horario_recepcion": "6:00-23:00",
+          "telefono": "",
+          "valoracion": 3.6
+        }
+      ],
+      "precioMin": 28,
+      "precioMax": 28,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hostal": 1
+      }
+    },
+    {
+      "slug": "cadiz",
+      "provincia": "Cádiz",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 11,
+          "nombre": "Motel Algeciras Puerto",
+          "tipo": "motel",
+          "lat": 36.1256,
+          "lng": -5.4634,
+          "provincia": "Cádiz",
+          "comunidad": "Andalucía",
+          "direccion": "Zona Portuaria Algeciras",
+          "precio_desde": 38,
+          "parking_camiones": true,
+          "plazas_parking": 100,
+          "servicios": [
+            "Parking seguro",
+            "WiFi",
+            "Restaurante 24h",
+            "Duchas",
+            "Tienda"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "valoracion": 3.9
+        }
+      ],
+      "precioMin": 38,
+      "precioMax": 38,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "motel": 1
+      }
+    },
+    {
+      "slug": "cordoba",
+      "provincia": "Córdoba",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 12,
+          "nombre": "Hotel Camino de Córdoba",
+          "tipo": "hotel",
+          "estrellas": 2,
+          "lat": 37.8834,
+          "lng": -4.7712,
+          "provincia": "Córdoba",
+          "comunidad": "Andalucía",
+          "direccion": "Ctra. N-IV km 400",
+          "precio_desde": 40,
+          "parking_camiones": true,
+          "plazas_parking": 45,
+          "servicios": [
+            "Parking gratuito",
+            "WiFi",
+            "Restaurante",
+            "Duchas",
+            "TV"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "valoracion": 4.0
+        }
+      ],
+      "precioMin": 40,
+      "precioMax": 40,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hotel": 1
+      }
+    },
+    {
+      "slug": "girona",
+      "provincia": "Girona",
+      "numHoteles": 3,
+      "items": [
+        {
+          "id": 5,
+          "nombre": "Motel La Jonquera",
+          "tipo": "motel",
+          "lat": 42.4034,
+          "lng": 2.8812,
+          "provincia": "Girona",
+          "comunidad": "Cataluña",
+          "direccion": "Ctra. N-II km 775",
+          "precio_desde": 38,
+          "parking_camiones": true,
+          "plazas_parking": 120,
+          "servicios": [
+            "Parking amplio",
+            "WiFi",
+            "Restaurante",
+            "Duchas",
+            "Tienda 24h"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "valoracion": 3.9
+        },
+        {
+          "id": 37,
+          "nombre": "Hotel OnTurtle La Jonquera",
+          "tipo": "hotel",
+          "estrellas": 2,
+          "lat": 42.4035,
+          "lng": 2.881,
+          "provincia": "Girona",
+          "comunidad": "Cataluña",
+          "direccion": "Área de Servicio OnTurtle, La Jonquera",
+          "precio_desde": 45,
+          "parking_camiones": true,
+          "plazas_parking": 50,
+          "servicios": [
+            "Parking ESPORG certificado",
+            "Parking vigilado 24h",
+            "WiFi",
+            "Restaurante",
+            "Supermercado Consum",
+            "Duchas",
+            "Lavandería",
+            "Tienda",
+            "Cajero automático",
+            "Descarga tacógrafo",
+            "Gasolinera calidad SGS",
+            "45 cámaras seguridad",
+            "Salón de juegos",
+            "Control repostaje matrícula"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "+34 972 554 488",
+          "web": "https://onturtle.eu/estacion-servicio-la-jonquera/",
+          "valoracion": 4.3
+        },
+        {
+          "id": 38,
+          "nombre": "Hostal Área Andamur La Junquera",
+          "tipo": "hostal",
+          "lat": 42.4029,
+          "lng": 2.8783,
+          "provincia": "Girona",
+          "comunidad": "Cataluña",
+          "direccion": "AP7 Salida 2, C/ Bassegoda 4, 17700 La Junquera",
+          "precio_desde": 38,
+          "parking_camiones": true,
+          "plazas_parking": 105,
+          "servicios": [
+            "Parking seguridad 24h",
+            "Control acceso matrícula",
+            "Vigilante seguridad",
+            "Valla 3m perimetral",
+            "WiFi",
+            "Restaurante",
+            "Cafetería",
+            "Gimnasio gratuito",
+            "Supermercado Consum",
+            "Duchas 6:30-22:30",
+            "Lavandería 24h",
+            "Tienda 24h",
+            "Terraza"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "+34 972 554 488",
+          "web": "https://www.andamur.com/areas-de-servicio/la-junquera/",
+          "valoracion": 4.2
+        }
+      ],
+      "precioMin": 38,
+      "precioMax": 45,
+      "numParkingCamiones": 3,
+      "numConTelefono": 2,
+      "tipos": {
+        "motel": 1,
+        "hotel": 1,
+        "hostal": 1
+      }
+    },
+    {
+      "slug": "guipuzcoa",
+      "provincia": "Guipúzcoa",
+      "numHoteles": 3,
+      "items": [
+        {
+          "id": 14,
+          "nombre": "Hotel Frontera Irún",
+          "tipo": "hotel",
+          "estrellas": 3,
+          "lat": 43.3378,
+          "lng": -1.7912,
+          "provincia": "Guipúzcoa",
+          "comunidad": "País Vasco",
+          "direccion": "Zona Fronteriza",
+          "precio_desde": 58,
+          "parking_camiones": true,
+          "plazas_parking": 200,
+          "servicios": [
+            "Parking seguro 24h",
+            "WiFi",
+            "Restaurante",
+            "Duchas",
+            "Lavandería",
+            "TV",
+            "Cambio divisas"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "web": "www.hotelfronterairun.es",
+          "valoracion": 4.5
+        },
+        {
+          "id": 41,
+          "nombre": "Centro Descanso Mowiz Astigarraga",
+          "tipo": "hostal",
+          "lat": 43.2833,
+          "lng": -1.95,
+          "provincia": "Guipúzcoa",
+          "comunidad": "País Vasco",
+          "direccion": "Parking Mowiz Truck, Astigarraga",
+          "precio_desde": 42,
+          "parking_camiones": true,
+          "plazas_parking": 341,
+          "servicios": [
+            "Parking ESPORG GOLD 341 plazas",
+            "Certificado TAPA PSR1",
+            "European Truck Parking Year 2023",
+            "Vigilancia 24h",
+            "WiFi",
+            "Restaurante",
+            "Duchas modernas",
+            "Lavandería",
+            "Tienda",
+            "Control acceso biométrico",
+            "Videovigilancia HD"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "+34 ",
+          "web": "https://www.mowiztruck.com/",
+          "valoracion": 4.6
+        },
+        {
+          "id": 42,
+          "nombre": "Zona Descanso Mowiz Oiartzun",
+          "tipo": "hostal",
+          "lat": 43.2897,
+          "lng": -1.8289,
+          "provincia": "Guipúzcoa",
+          "comunidad": "País Vasco",
+          "direccion": "Parking Mowiz Truck, Oiartzun",
+          "precio_desde": 40,
+          "parking_camiones": true,
+          "plazas_parking": 189,
+          "servicios": [
+            "Parking ESPORG GOLD 189 plazas",
+            "Certificado TAPA PSR1",
+            "Vigilancia 24h",
+            "WiFi",
+            "Restaurante",
+            "Duchas",
+            "Lavandería",
+            "Tienda",
+            "Control acceso",
+            "Videovigilancia"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "+34 ",
+          "web": "https://www.mowiztruck.com/",
+          "valoracion": 4.4
+        }
+      ],
+      "precioMin": 40,
+      "precioMax": 58,
+      "numParkingCamiones": 3,
+      "numConTelefono": 2,
+      "tipos": {
+        "hotel": 1,
+        "hostal": 2
+      }
+    },
+    {
+      "slug": "huesca",
+      "provincia": "Huesca",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 18,
+          "nombre": "Hostal El Pirineo Huesca",
+          "tipo": "hostal",
+          "lat": 42.1367,
+          "lng": -0.4123,
+          "provincia": "Huesca",
+          "comunidad": "Aragón",
+          "direccion": "Ctra. N-240",
+          "precio_desde": 30,
+          "parking_camiones": true,
+          "plazas_parking": 25,
+          "servicios": [
+            "Parking gratuito",
+            "WiFi",
+            "Desayuno",
+            "Duchas"
+          ],
+          "horario_recepcion": "7:00-23:00",
+          "telefono": "",
+          "valoracion": 3.6
+        }
+      ],
+      "precioMin": 30,
+      "precioMax": 30,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hostal": 1
+      }
+    },
+    {
+      "slug": "jaen",
+      "provincia": "Jaén",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 40,
+          "nombre": "Descanso Área Andamur Guarromán",
+          "tipo": "hostal",
+          "lat": 38.1429,
+          "lng": -3.7232,
+          "provincia": "Jaén",
+          "comunidad": "Andalucía",
+          "direccion": "Aut. A4 Salida 288, Pol. Ind. del Guadiel, 23210 Guarromán",
+          "precio_desde": 35,
+          "parking_camiones": true,
+          "plazas_parking": 67,
+          "servicios": [
+            "Parking seguridad 67 plazas",
+            "Control acceso matrícula",
+            "Vigilante nocturno",
+            "Valla 2m perimetral",
+            "Videovigilancia 24/7",
+            "WiFi",
+            "Restaurante",
+            "Cafetería",
+            "Duchas 24h",
+            "Tienda 24h",
+            "Máquinas vending",
+            "Cargador eléctrico",
+            "GNL/GNC disponible"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "+34 953 678 123",
+          "web": "https://www.andamur.com/areas-de-servicio/guarroman/",
+          "valoracion": 4.0
+        }
+      ],
+      "precioMin": 35,
+      "precioMax": 35,
+      "numParkingCamiones": 1,
+      "numConTelefono": 1,
+      "tipos": {
+        "hostal": 1
+      }
+    },
+    {
+      "slug": "la-rioja",
+      "provincia": "La Rioja",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 31,
+          "nombre": "Hostal Rioja Logroño",
+          "tipo": "hostal",
+          "lat": 42.4589,
+          "lng": -2.4512,
+          "provincia": "La Rioja",
+          "comunidad": "La Rioja",
+          "direccion": "Ctra. N-232",
+          "precio_desde": 32,
+          "parking_camiones": true,
+          "plazas_parking": 40,
+          "servicios": [
+            "Parking gratuito",
+            "WiFi",
+            "Desayuno",
+            "Duchas",
+            "Bodega cercana"
+          ],
+          "horario_recepcion": "6:00-24:00",
+          "telefono": "",
+          "valoracion": 3.9
+        }
+      ],
+      "precioMin": 32,
+      "precioMax": 32,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hostal": 1
+      }
+    },
+    {
+      "slug": "leon",
+      "provincia": "León",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 21,
+          "nombre": "Hotel León Transportes",
+          "tipo": "hotel",
+          "estrellas": 2,
+          "lat": 42.5934,
+          "lng": -5.5712,
+          "provincia": "León",
+          "comunidad": "Castilla y León",
+          "direccion": "Pol. Ind. Onzonilla",
+          "precio_desde": 42,
+          "parking_camiones": true,
+          "plazas_parking": 65,
+          "servicios": [
+            "Parking vigilado",
+            "WiFi",
+            "Restaurante",
+            "Duchas",
+            "TV",
+            "Lavandería"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "valoracion": 4.1
+        }
+      ],
+      "precioMin": 42,
+      "precioMax": 42,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hotel": 1
+      }
+    },
+    {
+      "slug": "lleida",
+      "provincia": "Lleida",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 6,
+          "nombre": "Hostal Lleida Camionero",
+          "tipo": "hostal",
+          "lat": 41.6234,
+          "lng": 0.6312,
+          "provincia": "Lleida",
+          "comunidad": "Cataluña",
+          "direccion": "Av. de Cataluña 234",
+          "precio_desde": 30,
+          "parking_camiones": true,
+          "plazas_parking": 40,
+          "servicios": [
+            "Parking gratuito",
+            "WiFi",
+            "Desayuno",
+            "Duchas"
+          ],
+          "horario_recepcion": "6:00-24:00",
+          "telefono": "",
+          "valoracion": 3.7
+        }
+      ],
+      "precioMin": 30,
+      "precioMax": 30,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hostal": 1
+      }
+    },
+    {
+      "slug": "madrid",
+      "provincia": "Madrid",
+      "numHoteles": 3,
+      "items": [
+        {
+          "id": 1,
+          "nombre": "Hotel Ruta Express Madrid",
+          "tipo": "hotel",
+          "estrellas": 2,
+          "lat": 40.3256,
+          "lng": -3.6912,
+          "provincia": "Madrid",
+          "comunidad": "Madrid",
+          "direccion": "Ctra. Andalucía km 15",
+          "precio_desde": 42,
+          "parking_camiones": true,
+          "plazas_parking": 50,
+          "servicios": [
+            "Parking vigilado",
+            "WiFi",
+            "Restaurante 24h",
+            "Duchas",
+            "TV",
+            "Aire acondicionado"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "valoracion": 4.2
+        },
+        {
+          "id": 2,
+          "nombre": "Hostal El Camionero",
+          "tipo": "hostal",
+          "lat": 40.4512,
+          "lng": -3.5234,
+          "provincia": "Madrid",
+          "comunidad": "Madrid",
+          "direccion": "Av. de Aragón 156",
+          "precio_desde": 32,
+          "parking_camiones": true,
+          "plazas_parking": 30,
+          "servicios": [
+            "Parking gratuito",
+            "WiFi",
+            "Desayuno",
+            "Duchas"
+          ],
+          "horario_recepcion": "6:00-23:00",
+          "telefono": "",
+          "valoracion": 3.8
+        },
+        {
+          "id": 3,
+          "nombre": "Hotel Área Sur",
+          "tipo": "hotel",
+          "estrellas": 2,
+          "lat": 40.289,
+          "lng": -3.7123,
+          "provincia": "Madrid",
+          "comunidad": "Madrid",
+          "direccion": "Ctra. Toledo km 22",
+          "precio_desde": 45,
+          "parking_camiones": true,
+          "plazas_parking": 80,
+          "servicios": [
+            "Parking vigilado",
+            "WiFi",
+            "Restaurante",
+            "Duchas",
+            "Lavandería",
+            "TV"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "valoracion": 4.0
+        }
+      ],
+      "precioMin": 32,
+      "precioMax": 45,
+      "numParkingCamiones": 3,
+      "numConTelefono": 0,
+      "tipos": {
+        "hotel": 2,
+        "hostal": 1
+      }
+    },
+    {
+      "slug": "murcia",
+      "provincia": "Murcia",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 30,
+          "nombre": "Hotel Huerta Murcia",
+          "tipo": "hotel",
+          "estrellas": 2,
+          "lat": 37.9867,
+          "lng": -1.1312,
+          "provincia": "Murcia",
+          "comunidad": "Región de Murcia",
+          "direccion": "Pol. Ind. Oeste",
+          "precio_desde": 40,
+          "parking_camiones": true,
+          "plazas_parking": 55,
+          "servicios": [
+            "Parking vigilado",
+            "WiFi",
+            "Restaurante",
+            "Duchas",
+            "TV"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "valoracion": 4.0
+        }
+      ],
+      "precioMin": 40,
+      "precioMax": 40,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hotel": 1
+      }
+    },
+    {
+      "slug": "malaga",
+      "provincia": "Málaga",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 13,
+          "nombre": "Hostal El Trucador Málaga",
+          "tipo": "hostal",
+          "lat": 36.7112,
+          "lng": -4.4256,
+          "provincia": "Málaga",
+          "comunidad": "Andalucía",
+          "direccion": "Pol. Ind. Guadalhorce",
+          "precio_desde": 32,
+          "parking_camiones": true,
+          "plazas_parking": 40,
+          "servicios": [
+            "Parking gratuito",
+            "WiFi",
+            "Desayuno",
+            "Duchas"
+          ],
+          "horario_recepcion": "6:00-23:00",
+          "telefono": "",
+          "valoracion": 3.7
+        }
+      ],
+      "precioMin": 32,
+      "precioMax": 32,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hostal": 1
+      }
+    },
+    {
+      "slug": "navarra",
+      "provincia": "Navarra",
+      "numHoteles": 2,
+      "items": [
+        {
+          "id": 16,
+          "nombre": "Hotel Ruta Pamplona",
+          "tipo": "hotel",
+          "estrellas": 2,
+          "lat": 42.8067,
+          "lng": -1.6512,
+          "provincia": "Navarra",
+          "comunidad": "Navarra",
+          "direccion": "Ctra. Zaragoza km 8",
+          "precio_desde": 45,
+          "parking_camiones": true,
+          "plazas_parking": 60,
+          "servicios": [
+            "Parking vigilado",
+            "WiFi",
+            "Restaurante",
+            "Duchas",
+            "TV"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "valoracion": 4.1
+        },
+        {
+          "id": 39,
+          "nombre": "Alojamiento Ciudad Transporte Pamplona",
+          "tipo": "hostal",
+          "lat": 42.7326,
+          "lng": -1.6133,
+          "provincia": "Navarra",
+          "comunidad": "Navarra",
+          "direccion": "A-15 Salida Imarcoain km 77/78, Ciudad del Transporte, 31119 Imárcoain",
+          "precio_desde": 40,
+          "parking_camiones": true,
+          "plazas_parking": 462,
+          "servicios": [
+            "Parking seguridad 462 plazas",
+            "Control acceso matrícula",
+            "Vigilante seguridad 24/7",
+            "Videovigilancia",
+            "WiFi",
+            "Restaurante",
+            "Cafetería",
+            "Duchas",
+            "Lavandería 24h",
+            "Tienda 24h",
+            "Terraza",
+            "Cargador eléctrico"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "+34 948 314 803",
+          "web": "https://www.andamur.com/areas-de-servicio/navarra/",
+          "valoracion": 4.1
+        }
+      ],
+      "precioMin": 40,
+      "precioMax": 45,
+      "numParkingCamiones": 2,
+      "numConTelefono": 1,
+      "tipos": {
+        "hotel": 1,
+        "hostal": 1
+      }
+    },
+    {
+      "slug": "pontevedra",
+      "provincia": "Pontevedra",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 26,
+          "nombre": "Hotel Porto Vigo",
+          "tipo": "hotel",
+          "estrellas": 2,
+          "lat": 42.2378,
+          "lng": -8.7234,
+          "provincia": "Pontevedra",
+          "comunidad": "Galicia",
+          "direccion": "Zona Portuaria Vigo",
+          "precio_desde": 45,
+          "parking_camiones": true,
+          "plazas_parking": 70,
+          "servicios": [
+            "Parking vigilado",
+            "WiFi",
+            "Restaurante",
+            "Duchas",
+            "TV",
+            "Mar cercano"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "valoracion": 4.0
+        }
+      ],
+      "precioMin": 45,
+      "precioMax": 45,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hotel": 1
+      }
+    },
+    {
+      "slug": "salamanca",
+      "provincia": "Salamanca",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 22,
+          "nombre": "Hostal Salamanca Ruta",
+          "tipo": "hostal",
+          "lat": 40.9067,
+          "lng": -5.6678,
+          "provincia": "Salamanca",
+          "comunidad": "Castilla y León",
+          "direccion": "Ctra. de Madrid km 210",
+          "precio_desde": 30,
+          "parking_camiones": true,
+          "plazas_parking": 35,
+          "servicios": [
+            "Parking gratuito",
+            "WiFi",
+            "Desayuno",
+            "Duchas"
+          ],
+          "horario_recepcion": "6:00-23:00",
+          "telefono": "",
+          "valoracion": 3.7
+        }
+      ],
+      "precioMin": 30,
+      "precioMax": 30,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hostal": 1
+      }
+    },
+    {
+      "slug": "sevilla",
+      "provincia": "Sevilla",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 10,
+          "nombre": "Hotel Ruta del Sur Sevilla",
+          "tipo": "hotel",
+          "estrellas": 2,
+          "lat": 37.4012,
+          "lng": -5.9234,
+          "provincia": "Sevilla",
+          "comunidad": "Andalucía",
+          "direccion": "Ctra. A-4 km 530",
+          "precio_desde": 42,
+          "parking_camiones": true,
+          "plazas_parking": 70,
+          "servicios": [
+            "Parking vigilado",
+            "WiFi",
+            "Restaurante",
+            "Piscina",
+            "Duchas",
+            "TV"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "valoracion": 4.1
+        }
+      ],
+      "precioMin": 42,
+      "precioMax": 42,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hotel": 1
+      }
+    },
+    {
+      "slug": "toledo",
+      "provincia": "Toledo",
+      "numHoteles": 2,
+      "items": [
+        {
+          "id": 23,
+          "nombre": "Hotel Mancha Toledo",
+          "tipo": "hotel",
+          "estrellas": 2,
+          "lat": 39.8567,
+          "lng": -4.0234,
+          "provincia": "Toledo",
+          "comunidad": "Castilla-La Mancha",
+          "direccion": "Ctra. N-401",
+          "precio_desde": 38,
+          "parking_camiones": true,
+          "plazas_parking": 50,
+          "servicios": [
+            "Parking vigilado",
+            "WiFi",
+            "Restaurante",
+            "Duchas",
+            "TV"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "valoracion": 3.9
+        },
+        {
+          "id": 35,
+          "nombre": "Motel Meseta Central",
+          "tipo": "motel",
+          "lat": 39.4678,
+          "lng": -3.5189,
+          "provincia": "Toledo",
+          "comunidad": "Castilla-La Mancha",
+          "direccion": "Madridejos A-4",
+          "precio_desde": 35,
+          "parking_camiones": true,
+          "plazas_parking": 60,
+          "servicios": [
+            "Parking amplio",
+            "WiFi",
+            "Restaurante 24h",
+            "Duchas",
+            "Tienda"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "valoracion": 3.8
+        }
+      ],
+      "precioMin": 35,
+      "precioMax": 38,
+      "numParkingCamiones": 2,
+      "numConTelefono": 0,
+      "tipos": {
+        "hotel": 1,
+        "motel": 1
+      }
+    },
+    {
+      "slug": "valencia",
+      "provincia": "Valencia",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 7,
+          "nombre": "Hotel Puerto Valencia",
+          "tipo": "hotel",
+          "estrellas": 3,
+          "lat": 39.4612,
+          "lng": -0.3456,
+          "provincia": "Valencia",
+          "comunidad": "Comunidad Valenciana",
+          "direccion": "Zona Portuaria",
+          "precio_desde": 55,
+          "parking_camiones": true,
+          "plazas_parking": 150,
+          "servicios": [
+            "Parking vigilado 24h",
+            "WiFi",
+            "Restaurante",
+            "Piscina",
+            "Gimnasio",
+            "Duchas"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "web": "www.hotelpuertovalencia.es",
+          "valoracion": 4.4
+        }
+      ],
+      "precioMin": 55,
+      "precioMax": 55,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hotel": 1
+      }
+    },
+    {
+      "slug": "valladolid",
+      "provincia": "Valladolid",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 19,
+          "nombre": "Hotel Meseta Valladolid",
+          "tipo": "hotel",
+          "estrellas": 2,
+          "lat": 41.6489,
+          "lng": -4.7289,
+          "provincia": "Valladolid",
+          "comunidad": "Castilla y León",
+          "direccion": "Ctra. N-601 km 180",
+          "precio_desde": 40,
+          "parking_camiones": true,
+          "plazas_parking": 55,
+          "servicios": [
+            "Parking vigilado",
+            "WiFi",
+            "Restaurante",
+            "Duchas",
+            "TV"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "valoracion": 4.0
+        }
+      ],
+      "precioMin": 40,
+      "precioMax": 40,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hotel": 1
+      }
+    },
+    {
+      "slug": "zaragoza",
+      "provincia": "Zaragoza",
+      "numHoteles": 1,
+      "items": [
+        {
+          "id": 17,
+          "nombre": "Hotel Plaza Zaragoza",
+          "tipo": "hotel",
+          "estrellas": 2,
+          "lat": 41.6478,
+          "lng": -0.8834,
+          "provincia": "Zaragoza",
+          "comunidad": "Aragón",
+          "direccion": "Ctra. Madrid km 300",
+          "precio_desde": 42,
+          "parking_camiones": true,
+          "plazas_parking": 80,
+          "servicios": [
+            "Parking vigilado",
+            "WiFi",
+            "Restaurante 24h",
+            "Duchas",
+            "TV",
+            "Tienda"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "",
+          "valoracion": 4.2
+        }
+      ],
+      "precioMin": 42,
+      "precioMax": 42,
+      "numParkingCamiones": 1,
+      "numConTelefono": 0,
+      "tipos": {
+        "hotel": 1
+      }
+    },
+    {
+      "slug": "alava",
+      "provincia": "Álava",
+      "numHoteles": 2,
+      "items": [
+        {
+          "id": 15,
+          "nombre": "Hostal Vitoria Centro",
+          "tipo": "hostal",
+          "lat": 42.8478,
+          "lng": -2.6789,
+          "provincia": "Álava",
+          "comunidad": "País Vasco",
+          "direccion": "Pol. Ind. Gamarra",
+          "precio_desde": 35,
+          "parking_camiones": true,
+          "plazas_parking": 50,
+          "servicios": [
+            "Parking vigilado",
+            "WiFi",
+            "Bar",
+            "Duchas"
+          ],
+          "horario_recepcion": "6:00-24:00",
+          "telefono": "",
+          "valoracion": 3.9
+        },
+        {
+          "id": 36,
+          "nombre": "Hotel Andamur San Román",
+          "tipo": "hotel",
+          "estrellas": 3,
+          "lat": 42.8639,
+          "lng": -2.3206,
+          "provincia": "Álava",
+          "comunidad": "País Vasco",
+          "direccion": "Autovía A-1, Salida 385, Pol. Ind. Okiturri, 01207 San Román de San Millán",
+          "precio_desde": 55,
+          "parking_camiones": true,
+          "plazas_parking": 66,
+          "servicios": [
+            "Parking vigilado 24h",
+            "WiFi gratuito",
+            "Restaurante",
+            "Bar",
+            "Aire acondicionado",
+            "TV pantalla plana",
+            "Baño privado",
+            "Escritorio",
+            "Jardín",
+            "Recepción 24h",
+            "Cajero automático",
+            "Gasolinera Andamur",
+            "Lavandería 24h",
+            "Gimnasio",
+            "Duchas",
+            "Tienda 24h",
+            "Alquiler bicicletas gratis",
+            "Pet friendly",
+            "Consigna equipajes"
+          ],
+          "horario_recepcion": "24h",
+          "telefono": "+34 945 030 502",
+          "web": "https://www.andamurhotel.com/",
+          "valoracion": 4.5
+        }
+      ],
+      "precioMin": 35,
+      "precioMax": 55,
+      "numParkingCamiones": 2,
+      "numConTelefono": 1,
+      "tipos": {
+        "hostal": 1,
+        "hotel": 1
+      }
+    }
+  ]
+}

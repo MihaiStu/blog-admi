@@ -1,80 +1,155 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import datos from '../../data/hoteles-provincias.json';
+
+const provincias = datos.provincias;
+const total = datos.totalHoteles;
+
+const title = `Hoteles para camioneros en España — ${total} alojamientos por provincia | AdmiLogistic`;
+const description = `Mapa y listado de ${total} hoteles, hostales y pensiones para camioneros en España, organizados por provincia.`;
+
+const itemList = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Hoteles para camioneros en España",
+  description,
+  numberOfItems: total,
+  itemListElement: provincias.map((p, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: `${p.provincia} — ${p.numHoteles} alojamientos`,
+    url: `https://admilogistic.es/bases-datos/hoteles/${p.slug}/`,
+  })),
+};
 ---
 
-<BaseLayout pageBg="bases" title="Base de Datos - Hoteles | AdmiLogistic" description="Mapa y listado de hoteles para transportistas con parking para camiones.">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-  <div class="db-page">
-    <header class="db-header">
-      <h1>Hoteles para transportistas</h1>
-      <p>Alojamientos con parking para camiones. Hoteles, hostales y moteles en rutas nacionales. Datos orientativos.</p>
+<BaseLayout pageBg="bases" title={title} description={description}>
+  <Fragment slot="head">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  </Fragment>
+  <div class="pk-idx">
+    <header class="pk-idx-header">
+      <h1>Hoteles y alojamientos para camioneros</h1>
+      <p>
+        <strong>{total} alojamientos</strong> especializados en profesionales del transporte en toda España.
+        La mayoría cuenta con parking para camiones. Datos de RoadMaster.
+      </p>
     </header>
-    <div class="db-map-wrap">
-      <div id="map-hoteles" class="db-map"></div>
+
+    <div class="pk-idx-stats">
+      <div class="pk-idx-stat">
+        <span class="v">{total}</span>
+        <span class="l">Alojamientos totales</span>
+      </div>
+      <div class="pk-idx-stat">
+        <span class="v">{provincias.reduce((a, p) => a + p.numParkingCamiones, 0)}</span>
+        <span class="l">Con parking camiones</span>
+      </div>
+      <div class="pk-idx-stat">
+        <span class="v">{provincias.reduce((a, p) => a + p.numConTelefono, 0)}</span>
+        <span class="l">Con teléfono</span>
+      </div>
+      <div class="pk-idx-stat">
+        <span class="v">{provincias.length}</span>
+        <span class="l">Provincias</span>
+      </div>
     </div>
-    <div class="db-list-wrap">
-      <h2>Listado</h2>
-      <div id="list-hoteles" class="db-list"></div>
+
+    <h2>Elige tu provincia</h2>
+    <div class="pk-idx-grid">
+      {provincias.map((p) => (
+        <a href={`/bases-datos/hoteles/${p.slug}/`} class="pk-idx-card">
+          <span class="pk-idx-prov">{p.provincia}</span>
+          <span class="pk-idx-meta">
+            {p.numHoteles} {p.numHoteles === 1 ? 'alojamiento' : 'alojamientos'}
+            {p.precioMin > 0 && ` · desde ${p.precioMin} €`}
+          </span>
+          {p.numParkingCamiones === p.numHoteles && (
+            <span class="pk-idx-badge">Parking</span>
+          )}
+        </a>
+      ))}
     </div>
-    <div class="db-cta">
-      <a href="/proyectos/roadmaster/" class="db-cta-btn">Usar hoteles en RoadMaster</a>
+
+    <p class="pk-idx-nota">
+      Datos recopilados de RoadMaster. Hoteles, hostales, moteles y pensiones con servicios para
+      profesionales del transporte. Todos cuentan con parking para camiones o zonas de aparcamiento.
+    </p>
+
+    <div class="pk-idx-cta">
+      <a href="/proyectos/roadmaster/" class="pk-idx-cta-btn">Planifica tu ruta con RoadMaster →</a>
     </div>
   </div>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
-  <script>
-    (function () {
-      const mapEl = document.getElementById('map-hoteles');
-      const listEl = document.getElementById('list-hoteles');
-      if (!mapEl) return;
-      fetch('/data/hoteles.json')
-        .then(r => r.json())
-        .then(data => {
-          if (typeof L === 'undefined') return;
-          const map = L.map('map-hoteles').setView([40.4, -3.7], 6);
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
-          const bounds = [];
-          data.forEach(p => {
-            const lat = p.lat, lng = p.lng;
-            if (lat == null || lng == null) return;
-            bounds.push([lat, lng]);
-            const name = p.nombre || '';
-            const info = [p.direccion || p.provincia, p.precio_desde != null ? 'desde ' + p.precio_desde + ' €' : ''].filter(Boolean).join(' · ');
-            L.marker([lat, lng]).addTo(map).bindPopup(`<strong>${escapeHtml(name)}</strong><br>${escapeHtml(info)}`);
-          });
-          if (bounds.length) map.fitBounds(bounds, { padding: [30, 30], maxZoom: 10 });
-          if (listEl && data.length) {
-            listEl.innerHTML = data.map(p => {
-              const info = [p.direccion || p.provincia, p.precio_desde != null ? 'desde ' + p.precio_desde + ' €' : ''].filter(Boolean).join(' · ');
-              const stars = p.estrellas ? '★'.repeat(p.estrellas) + ' ' : '';
-              return `<div class="db-list-item"><strong>${stars}${escapeHtml(p.nombre)}</strong><br><span class="db-list-meta">${escapeHtml(info)}</span></div>`;
-            }).join('');
-          }
-        })
-        .catch(() => { if (listEl) listEl.innerHTML = '<p>No se pudieron cargar los datos.</p>'; });
-      function escapeHtml(s) {
-        if (!s) return '';
-        const d = document.createElement('div');
-        d.textContent = s;
-        return d.innerHTML;
-      }
-    })();
-  </script>
+
+  <div class="pk-map-wrap">
+    <div id="pk-map" class="pk-map"></div>
+  </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify(itemList)} />
 </BaseLayout>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+  (function () {
+    const mapEl = document.getElementById('pk-map');
+    if (!mapEl) return;
+    fetch('/data/hoteles.json')
+      .then(r => r.json())
+      .then(data => {
+        if (typeof L === 'undefined') return;
+        const map = L.map('pk-map').setView([40.4, -3.7], 6);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© OpenStreetMap'
+        }).addTo(map);
+        const bounds = [];
+        data.forEach(h => {
+          if (h.lat == null || h.lng == null) return;
+          bounds.push([h.lat, h.lng]);
+          const info = `${h.tipo}${h.precio_desde ? ` · desde ${h.precio_desde} €` : ''}${h.parking_camiones ? ' · Parking' : ''}`;
+          L.marker([h.lat, h.lng])
+            .addTo(map)
+            .bindPopup(`<strong>${escHtml(h.nombre)}</strong><br>${escHtml(h.provincia)}<br>${escHtml(info)}`);
+        });
+        if (bounds.length) map.fitBounds(bounds, { padding: [30, 30], maxZoom: 10 });
+      })
+      .catch(() => {});
+    function escHtml(s) {
+      if (!s) return '';
+      const d = document.createElement('div');
+      d.textContent = s;
+      return d.innerHTML;
+    }
+  })();
+</script>
+
 <style>
-  .db-page { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
-  .db-header { text-align: center; margin-bottom: 1.5rem; }
-  .db-header h1 { font-size: clamp(1.75rem, 3vw, 2.25rem); color: #1a1a1a; margin-bottom: 0.5rem; }
-  .db-header p { color: #555; font-size: 1rem; line-height: 1.6; }
-  .db-map-wrap { margin-bottom: 2rem; border-radius: 16px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.08); }
-  .db-map { height: 420px; background: #e5e7eb; }
-  .db-list-wrap h2 { font-size: 1.25rem; margin-bottom: 1rem; color: #1a1a1a; }
-  .db-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
-  .db-list-item { padding: 1rem; background: rgba(255,255,255,0.9); border-radius: 10px; border-left: 4px solid #8b5cf6; font-size: 0.9375rem; }
-  .db-list-item strong { display: block; margin-bottom: 0.25rem; color: #0f172a; }
-  .db-list-meta { color: #64748b; }
-  .db-cta { text-align: center; margin-top: 2rem; }
-  .db-cta-btn { display: inline-block; padding: 0.75rem 1.75rem; background: #8b5cf6; color: #fff; font-weight: 600; text-decoration: none; border-radius: 10px; transition: background 0.2s; }
-  .db-cta-btn:hover { background: #7c3aed; }
-  @media (max-width: 768px) { .db-map { height: 320px; } .db-list { grid-template-columns: 1fr; } }
+  .pk-idx { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem 1rem; }
+  .pk-idx-header { text-align: center; margin-bottom: 1.5rem; }
+  .pk-idx-header h1 { font-size: clamp(1.75rem, 3vw, 2.4rem); color: #fff; margin-bottom: 0.6rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
+  .pk-idx-header p { color: rgba(255,255,255,0.9); font-size: 1.05rem; line-height: 1.6; max-width: 780px; margin: 0 auto; }
+  .pk-idx-header strong { color: #fff; }
+
+  .pk-idx-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 1.75rem auto; max-width: 720px; }
+  .pk-idx-stat { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 12px; padding: 1rem; text-align: center; }
+  .pk-idx-stat .v { display: block; font-size: 1.3rem; font-weight: 700; color: #fff; }
+  .pk-idx-stat .l { display: block; font-size: 0.78rem; color: rgba(255,255,255,0.72); margin-top: 0.3rem; }
+
+  .pk-idx h2 { color: #fff; font-size: 1.35rem; margin: 1.5rem 0 1rem; text-align: center; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
+
+  .pk-idx-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.9rem; }
+  .pk-idx-card { position: relative; display: flex; flex-direction: column; gap: 0.25rem; padding: 1rem 1.1rem; background: rgba(15,23,42,0.55); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.15); border-left: 4px solid #8b5cf6; border-radius: 12px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s, background 0.2s; }
+  .pk-idx-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,0.3); background: rgba(15,23,42,0.7); }
+  .pk-idx-prov { font-weight: 700; color: #ffffff; font-size: 1.05rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+  .pk-idx-meta { color: rgba(255,255,255,0.75); font-size: 0.8rem; }
+  .pk-idx-badge { position: absolute; top: 0.5rem; right: 0.5rem; font-size: 0.65rem; background: #8b5cf6; color: #fff; padding: 0.15rem 0.5rem; border-radius: 999px; font-weight: 600; }
+
+  .pk-idx-nota { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin-top: 1.25rem; text-align: center; line-height: 1.5; }
+  .pk-idx-nota a { color: #60a5fa; text-decoration: underline; }
+  .pk-idx-cta { text-align: center; margin-top: 1.5rem; }
+  .pk-idx-cta-btn { display: inline-block; padding: 0.8rem 1.9rem; background: #8b5cf6; color: #fff; font-weight: 700; text-decoration: none; border-radius: 10px; transition: background 0.2s; }
+  .pk-idx-cta-btn:hover { background: #a78bfa; }
+
+  .pk-map-wrap { max-width: 1200px; margin: 2rem auto; padding: 0 1rem 3rem; }
+  .pk-map { height: 420px; border-radius: 16px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.08); background: #e5e7eb; }
+  @media (max-width: 768px) { .pk-idx-stats { grid-template-columns: repeat(2, 1fr); } .pk-map { height: 320px; } }
 </style>

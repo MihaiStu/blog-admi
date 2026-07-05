@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import datos from '../../../data/hoteles-provincias.json';
+
+export function getStaticPaths() {
+  return datos.provincias.map((p) => ({
+    params: { provincia: p.slug },
+    props: { p },
+  }));
+}
+
+const { p } = Astro.props;
+
+const tiposTexto = Object.entries(p.tipos || {}).map(([tipo, count]) => `${count} ${tipo}${count > 1 ? 's' : ''}`).join(', ');
+
+const title = `Hoteles para camioneros en ${p.provincia} — ${p.numHoteles} alojamientos | AdmiLogistic`;
+const description = `Encuentra ${p.numHoteles} hoteles, hostales y pensiones para camioneros en ${p.provincia}.${p.precioMin > 0 ? ` Desde ${p.precioMin} €/noche.` : ''} ${p.numParkingCamiones > 0 ? 'Con parking para camiones.' : ''}`;
+
+const itemList = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: `Hoteles para camioneros en ${p.provincia}`,
+  description,
+  numberOfItems: p.numHoteles,
+  itemListElement: p.items.slice(0, 10).map((h, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: h.nombre,
+    description: [`${h.tipo}`, h.precio_desde ? `desde ${h.precio_desde} €` : null, h.parking_camiones ? 'Parking camiones' : null].filter(Boolean).join(" · "),
+  })),
+};
+---
+
+<BaseLayout pageBg="bases" title={title} description={description}>
+  <div class="pk-page">
+    <nav class="pk-breadcrumb">
+      <a href="/bases-datos/">Bases de datos</a> ·
+      <a href="/bases-datos/hoteles/">Hoteles</a> ·
+      <span>{p.provincia}</span>
+    </nav>
+
+    <header class="pk-header">
+      <h1>Hoteles para camioneros en {p.provincia}</h1>
+      <p class="pk-intro">
+        <strong>{p.numHoteles} alojamientos</strong> para profesionales del transporte
+        en la provincia de {p.provincia}.
+        {tiposTexto && ` ${tiposTexto}.`}
+        {p.precioMin > 0 && ` Precios desde ${p.precioMin} €/noche.`}
+      </p>
+    </header>
+
+    <div class="pk-stats">
+      <div class="pk-stat">
+        <span class="pk-stat-label">Alojamientos</span>
+        <span class="pk-stat-value">{p.numHoteles}</span>
+      </div>
+      <div class="pk-stat">
+        <span class="pk-stat-label">Precio desde</span>
+        <span class="pk-stat-value">{p.precioMin > 0 ? `${p.precioMin} €` : '-'}</span>
+      </div>
+      <div class="pk-stat">
+        <span class="pk-stat-label">Parking camiones</span>
+        <span class="pk-stat-value">{p.numParkingCamiones}</span>
+      </div>
+      <div class="pk-stat">
+        <span class="pk-stat-label">Con teléfono</span>
+        <span class="pk-stat-value">{p.numConTelefono}</span>
+      </div>
+    </div>
+
+    <h2>Listado de alojamientos en {p.provincia}</h2>
+    <div class="pk-list">
+      {p.items.map((h) => (
+        <div class={`pk-item${h.parking_camiones ? ' pk-item--parking' : ''}`}>
+          <div class="pk-item-header">
+            <strong>{h.nombre}</strong>
+            <span class="pk-item-tipo">{h.tipo}</span>
+            {h.valoracion && (
+              <span class="pk-item-val">{'★'.repeat(Math.round(h.valoracion))}{'☆'.repeat(5 - Math.round(h.valoracion))}</span>
+            )}
+          </div>
+          <div class="pk-item-meta">
+            {h.direccion && <span>{h.direccion}</span>}
+            {h.precio_desde > 0 && <span class="pk-precio">Desde {h.precio_desde} €/noche</span>}
+            {h.horario_recepcion && <span>Recepción: {h.horario_recepcion}</span>}
+            {h.telefono && <a href={`tel:${h.telefono}`} class="pk-tel">{h.telefono}</a>}
+          </div>
+          <div class="pk-item-meta">
+            {h.parking_camiones && <span>✓ Parking camiones{h.plazas_parking ? ` (${h.plazas_parking} plazas)` : ''}</span>}
+          </div>
+          {h.servicios?.length > 0 && (
+            <div class="pk-item-servicios">
+              {h.servicios.slice(0, 6).map(s => <span class="pk-tag">{s}</span>)}
+              {h.servicios.length > 6 && <span class="pk-tag pk-tag--more">+{h.servicios.length - 6}</span>}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+
+    <p class="pk-nota">
+      Datos de RoadMaster. Alojamientos con servicios para profesionales del transporte.
+    </p>
+
+    <div class="pk-cta">
+      <h3>¿Planificas tus rutas?</h3>
+      <p>Con <strong>RoadMaster</strong> encuentra alojamientos cerca de tu ruta con parking para camiones.</p>
+      <a href="/proyectos/roadmaster/" class="pk-cta-btn">Probar RoadMaster gratis 14 días</a>
+    </div>
+  </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify(itemList)} />
+</BaseLayout>
+
+<style>
+  .pk-page { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+  .pk-breadcrumb { font-size: 0.85rem; color: #cbd5e1; margin-bottom: 1rem; }
+  .pk-breadcrumb a { color: #8b5cf6; text-decoration: none; }
+  .pk-breadcrumb a:hover { text-decoration: underline; }
+  .pk-header { margin-bottom: 1.5rem; }
+  .pk-header h1 { font-size: clamp(1.6rem, 3vw, 2.25rem); color: #fff; margin-bottom: 0.75rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
+  .pk-intro { color: rgba(255,255,255,0.92); font-size: 1.05rem; line-height: 1.6; max-width: 800px; }
+  .pk-intro strong { color: #fff; }
+
+  .pk-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 1.5rem 0; }
+  .pk-stat { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.18); border-radius: 12px; padding: 1rem; text-align: center; }
+  .pk-stat-label { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+  .pk-stat-value { display: block; font-size: 1.35rem; font-weight: 700; color: #fff; }
+
+  .pk-page h2 { color: #fff; font-size: 1.4rem; margin: 1.5rem 0 1rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
+
+  .pk-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
+  .pk-item { background: rgba(15,23,42,0.55); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.15); border-left: 4px solid #8b5cf6; border-radius: 12px; padding: 1rem; }
+  .pk-item--parking { border-left-color: #10b981; }
+  .pk-item-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
+  .pk-item-header strong { color: #fff; font-size: 1rem; }
+  .pk-item-tipo { font-size: 0.7rem; background: rgba(139,92,246,0.2); color: #c4b5fd; padding: 0.15rem 0.5rem; border-radius: 999px; font-weight: 500; }
+  .pk-item-val { font-size: 0.85rem; color: #f59e0b; letter-spacing: 2px; }
+  .pk-item-meta { display: flex; flex-wrap: wrap; gap: 0.75rem; font-size: 0.8rem; color: rgba(255,255,255,0.75); margin-bottom: 0.35rem; }
+  .pk-item-meta a { color: #60a5fa; text-decoration: none; }
+  .pk-precio { color: #34d399; font-weight: 600; }
+  .pk-tel { color: #34d399; font-weight: 600; }
+  .pk-item-servicios { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.35rem; }
+  .pk-tag { font-size: 0.7rem; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.85); padding: 0.15rem 0.5rem; border-radius: 999px; }
+  .pk-tag--more { background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.55); }
+
+  .pk-nota { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin-top: 1.5rem; line-height: 1.5; }
+
+  .pk-cta { margin-top: 2.5rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 16px; padding: 1.5rem; text-align: center; }
+  .pk-cta h3 { color: #fff; font-size: 1.25rem; margin-bottom: 0.5rem; }
+  .pk-cta p { color: rgba(255,255,255,0.9); margin-bottom: 1.1rem; line-height: 1.5; max-width: 560px; margin-left: auto; margin-right: auto; }
+  .pk-cta-btn { display: inline-block; padding: 0.8rem 1.9rem; background: #8b5cf6; color: #fff; font-weight: 700; text-decoration: none; border-radius: 10px; transition: background 0.2s; }
+  .pk-cta-btn:hover { background: #a78bfa; }
+
+  @media (max-width: 640px) {
+    .pk-stats { grid-template-columns: repeat(2, 1fr); }
+    .pk-list { grid-template-columns: 1fr; }
+  }
+</style>

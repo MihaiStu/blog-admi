@@ -1,84 +1,156 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import datos from '../../data/talleres-provincias.json';
+
+const provincias = datos.provincias;
+const total = datos.totalTalleres;
+
+const title = `Talleres mecánicos para camiones en España — ${total} talleres por provincia | AdmiLogistic`;
+const description = `Mapa y listado de ${total} talleres mecánicos para camiones en España, organizados por provincia.`;
+
+const itemList = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Talleres mecánicos para camiones en España",
+  description,
+  numberOfItems: total,
+  itemListElement: provincias.map((p, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: `${p.provincia} — ${p.numTalleres} talleres`,
+    url: `https://admilogistic.es/bases-datos/talleres/${p.slug}/`,
+  })),
+};
 ---
 
-<BaseLayout pageBg="bases" title="Base de Datos - Talleres | AdmiLogistic" description="Mapa y listado de talleres especializados en vehículos industriales.">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-  <div class="db-page">
-    <header class="db-header">
-      <h1>Talleres</h1>
-      <p>Talleres especializados en vehículos industriales. Datos orientativos; para uso integrado en rutas, usa RoadMaster.</p>
+<BaseLayout pageBg="bases" title={title} description={description}>
+  <Fragment slot="head">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  </Fragment>
+  <div class="pk-idx">
+    <header class="pk-idx-header">
+      <h1>Talleres mecánicos para camiones</h1>
+      <p>
+        <strong>{total} talleres</strong> especializados en vehículos industriales en toda España.
+        {provincias.filter(p => p.numUrgencias24h > 0).length} provincias con talleres de urgencia 24h.
+        Datos de RoadMaster.
+      </p>
     </header>
-    <div class="db-map-wrap">
-      <div id="map-talleres" class="db-map"></div>
+
+    <div class="pk-idx-stats">
+      <div class="pk-idx-stat">
+        <span class="v">{total}</span>
+        <span class="l">Talleres totales</span>
+      </div>
+      <div class="pk-idx-stat">
+        <span class="v">{provincias.reduce((a, p) => a + p.numUrgencias24h, 0)}</span>
+        <span class="l">Urgencias 24h</span>
+      </div>
+      <div class="pk-idx-stat">
+        <span class="v">{provincias.reduce((a, p) => a + p.numConTelefono, 0)}</span>
+        <span class="l">Con teléfono</span>
+      </div>
+      <div class="pk-idx-stat">
+        <span class="v">{provincias.length}</span>
+        <span class="l">Provincias</span>
+      </div>
     </div>
-    <div class="db-list-wrap">
-      <h2>Listado</h2>
-      <div id="list-talleres" class="db-list"></div>
+
+    <h2>Elige tu provincia</h2>
+    <div class="pk-idx-grid">
+      {provincias.map((p) => (
+        <a href={`/bases-datos/talleres/${p.slug}/`} class="pk-idx-card">
+          <span class="pk-idx-prov">{p.provincia}</span>
+          <span class="pk-idx-meta">
+            {p.numTalleres} talleres
+            {p.especialidades.length > 0 && ` · ${p.especialidades.slice(0, 3).join(', ')}${p.especialidades.length > 3 ? '...' : ''}`}
+          </span>
+          {p.numUrgencias24h > 0 && (
+            <span class="pk-idx-badge">24h</span>
+          )}
+        </a>
+      ))}
     </div>
-    <div class="db-cta">
-      <a href="/proyectos/roadmaster/" class="db-cta-btn">Usar talleres en RoadMaster</a>
+
+    <p class="pk-idx-nota">
+      Datos recopilados de RoadMaster. Incluye talleres especializados en mecánica, chapa, neumáticos,
+      ITV, electricidad, motor y grúa para vehículos industriales.
+    </p>
+
+    <div class="pk-idx-cta">
+      <a href="/proyectos/roadmaster/" class="pk-idx-cta-btn">Gestiona tu flota con RoadMaster →</a>
     </div>
   </div>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
-  <script>
-    (function () {
-      const mapEl = document.getElementById('map-talleres');
-      const listEl = document.getElementById('list-talleres');
-      if (!mapEl) return;
-      fetch('/data/talleres.json')
-        .then(r => r.json())
-        .then(data => {
-          if (typeof L === 'undefined') return;
-          const map = L.map('map-talleres').setView([40.4, -3.7], 6);
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
-          const bounds = [];
-          data.forEach(p => {
-            const lat = p.coordenadas ? p.coordenadas.lat : p.lat;
-            const lng = p.coordenadas ? p.coordenadas.lng : p.lng;
-            if (lat == null || lng == null) return;
-            bounds.push([lat, lng]);
-            const name = p.nombre || '';
-            const addr = (p.direccion || '').slice(0, 60);
-            L.marker([lat, lng]).addTo(map).bindPopup(`<strong>${escapeHtml(name)}</strong><br>${escapeHtml(addr)}`);
-          });
-          if (bounds.length) map.fitBounds(bounds, { padding: [30, 30], maxZoom: 10 });
-          if (listEl && data.length) {
-            listEl.innerHTML = data.slice(0, 30).map(p => {
-              const lat = p.coordenadas ? p.coordenadas.lat : p.lat;
-              const lng = p.coordenadas ? p.coordenadas.lng : p.lng;
-              const addr = p.direccion || (p.provincia ? p.provincia : '');
-              const tel = p.telefono ? `<a href="tel:${p.telefono}">${escapeHtml(p.telefono)}</a>` : '';
-              return `<div class="db-list-item"><strong>${escapeHtml(p.nombre)}</strong><br><span class="db-list-meta">${escapeHtml(addr)}</span>${tel ? '<br>' + tel : ''}</div>`;
-            }).join('');
-          }
-        })
-        .catch(() => { if (listEl) listEl.innerHTML = '<p>No se pudieron cargar los datos.</p>'; });
-      function escapeHtml(s) {
-        if (!s) return '';
-        const d = document.createElement('div');
-        d.textContent = s;
-        return d.innerHTML;
-      }
-    })();
-  </script>
+
+  <div class="pk-map-wrap">
+    <div id="pk-map" class="pk-map"></div>
+  </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify(itemList)} />
 </BaseLayout>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+  (function () {
+    const mapEl = document.getElementById('pk-map');
+    if (!mapEl) return;
+    fetch('/data/talleres.json')
+      .then(r => r.json())
+      .then(data => {
+        if (typeof L === 'undefined') return;
+        const map = L.map('pk-map').setView([40.4, -3.7], 6);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© OpenStreetMap'
+        }).addTo(map);
+        const bounds = [];
+        data.forEach(t => {
+          if (t.lat == null || t.lng == null) return;
+          bounds.push([t.lat, t.lng]);
+          const urg = t.urgencias24h ? ' · 24h' : '';
+          L.marker([t.lat, t.lng])
+            .addTo(map)
+            .bindPopup(`<strong>${escHtml(t.nombre)}</strong><br>${escHtml(t.provincia)}${urg}`);
+        });
+        if (bounds.length) map.fitBounds(bounds, { padding: [30, 30], maxZoom: 10 });
+      })
+      .catch(() => {});
+    function escHtml(s) {
+      if (!s) return '';
+      const d = document.createElement('div');
+      d.textContent = s;
+      return d.innerHTML;
+    }
+  })();
+</script>
+
 <style>
-  .db-page { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
-  .db-header { text-align: center; margin-bottom: 1.5rem; }
-  .db-header h1 { font-size: clamp(1.75rem, 3vw, 2.25rem); color: #1a1a1a; margin-bottom: 0.5rem; }
-  .db-header p { color: #555; font-size: 1rem; line-height: 1.6; }
-  .db-map-wrap { margin-bottom: 2rem; border-radius: 16px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.08); }
-  .db-map { height: 420px; background: #e5e7eb; }
-  .db-list-wrap h2 { font-size: 1.25rem; margin-bottom: 1rem; color: #1a1a1a; }
-  .db-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
-  .db-list-item { padding: 1rem; background: rgba(255,255,255,0.9); border-radius: 10px; border-left: 4px solid #0ea5e9; font-size: 0.9375rem; }
-  .db-list-item strong { display: block; margin-bottom: 0.25rem; color: #0f172a; }
-  .db-list-meta { color: #64748b; }
-  .db-list-item a { color: #6366f1; }
-  .db-cta { text-align: center; margin-top: 2rem; }
-  .db-cta-btn { display: inline-block; padding: 0.75rem 1.75rem; background: #1a1a1a; color: #fff; font-weight: 600; text-decoration: none; border-radius: 10px; transition: background 0.2s; }
-  .db-cta-btn:hover { background: #333; }
-  @media (max-width: 768px) { .db-map { height: 320px; } .db-list { grid-template-columns: 1fr; } }
+  .pk-idx { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem 1rem; }
+  .pk-idx-header { text-align: center; margin-bottom: 1.5rem; }
+  .pk-idx-header h1 { font-size: clamp(1.75rem, 3vw, 2.4rem); color: #fff; margin-bottom: 0.6rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
+  .pk-idx-header p { color: rgba(255,255,255,0.9); font-size: 1.05rem; line-height: 1.6; max-width: 780px; margin: 0 auto; }
+  .pk-idx-header strong { color: #fff; }
+
+  .pk-idx-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 1.75rem auto; max-width: 720px; }
+  .pk-idx-stat { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 12px; padding: 1rem; text-align: center; }
+  .pk-idx-stat .v { display: block; font-size: 1.3rem; font-weight: 700; color: #fff; }
+  .pk-idx-stat .l { display: block; font-size: 0.78rem; color: rgba(255,255,255,0.72); margin-top: 0.3rem; }
+
+  .pk-idx h2 { color: #fff; font-size: 1.35rem; margin: 1.5rem 0 1rem; text-align: center; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
+
+  .pk-idx-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.9rem; }
+  .pk-idx-card { position: relative; display: flex; flex-direction: column; gap: 0.25rem; padding: 1rem 1.1rem; background: rgba(15,23,42,0.55); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.15); border-left: 4px solid #3b82f6; border-radius: 12px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s, background 0.2s; }
+  .pk-idx-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,0.3); background: rgba(15,23,42,0.7); }
+  .pk-idx-prov { font-weight: 700; color: #ffffff; font-size: 1.05rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+  .pk-idx-meta { color: rgba(255,255,255,0.75); font-size: 0.8rem; }
+  .pk-idx-badge { position: absolute; top: 0.5rem; right: 0.5rem; font-size: 0.65rem; background: #ef4444; color: #fff; padding: 0.15rem 0.5rem; border-radius: 999px; font-weight: 600; }
+
+  .pk-idx-nota { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin-top: 1.25rem; text-align: center; line-height: 1.5; }
+  .pk-idx-nota a { color: #60a5fa; text-decoration: underline; }
+  .pk-idx-cta { text-align: center; margin-top: 1.5rem; }
+  .pk-idx-cta-btn { display: inline-block; padding: 0.8rem 1.9rem; background: #3b82f6; color: #fff; font-weight: 700; text-decoration: none; border-radius: 10px; transition: background 0.2s; }
+  .pk-idx-cta-btn:hover { background: #60a5fa; }
+
+  .pk-map-wrap { max-width: 1200px; margin: 2rem auto; padding: 0 1rem 3rem; }
+  .pk-map { height: 420px; border-radius: 16px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.08); background: #e5e7eb; }
+  @media (max-width: 768px) { .pk-idx-stats { grid-template-columns: repeat(2, 1fr); } .pk-map { height: 320px; } }
 </style>
