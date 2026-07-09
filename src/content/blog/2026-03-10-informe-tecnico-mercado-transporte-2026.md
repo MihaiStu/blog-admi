@@ -3,7 +3,7 @@ title: "Transporte por carretera 2026: regulación y tecnología"
 description: "Informe técnico sobre inspección 2026, control digital, ayudas por crisis energética, innovación industrial y formación para la transición ecológica en el transporte por carretera."
 pubDate: 2026-06-09
 category: actualidad
-image: /images/blog/Novedades y desafíos en el transporte por carretera en 2026.png
+image: /images/blog/novedades-desafios-transporte-2026.webp
 ---
 
 # Novedades y desafíos en el transporte por carretera en 2026

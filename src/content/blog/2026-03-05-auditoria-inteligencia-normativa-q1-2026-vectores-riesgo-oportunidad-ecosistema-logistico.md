@@ -1,5 +1,5 @@
 ---
-title: "Análisis Normativo Q1-2026: Riesgos y Oportunidades en Logística"
+title: "Análisis Normativo Q1-2026: Riesgos y Oportunidades"
 description: "Orden PJC/161/2026 aduanas y SOIVRE, Orden TED/162/2026 fondos Next Generation, A-21 Zaragoza como infraestructura 4.0. Análisis AdmiLogistic."
 pubDate: 2026-03-05
 category: actualidad

@@ -3,7 +3,7 @@ title: "RD 88/2026: tu base logística como activo de ingresos"
 description: "Análisis técnico AdmiLogistic sobre el Agregador Independiente, monetización de flexibilidad, estabilidad PVPC y exigencias de la Orden TED/82/2026 en hubs logísticos."
 pubDate: 2026-03-12
 category: actualidad
-image: /images/blog/Base Logística y Agregación de Demanda.png
+image: /images/blog/base-logistica-agregacion-demanda.webp
 ---
 
 # RD 88/2026: Cómo transformar tu base logística en un activo de ingresos mediante la agregación de demanda

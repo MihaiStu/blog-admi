@@ -25,6 +25,22 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </ul>
       </section>
 
+      <section class="pricing-block">
+        <div class="pricing-head">
+          <span class="pricing-from">Desde</span>
+          <span class="pricing-amount">79 €<span class="pricing-period">/mes</span></span>
+          <span class="pricing-note">14 días gratis · sin tarjeta · sin permanencia</span>
+        </div>
+        <a href="/proyectos/#precios" class="pricing-link">Ver todos los planes y precios →</a>
+      </section>
+
+      <section class="trust-row">
+        <div class="trust-item"><span class="trust-ico">🚚</span> Para flotas de 1 a 50 vehículos</div>
+        <div class="trust-item"><span class="trust-ico">🇪🇸</span> Soporte en español</div>
+        <div class="trust-item"><span class="trust-ico">🔓</span> Sin permanencia, cancela cuando quieras</div>
+        <div class="trust-item"><span class="trust-ico">☁️</span> En la nube, sin instalar nada</div>
+      </section>
+
       <div class="cta-buttons">
         <a href="https://roadmaster.admilogistic.es/register" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Probar gratis 14 días</a>
         <a href="https://roadmaster.admilogistic.es" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Acceder a la app</a>
@@ -209,5 +225,46 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     .problem li {
       font-size: 0.9375rem;
     }
+  }
+
+  /* Precio + confianza */
+  .pricing-block {
+    max-width: 880px;
+    margin: 2rem auto 1rem;
+    padding: 1.5rem;
+    background: rgba(99, 102, 241, 0.15);
+    border: 1px solid rgba(129, 140, 248, 0.4);
+    border-radius: 16px;
+    text-align: center;
+  }
+  .pricing-head { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; }
+  .pricing-from { color: rgba(255,255,255,0.7); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .pricing-amount { color: #fff; font-size: 2.6rem; font-weight: 800; line-height: 1; }
+  .pricing-period { font-size: 1.1rem; font-weight: 500; color: rgba(255,255,255,0.75); }
+  .pricing-note { color: rgba(255,255,255,0.85); font-size: 0.95rem; margin-top: 0.4rem; }
+  .pricing-link { display: inline-block; margin-top: 1rem; color: #c7d2fe; font-weight: 600; text-decoration: none; }
+  .pricing-link:hover { text-decoration: underline; }
+
+  .trust-row {
+    max-width: 880px;
+    margin: 0 auto 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+  }
+  .trust-item {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 0.9rem 0.75rem;
+    text-align: center;
+    color: rgba(255,255,255,0.92);
+    font-size: 0.85rem;
+    line-height: 1.35;
+  }
+  .trust-ico { display: block; font-size: 1.5rem; margin-bottom: 0.4rem; }
+  @media (max-width: 720px) {
+    .trust-row { grid-template-columns: repeat(2, 1fr); }
+    .pricing-amount { font-size: 2.1rem; }
   }
 </style>

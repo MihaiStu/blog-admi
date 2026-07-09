@@ -4,7 +4,7 @@ description: "Nueva app para autónomos y pymes de transporte: facturación comp
 pubDate: 2026-06-14
 author: Admilogistic
 category: fiscalidad
-image: /images/factura-digital-portada.png
+image: /images/factura-digital-portada.webp
 imageAlt: "Factura Digital — app de facturación y gestión de transporte para autónomos y pymes en España"
 tags:
   - facturación

@@ -1,5 +1,5 @@
 ---
-title: "Pictogramas del Tacógrafo Digital: Guía de Símbolos y Significados"
+title: "Pictogramas del Tacógrafo: Guía de Símbolos y Significado"
 description: "¿Ves un símbolo en el tacógrafo y no sabes qué significa? Guía completa: iconos de actividad, errores de tarjeta, averías y fallos GNSS. Identifica el icono y actúa antes de que sea una infracción."
 pubDate: 2026-02-03
 category: "cumplimiento"
