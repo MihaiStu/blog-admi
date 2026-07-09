@@ -1,0 +1,15 @@
+# AdmiLogistic Blog
+
+Información y noticias profesionales sobre transporte por carretera, gestión de flotas, tacógrafo y fiscalidad para autónomos y pymes del transporte en España.
+
+## Metadata
+- URL: https://blog.admilogistic.es
+- Type: Blog profesional de logística y transporte
+- Author: AdmiLogistic
+- Language: es-ES
+
+## Links
+- [Bases de Datos](/bases-datos/): Recursos locales de parkings, talleres, gasolineras y hoteles.
+- [Herramientas](/proyectos/): Aplicaciones de AdmiLogistic (Factura Digital, Tacógrafo, RoadMaster, Driver App).
+- [Categorías](/categorias/): Operaciones, Cumplimiento, Fiscalidad, Vehículos, Tarjetas Gasoil, Actualidad.
+- [llms-full.txt](/llms-full.txt): Base de datos de conocimiento completa en formato markdown consolidado para lectura en lote.
