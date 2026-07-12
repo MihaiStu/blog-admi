@@ -3,56 +3,40 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import datos from '../../data/parkings-provincias.json';
 
 const provincias = datos.provincias;
-const total = datos.totalParkings;
-const plazasTotal = provincias.reduce((a, p) => a + p.plazasTotal, 0);
-const conPlazas = provincias.filter(p => p.plazasTotal > 0);
-const noPrecio = provincias.reduce((a, p) => a + p.parkings.filter(pk => pk.precio == null || pk.precio === 0).length, 0);
-const gratisPct = Math.round(noPrecio / total * 100);
+const totalItems = datos.totalItems;
 
-const title = `Parkings para camiones en España — ${total} parkings por provincia | AdmiLogistic`;
-const description = `Mapa y listado de ${total} parkings y áreas de descanso para camiones en España, organizados por provincia. ${plazasTotal.toLocaleString('es-ES')} plazas totales.`;
+const title = `Parkings y áreas de descanso para camiones por provincias | AdmiLogistic`;
+const description = `${totalItems} parkings, áreas de servicio y áreas de descanso para camiones en España, por provincias. Datos de OpenStreetMap para planificar tus paradas en ruta.`;
 
 const itemList = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  name: "Parkings para camiones en España",
-  description,
-  numberOfItems: total,
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Parkings y áreas de descanso para camiones en España',
+  numberOfItems: totalItems,
   itemListElement: provincias.map((p, i) => ({
-    "@type": "ListItem",
+    '@type': 'ListItem',
     position: i + 1,
-    name: `${p.provincia} — ${p.numParkings} parkings`,
+    name: `${p.provincia} — ${p.numItems} áreas`,
     url: `https://admilogistic.es/bases-datos/parkings/${p.slug}/`,
   })),
 };
 ---
 
 <BaseLayout pageBg="bases" title={title} description={description}>
-  <Fragment slot="head">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  </Fragment>
   <div class="pk-idx">
     <header class="pk-idx-header">
       <h1>Parkings y áreas de descanso para camiones</h1>
       <p>
-        <strong>{total} parkings</strong> y áreas de descanso para vehículos industriales en toda España,
-        incluyendo <strong>{provincias.filter(p => p.parkings.some(pk => pk.fuente === 'ministerio')).length} provincias con parkings certificados</strong>
-        por el Ministerio de Transportes. Datos de RoadMaster, OpenStreetMap y fuentes oficiales.
+        <strong>{totalItems.toLocaleString('es-ES')} parkings, áreas de servicio y áreas de descanso</strong>
+        aptos para camiones en toda España, organizados por provincia. Pensado para transportistas
+        y flotas que planifican sus paradas y descansos en ruta. Datos de OpenStreetMap.
       </p>
     </header>
 
     <div class="pk-idx-stats">
       <div class="pk-idx-stat">
-        <span class="v">{total}</span>
-        <span class="l">Parkings totales</span>
-      </div>
-      <div class="pk-idx-stat">
-        <span class="v">{plazasTotal.toLocaleString('es-ES')}</span>
-        <span class="l">Plazas para camiones</span>
-      </div>
-      <div class="pk-idx-stat">
-        <span class="v">{gratisPct}%</span>
-        <span class="l">Gratuitos</span>
+        <span class="v">{totalItems.toLocaleString('es-ES')}</span>
+        <span class="l">Áreas y parkings</span>
       </div>
       <div class="pk-idx-stat">
         <span class="v">{provincias.length}</span>
@@ -65,80 +49,33 @@ const itemList = {
       {provincias.map((p) => (
         <a href={`/bases-datos/parkings/${p.slug}/`} class="pk-idx-card">
           <span class="pk-idx-prov">{p.provincia}</span>
-          <span class="pk-idx-meta">
-            {p.numParkings} parkings
-            {p.plazasTotal > 0 ? ` · ${p.plazasTotal} plazas` : ''}
-          </span>
-          {p.parkings.some(pk => pk.fuente === 'ministerio') && (
-            <span class="pk-idx-badge">Certificados</span>
-          )}
+          <span class="pk-idx-count">{p.numItems} áreas</span>
+          <span class="pk-idx-meta">{p.numAreasServicio} servicio · {p.numAreasDescanso} descanso · {p.numParkings} parking</span>
         </a>
       ))}
     </div>
 
     <p class="pk-idx-nota">
-      Datos recopilados de OpenStreetMap, RoadMaster y el Ministerio de Transportes
-      (<a href="https://visorcarreteras.transportes.gob.es/AparcamientosSeguros" target="_blank" rel="noopener">visor de aparcamientos seguros</a>).
-      Los parkings certificados cumplen el Reglamento Delegado (UE) 2022/2012.
+      Datos de OpenStreetMap (Overpass API). La disponibilidad y los servicios pueden variar;
+      confirma siempre antes de tu parada.
     </p>
 
     <div class="pk-idx-cta">
-      <a href="/proyectos/roadmaster/" class="pk-idx-cta-btn">Gestiona tus rutas con RoadMaster →</a>
+      <a href="/proyectos/roadmaster/" class="pk-idx-cta-btn">Planifica tus rutas con RoadMaster →</a>
     </div>
-  </div>
-
-  <div class="pk-map-wrap">
-    <div id="pk-map" class="pk-map"></div>
   </div>
 
   <script type="application/ld+json" set:html={JSON.stringify(itemList)} />
 </BaseLayout>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-<script>
-  (function () {
-    const mapEl = document.getElementById('pk-map');
-    if (!mapEl) return;
-    fetch('/data/parkings.json')
-      .then(r => r.json())
-      .then(data => {
-        if (typeof L === 'undefined') return;
-        const map = L.map('pk-map').setView([40.4, -3.7], 6);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '© OpenStreetMap'
-        }).addTo(map);
-        const bounds = [];
-        data.forEach(p => {
-          if (p.lat == null || p.lng == null) return;
-          bounds.push([p.lat, p.lng]);
-          const name = p.nombre || '';
-          const info = [p.autopista, p.pk && 'pk ' + p.pk, p.provincia].filter(Boolean).join(' · ');
-          const plazas = p.plazas_camiones ? `<br>${p.plazas_camiones} plazas` : '';
-          const precio = p.precio != null ? (p.precio === 0 ? ' · Gratis' : ` · ${p.precio} €`) : '';
-          L.marker([p.lat, p.lng])
-            .addTo(map)
-            .bindPopup(`<strong>${escHtml(name)}</strong><br>${escHtml(info)}${plazas}${precio}`);
-        });
-        if (bounds.length) map.fitBounds(bounds, { padding: [30, 30], maxZoom: 10 });
-      })
-      .catch(() => {});
-    function escHtml(s) {
-      if (!s) return '';
-      const d = document.createElement('div');
-      d.textContent = s;
-      return d.innerHTML;
-    }
-  })();
-</script>
-
 <style>
-  .pk-idx { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem 1rem; }
+  .pk-idx { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
   .pk-idx-header { text-align: center; margin-bottom: 1.5rem; }
   .pk-idx-header h1 { font-size: clamp(1.75rem, 3vw, 2.4rem); color: #fff; margin-bottom: 0.6rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
   .pk-idx-header p { color: rgba(255,255,255,0.9); font-size: 1.05rem; line-height: 1.6; max-width: 780px; margin: 0 auto; }
   .pk-idx-header strong { color: #fff; }
 
-  .pk-idx-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 1.75rem auto; max-width: 720px; }
+  .pk-idx-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1.75rem auto; max-width: 480px; }
   .pk-idx-stat { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 12px; padding: 1rem; text-align: center; }
   .pk-idx-stat .v { display: block; font-size: 1.3rem; font-weight: 700; color: #fff; }
   .pk-idx-stat .l { display: block; font-size: 0.78rem; color: rgba(255,255,255,0.72); margin-top: 0.3rem; }
@@ -146,19 +83,16 @@ const itemList = {
   .pk-idx h2 { color: #fff; font-size: 1.35rem; margin: 1.5rem 0 1rem; text-align: center; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
 
   .pk-idx-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.9rem; }
-  .pk-idx-card { position: relative; display: flex; flex-direction: column; gap: 0.25rem; padding: 1rem 1.1rem; background: rgba(15,23,42,0.55); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.15); border-left: 4px solid #10b981; border-radius: 12px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s, background 0.2s; }
+  .pk-idx-card { display: flex; flex-direction: column; gap: 0.25rem; padding: 1rem 1.1rem; background: rgba(15,23,42,0.55); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.15); border-left: 4px solid #10b981; border-radius: 12px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s, background 0.2s; }
   .pk-idx-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,0.3); background: rgba(15,23,42,0.7); }
   .pk-idx-prov { font-weight: 700; color: #ffffff; font-size: 1.05rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
-  .pk-idx-meta { color: rgba(255,255,255,0.75); font-size: 0.8rem; }
-  .pk-idx-badge { position: absolute; top: 0.5rem; right: 0.5rem; font-size: 0.65rem; background: #f59e0b; color: #1a1a1a; padding: 0.15rem 0.5rem; border-radius: 999px; font-weight: 600; }
+  .pk-idx-count { color: #6ee7b7; font-weight: 700; font-size: 0.95rem; }
+  .pk-idx-meta { color: rgba(255,255,255,0.75); font-size: 0.78rem; }
 
   .pk-idx-nota { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin-top: 1.25rem; text-align: center; line-height: 1.5; }
-  .pk-idx-nota a { color: #60a5fa; text-decoration: underline; }
   .pk-idx-cta { text-align: center; margin-top: 1.5rem; }
   .pk-idx-cta-btn { display: inline-block; padding: 0.8rem 1.9rem; background: #10b981; color: #fff; font-weight: 700; text-decoration: none; border-radius: 10px; transition: background 0.2s; }
   .pk-idx-cta-btn:hover { background: #34d399; }
 
-  .pk-map-wrap { max-width: 1200px; margin: 2rem auto; padding: 0 1rem 3rem; }
-  .pk-map { height: 420px; border-radius: 16px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.08); background: #e5e7eb; }
-  @media (max-width: 768px) { .pk-idx-stats { grid-template-columns: repeat(2, 1fr); } .pk-map { height: 320px; } }
+  @media (max-width: 600px) { .pk-idx-stats { grid-template-columns: 1fr; } }
 </style>

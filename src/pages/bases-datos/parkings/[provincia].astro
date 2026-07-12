@@ -11,103 +11,96 @@ export function getStaticPaths() {
 
 const { p } = Astro.props;
 
-const certificados = p.parkings.filter(pk => pk.fuente === 'ministerio');
-const gratuitos = p.parkings.filter(pk => pk.precio == null || pk.precio === 0);
-const dePago = p.parkings.filter(pk => pk.precio != null && pk.precio > 0);
+const title = `Parkings y áreas de descanso para camiones en ${p.provincia} | AdmiLogistic`;
+const description = `${p.numItems} parkings, áreas de servicio y áreas de descanso para camiones en ${p.provincia}. Datos de OpenStreetMap para planificar tus rutas y paradas.`;
 
-const title = `Parkings para camiones en ${p.provincia} — ${p.numParkings} parkings | AdmiLogistic`;
-const description = `Encuentra ${p.numParkings} parkings y áreas de descanso para camiones en ${p.provincia}.${p.plazasTotal > 0 ? ` ${p.plazasTotal} plazas totales.` : ''}${certificados.length > 0 ? ' Incluye parkings certificados por el Ministerio.' : ''}`;
-
+// Schema ItemList (primeros 10 items) para rich results
 const itemList = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  name: `Parkings para camiones en ${p.provincia}`,
-  description,
-  numberOfItems: p.numParkings,
-  itemListElement: p.parkings.slice(0, 10).map((pk, i) => ({
-    "@type": "ListItem",
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `Parkings y áreas de descanso para camiones en ${p.provincia}`,
+  itemListElement: p.items.slice(0, 10).map((e, i) => ({
+    '@type': 'ListItem',
     position: i + 1,
-    name: pk.nombre,
-    description: [pk.autopista, pk.plazas_camiones ? `${pk.plazas_camiones} plazas` : null, pk.precio != null ? (pk.precio === 0 ? 'Gratis' : `${pk.precio} €`) : null].filter(Boolean).join(" · "),
+    name: `${e.nombre} — ${e.tipo}`,
   })),
 };
 ---
 
 <BaseLayout pageBg="bases" title={title} description={description}>
-  <div class="pk-page">
-    <nav class="pk-breadcrumb">
+  <div class="park-page">
+    <nav class="park-breadcrumb">
       <a href="/bases-datos/">Bases de datos</a> ·
       <a href="/bases-datos/parkings/">Parkings</a> ·
       <span>{p.provincia}</span>
     </nav>
 
-    <header class="pk-header">
-      <h1>Parkings para camiones en {p.provincia}</h1>
-      <p class="pk-intro">
-        <strong>{p.numParkings} parkings</strong> y áreas de descanso para vehículos industriales
-        en la provincia de {p.provincia}.
-        {certificados.length > 0 && ` ${certificados.length} cuentan con certificación oficial del Ministerio de Transportes.`}
+    <header class="park-header">
+      <h1>Parkings y áreas de descanso para camiones en {p.provincia}</h1>
+      <p class="park-intro">
+        Listado de <strong>{p.numItems} parkings, áreas de servicio y áreas de descanso</strong>
+        aptos para camiones en la provincia de {p.provincia}, para transportistas y flotas.
+        Datos de OpenStreetMap para planificar tus paradas y descansos en ruta.
       </p>
     </header>
 
-    <div class="pk-stats">
-      <div class="pk-stat">
-        <span class="pk-stat-label">Parkings</span>
-        <span class="pk-stat-value">{p.numParkings}</span>
+    <div class="park-stats">
+      <div class="park-stat park-stat--total">
+        <span class="park-stat-label">Total</span>
+        <span class="park-stat-value">{p.numItems}</span>
       </div>
-      <div class="pk-stat">
-        <span class="pk-stat-label">Plazas totales</span>
-        <span class="pk-stat-value">{p.plazasTotal > 0 ? p.plazasTotal : '-'}</span>
+      <div class="park-stat">
+        <span class="park-stat-label">Áreas de servicio</span>
+        <span class="park-stat-value">{p.numAreasServicio}</span>
       </div>
-      <div class="pk-stat">
-        <span class="pk-stat-label">Gratuitos</span>
-        <span class="pk-stat-value">{gratuitos.length}</span>
+      <div class="park-stat">
+        <span class="park-stat-label">Áreas de descanso</span>
+        <span class="park-stat-value">{p.numAreasDescanso}</span>
       </div>
-      {certificados.length > 0 && (
-        <div class="pk-stat pk-stat--cert">
-          <span class="pk-stat-label">Certificados</span>
-          <span class="pk-stat-value">{certificados.length}</span>
-        </div>
-      )}
+      <div class="park-stat">
+        <span class="park-stat-label">Parkings de camión</span>
+        <span class="park-stat-value">{p.numParkings}</span>
+      </div>
     </div>
 
-    <h2>Listado de parkings en {p.provincia}</h2>
-    <div class="pk-list">
-      {p.parkings.map((pk) => {
-        const esCert = pk.fuente === 'ministerio';
-        const precioLabel = pk.precio == null ? '' : (pk.precio === 0 ? 'Gratis' : `${pk.precio} €`);
-        return (
-          <div class={`pk-item${esCert ? ' pk-item--cert' : ''}`}>
-            <div class="pk-item-header">
-              <strong>{pk.nombre}</strong>
-              {esCert && <span class="pk-item-badge">{pk.certificacion}</span>}
-            </div>
-            <div class="pk-item-meta">
-              {pk.autopista && <span>{pk.autopista}{pk.pk ? ` pk ${pk.pk}` : ''}</span>}
-              {pk.plazas_camiones && <span>{pk.plazas_camiones} plazas</span>}
-              {precioLabel && <span>{precioLabel}</span>}
-              {pk.operador && <span>{pk.operador}</span>}
-            </div>
-            {pk.servicios.length > 0 && (
-              <div class="pk-item-servicios">
-                {pk.servicios.slice(0, 6).map(s => <span class="pk-tag">{s}</span>)}
-                {pk.servicios.length > 6 && <span class="pk-tag pk-tag--more">+{pk.servicios.length - 6}</span>}
-              </div>
-            )}
-          </div>
-        );
-      })}
+    <h2>Listado en {p.provincia}</h2>
+    <div class="park-table-wrap">
+      <table class="park-table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Vía</th>
+            <th>Servicios</th>
+          </tr>
+        </thead>
+        <tbody>
+          {p.items.map((e) => (
+            <tr>
+              <td><strong>{e.nombre}</strong></td>
+              <td>{e.tipo}</td>
+              <td class="park-via">{e.autopista || '—'}</td>
+              <td class="park-servicios">
+                {e.aseos && <span class="park-serv">Aseos</span>}
+                {e.duchas && <span class="park-serv">Duchas</span>}
+                {e.combustible && <span class="park-serv">Combustible</span>}
+                {!e.aseos && !e.duchas && !e.combustible && <span class="park-serv park-serv--none">Sin datos</span>}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
 
-    <p class="pk-nota">
-      Datos de OpenStreetMap, RoadMaster y el Ministerio de Transportes.
-      Los parkings certificados cumplen el Reglamento Delegado (UE) 2022/2012.
+    <p class="park-nota">
+      Datos de OpenStreetMap (Overpass API). Mostramos hasta 60 ubicaciones por provincia.
+      La disponibilidad de servicios puede variar; confirma siempre antes de tu parada.
     </p>
 
-    <div class="pk-cta">
+    <div class="park-cta">
       <h3>¿Gestionas una flota?</h3>
-      <p>Con <strong>RoadMaster</strong> encuentras parkings en ruta, controlas gastos y planificas paradas de descanso.</p>
-      <a href="/proyectos/roadmaster/" class="pk-cta-btn">Probar RoadMaster gratis 14 días</a>
+      <p>Con <strong>RoadMaster</strong> planificas rutas con las áreas de descanso, parkings y gasolineras más convenientes en cada trayecto.</p>
+      <a href="/proyectos/roadmaster/" class="park-cta-btn">Probar RoadMaster gratis 14 días</a>
     </div>
   </div>
 
@@ -115,44 +108,43 @@ const itemList = {
 </BaseLayout>
 
 <style>
-  .pk-page { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
-  .pk-breadcrumb { font-size: 0.85rem; color: #cbd5e1; margin-bottom: 1rem; }
-  .pk-breadcrumb a { color: #10b981; text-decoration: none; }
-  .pk-breadcrumb a:hover { text-decoration: underline; }
-  .pk-header { margin-bottom: 1.5rem; }
-  .pk-header h1 { font-size: clamp(1.6rem, 3vw, 2.25rem); color: #fff; margin-bottom: 0.75rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
-  .pk-intro { color: rgba(255,255,255,0.92); font-size: 1.05rem; line-height: 1.6; max-width: 800px; }
-  .pk-intro strong { color: #fff; }
+  .park-page { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+  .park-breadcrumb { font-size: 0.85rem; color: #cbd5e1; margin-bottom: 1rem; }
+  .park-breadcrumb a { color: #f59e0b; text-decoration: none; }
+  .park-breadcrumb a:hover { text-decoration: underline; }
+  .park-header { margin-bottom: 1.5rem; }
+  .park-header h1 { font-size: clamp(1.6rem, 3vw, 2.25rem); color: #fff; margin-bottom: 0.75rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
+  .park-intro { color: rgba(255,255,255,0.92); font-size: 1.05rem; line-height: 1.6; max-width: 800px; }
+  .park-intro strong { color: #fff; }
 
-  .pk-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 1.5rem 0; }
-  .pk-stat { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.18); border-radius: 12px; padding: 1rem; text-align: center; }
-  .pk-stat--cert { background: rgba(245,158,11,0.2); border-color: rgba(245,158,11,0.5); }
-  .pk-stat-label { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
-  .pk-stat-value { display: block; font-size: 1.35rem; font-weight: 700; color: #fff; }
+  .park-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 1.5rem 0; }
+  .park-stat { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.18); border-radius: 12px; padding: 1rem; text-align: center; }
+  .park-stat--total { background: rgba(99,102,241,0.2); border-color: rgba(99,102,241,0.5); }
+  .park-stat-label { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+  .park-stat-value { display: block; font-size: 1.35rem; font-weight: 700; color: #fff; }
 
-  .pk-page h2 { color: #fff; font-size: 1.4rem; margin: 1.5rem 0 1rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
+  .park-page h2 { color: #fff; font-size: 1.4rem; margin: 1.5rem 0 1rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
 
-  .pk-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
-  .pk-item { background: rgba(15,23,42,0.55); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.15); border-left: 4px solid #10b981; border-radius: 12px; padding: 1rem; }
-  .pk-item--cert { border-left-color: #f59e0b; background: rgba(245,158,11,0.08); }
-  .pk-item-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
-  .pk-item-header strong { color: #fff; font-size: 1rem; }
-  .pk-item-badge { font-size: 0.65rem; background: #f59e0b; color: #1a1a1a; padding: 0.15rem 0.5rem; border-radius: 999px; font-weight: 600; flex-shrink: 0; }
-  .pk-item-meta { display: flex; flex-wrap: wrap; gap: 0.75rem; font-size: 0.8rem; color: rgba(255,255,255,0.75); margin-bottom: 0.5rem; }
-  .pk-item-servicios { display: flex; flex-wrap: wrap; gap: 0.3rem; }
-  .pk-tag { font-size: 0.7rem; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.85); padding: 0.15rem 0.5rem; border-radius: 999px; }
-  .pk-tag--more { background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.55); }
+  .park-table-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid rgba(255,255,255,0.15); background: rgba(15,23,42,0.55); backdrop-filter: blur(8px); }
+  .park-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 640px; }
+  .park-table thead th { background: rgba(15,23,42,0.85); color: #fff; text-align: left; padding: 0.75rem 0.9rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.03em; }
+  .park-table td { padding: 0.7rem 0.9rem; border-bottom: 1px solid rgba(255,255,255,0.12); color: #fff; vertical-align: top; }
+  .park-table td strong { color: #fff; }
+  .park-table tbody tr:nth-child(even) { background: rgba(255,255,255,0.05); }
+  .park-via { color: #a5b4fc; white-space: nowrap; }
+  .park-servicios { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .park-serv { background: rgba(16,185,129,0.18); color: #6ee7b7; padding: 0.15rem 0.5rem; border-radius: 6px; font-size: 0.78rem; }
+  .park-serv--none { background: rgba(107,114,128,0.2); color: #9ca3af; }
 
-  .pk-nota { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin-top: 1.5rem; line-height: 1.5; }
+  .park-nota { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin-top: 0.9rem; line-height: 1.5; }
 
-  .pk-cta { margin-top: 2.5rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 16px; padding: 1.5rem; text-align: center; }
-  .pk-cta h3 { color: #fff; font-size: 1.25rem; margin-bottom: 0.5rem; }
-  .pk-cta p { color: rgba(255,255,255,0.9); margin-bottom: 1.1rem; line-height: 1.5; max-width: 560px; margin-left: auto; margin-right: auto; }
-  .pk-cta-btn { display: inline-block; padding: 0.8rem 1.9rem; background: #10b981; color: #fff; font-weight: 700; text-decoration: none; border-radius: 10px; transition: background 0.2s; }
-  .pk-cta-btn:hover { background: #34d399; }
+  .park-cta { margin-top: 2.5rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 16px; padding: 1.5rem; text-align: center; }
+  .park-cta h3 { color: #fff; font-size: 1.25rem; margin-bottom: 0.5rem; }
+  .park-cta p { color: rgba(255,255,255,0.9); margin-bottom: 1.1rem; line-height: 1.5; max-width: 560px; margin-left: auto; margin-right: auto; }
+  .park-cta-btn { display: inline-block; padding: 0.8rem 1.9rem; background: #f59e0b; color: #1a1a1a; font-weight: 700; text-decoration: none; border-radius: 10px; transition: background 0.2s; }
+  .park-cta-btn:hover { background: #fbbf24; }
 
   @media (max-width: 640px) {
-    .pk-stats { grid-template-columns: repeat(2, 1fr); }
-    .pk-list { grid-template-columns: 1fr; }
+    .park-stats { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
