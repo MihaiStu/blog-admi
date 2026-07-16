@@ -5,6 +5,46 @@
       "source": "/tacografo",
       "destination": "https://admilogistic.es/proyectos/tacografo/",
       "permanent": true
+    },
+    {
+      "source": "/categorias/noticias/",
+      "destination": "/categorias/actualidad/",
+      "permanent": true
+    },
+    {
+      "source": "/categorias/noticias",
+      "destination": "/categorias/actualidad/",
+      "permanent": true
+    },
+    {
+      "source": "/categorias/camiones/",
+      "destination": "/categorias/vehiculos/",
+      "permanent": true
+    },
+    {
+      "source": "/categorias/camiones",
+      "destination": "/categorias/vehiculos/",
+      "permanent": true
+    },
+    {
+      "source": "/categorias/rutas/",
+      "destination": "/categorias/operaciones/",
+      "permanent": true
+    },
+    {
+      "source": "/categorias/rutas",
+      "destination": "/categorias/operaciones/",
+      "permanent": true
+    },
+    {
+      "source": "/categorias/tacografo/",
+      "destination": "/categorias/cumplimiento/",
+      "permanent": true
+    },
+    {
+      "source": "/categorias/tacografo",
+      "destination": "/categorias/cumplimiento/",
+      "permanent": true
     }
   ],
   "headers": [
