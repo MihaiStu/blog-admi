@@ -70,21 +70,26 @@ const itemList = {
           <tr>
             <th>Nombre</th>
             <th>Tipo</th>
-            <th>Vía</th>
             <th>Servicios</th>
+            <th>Ubicación</th>
           </tr>
         </thead>
         <tbody>
           {p.items.map((e) => (
             <tr>
-              <td><strong>{e.nombre}</strong></td>
+              <td>
+                <strong>{e.nombre}</strong>
+                {e.municipio && <span class="park-muni">{e.municipio}</span>}
+              </td>
               <td>{e.tipo}</td>
-              <td class="park-via">{e.autopista || '—'}</td>
               <td class="park-servicios">
                 {e.aseos && <span class="park-serv">Aseos</span>}
                 {e.duchas && <span class="park-serv">Duchas</span>}
                 {e.combustible && <span class="park-serv">Combustible</span>}
-                {!e.aseos && !e.duchas && !e.combustible && <span class="park-serv park-serv--none">Sin datos</span>}
+                {!e.aseos && !e.duchas && !e.combustible && <span class="park-serv--none">—</span>}
+              </td>
+              <td>
+                <a class="park-map" href={`https://www.google.com/maps/search/?api=1&query=${e.lat},${e.lng}`} target="_blank" rel="noopener noreferrer">📍 Ver en el mapa</a>
               </td>
             </tr>
           ))}
@@ -93,7 +98,7 @@ const itemList = {
     </div>
 
     <p class="park-nota">
-      Datos de OpenStreetMap (Overpass API). Mostramos hasta 60 ubicaciones por provincia.
+      Datos de OpenStreetMap (Overpass API). Mostramos hasta 80 ubicaciones con nombre por provincia.
       La disponibilidad de servicios puede variar; confirma siempre antes de tu parada.
     </p>
 
@@ -134,7 +139,10 @@ const itemList = {
   .park-via { color: #a5b4fc; white-space: nowrap; }
   .park-servicios { display: flex; flex-wrap: wrap; gap: 0.4rem; }
   .park-serv { background: rgba(16,185,129,0.18); color: #6ee7b7; padding: 0.15rem 0.5rem; border-radius: 6px; font-size: 0.78rem; }
-  .park-serv--none { background: rgba(107,114,128,0.2); color: #9ca3af; }
+  .park-serv--none { color: rgba(255,255,255,0.4); }
+  .park-muni { display: block; font-size: 0.78rem; color: rgba(255,255,255,0.65); margin-top: 0.15rem; }
+  .park-map { display: inline-block; color: #93c5fd; text-decoration: none; font-size: 0.85rem; white-space: nowrap; }
+  .park-map:hover { color: #bfdbfe; text-decoration: underline; }
 
   .park-nota { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin-top: 0.9rem; line-height: 1.5; }
 

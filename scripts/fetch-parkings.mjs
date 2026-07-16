@@ -122,16 +122,19 @@ async function main() {
       provincias.set(slug, { slug, provincia: prov, items: [] });
     }
     const nombreRaw = (tags.name || '').trim();
-    const nombre = nombreRaw.length >= 3 ? nombreRaw : tipoDe(tags);
+    // nombre real solo si existe y no es genérico; si no, cadena vacía (la página muestra el tipo)
+    const nombre = nombreRaw.length >= 3 ? nombreRaw : '';
     provincias.get(slug).items.push({
       nombre,
       tipo: tipoDe(tags),
+      municipio: (tags['addr:city'] || tags['addr:town'] || '').trim(),
       autopista: tags.ref || tags['destination:ref'] || '',
       plazasCamion: tags['capacity:hgv'] || tags.capacity || '',
       aseos: tags.toilets === 'yes',
       duchas: tags.shower === 'yes' || tags.shower === 'true',
       combustible: tags.fuel === 'yes' || !!tags['fuel:diesel'],
-      lat, lng,
+      lat: Math.round(lat * 1e6) / 1e6,
+      lng: Math.round(lng * 1e6) / 1e6,
     });
   }
 
@@ -143,19 +146,45 @@ async function main() {
   };
 
   for (const p of provincias.values()) {
-    // ordena: primero parkings de camiones, luego áreas de servicio, luego descanso; con nombre antes
+    // SOLO áreas con nombre real. Las anónimas de OSM no aportan y ensucian la tabla.
+    let named = p.items.filter((i) => i.nombre);
+
+    // Deduplicar: OSM suele traer la misma área como nodo Y como polígono (mismo
+    // nombre a <2 km). Fusionamos servicios y nos quedamos con una sola entrada.
+    const vistos = [];
+    named = named.filter((i) => {
+      const dup = vistos.find(
+        (v) => v.nombre.toLowerCase() === i.nombre.toLowerCase() && dist2(v.lat, v.lng, i.lat, i.lng) < 0.0004 // ~2 km
+      );
+      if (dup) {
+        dup.aseos ||= i.aseos;
+        dup.duchas ||= i.duchas;
+        dup.combustible ||= i.combustible;
+        dup.municipio ||= i.municipio;
+        dup.autopista ||= i.autopista;
+        dup.plazasCamion ||= i.plazasCamion;
+        return false;
+      }
+      vistos.push(i);
+      return true;
+    });
+    if (named.length === 0) continue; // provincia sin áreas nombradas -> no se genera página
+
     const orden = { 'Parking de camiones': 0, 'Área de servicio': 1, 'Área de descanso': 2 };
-    p.items.sort((a, b) => (orden[a.tipo] - orden[b.tipo]) || a.nombre.localeCompare(b.nombre, 'es'));
+    named.sort((a, b) =>
+      (orden[a.tipo] - orden[b.tipo]) ||
+      a.nombre.localeCompare(b.nombre, 'es')
+    );
     out.provincias.push({
       slug: p.slug,
       provincia: p.provincia,
-      numItems: p.items.length,
-      numParkings: p.items.filter((i) => i.tipo === 'Parking de camiones').length,
-      numAreasServicio: p.items.filter((i) => i.tipo === 'Área de servicio').length,
-      numAreasDescanso: p.items.filter((i) => i.tipo === 'Área de descanso').length,
-      items: p.items.slice(0, 60), // suficiente para SEO, sin inflar la página
+      numItems: named.length,
+      numParkings: named.filter((i) => i.tipo === 'Parking de camiones').length,
+      numAreasServicio: named.filter((i) => i.tipo === 'Área de servicio').length,
+      numAreasDescanso: named.filter((i) => i.tipo === 'Área de descanso').length,
+      items: named.slice(0, 80),
     });
-    out.totalItems += p.items.length;
+    out.totalItems += named.length;
   }
 
   out.provincias.sort((a, b) => a.provincia.localeCompare(b.provincia, 'es'));
