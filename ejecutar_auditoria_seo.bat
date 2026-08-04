@@ -16,6 +16,19 @@ git pull origin main
 echo.
 echo [2/4] Compilando web y regenerando llms.txt...
 call npm run build
+if errorlevel 1 (
+    color 0C
+    echo.
+    echo ====================================================
+    echo  ERROR: EL BUILD HA FALLADO. NO SE SUBE NADA A GITHUB.
+    echo  Revisa el error de arriba ^(normalmente un caracter
+    echo  raro tipo "^<45" en un post .mdx^) y vuelve a lanzar
+    echo  esta auditoria cuando este arreglado.
+    echo ====================================================
+    echo.
+    pause
+    exit /b 1
+)
 
 echo.
 echo [3/4] Ejecutando Auditoria SEO y guardando informe...
@@ -30,6 +43,13 @@ if errorlevel 1 (
     echo Cambios detectados en llms.txt. Subiendo a GitHub...
     git commit -m "chore(seo): actualizacion programada automatica de llms.txt"
     git push origin main
+    if errorlevel 1 (
+        color 0C
+        echo.
+        echo ✗ ERROR: el push a GitHub ha fallado. Revisa el mensaje de arriba.
+        pause
+        exit /b 1
+    )
     echo ✓ Cambios subidos a GitHub y desplegados en Vercel.
 ) else (
     echo ✓ No hay cambios en llms.txt. Repositorio al dia.
