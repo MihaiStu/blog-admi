@@ -1,8 +1,8 @@
 {
-  "fecha": "15/08/2026 9:11:26",
-  "generado": "2026-08-15T07:11:54.670Z",
+  "fecha": "16/08/2026 9:16:52",
+  "generado": "2026-08-16T07:17:14.839Z",
   "fuente": "Ministerio para la Transición Ecológica (Geoportal de Hidrocarburos)",
-  "totalEstaciones": 11502,
+  "totalEstaciones": 11472,
   "provincias": [
     {
       "slug": "albacete",
@@ -171,26 +171,26 @@
         {
           "rotulo": "Gasplay",
           "municipio": "Roda (La)",
-          "direccion": "CARRETERA AB101 KM. 0,2",
-          "horario": "L-D: 24H",
-          "diesel": 1.699,
-          "dieselPremium": null,
-          "gasolina95": 1.499,
-          "adblue": 0.7,
-          "lat": 39.218389,
-          "lng": -2.158028
-        },
-        {
-          "rotulo": "Gasplay",
-          "municipio": "Roda (La)",
           "direccion": "CALLE ALFREDO ATIENZA, 168",
           "horario": "L-D: 24H",
           "diesel": 1.699,
           "dieselPremium": null,
-          "gasolina95": 1.499,
+          "gasolina95": 1.519,
           "adblue": 0.7,
           "lat": 39.200528,
           "lng": -2.147972
+        },
+        {
+          "rotulo": "Gasplay",
+          "municipio": "Roda (La)",
+          "direccion": "CARRETERA AB101 KM. 0,2",
+          "horario": "L-D: 24H",
+          "diesel": 1.699,
+          "dieselPremium": null,
+          "gasolina95": 1.519,
+          "adblue": 0.7,
+          "lat": 39.218389,
+          "lng": -2.158028
         },
         {
           "rotulo": "Champinter",
@@ -267,18 +267,6 @@
         {
           "rotulo": "Plenergy",
           "municipio": "Villarrobledo",
-          "direccion": "CALLE GENERAL MARTI, 2",
-          "horario": "L-D: 24H",
-          "diesel": 1.719,
-          "dieselPremium": null,
-          "gasolina95": 1.609,
-          "adblue": null,
-          "lat": 39.266417,
-          "lng": -2.596944
-        },
-        {
-          "rotulo": "Plenergy",
-          "municipio": "Villarrobledo",
           "direccion": "AVENIDA REYES CATOLICOS, 138",
           "horario": "L-D: 24H",
           "diesel": 1.719,
@@ -287,6 +275,18 @@
           "adblue": null,
           "lat": 39.276917,
           "lng": -2.591111
+        },
+        {
+          "rotulo": "Plenergy",
+          "municipio": "Villarrobledo",
+          "direccion": "CALLE GENERAL MARTI, 2",
+          "horario": "L-D: 24H",
+          "diesel": 1.719,
+          "dieselPremium": null,
+          "gasolina95": 1.609,
+          "adblue": null,
+          "lat": 39.266417,
+          "lng": -2.596944
         },
         {
           "rotulo": "Lozano",
@@ -329,9 +329,9 @@
           "municipio": "Almansa",
           "direccion": "AVENIDA INFANTE DON JUAN MANUEL, 8",
           "horario": "L-D: 24H",
-          "diesel": 1.739,
+          "diesel": 1.729,
           "dieselPremium": null,
-          "gasolina95": 1.639,
+          "gasolina95": 1.629,
           "adblue": 0.969,
           "lat": 38.874556,
           "lng": -1.102944
@@ -515,16 +515,16 @@
           "lng": -0.198389
         },
         {
-          "rotulo": "Plenergy",
+          "rotulo": "Beroil",
           "municipio": "Alfàs del Pi (l')",
-          "direccion": "AVENIDA ALBIR, 90",
+          "direccion": "AVINGUDA PAIS VALENCIÁ, 37",
           "horario": "L-D: 24H",
           "diesel": 1.649,
           "dieselPremium": null,
           "gasolina95": 1.549,
-          "adblue": null,
-          "lat": 38.574028,
-          "lng": -0.076694
+          "adblue": 0.6,
+          "lat": 38.580639,
+          "lng": -0.104972
         },
         {
           "rotulo": "Plenergy",
@@ -539,16 +539,16 @@
           "lng": -0.106167
         },
         {
-          "rotulo": "Beroil",
+          "rotulo": "Plenergy",
           "municipio": "Alfàs del Pi (l')",
-          "direccion": "AVINGUDA PAIS VALENCIÁ, 37",
+          "direccion": "AVENIDA ALBIR, 90",
           "horario": "L-D: 24H",
           "diesel": 1.649,
           "dieselPremium": null,
           "gasolina95": 1.549,
-          "adblue": 0.6,
-          "lat": 38.580639,
-          "lng": -0.104972
+          "adblue": null,
+          "lat": 38.574028,
+          "lng": -0.076694
         },
         {
           "rotulo": "Petroprix ",
@@ -593,7 +593,7 @@
           "horario": "L-D: 24H",
           "diesel": 1.685,
           "dieselPremium": null,
-          "gasolina95": 1.769,
+          "gasolina95": 1.739,
           "adblue": null,
           "lat": 38.717667,
           "lng": 0.059861
@@ -705,18 +705,6 @@
           "adblue": null,
           "lat": 38.837917,
           "lng": 0.091972
-        },
-        {
-          "rotulo": "E.s Denia",
-          "municipio": "Dénia",
-          "direccion": "PARTIDA MADRIGUERES NORD, 20",
-          "horario": "L-D: 24H",
-          "diesel": 1.699,
-          "dieselPremium": null,
-          "gasolina95": 1.669,
-          "adblue": null,
-          "lat": 38.837694,
-          "lng": 0.087
         },
         {
           "rotulo": "Plenergy",
@@ -853,18 +841,6 @@
         {
           "rotulo": "Ballenoil",
           "municipio": "Villajoyosa/Vila Joiosa (la)",
-          "direccion": "POLIGONO BULEVAR 3 PP 33 24 FF24, S/N",
-          "horario": "L-D: 24H",
-          "diesel": 1.709,
-          "dieselPremium": 1.729,
-          "gasolina95": 1.649,
-          "adblue": null,
-          "lat": 38.525722,
-          "lng": -0.191361
-        },
-        {
-          "rotulo": "Ballenoil",
-          "municipio": "Villajoyosa/Vila Joiosa (la)",
           "direccion": "CARRETERA N-332 KM. 135,5",
           "horario": "L-D: 24H",
           "diesel": 1.709,
@@ -873,6 +849,18 @@
           "adblue": null,
           "lat": 38.499028,
           "lng": -0.252
+        },
+        {
+          "rotulo": "Ballenoil",
+          "municipio": "Villajoyosa/Vila Joiosa (la)",
+          "direccion": "POLIGONO BULEVAR 3 PP 33 24 FF24, S/N",
+          "horario": "L-D: 24H",
+          "diesel": 1.709,
+          "dieselPremium": 1.729,
+          "gasolina95": 1.649,
+          "adblue": null,
+          "lat": 38.525722,
+          "lng": -0.191361
         },
         {
           "rotulo": "Plenergy",
@@ -913,18 +901,6 @@
         {
           "rotulo": "Ballenoil",
           "municipio": "Elche/Elx",
-          "direccion": "CARRETERA N-340A KM. 716,3",
-          "horario": "L-D: 24H",
-          "diesel": 1.719,
-          "dieselPremium": 1.739,
-          "gasolina95": 1.639,
-          "adblue": null,
-          "lat": 38.258694,
-          "lng": -0.734333
-        },
-        {
-          "rotulo": "Ballenoil",
-          "municipio": "Elche/Elx",
           "direccion": "AVINGUDA DE CREVILLENTE, 36",
           "horario": "L-D: 24H",
           "diesel": 1.719,
@@ -933,6 +909,18 @@
           "adblue": null,
           "lat": 38.260222,
           "lng": -0.722333
+        },
+        {
+          "rotulo": "Ballenoil",
+          "municipio": "Elche/Elx",
+          "direccion": "CARRETERA N-340A KM. 716,3",
+          "horario": "L-D: 24H",
+          "diesel": 1.719,
+          "dieselPremium": 1.739,
+          "gasolina95": 1.639,
+          "adblue": null,
+          "lat": 38.258694,
+          "lng": -0.734333
         },
         {
           "rotulo": "Petroprix",
@@ -959,16 +947,16 @@
           "lng": -0.723694
         },
         {
-          "rotulo": "Ballenoil",
+          "rotulo": "Petroprix",
           "municipio": "Elche/Elx",
-          "direccion": "CALLE SENIJA, 2",
+          "direccion": "RONDA VALL D'UIXO, 52",
           "horario": "L-D: 24H",
           "diesel": 1.719,
           "dieselPremium": null,
           "gasolina95": 1.639,
           "adblue": null,
-          "lat": 38.282583,
-          "lng": -0.712472
+          "lat": 38.283917,
+          "lng": -0.714278
         },
         {
           "rotulo": "Plenergy",
@@ -981,6 +969,18 @@
           "adblue": null,
           "lat": 38.280694,
           "lng": -0.715
+        },
+        {
+          "rotulo": "Ballenoil",
+          "municipio": "Elche/Elx",
+          "direccion": "CALLE SENIJA, 2",
+          "horario": "L-D: 24H",
+          "diesel": 1.719,
+          "dieselPremium": null,
+          "gasolina95": 1.639,
+          "adblue": null,
+          "lat": 38.282583,
+          "lng": -0.712472
         }
       ]
     },
@@ -990,7 +990,7 @@
       "numEstaciones": 230,
       "dieselMin": 1.615,
       "dieselMax": 1.989,
-      "dieselMedia": 1.806,
+      "dieselMedia": 1.807,
       "estaciones": [
         {
           "rotulo": "Ballenoil",
@@ -998,7 +998,7 @@
           "direccion": "CALLE CARRETERA DEL CAMPILLO, 31",
           "horario": "L-D: 24H",
           "diesel": 1.615,
-          "dieselPremium": null,
+          "dieselPremium": 1.686,
           "gasolina95": 1.499,
           "adblue": null,
           "lat": 36.749528,
@@ -1480,7 +1480,7 @@
       "numEstaciones": 72,
       "dieselMin": 1.599,
       "dieselMax": 1.989,
-      "dieselMedia": 1.845,
+      "dieselMedia": 1.846,
       "estaciones": [
         {
           "rotulo": "Eroski",
@@ -1579,6 +1579,30 @@
           "lng": -2.716389
         },
         {
+          "rotulo": "Eroski",
+          "municipio": "Vitoria-Gasteiz",
+          "direccion": "CALLE ZARAMAGA, 1",
+          "horario": "L-D: 24H",
+          "diesel": 1.699,
+          "dieselPremium": 1.799,
+          "gasolina95": 1.579,
+          "adblue": null,
+          "lat": 42.860306,
+          "lng": -2.664278
+        },
+        {
+          "rotulo": "Onaindia Lowcost",
+          "municipio": "Vitoria-Gasteiz",
+          "direccion": "CALLE PORTAL DE GAMARRA, 7",
+          "horario": "L-D: 24H",
+          "diesel": 1.699,
+          "dieselPremium": 1.739,
+          "gasolina95": 1.649,
+          "adblue": null,
+          "lat": 42.865278,
+          "lng": -2.661139
+        },
+        {
           "rotulo": "Gamarra Low Cost",
           "municipio": "Vitoria-Gasteiz",
           "direccion": "CALLE PORTAL DE GAMARRA, 37",
@@ -1601,30 +1625,6 @@
           "adblue": null,
           "lat": 42.872556,
           "lng": -2.658583
-        },
-        {
-          "rotulo": "Onaindia Lowcost",
-          "municipio": "Vitoria-Gasteiz",
-          "direccion": "CALLE PORTAL DE GAMARRA, 7",
-          "horario": "L-D: 24H",
-          "diesel": 1.699,
-          "dieselPremium": 1.739,
-          "gasolina95": 1.649,
-          "adblue": null,
-          "lat": 42.865278,
-          "lng": -2.661139
-        },
-        {
-          "rotulo": "Eroski",
-          "municipio": "Vitoria-Gasteiz",
-          "direccion": "CALLE ZARAMAGA, 1",
-          "horario": "L-D: 24H",
-          "diesel": 1.699,
-          "dieselPremium": 1.799,
-          "gasolina95": 1.579,
-          "adblue": null,
-          "lat": 42.860306,
-          "lng": -2.664278
         },
         {
           "rotulo": "Ona Lowcost",
@@ -1831,18 +1831,6 @@
           "lng": -2.357278
         },
         {
-          "rotulo": "Andamur",
-          "municipio": "San Millán/Donemiliaga",
-          "direccion": "POLIGONO PG OKITURRI PARCELA A2, 38",
-          "horario": "L: 24H",
-          "diesel": 1.869,
-          "dieselPremium": null,
-          "gasolina95": null,
-          "adblue": 0.924,
-          "lat": 42.863722,
-          "lng": -2.32275
-        },
-        {
           "rotulo": "Andamur \"san Roman\"",
           "municipio": "San Millán/Donemiliaga",
           "direccion": "POLIGONO OKITURRI, S/N",
@@ -1853,6 +1841,18 @@
           "adblue": 0.924,
           "lat": 42.8635,
           "lng": -2.320361
+        },
+        {
+          "rotulo": "Andamur",
+          "municipio": "San Millán/Donemiliaga",
+          "direccion": "POLIGONO PG OKITURRI PARCELA A2, 38",
+          "horario": "L: 24H",
+          "diesel": 1.869,
+          "dieselPremium": null,
+          "gasolina95": null,
+          "adblue": 0.924,
+          "lat": 42.863722,
+          "lng": -2.32275
         },
         {
           "rotulo": "Onaindia",
@@ -1967,7 +1967,7 @@
     {
       "slug": "asturias",
       "provincia": "Asturias",
-      "numEstaciones": 240,
+      "numEstaciones": 239,
       "dieselMin": 1.709,
       "dieselMax": 1.989,
       "dieselMedia": 1.891,
@@ -2083,18 +2083,6 @@
         {
           "rotulo": "Ballenoil",
           "municipio": "Gijón",
-          "direccion": "AVENIDA ROCES, N",
-          "horario": "L-D: 24H",
-          "diesel": 1.729,
-          "dieselPremium": 1.749,
-          "gasolina95": 1.669,
-          "adblue": null,
-          "lat": 43.508861,
-          "lng": -5.677944
-        },
-        {
-          "rotulo": "Ballenoil",
-          "municipio": "Gijón",
           "direccion": "AVENIDA CAMPONES, 14",
           "horario": "L-D: 24H",
           "diesel": 1.729,
@@ -2103,6 +2091,18 @@
           "adblue": null,
           "lat": 43.534972,
           "lng": -5.690167
+        },
+        {
+          "rotulo": "Ballenoil",
+          "municipio": "Gijón",
+          "direccion": "AVENIDA ROCES, N",
+          "horario": "L-D: 24H",
+          "diesel": 1.729,
+          "dieselPremium": 1.749,
+          "gasolina95": 1.669,
+          "adblue": null,
+          "lat": 43.508861,
+          "lng": -5.677944
         },
         {
           "rotulo": "Petroprix",
@@ -2225,18 +2225,6 @@
           "lng": -5.922806
         },
         {
-          "rotulo": "Petroprix Aviles",
-          "municipio": "Avilés",
-          "direccion": "TRAVESÍA TORNO DEL, 2",
-          "horario": "L-D: 24H",
-          "diesel": 1.749,
-          "dieselPremium": null,
-          "gasolina95": 1.699,
-          "adblue": null,
-          "lat": 43.570639,
-          "lng": -5.923194
-        },
-        {
           "rotulo": "Plenergy",
           "municipio": "Avilés",
           "direccion": "AVENIDA DE LUGO, 50",
@@ -2247,6 +2235,18 @@
           "adblue": null,
           "lat": 43.569111,
           "lng": -5.927778
+        },
+        {
+          "rotulo": "Petroprix Aviles",
+          "municipio": "Avilés",
+          "direccion": "TRAVESÍA TORNO DEL, 2",
+          "horario": "L-D: 24H",
+          "diesel": 1.749,
+          "dieselPremium": null,
+          "gasolina95": 1.699,
+          "adblue": null,
+          "lat": 43.570639,
+          "lng": -5.923194
         },
         {
           "rotulo": "Ballenoil",
@@ -2393,18 +2393,6 @@
           "lng": -5.933444
         },
         {
-          "rotulo": "Galp",
-          "municipio": "Gijón",
-          "direccion": "AVENIDA DE LA ARGENTINA, S/N",
-          "horario": "L-D: 07:00-23:00",
-          "diesel": 1.769,
-          "dieselPremium": 1.819,
-          "gasolina95": 1.759,
-          "adblue": null,
-          "lat": 43.538222,
-          "lng": -5.703389
-        },
-        {
           "rotulo": "Ballenoil",
           "municipio": "Parres",
           "direccion": "CALLE POZO EL BARREÑO, 18",
@@ -2451,6 +2439,18 @@
           "adblue": null,
           "lat": 43.164861,
           "lng": -5.675
+        },
+        {
+          "rotulo": "Galp",
+          "municipio": "Gijón",
+          "direccion": "AVENIDA DE LA ARGENTINA, S/N",
+          "horario": "L-D: 07:00-23:00",
+          "diesel": 1.779,
+          "dieselPremium": 1.829,
+          "gasolina95": 1.769,
+          "adblue": null,
+          "lat": 43.538222,
+          "lng": -5.703389
         }
       ]
     },
@@ -2460,7 +2460,7 @@
       "numEstaciones": 73,
       "dieselMin": 1.699,
       "dieselMax": 1.974,
-      "dieselMedia": 1.894,
+      "dieselMedia": 1.895,
       "estaciones": [
         {
           "rotulo": "La Adrada",
@@ -2529,7 +2529,7 @@
           "horario": "L-D: 24H",
           "diesel": 1.779,
           "dieselPremium": 1.819,
-          "gasolina95": 1.639,
+          "gasolina95": 1.659,
           "adblue": null,
           "lat": 40.592361,
           "lng": -4.966528
@@ -2540,7 +2540,7 @@
           "direccion": "CALLE LOS MACEROS, SN",
           "horario": "L-D: 24H",
           "diesel": 1.799,
-          "dieselPremium": 1.849,
+          "dieselPremium": 1.829,
           "gasolina95": 1.629,
           "adblue": null,
           "lat": 40.643167,
@@ -2607,18 +2607,6 @@
           "lng": -4.684944
         },
         {
-          "rotulo": "Petroprix",
-          "municipio": "Ávila",
-          "direccion": "AVENIDA JUAN CARLOS I, 17",
-          "horario": "L-D: 24H",
-          "diesel": 1.809,
-          "dieselPremium": null,
-          "gasolina95": 1.639,
-          "adblue": null,
-          "lat": 40.661806,
-          "lng": -4.674889
-        },
-        {
           "rotulo": "Repostar",
           "municipio": "Ávila",
           "direccion": "CALLE RIO DUERO, 11",
@@ -2641,6 +2629,18 @@
           "adblue": null,
           "lat": 40.661083,
           "lng": -4.679194
+        },
+        {
+          "rotulo": "Petroprix",
+          "municipio": "Ávila",
+          "direccion": "AVENIDA JUAN CARLOS I, 17",
+          "horario": "L-D: 24H",
+          "diesel": 1.809,
+          "dieselPremium": null,
+          "gasolina95": 1.639,
+          "adblue": null,
+          "lat": 40.661806,
+          "lng": -4.674889
         },
         {
           "rotulo": "San Juan De La Cruz",
@@ -2800,15 +2800,15 @@
         },
         {
           "rotulo": "Repsol",
-          "municipio": "Ávila",
-          "direccion": "AVENIDA JUAN CARLOS I, S/N",
-          "horario": "L: 07:00-23:00",
-          "diesel": 1.909,
-          "dieselPremium": null,
-          "gasolina95": 1.769,
-          "adblue": 0.959,
-          "lat": 40.667694,
-          "lng": -4.660111
+          "municipio": "Piedrahíta",
+          "direccion": "C/ EXTRAMUROS - 6 (TRAVESIA CN - 110)",
+          "horario": "L-D: 07:00-23:00",
+          "diesel": 1.899,
+          "dieselPremium": 2.029,
+          "gasolina95": 1.709,
+          "adblue": null,
+          "lat": 40.465194,
+          "lng": -5.325556
         },
         {
           "rotulo": "F.coca P. S.l.",
@@ -2823,18 +2823,6 @@
           "lng": -5
         },
         {
-          "rotulo": "Repsol",
-          "municipio": "Piedrahíta",
-          "direccion": "C/ EXTRAMUROS - 6 (TRAVESIA CN - 110)",
-          "horario": "L-D: 07:00-23:00",
-          "diesel": 1.919,
-          "dieselPremium": 2.029,
-          "gasolina95": 1.735,
-          "adblue": null,
-          "lat": 40.465194,
-          "lng": -5.325556
-        },
-        {
           "rotulo": "Moeve",
           "municipio": "Sotillo de la Adrada",
           "direccion": "CALLE DOCTOR DIAZ PALACIOS, S,N",
@@ -2845,18 +2833,6 @@
           "adblue": null,
           "lat": 40.293194,
           "lng": -4.579417
-        },
-        {
-          "rotulo": "Q8",
-          "municipio": "Tiemblo (El)",
-          "direccion": "CARRETERA CTRA. N-403-A KM. KM 90",
-          "horario": "L-D: 06:00-22:00",
-          "diesel": 1.919,
-          "dieselPremium": null,
-          "gasolina95": 1.749,
-          "adblue": null,
-          "lat": 40.409667,
-          "lng": -4.493583
         },
         {
           "rotulo": "Moeve",
@@ -2919,6 +2895,18 @@
           "lng": -5.326889
         },
         {
+          "rotulo": "Q8",
+          "municipio": "Tiemblo (El)",
+          "direccion": "CARRETERA CTRA. N-403-A KM. KM 90",
+          "horario": "L-D: 06:00-22:00",
+          "diesel": 1.929,
+          "dieselPremium": null,
+          "gasolina95": 1.749,
+          "adblue": null,
+          "lat": 40.409667,
+          "lng": -4.493583
+        },
+        {
           "rotulo": "Repsol",
           "municipio": "Arévalo",
           "direccion": "CR N-6 123   A",
@@ -2941,13 +2929,25 @@
           "adblue": 1.049,
           "lat": 40.648472,
           "lng": -4.671528
+        },
+        {
+          "rotulo": "Repsol",
+          "municipio": "Ávila",
+          "direccion": "AVENIDA JUAN CARLOS I, S/N",
+          "horario": "L: 07:00-23:00",
+          "diesel": 1.939,
+          "dieselPremium": null,
+          "gasolina95": 1.789,
+          "adblue": 0.959,
+          "lat": 40.667694,
+          "lng": -4.660111
         }
       ]
     },
     {
       "slug": "badajoz",
       "provincia": "Badajoz",
-      "numEstaciones": 274,
+      "numEstaciones": 273,
       "dieselMin": 1.399,
       "dieselMax": 2.139,
       "dieselMedia": 1.839,
@@ -3157,18 +3157,6 @@
           "lng": -6.193861
         },
         {
-          "rotulo": "Morgane Oil",
-          "municipio": "Almendralejo",
-          "direccion": "AVENIDA DE SEVILLA, 140",
-          "horario": "L-D: 24H",
-          "diesel": 1.709,
-          "dieselPremium": 1.799,
-          "gasolina95": 1.599,
-          "adblue": null,
-          "lat": 38.672389,
-          "lng": -6.390167
-        },
-        {
           "rotulo": "Cooperativa Olivarera Cabeza Del Buey",
           "municipio": "Cabeza del Buey",
           "direccion": "CARRETERA PUEBLA DE ALCOCER KM. 1",
@@ -3265,6 +3253,18 @@
           "lng": -6.989556
         },
         {
+          "rotulo": "Morgane Oil",
+          "municipio": "Almendralejo",
+          "direccion": "AVENIDA DE SEVILLA, 140",
+          "horario": "L-D: 24H",
+          "diesel": 1.729,
+          "dieselPremium": 1.799,
+          "gasolina95": 1.599,
+          "adblue": null,
+          "lat": 38.672389,
+          "lng": -6.390167
+        },
+        {
           "rotulo": "Ocho Áreas De Servicio",
           "municipio": "Badajoz",
           "direccion": "CARRETERA N432 KM. 2100",
@@ -3356,7 +3356,7 @@
           "diesel": 1.729,
           "dieselPremium": null,
           "gasolina95": 1.619,
-          "adblue": null,
+          "adblue": 0.859,
           "lat": 38.883861,
           "lng": -6.932639
         },
@@ -3527,18 +3527,6 @@
           "lng": 3.011639
         },
         {
-          "rotulo": "Economic Fuel",
-          "municipio": "Muro",
-          "direccion": "AVENIDA SANTA MARGARITA, 49",
-          "horario": "L-D: 24H",
-          "diesel": 1.819,
-          "dieselPremium": null,
-          "gasolina95": 1.729,
-          "adblue": null,
-          "lat": 39.729306,
-          "lng": 3.059583
-        },
-        {
           "rotulo": "Just Fuel",
           "municipio": "Pollença",
           "direccion": "CALLE FUSTER DEL, 47",
@@ -3561,6 +3549,18 @@
           "adblue": null,
           "lat": 39.465111,
           "lng": 3.140944
+        },
+        {
+          "rotulo": "Economic Fuel",
+          "municipio": "Muro",
+          "direccion": "AVENIDA SANTA MARGARITA, 49",
+          "horario": "L-D: 24H",
+          "diesel": 1.829,
+          "dieselPremium": null,
+          "gasolina95": 1.729,
+          "adblue": null,
+          "lat": 39.729306,
+          "lng": 3.059583
         },
         {
           "rotulo": "Just Fuel",
@@ -3707,18 +3707,6 @@
           "lng": 2.658472
         },
         {
-          "rotulo": "Plenergy",
-          "municipio": "Palma de Mallorca",
-          "direccion": "CALLE DE SAMIL, 59",
-          "horario": "L-D: 24H",
-          "diesel": 1.849,
-          "dieselPremium": null,
-          "gasolina95": 1.729,
-          "adblue": null,
-          "lat": 39.532222,
-          "lng": 2.735056
-        },
-        {
           "rotulo": "Eroski",
           "municipio": "Sant Antoni de Portmany",
           "direccion": "AVENIDA SES PAISSES, 4",
@@ -3743,6 +3731,18 @@
           "lng": 2.70325
         },
         {
+          "rotulo": "Plenergy",
+          "municipio": "Palma de Mallorca",
+          "direccion": "CALLE DE SAMIL, 59",
+          "horario": "L-D: 24H",
+          "diesel": 1.855,
+          "dieselPremium": null,
+          "gasolina95": 1.729,
+          "adblue": null,
+          "lat": 39.532222,
+          "lng": 2.735056
+        },
+        {
           "rotulo": "Autonet&oil",
           "municipio": "Manacor",
           "direccion": "CALLE DE LES PAGESES, 8",
@@ -3753,30 +3753,6 @@
           "adblue": 0.999,
           "lat": 39.560028,
           "lng": 3.207972
-        },
-        {
-          "rotulo": "Plenergy",
-          "municipio": "Marratxí",
-          "direccion": "CAMINO DE MONTANA, 11",
-          "horario": "L-D: 24H",
-          "diesel": 1.859,
-          "dieselPremium": null,
-          "gasolina95": 1.727,
-          "adblue": null,
-          "lat": 39.618333,
-          "lng": 2.715056
-        },
-        {
-          "rotulo": "Autonetoil",
-          "municipio": "Palma de Mallorca",
-          "direccion": "CALLE POIMA, 12",
-          "horario": "L-D: 24H",
-          "diesel": 1.859,
-          "dieselPremium": 1.889,
-          "gasolina95": 1.729,
-          "adblue": null,
-          "lat": 39.595056,
-          "lng": 2.632778
         },
         {
           "rotulo": "V2 Gasolineras",
@@ -3791,30 +3767,6 @@
           "lng": 2.685333
         },
         {
-          "rotulo": "Autonet&oil",
-          "municipio": "Palma de Mallorca",
-          "direccion": "CALLE GABRIEL ALZAMORA, 25",
-          "horario": "L-D: 24H",
-          "diesel": 1.859,
-          "dieselPremium": null,
-          "gasolina95": 1.729,
-          "adblue": null,
-          "lat": 39.589306,
-          "lng": 2.674778
-        },
-        {
-          "rotulo": "Autonet&oil",
-          "municipio": "Palma de Mallorca",
-          "direccion": "CALLE GREMI CIRUGIANS I BARBERS, 11",
-          "horario": "L-D: 24H",
-          "diesel": 1.859,
-          "dieselPremium": null,
-          "gasolina95": 1.729,
-          "adblue": null,
-          "lat": 39.600639,
-          "lng": 2.65825
-        },
-        {
           "rotulo": "V2 Gasolineras",
           "municipio": "Palma de Mallorca",
           "direccion": "CARRER MARBELLA, 29",
@@ -3827,6 +3779,18 @@
           "lng": 2.734833
         },
         {
+          "rotulo": "Plenergy",
+          "municipio": "Marratxí",
+          "direccion": "CAMINO DE MONTANA, 11",
+          "horario": "L-D: 24H",
+          "diesel": 1.867,
+          "dieselPremium": null,
+          "gasolina95": 1.729,
+          "adblue": null,
+          "lat": 39.618333,
+          "lng": 2.715056
+        },
+        {
           "rotulo": "Shell",
           "municipio": "Marratxí",
           "direccion": "CARRER CAMÍ DE MUNTANYA ESQ CARRER CELLETERS, S/N",
@@ -3837,6 +3801,42 @@
           "adblue": 1.52,
           "lat": 39.618611,
           "lng": 2.715056
+        },
+        {
+          "rotulo": "Autonetoil",
+          "municipio": "Palma de Mallorca",
+          "direccion": "CALLE POIMA, 12",
+          "horario": "L-D: 24H",
+          "diesel": 1.869,
+          "dieselPremium": 1.899,
+          "gasolina95": 1.729,
+          "adblue": null,
+          "lat": 39.595056,
+          "lng": 2.632778
+        },
+        {
+          "rotulo": "Autonet&oil",
+          "municipio": "Palma de Mallorca",
+          "direccion": "CALLE GABRIEL ALZAMORA, 25",
+          "horario": "L-D: 24H",
+          "diesel": 1.869,
+          "dieselPremium": null,
+          "gasolina95": 1.729,
+          "adblue": null,
+          "lat": 39.589306,
+          "lng": 2.674778
+        },
+        {
+          "rotulo": "Autonet&oil",
+          "municipio": "Palma de Mallorca",
+          "direccion": "CALLE GREMI CIRUGIANS I BARBERS, 11",
+          "horario": "L-D: 24H",
+          "diesel": 1.869,
+          "dieselPremium": null,
+          "gasolina95": 1.729,
+          "adblue": null,
+          "lat": 39.600639,
+          "lng": 2.65825
         },
         {
           "rotulo": "Autonetoil",
@@ -3893,7 +3893,7 @@
           "horario": "L-D: 24H",
           "diesel": 1.898,
           "dieselPremium": 1.998,
-          "gasolina95": 1.758,
+          "gasolina95": 1.828,
           "adblue": null,
           "lat": 39.567083,
           "lng": 2.685778
@@ -4055,18 +4055,6 @@
         {
           "rotulo": "Plenergy",
           "municipio": "Vilafranca del Penedès",
-          "direccion": "CARRER PLA DEL VIVER, 4",
-          "horario": "L-D: 24H",
-          "diesel": 1.639,
-          "dieselPremium": null,
-          "gasolina95": 1.487,
-          "adblue": null,
-          "lat": 41.335806,
-          "lng": 1.683056
-        },
-        {
-          "rotulo": "Plenergy",
-          "municipio": "Vilafranca del Penedès",
           "direccion": "CARRER PAU 2-POUS D'EN ROSSELL, S/N",
           "horario": "L-D: 24H",
           "diesel": 1.639,
@@ -4075,6 +4063,18 @@
           "adblue": null,
           "lat": 41.3505,
           "lng": 1.687972
+        },
+        {
+          "rotulo": "Plenergy",
+          "municipio": "Vilafranca del Penedès",
+          "direccion": "CARRER PLA DEL VIVER, 4",
+          "horario": "L-D: 24H",
+          "diesel": 1.639,
+          "dieselPremium": null,
+          "gasolina95": 1.487,
+          "adblue": null,
+          "lat": 41.335806,
+          "lng": 1.683056
         },
         {
           "rotulo": "Bonarea",
@@ -4317,18 +4317,6 @@
           "lng": 2.106667
         },
         {
-          "rotulo": "Petro7 - Petrolis Independents",
-          "municipio": "Terrassa",
-          "direccion": "CARRER CR. BP-1503 DE RUBI A TERRASSA, 325",
-          "horario": "L-D: 24H",
-          "diesel": 1.648,
-          "dieselPremium": 1.708,
-          "gasolina95": 1.528,
-          "adblue": null,
-          "lat": 41.534472,
-          "lng": 2.033778
-        },
-        {
           "rotulo": "Fer Preu Just",
           "municipio": "Igualada",
           "direccion": "CALLE ALEMANYA, 3",
@@ -4411,6 +4399,18 @@
           "adblue": null,
           "lat": 41.945417,
           "lng": 2.25175
+        },
+        {
+          "rotulo": "Ballenoil",
+          "municipio": "Cerdanyola del Vallès",
+          "direccion": "CALLE SANTA ANA, 115",
+          "horario": "L-D: 24H",
+          "diesel": 1.659,
+          "dieselPremium": null,
+          "gasolina95": 1.499,
+          "adblue": null,
+          "lat": 41.500472,
+          "lng": 2.128028
         }
       ]
     },
@@ -4420,7 +4420,7 @@
       "numEstaciones": 128,
       "dieselMin": 1.634,
       "dieselMax": 1.949,
-      "dieselMedia": 1.851,
+      "dieselMedia": 1.852,
       "estaciones": [
         {
           "rotulo": "Gasolinera Zamudio",
@@ -4531,18 +4531,6 @@
           "lng": -2.837361
         },
         {
-          "rotulo": "Urbi Low Cost",
-          "municipio": "Basauri",
-          "direccion": "AVENIDA CERVANTES, 51",
-          "horario": "L-D: 24H",
-          "diesel": 1.689,
-          "dieselPremium": null,
-          "gasolina95": 1.589,
-          "adblue": 0.899,
-          "lat": 43.240944,
-          "lng": -2.879028
-        },
-        {
           "rotulo": "Eroski",
           "municipio": "Gorliz",
           "direccion": "POLIGONO SAGASTIKOETXE, S/N",
@@ -4553,6 +4541,18 @@
           "adblue": null,
           "lat": 43.408083,
           "lng": -2.9305
+        },
+        {
+          "rotulo": "Urbi Low Cost",
+          "municipio": "Basauri",
+          "direccion": "AVENIDA CERVANTES, 51",
+          "horario": "L-D: 24H",
+          "diesel": 1.699,
+          "dieselPremium": null,
+          "gasolina95": 1.609,
+          "adblue": 0.899,
+          "lat": 43.240944,
+          "lng": -2.879028
         },
         {
           "rotulo": "Eroski",
@@ -4634,9 +4634,9 @@
           "diesel": 1.729,
           "dieselPremium": null,
           "gasolina95": 1.599,
-          "adblue": 0.949,
-          "lat": 43.266222,
-          "lng": -2.685861
+          "adblue": null,
+          "lat": 43.265278,
+          "lng": -2.686306
         },
         {
           "rotulo": "Easygas",
@@ -4646,9 +4646,9 @@
           "diesel": 1.729,
           "dieselPremium": null,
           "gasolina95": 1.599,
-          "adblue": null,
-          "lat": 43.265278,
-          "lng": -2.686306
+          "adblue": 0.949,
+          "lat": 43.266222,
+          "lng": -2.685861
         },
         {
           "rotulo": "Eroski",
@@ -4843,18 +4843,6 @@
           "lng": -2.811417
         },
         {
-          "rotulo": "Gugas",
-          "municipio": "Zeanuri",
-          "direccion": "CARRETERA ALTO DE BARAZAR CN 240 KM. 28",
-          "horario": "L-D: 24H",
-          "diesel": 1.779,
-          "dieselPremium": null,
-          "gasolina95": 1.699,
-          "adblue": null,
-          "lat": 43.0655,
-          "lng": -2.711167
-        },
-        {
           "rotulo": "Auto Estación De Servicio Barazar S.a.",
           "municipio": "Zeanuri",
           "direccion": "CARRETERA 240 KM 126 KM. 126",
@@ -4865,6 +4853,18 @@
           "adblue": 0.699,
           "lat": 43.064917,
           "lng": -2.711528
+        },
+        {
+          "rotulo": "Gugas",
+          "municipio": "Zeanuri",
+          "direccion": "CARRETERA ALTO DE BARAZAR CN 240 KM. 28",
+          "horario": "L-D: 24H",
+          "diesel": 1.779,
+          "dieselPremium": null,
+          "gasolina95": 1.699,
+          "adblue": null,
+          "lat": 43.0655,
+          "lng": -2.711167
         },
         {
           "rotulo": "Euskadilowcost",
@@ -4908,22 +4908,10 @@
       "slug": "burgos",
       "provincia": "Burgos",
       "numEstaciones": 138,
-      "dieselMin": 1.579,
+      "dieselMin": 1.619,
       "dieselMax": 1.99,
-      "dieselMedia": 1.835,
+      "dieselMedia": 1.837,
       "estaciones": [
-        {
-          "rotulo": "Plenergy",
-          "municipio": "Miranda de Ebro",
-          "direccion": "CARRETERA BILBAO  EN  MIRANDA DE EBRO KM. 40",
-          "horario": "L-D: 24H",
-          "diesel": 1.579,
-          "dieselPremium": null,
-          "gasolina95": 1.499,
-          "adblue": null,
-          "lat": 42.692972,
-          "lng": -2.9505
-        },
         {
           "rotulo": "Ballenoil",
           "municipio": "Miranda de Ebro",
@@ -4935,6 +4923,18 @@
           "adblue": null,
           "lat": 42.692556,
           "lng": -2.949556
+        },
+        {
+          "rotulo": "Plenergy",
+          "municipio": "Miranda de Ebro",
+          "direccion": "CARRETERA BILBAO  EN  MIRANDA DE EBRO KM. 40",
+          "horario": "L-D: 24H",
+          "diesel": 1.619,
+          "dieselPremium": null,
+          "gasolina95": 1.539,
+          "adblue": null,
+          "lat": 42.692972,
+          "lng": -2.9505
         },
         {
           "rotulo": "E.leclerc",
@@ -5067,18 +5067,6 @@
           "adblue": 0.75,
           "lat": 41.639778,
           "lng": -3.693444
-        },
-        {
-          "rotulo": "Avia",
-          "municipio": "Villarcayo de Merindad de Castilla la Vieja",
-          "direccion": "C-629 (POLÍGONO LAS MERINDADES) km 62KMS",
-          "horario": "L: 07:00-23:00",
-          "diesel": 1.719,
-          "dieselPremium": null,
-          "gasolina95": 1.599,
-          "adblue": null,
-          "lat": 42.920389,
-          "lng": -3.581222
         },
         {
           "rotulo": "Gasolinera Treviño",
@@ -5263,18 +5251,6 @@
         {
           "rotulo": "Beroil",
           "municipio": "Aranda de Duero",
-          "direccion": "CARRETERA NACIONAL I KM. 160,3",
-          "horario": "L-D: 24H",
-          "diesel": 1.769,
-          "dieselPremium": null,
-          "gasolina95": 1.699,
-          "adblue": null,
-          "lat": 41.686861,
-          "lng": -3.684861
-        },
-        {
-          "rotulo": "Beroil",
-          "municipio": "Aranda de Duero",
           "direccion": "AVENIDA PORTUGAL, 82",
           "horario": "L-D: 24H",
           "diesel": 1.769,
@@ -5283,6 +5259,18 @@
           "adblue": 0.6,
           "lat": 41.666444,
           "lng": -3.727861
+        },
+        {
+          "rotulo": "Beroil",
+          "municipio": "Aranda de Duero",
+          "direccion": "CARRETERA NACIONAL I KM. 160,3",
+          "horario": "L-D: 24H",
+          "diesel": 1.769,
+          "dieselPremium": null,
+          "gasolina95": 1.699,
+          "adblue": null,
+          "lat": 41.686861,
+          "lng": -3.684861
         },
         {
           "rotulo": "Norpetrol Arcos",
@@ -5391,16 +5379,28 @@
           "adblue": 0.6,
           "lat": 43.158583,
           "lng": -3.235833
+        },
+        {
+          "rotulo": "Beroil",
+          "municipio": "Valle de Valdelucio",
+          "direccion": "CARRETERA NACIONAL 627 KM. 66,150",
+          "horario": "L: 07:00-23:00",
+          "diesel": 1.769,
+          "dieselPremium": 1.779,
+          "gasolina95": 1.699,
+          "adblue": 0.6,
+          "lat": 42.739889,
+          "lng": -4.141444
         }
       ]
     },
     {
       "slug": "caceres",
       "provincia": "Cáceres",
-      "numEstaciones": 158,
+      "numEstaciones": 157,
       "dieselMin": 1.67,
-      "dieselMax": 1.999,
-      "dieselMedia": 1.886,
+      "dieselMax": 2.009,
+      "dieselMedia": 1.888,
       "estaciones": [
         {
           "rotulo": "Sedimacar, Sl",
@@ -5425,18 +5425,6 @@
           "adblue": null,
           "lat": 40.142806,
           "lng": -5.877861
-        },
-        {
-          "rotulo": "Sociedad Cooperativa San Miguel Arcangel",
-          "municipio": "Palomero",
-          "direccion": "CALLE LAGUNA, 24",
-          "horario": "L-D: 24H",
-          "diesel": 1.685,
-          "dieselPremium": null,
-          "gasolina95": 1.56,
-          "adblue": null,
-          "lat": 40.24775,
-          "lng": -6.278306
         },
         {
           "rotulo": "Euronor Energy ",
@@ -5465,18 +5453,6 @@
         {
           "rotulo": "Ballenoil",
           "municipio": "Navalmoral de la Mata",
-          "direccion": "CARRETERA JARANDILLA KM. 36",
-          "horario": "L-D: 24H",
-          "diesel": 1.699,
-          "dieselPremium": 1.719,
-          "gasolina95": 1.559,
-          "adblue": null,
-          "lat": 39.899222,
-          "lng": -5.54525
-        },
-        {
-          "rotulo": "Ballenoil",
-          "municipio": "Navalmoral de la Mata",
           "direccion": "CARRETERA MADRID-LISBOA KM. 44",
           "horario": "L-D: 24H",
           "diesel": 1.699,
@@ -5487,16 +5463,28 @@
           "lng": -5.529944
         },
         {
-          "rotulo": "Transtello S.l.",
-          "municipio": "Miajadas",
-          "direccion": "CALLE FUNDIDORES, 9",
-          "horario": "L-V: 07:30-14:00 y 16:00-20:30; S: 07:30-14:00",
-          "diesel": 1.71,
-          "dieselPremium": null,
-          "gasolina95": null,
+          "rotulo": "Ballenoil",
+          "municipio": "Navalmoral de la Mata",
+          "direccion": "CARRETERA JARANDILLA KM. 36",
+          "horario": "L-D: 24H",
+          "diesel": 1.699,
+          "dieselPremium": 1.719,
+          "gasolina95": 1.559,
           "adblue": null,
-          "lat": 39.139806,
-          "lng": -5.923556
+          "lat": 39.899222,
+          "lng": -5.54525
+        },
+        {
+          "rotulo": "Sociedad Cooperativa San Miguel Arcangel",
+          "municipio": "Palomero",
+          "direccion": "CALLE LAGUNA, 24",
+          "horario": "L-D: 24H",
+          "diesel": 1.7,
+          "dieselPremium": null,
+          "gasolina95": 1.57,
+          "adblue": null,
+          "lat": 40.24775,
+          "lng": -6.278306
         },
         {
           "rotulo": "   Petrol Station",
@@ -5547,6 +5535,18 @@
           "lng": -5.786417
         },
         {
+          "rotulo": "Gasolinera Cáceres",
+          "municipio": "Cáceres",
+          "direccion": "CALLE EMILIO CARDENAL, 2",
+          "horario": "L-D: 07:00-22:00",
+          "diesel": 1.724,
+          "dieselPremium": null,
+          "gasolina95": 1.604,
+          "adblue": null,
+          "lat": 39.490139,
+          "lng": -6.366333
+        },
+        {
           "rotulo": "San Roque",
           "municipio": "Casas del Castañar",
           "direccion": "AVENIDA ASPERILLAS, 45",
@@ -5559,16 +5559,16 @@
           "lng": -5.908972
         },
         {
-          "rotulo": "Gasolinera Cáceres",
+          "rotulo": "Gasolinera Capellanías",
           "municipio": "Cáceres",
-          "direccion": "CALLE EMILIO CARDENAL, 2",
-          "horario": "L-D: 07:00-22:00",
+          "direccion": "POLIGONO CAPELLANIAS, 329",
+          "horario": "L-D: 06:00-22:00",
           "diesel": 1.734,
           "dieselPremium": null,
-          "gasolina95": 1.644,
-          "adblue": null,
-          "lat": 39.490139,
-          "lng": -6.366333
+          "gasolina95": 1.614,
+          "adblue": 0.799,
+          "lat": 39.484194,
+          "lng": -6.413389
         },
         {
           "rotulo": "No",
@@ -5617,18 +5617,6 @@
           "adblue": null,
           "lat": 39.897056,
           "lng": -5.54025
-        },
-        {
-          "rotulo": "Gasolinera Capellanías",
-          "municipio": "Cáceres",
-          "direccion": "POLIGONO CAPELLANIAS, 329",
-          "horario": "L-D: 06:00-22:00",
-          "diesel": 1.744,
-          "dieselPremium": null,
-          "gasolina95": 1.654,
-          "adblue": 0.799,
-          "lat": 39.484194,
-          "lng": -6.413389
         },
         {
           "rotulo": "Soc. Coop. Ltda. Del Campo San Juan",
@@ -5691,18 +5679,6 @@
           "lng": -5.850333
         },
         {
-          "rotulo": "Momo Oil",
-          "municipio": "Miajadas",
-          "direccion": "POLIGONO C/ CURTIDORES, 22",
-          "horario": "L-D: 24H",
-          "diesel": 1.759,
-          "dieselPremium": 1.799,
-          "gasolina95": 1.699,
-          "adblue": 0.799,
-          "lat": 39.140444,
-          "lng": -5.920972
-        },
-        {
           "rotulo": "Estacion 24h. Miajadas Logistica Y Transportes Sl",
           "municipio": "Miajadas",
           "direccion": "CALLE DE LAS ARTES Y OFICIOS, S/N",
@@ -5725,6 +5701,18 @@
           "adblue": null,
           "lat": 39.140472,
           "lng": -5.9215
+        },
+        {
+          "rotulo": "Momo Oil",
+          "municipio": "Miajadas",
+          "direccion": "POLIGONO C/ CURTIDORES, 22",
+          "horario": "L-D: 24H",
+          "diesel": 1.759,
+          "dieselPremium": 1.799,
+          "gasolina95": 1.699,
+          "adblue": 0.799,
+          "lat": 39.140444,
+          "lng": -5.920972
         },
         {
           "rotulo": "Gasóleos Montehermoso",
@@ -5881,6 +5869,18 @@
           "adblue": null,
           "lat": 39.982389,
           "lng": -6.051639
+        },
+        {
+          "rotulo": "Estacion Servicio Ntra Sra De La Blanca",
+          "municipio": "Pasarón de la Vera",
+          "direccion": "CARRETERA PASARON ARROYOMOLINOS DE LA VERA KM. 1,5",
+          "horario": "L-D: 24H",
+          "diesel": 1.819,
+          "dieselPremium": null,
+          "gasolina95": 1.659,
+          "adblue": null,
+          "lat": 40.04375,
+          "lng": -5.830778
         }
       ]
     },
@@ -5979,6 +5979,18 @@
         {
           "rotulo": "Ballenoil",
           "municipio": "Jerez de la Frontera",
+          "direccion": "AVENIDA FERNANDO PORTILLO, S/N",
+          "horario": "L-D: 24H",
+          "diesel": 1.659,
+          "dieselPremium": 1.73,
+          "gasolina95": 1.649,
+          "adblue": null,
+          "lat": 36.697444,
+          "lng": -6.107
+        },
+        {
+          "rotulo": "Ballenoil",
+          "municipio": "Jerez de la Frontera",
           "direccion": "AVENIDA EUROPA, S/N",
           "horario": "L-D: 24H",
           "diesel": 1.659,
@@ -5991,22 +6003,10 @@
         {
           "rotulo": "Ballenoil",
           "municipio": "Jerez de la Frontera",
-          "direccion": "AVENIDA FERNANDO PORTILLO, S/N",
-          "horario": "L-D: 24H",
-          "diesel": 1.659,
-          "dieselPremium": null,
-          "gasolina95": 1.649,
-          "adblue": null,
-          "lat": 36.697444,
-          "lng": -6.107
-        },
-        {
-          "rotulo": "Ballenoil",
-          "municipio": "Jerez de la Frontera",
           "direccion": "AVENIDA MEDINA SIDONIA KM.1, S/N",
           "horario": "L-D: 24H",
           "diesel": 1.659,
-          "dieselPremium": null,
+          "dieselPremium": 1.73,
           "gasolina95": 1.649,
           "adblue": null,
           "lat": 36.671611,
@@ -6121,6 +6121,18 @@
           "lng": -6.234444
         },
         {
+          "rotulo": "Galp",
+          "municipio": "Jerez de la Frontera",
+          "direccion": "AVENIDA MEDINA SIDONIA, S/N",
+          "horario": "L-D: 06:00-22:00",
+          "diesel": 1.709,
+          "dieselPremium": 1.759,
+          "gasolina95": 1.699,
+          "adblue": null,
+          "lat": 36.677167,
+          "lng": -6.123944
+        },
+        {
           "rotulo": "Hemegas",
           "municipio": "Olvera",
           "direccion": "CALLE LAVANDERA, 2",
@@ -6131,6 +6143,18 @@
           "adblue": 0.999,
           "lat": 36.933639,
           "lng": -5.246111
+        },
+        {
+          "rotulo": "Ballenoil",
+          "municipio": "Barbate",
+          "direccion": "AVENIDA NUEVO PEPITA AURORA, S/N",
+          "horario": "L-D: 24H",
+          "diesel": 1.719,
+          "dieselPremium": 1.739,
+          "gasolina95": 1.604,
+          "adblue": null,
+          "lat": 36.196222,
+          "lng": -5.91675
         },
         {
           "rotulo": "Autonetoil",
@@ -6155,18 +6179,6 @@
           "adblue": null,
           "lat": 36.206667,
           "lng": -5.926944
-        },
-        {
-          "rotulo": "Ballenoil",
-          "municipio": "Barbate",
-          "direccion": "AVENIDA NUEVO PEPITA AURORA, S/N",
-          "horario": "L-D: 24H",
-          "diesel": 1.719,
-          "dieselPremium": null,
-          "gasolina95": 1.604,
-          "adblue": null,
-          "lat": 36.196222,
-          "lng": -5.91675
         },
         {
           "rotulo": "Autonetoil",
@@ -6215,6 +6227,18 @@
           "adblue": 0.899,
           "lat": 36.670222,
           "lng": -6.145167
+        },
+        {
+          "rotulo": "Galp",
+          "municipio": "Puerto Real",
+          "direccion": "AVENIDA PERU (RIO S PEDRO), 0",
+          "horario": "L-D: 06:00-22:00",
+          "diesel": 1.739,
+          "dieselPremium": 1.789,
+          "gasolina95": 1.649,
+          "adblue": null,
+          "lat": 36.524111,
+          "lng": -6.236889
         },
         {
           "rotulo": "Petrol&go",
@@ -6347,30 +6371,6 @@
           "adblue": null,
           "lat": 36.11525,
           "lng": -5.453667
-        },
-        {
-          "rotulo": "Hemegas",
-          "municipio": "Cádiz",
-          "direccion": "CALLE ALGECIRAS, 4",
-          "horario": "L-D: 24H",
-          "diesel": 1.759,
-          "dieselPremium": null,
-          "gasolina95": 1.669,
-          "adblue": 0.999,
-          "lat": 36.498194,
-          "lng": -6.267417
-        },
-        {
-          "rotulo": "Petrol & Go ",
-          "municipio": "Cádiz",
-          "direccion": "CALLE CASTELLAR DE LA FRONTERA, 4",
-          "horario": "L-D: 24H",
-          "diesel": 1.759,
-          "dieselPremium": null,
-          "gasolina95": 1.669,
-          "adblue": null,
-          "lat": 36.500333,
-          "lng": -6.270222
         }
       ]
     },
@@ -6380,7 +6380,7 @@
       "numEstaciones": 167,
       "dieselMin": 1.629,
       "dieselMax": 1.985,
-      "dieselMedia": 1.852,
+      "dieselMedia": 1.853,
       "estaciones": [
         {
           "rotulo": "Ballenoil",
@@ -6455,18 +6455,6 @@
           "lng": -3.85875
         },
         {
-          "rotulo": "Gasolinera Alisal",
-          "municipio": "Santander",
-          "direccion": "AVENIDA VICENTE TRUEBA, SN",
-          "horario": "L-D: 07:00-23:00",
-          "diesel": 1.629,
-          "dieselPremium": null,
-          "gasolina95": 1.559,
-          "adblue": 0.799,
-          "lat": 43.457083,
-          "lng": -3.856917
-        },
-        {
           "rotulo": "Petroprix",
           "municipio": "Santander",
           "direccion": "AVENIDA CANDINA, 15",
@@ -6477,18 +6465,6 @@
           "adblue": null,
           "lat": 43.452194,
           "lng": -3.830833
-        },
-        {
-          "rotulo": "Plenergy",
-          "municipio": "Santander",
-          "direccion": "CALLE C/ GUTIÉRREZ SOLANA, 10",
-          "horario": "L-D: 24H",
-          "diesel": 1.629,
-          "dieselPremium": null,
-          "gasolina95": 1.559,
-          "adblue": null,
-          "lat": 43.461194,
-          "lng": -3.836278
         },
         {
           "rotulo": "Ballenoil",
@@ -6513,6 +6489,30 @@
           "adblue": null,
           "lat": 43.45125,
           "lng": -3.859694
+        },
+        {
+          "rotulo": "Plenergy",
+          "municipio": "Santander",
+          "direccion": "CALLE C/ GUTIÉRREZ SOLANA, 10",
+          "horario": "L-D: 24H",
+          "diesel": 1.629,
+          "dieselPremium": null,
+          "gasolina95": 1.559,
+          "adblue": null,
+          "lat": 43.461194,
+          "lng": -3.836278
+        },
+        {
+          "rotulo": "Gasolinera Alisal",
+          "municipio": "Santander",
+          "direccion": "AVENIDA VICENTE TRUEBA, SN",
+          "horario": "L-D: 07:00-23:00",
+          "diesel": 1.629,
+          "dieselPremium": null,
+          "gasolina95": 1.559,
+          "adblue": 0.799,
+          "lat": 43.457083,
+          "lng": -3.856917
         },
         {
           "rotulo": "Plenergy",
@@ -6870,7 +6870,7 @@
       "numEstaciones": 191,
       "dieselMin": 1.595,
       "dieselMax": 2.039,
-      "dieselMedia": 1.838,
+      "dieselMedia": 1.839,
       "estaciones": [
         {
           "rotulo": "Plenergy",
@@ -6925,9 +6925,9 @@
           "municipio": "Ribesalbes",
           "direccion": "AVENIDA ONDA, 46",
           "horario": "L-D: 24H",
-          "diesel": 1.599,
+          "diesel": 1.629,
           "dieselPremium": null,
-          "gasolina95": 1.469,
+          "gasolina95": 1.489,
           "adblue": null,
           "lat": 40.018861,
           "lng": -0.277694
@@ -6993,18 +6993,6 @@
           "lng": -0.109222
         },
         {
-          "rotulo": "Petroprix",
-          "municipio": "Villarreal/Vila-real",
-          "direccion": "AVENIDA AV ITALIA S/N, ",
-          "horario": "L-D: 24H",
-          "diesel": 1.649,
-          "dieselPremium": null,
-          "gasolina95": 1.509,
-          "adblue": null,
-          "lat": 39.930528,
-          "lng": -0.107389
-        },
-        {
           "rotulo": "Plenergy",
           "municipio": "Villarreal/Vila-real",
           "direccion": "AVENIDA EUROPA, 1",
@@ -7015,6 +7003,18 @@
           "adblue": null,
           "lat": 39.931917,
           "lng": -0.098167
+        },
+        {
+          "rotulo": "Petroprix",
+          "municipio": "Villarreal/Vila-real",
+          "direccion": "AVENIDA AV ITALIA S/N, ",
+          "horario": "L-D: 24H",
+          "diesel": 1.649,
+          "dieselPremium": null,
+          "gasolina95": 1.509,
+          "adblue": null,
+          "lat": 39.930528,
+          "lng": -0.107389
         },
         {
           "rotulo": "Gasexpress Vinaroz",
@@ -7411,18 +7411,6 @@
           "lng": -5.319556
         },
         {
-          "rotulo": "Shell Punta Almina",
-          "municipio": "Ceuta",
-          "direccion": "AVENIDA MUELLE CAÑONERO DATO, S/N",
-          "horario": "L-D: 24H",
-          "diesel": 1.657,
-          "dieselPremium": null,
-          "gasolina95": 1.567,
-          "adblue": null,
-          "lat": 35.894056,
-          "lng": -5.322917
-        },
-        {
           "rotulo": "Shell Muelle Dato",
           "municipio": "Ceuta",
           "direccion": "AVENIDA MUELLE DATO, 8",
@@ -7433,6 +7421,18 @@
           "adblue": null,
           "lat": 35.892333,
           "lng": -5.320556
+        },
+        {
+          "rotulo": "Shell Punta Almina",
+          "municipio": "Ceuta",
+          "direccion": "AVENIDA MUELLE CAÑONERO DATO, S/N",
+          "horario": "L-D: 24H",
+          "diesel": 1.657,
+          "dieselPremium": null,
+          "gasolina95": 1.567,
+          "adblue": null,
+          "lat": 35.894056,
+          "lng": -5.322917
         },
         {
           "rotulo": "Disa Puerto",
@@ -7882,7 +7882,7 @@
           "direccion": "CALLE DUQUE DE AHUMADA, 13",
           "horario": "L-D: 24H",
           "diesel": 1.719,
-          "dieselPremium": null,
+          "dieselPremium": 1.739,
           "gasolina95": 1.629,
           "adblue": null,
           "lat": 38.996139,
@@ -7977,7 +7977,7 @@
     {
       "slug": "cordoba",
       "provincia": "Córdoba",
-      "numEstaciones": 207,
+      "numEstaciones": 206,
       "dieselMin": 1.659,
       "dieselMax": 1.985,
       "dieselMedia": 1.866,
@@ -8213,18 +8213,6 @@
         {
           "rotulo": "Plenergy",
           "municipio": "Córdoba",
-          "direccion": "AVENIDA SIMÓN CARPINTERO, 8",
-          "horario": "L-D: 24H",
-          "diesel": 1.749,
-          "dieselPremium": null,
-          "gasolina95": 1.599,
-          "adblue": null,
-          "lat": 37.902722,
-          "lng": -4.724972
-        },
-        {
-          "rotulo": "Plenergy",
-          "municipio": "Córdoba",
           "direccion": "CALLE LAPISLÁZULI, 10",
           "horario": "L-D: 24H",
           "diesel": 1.749,
@@ -8233,6 +8221,18 @@
           "adblue": null,
           "lat": 37.88825,
           "lng": -4.749639
+        },
+        {
+          "rotulo": "Plenergy",
+          "municipio": "Córdoba",
+          "direccion": "AVENIDA SIMÓN CARPINTERO, 8",
+          "horario": "L-D: 24H",
+          "diesel": 1.749,
+          "dieselPremium": null,
+          "gasolina95": 1.599,
+          "adblue": null,
+          "lat": 37.902722,
+          "lng": -4.724972
         },
         {
           "rotulo": "Petroprix",
@@ -8396,7 +8396,7 @@
           "direccion": "AVENIDA SANTA ANA, 83",
           "horario": "L-D: 24H",
           "diesel": 1.759,
-          "dieselPremium": null,
+          "dieselPremium": 1.779,
           "gasolina95": 1.589,
           "adblue": null,
           "lat": 37.703028,
@@ -8599,7 +8599,7 @@
           "horario": "L-D: 24H",
           "diesel": 1.697,
           "dieselPremium": null,
-          "gasolina95": 1.589,
+          "gasolina95": 1.597,
           "adblue": null,
           "lat": 42.914444,
           "lng": -8.528861
@@ -8911,7 +8911,7 @@
           "horario": "L-V: 07:00-21:30; S: 10:00-15:00",
           "diesel": 1.729,
           "dieselPremium": 1.799,
-          "gasolina95": 1.669,
+          "gasolina95": 1.659,
           "adblue": 0.779,
           "lat": 43.326861,
           "lng": -8.472028
@@ -8929,18 +8929,6 @@
           "lng": -8.458056
         },
         {
-          "rotulo": "Carbugal Cortiñan",
-          "municipio": "Bergondo",
-          "direccion": "CARRETERA N-VI KM. 576",
-          "horario": "L-D: 07:00-23:00",
-          "diesel": 1.729,
-          "dieselPremium": null,
-          "gasolina95": 1.659,
-          "adblue": 0.799,
-          "lat": 43.281222,
-          "lng": -8.237417
-        },
-        {
           "rotulo": "Petrocash Pol. Ind. De Bergondo",
           "municipio": "Bergondo",
           "direccion": "POLIGONO DE BERGONDO, PARC. E22",
@@ -8951,13 +8939,25 @@
           "adblue": 0.799,
           "lat": 43.313472,
           "lng": -8.266944
+        },
+        {
+          "rotulo": "Carbugal Cortiñan",
+          "municipio": "Bergondo",
+          "direccion": "CARRETERA N-VI KM. 576",
+          "horario": "L-D: 07:00-23:00",
+          "diesel": 1.729,
+          "dieselPremium": null,
+          "gasolina95": 1.659,
+          "adblue": 0.799,
+          "lat": 43.281222,
+          "lng": -8.237417
         }
       ]
     },
     {
       "slug": "cuenca",
       "provincia": "Cuenca",
-      "numEstaciones": 118,
+      "numEstaciones": 117,
       "dieselMin": 1.649,
       "dieselMax": 2.019,
       "dieselMedia": 1.863,
@@ -8973,18 +8973,6 @@
           "adblue": null,
           "lat": 39.443528,
           "lng": -1.75275
-        },
-        {
-          "rotulo": "Noalles Y Balanza ",
-          "municipio": "Campos del Paraíso",
-          "direccion": "CARRETERA CM-310A KM. 90",
-          "horario": "L-D: 24H",
-          "diesel": 1.65,
-          "dieselPremium": null,
-          "gasolina95": null,
-          "adblue": null,
-          "lat": 40.042694,
-          "lng": -2.734444
         },
         {
           "rotulo": "Plenergy",
@@ -9004,7 +8992,7 @@
           "direccion": "AVENIDA DE LOS ALFARES, 21",
           "horario": "L-D: 24H",
           "diesel": 1.655,
-          "dieselPremium": null,
+          "dieselPremium": 1.726,
           "gasolina95": 1.525,
           "adblue": null,
           "lat": 40.076222,
@@ -9033,6 +9021,18 @@
           "adblue": 0.895,
           "lat": 39.531694,
           "lng": -1.564972
+        },
+        {
+          "rotulo": "Noalles Y Balanza ",
+          "municipio": "Campos del Paraíso",
+          "direccion": "CARRETERA CM-310A KM. 90",
+          "horario": "L-D: 24H",
+          "diesel": 1.665,
+          "dieselPremium": null,
+          "gasolina95": null,
+          "adblue": null,
+          "lat": 40.042694,
+          "lng": -2.734444
         },
         {
           "rotulo": "Santa Ana Soc. Coop.",
@@ -9664,7 +9664,7 @@
           "diesel": 1.739,
           "dieselPremium": null,
           "gasolina95": 1.629,
-          "adblue": null,
+          "adblue": 0.76,
           "lat": 43.189028,
           "lng": -2.463056
         },
@@ -9937,10 +9937,10 @@
     {
       "slug": "girona",
       "provincia": "Girona",
-      "numEstaciones": 267,
+      "numEstaciones": 266,
       "dieselMin": 1.638,
       "dieselMax": 1.999,
-      "dieselMedia": 1.834,
+      "dieselMedia": 1.835,
       "estaciones": [
         {
           "rotulo": "Seroil Energy",
@@ -9949,7 +9949,7 @@
           "horario": "L-D: 24H",
           "diesel": 1.638,
           "dieselPremium": null,
-          "gasolina95": 1.438,
+          "gasolina95": 1.498,
           "adblue": 0.48,
           "lat": 42.004139,
           "lng": 2.824944
@@ -10042,18 +10042,6 @@
           "rotulo": "Petroselva",
           "municipio": "Riudarenes",
           "direccion": "CARRETERA C-63 KM. 21",
-          "horario": "L-D: 24H",
-          "diesel": 1.679,
-          "dieselPremium": null,
-          "gasolina95": 1.519,
-          "adblue": null,
-          "lat": 41.841611,
-          "lng": 2.698528
-        },
-        {
-          "rotulo": "Petroselva",
-          "municipio": "Riudarenes",
-          "direccion": "CARRETERA C-63 KM. 21",
           "horario": "L-D: 06:00-22:00",
           "diesel": 1.679,
           "dieselPremium": 1.859,
@@ -10061,6 +10049,18 @@
           "adblue": null,
           "lat": 41.844361,
           "lng": 2.694944
+        },
+        {
+          "rotulo": "Petroselva",
+          "municipio": "Riudarenes",
+          "direccion": "CARRETERA C-63 KM. 21",
+          "horario": "L-D: 24H",
+          "diesel": 1.679,
+          "dieselPremium": null,
+          "gasolina95": 1.519,
+          "adblue": null,
+          "lat": 41.841611,
+          "lng": 2.698528
         },
         {
           "rotulo": "Petrolis De Barcelona",
@@ -10171,18 +10171,6 @@
           "lng": 3.157222
         },
         {
-          "rotulo": "Oilarea",
-          "municipio": "Caldes de Malavella",
-          "direccion": "CALLE SANT SEBASTIÀ, 41",
-          "horario": "L-D: 24H",
-          "diesel": 1.699,
-          "dieselPremium": null,
-          "gasolina95": 1.569,
-          "adblue": null,
-          "lat": 41.836556,
-          "lng": 2.799389
-        },
-        {
           "rotulo": "Servico",
           "municipio": "Fornells de la Selva",
           "direccion": "CARRETERA NACIONAL II KM. 710",
@@ -10249,7 +10237,7 @@
           "horario": "L-D: 24H",
           "diesel": 1.699,
           "dieselPremium": null,
-          "gasolina95": 1.559,
+          "gasolina95": 1.529,
           "adblue": null,
           "lat": 42.189417,
           "lng": 2.475611
@@ -10421,16 +10409,28 @@
           "adblue": null,
           "lat": 41.862278,
           "lng": 3.133861
+        },
+        {
+          "rotulo": "Esclatoil",
+          "municipio": "Sarrià de Ter",
+          "direccion": "AVINGUDA DE FRANÇA, 125",
+          "horario": "L-D: 24H",
+          "diesel": 1.719,
+          "dieselPremium": 1.769,
+          "gasolina95": 1.589,
+          "adblue": 0.559,
+          "lat": 42.006167,
+          "lng": 2.816111
         }
       ]
     },
     {
       "slug": "granada",
       "provincia": "Granada",
-      "numEstaciones": 280,
+      "numEstaciones": 277,
       "dieselMin": 1.599,
       "dieselMax": 1.99,
-      "dieselMedia": 1.828,
+      "dieselMedia": 1.827,
       "estaciones": [
         {
           "rotulo": "Plenergy",
@@ -10443,6 +10443,18 @@
           "adblue": null,
           "lat": 37.152417,
           "lng": -3.622722
+        },
+        {
+          "rotulo": "Alcampo Motril",
+          "municipio": "Motril",
+          "direccion": "AVENIDA SALOBREÑA, S/N",
+          "horario": "L-D: 24H",
+          "diesel": 1.649,
+          "dieselPremium": 1.719,
+          "gasolina95": 1.489,
+          "adblue": null,
+          "lat": 36.742028,
+          "lng": -3.530806
         },
         {
           "rotulo": "Plenergy",
@@ -10467,18 +10479,6 @@
           "adblue": null,
           "lat": 36.742417,
           "lng": -3.527861
-        },
-        {
-          "rotulo": "Alcampo Motril",
-          "municipio": "Motril",
-          "direccion": "AVENIDA SALOBREÑA, S/N",
-          "horario": "L-D: 24H",
-          "diesel": 1.649,
-          "dieselPremium": 1.719,
-          "gasolina95": 1.489,
-          "adblue": null,
-          "lat": 36.742028,
-          "lng": -3.530806
         },
         {
           "rotulo": "Petroprix",
@@ -10517,18 +10517,6 @@
           "lng": -3.583167
         },
         {
-          "rotulo": "Cosafra",
-          "municipio": "Huétor Tájar",
-          "direccion": "CARRETERA DE LOJA KM 0,600 S/N KM. 0,600",
-          "horario": "L-D: 24H",
-          "diesel": 1.669,
-          "dieselPremium": null,
-          "gasolina95": 1.529,
-          "adblue": null,
-          "lat": 37.197167,
-          "lng": -4.056972
-        },
-        {
           "rotulo": "Petroprix",
           "municipio": "Huétor Tájar",
           "direccion": "CARRETERA GRANADA-SEVILLA KM. 68",
@@ -10539,6 +10527,18 @@
           "adblue": null,
           "lat": 37.187333,
           "lng": -4.033472
+        },
+        {
+          "rotulo": "Cosafra",
+          "municipio": "Huétor Tájar",
+          "direccion": "CARRETERA DE LOJA KM 0,600 S/N KM. 0,600",
+          "horario": "L-D: 24H",
+          "diesel": 1.669,
+          "dieselPremium": null,
+          "gasolina95": 1.529,
+          "adblue": null,
+          "lat": 37.197167,
+          "lng": -4.056972
         },
         {
           "rotulo": "Gasolinera Granada La Palma",
@@ -10685,18 +10685,6 @@
           "lng": -3.36225
         },
         {
-          "rotulo": "Gm Oil",
-          "municipio": "Motril",
-          "direccion": "CALLE SANTO DOMINGO, 23",
-          "horario": "L-D: 24H",
-          "diesel": 1.699,
-          "dieselPremium": null,
-          "gasolina95": 1.519,
-          "adblue": null,
-          "lat": 36.733472,
-          "lng": -3.509028
-        },
-        {
           "rotulo": "Smart Oil ",
           "municipio": "Motril",
           "direccion": "CARRETERA ALMERIA-MOTRIL KM. 50",
@@ -10707,6 +10695,18 @@
           "adblue": 0.889,
           "lat": 36.737417,
           "lng": -3.513556
+        },
+        {
+          "rotulo": "Gm Oil",
+          "municipio": "Motril",
+          "direccion": "CALLE SANTO DOMINGO, 23",
+          "horario": "L-D: 24H",
+          "diesel": 1.699,
+          "dieselPremium": null,
+          "gasolina95": 1.519,
+          "adblue": null,
+          "lat": 36.733472,
+          "lng": -3.509028
         },
         {
           "rotulo": "Sat La Caña",
@@ -10805,6 +10805,18 @@
           "lng": -3.61075
         },
         {
+          "rotulo": "Petroprix",
+          "municipio": "Granada",
+          "direccion": "POLIGONO PERI CETARSA, 5",
+          "horario": "L-D: 24H",
+          "diesel": 1.719,
+          "dieselPremium": null,
+          "gasolina95": 1.589,
+          "adblue": null,
+          "lat": 37.200167,
+          "lng": -3.649583
+        },
+        {
           "rotulo": "Plenergy",
           "municipio": "Granada",
           "direccion": "AVENIDA DE ANDALUCIA, S/N",
@@ -10827,18 +10839,6 @@
           "adblue": 0.968,
           "lat": 37.197639,
           "lng": -3.641139
-        },
-        {
-          "rotulo": "Petroprix",
-          "municipio": "Granada",
-          "direccion": "POLIGONO PERI CETARSA, 5",
-          "horario": "L-D: 24H",
-          "diesel": 1.719,
-          "dieselPremium": null,
-          "gasolina95": 1.589,
-          "adblue": null,
-          "lat": 37.200167,
-          "lng": -3.649583
         },
         {
           "rotulo": "Estación De Servicio Puerta Guadix 292",
@@ -10877,18 +10877,6 @@
           "lng": -3.681944
         },
         {
-          "rotulo": "Bp",
-          "municipio": "Benalúa de las Villas",
-          "direccion": "CARRETERA A-403 KM. 129",
-          "horario": "L: 24H",
-          "diesel": 1.729,
-          "dieselPremium": 1.799,
-          "gasolina95": 1.629,
-          "adblue": null,
-          "lat": 37.444361,
-          "lng": -3.650333
-        },
-        {
           "rotulo": "Petroprix",
           "municipio": "Chauchina",
           "direccion": "AVENIDA PRIMERO DE MAYO, 8",
@@ -10911,6 +10899,18 @@
           "adblue": null,
           "lat": 37.583083,
           "lng": -2.578167
+        },
+        {
+          "rotulo": "E.s. El Molino Maracena",
+          "municipio": "Maracena",
+          "direccion": "CALLE CRISTOBAL IBAÑEZ ENCINA, 11",
+          "horario": "L-D: 24H",
+          "diesel": 1.729,
+          "dieselPremium": null,
+          "gasolina95": 1.629,
+          "adblue": null,
+          "lat": 37.202361,
+          "lng": -3.641778
         }
       ]
     },
@@ -10920,7 +10920,7 @@
       "numEstaciones": 89,
       "dieselMin": 1.699,
       "dieselMax": 1.968,
-      "dieselMedia": 1.86,
+      "dieselMedia": 1.859,
       "estaciones": [
         {
           "rotulo": "Ballenoil",
@@ -10971,6 +10971,18 @@
           "lng": -3.180778
         },
         {
+          "rotulo": "Petroprix",
+          "municipio": "Guadalajara",
+          "direccion": "CALLE FRANCISCO ARITIO, 97",
+          "horario": "L-D: 24H",
+          "diesel": 1.699,
+          "dieselPremium": null,
+          "gasolina95": 1.559,
+          "adblue": null,
+          "lat": 40.638722,
+          "lng": -3.186306
+        },
+        {
           "rotulo": "Beroil",
           "municipio": "Guadalajara",
           "direccion": "CALLE C/TRAFALGAR, S/N",
@@ -10981,18 +10993,6 @@
           "adblue": 0.6,
           "lat": 40.627611,
           "lng": -3.185472
-        },
-        {
-          "rotulo": "Ballenoil",
-          "municipio": "Guadalajara",
-          "direccion": "CALLE JULIAN BESTEIRO, 23",
-          "horario": "L-D: 24H",
-          "diesel": 1.699,
-          "dieselPremium": null,
-          "gasolina95": 1.559,
-          "adblue": null,
-          "lat": 40.632861,
-          "lng": -3.182972
         },
         {
           "rotulo": "Plenergy",
@@ -11007,18 +11007,6 @@
           "lng": -3.188139
         },
         {
-          "rotulo": "Petroprix",
-          "municipio": "Guadalajara",
-          "direccion": "CALLE FRANCISCO ARITIO, 97",
-          "horario": "L-D: 24H",
-          "diesel": 1.699,
-          "dieselPremium": null,
-          "gasolina95": 1.559,
-          "adblue": null,
-          "lat": 40.638722,
-          "lng": -3.186306
-        },
-        {
           "rotulo": "Plenergy",
           "municipio": "Guadalajara",
           "direccion": "CALLE MÉJICO, 18",
@@ -11029,6 +11017,18 @@
           "adblue": null,
           "lat": 40.629,
           "lng": -3.187528
+        },
+        {
+          "rotulo": "Ballenoil",
+          "municipio": "Guadalajara",
+          "direccion": "CALLE JULIAN BESTEIRO, 23",
+          "horario": "L-D: 24H",
+          "diesel": 1.699,
+          "dieselPremium": null,
+          "gasolina95": 1.559,
+          "adblue": null,
+          "lat": 40.632861,
+          "lng": -3.182972
         },
         {
           "rotulo": "Plenergy",
@@ -11139,6 +11139,18 @@
           "lng": -3.151028
         },
         {
+          "rotulo": "Maroil",
+          "municipio": "Maranchón",
+          "direccion": "TRAVESÍA CARRETERA NACIONAL N211 KM22.200, S/N",
+          "horario": "L-J: 08:00-13:00; V: 08:00-13:00 y 16:00-19:00; S: 09:00-13:00",
+          "diesel": 1.755,
+          "dieselPremium": null,
+          "gasolina95": 1.649,
+          "adblue": null,
+          "lat": 41.048,
+          "lng": -2.204917
+        },
+        {
           "rotulo": "Galp",
           "municipio": "Guadalajara",
           "direccion": "CALLE FRANCISCO ARITIO, S/N",
@@ -11149,18 +11161,6 @@
           "adblue": 0.799,
           "lat": 40.634778,
           "lng": -3.191
-        },
-        {
-          "rotulo": "Maroil",
-          "municipio": "Maranchón",
-          "direccion": "TRAVESÍA CARRETERA NACIONAL N211 KM22.200, S/N",
-          "horario": "L-J: 08:00-13:00; V: 08:00-13:00 y 16:00-19:00; S: 09:00-13:00",
-          "diesel": 1.769,
-          "dieselPremium": null,
-          "gasolina95": 1.669,
-          "adblue": null,
-          "lat": 41.048,
-          "lng": -2.204917
         },
         {
           "rotulo": "Shell",
@@ -11437,18 +11437,6 @@
           "lng": -6.732889
         },
         {
-          "rotulo": "Agd",
-          "municipio": "Manzanilla",
-          "direccion": "CARRETERA A472 KM. 34,90",
-          "horario": "L-D: 24H",
-          "diesel": 1.693,
-          "dieselPremium": null,
-          "gasolina95": 1.595,
-          "adblue": null,
-          "lat": 37.387028,
-          "lng": -6.399694
-        },
-        {
           "rotulo": "E.s.campo De Tejada",
           "municipio": "Escacena del Campo",
           "direccion": "CARRETERA HU-5132 KM. 2",
@@ -11473,16 +11461,16 @@
           "lng": -6.593806
         },
         {
-          "rotulo": "Cobella",
-          "municipio": "Lepe",
-          "direccion": "AVENIDA BLAS INFANTE, S/N",
-          "horario": "L-D: 07:00-23:00",
-          "diesel": 1.709,
+          "rotulo": "Agd",
+          "municipio": "Manzanilla",
+          "direccion": "CARRETERA A472 KM. 34,90",
+          "horario": "L-D: 24H",
+          "diesel": 1.713,
           "dieselPremium": null,
-          "gasolina95": 1.565,
+          "gasolina95": 1.595,
           "adblue": null,
-          "lat": 37.249639,
-          "lng": -7.214
+          "lat": 37.387028,
+          "lng": -6.399694
         },
         {
           "rotulo": "Ballenoil",
@@ -11509,12 +11497,24 @@
           "lng": -6.406361
         },
         {
+          "rotulo": "Cobella",
+          "municipio": "Lepe",
+          "direccion": "AVENIDA BLAS INFANTE, S/N",
+          "horario": "L-D: 07:00-23:00",
+          "diesel": 1.725,
+          "dieselPremium": null,
+          "gasolina95": 1.575,
+          "adblue": null,
+          "lat": 37.249639,
+          "lng": -7.214
+        },
+        {
           "rotulo": "Ballenoil",
           "municipio": "Huelva",
           "direccion": "CARRETERA N431 KM. 63,1",
           "horario": "L-D: 24H",
           "diesel": 1.728,
-          "dieselPremium": null,
+          "dieselPremium": 1.799,
           "gasolina95": 1.639,
           "adblue": null,
           "lat": 37.306139,
@@ -11591,6 +11591,18 @@
           "adblue": 1,
           "lat": 37.349111,
           "lng": -6.390417
+        },
+        {
+          "rotulo": "Galp",
+          "municipio": "Huelva",
+          "direccion": "AVENIDA ITALIA, 32",
+          "horario": "L-D: 06:00-22:00",
+          "diesel": 1.779,
+          "dieselPremium": 1.829,
+          "gasolina95": 1.689,
+          "adblue": null,
+          "lat": 37.253667,
+          "lng": -6.952056
         },
         {
           "rotulo": "Shell",
@@ -11809,88 +11821,76 @@
           "lng": -6.991028
         },
         {
-          "rotulo": "Galp",
-          "municipio": "Huelva",
-          "direccion": "AVENIDA ITALIA, 32",
-          "horario": "L-D: 06:00-22:00",
-          "diesel": 1.839,
-          "dieselPremium": 1.889,
-          "gasolina95": 1.754,
-          "adblue": null,
-          "lat": 37.253667,
-          "lng": -6.952056
-        },
-        {
           "rotulo": "Deoil",
           "municipio": "Beas",
           "direccion": "CTRA.N-435 km 210",
           "horario": "L-D: 06:00-22:00",
           "diesel": 1.84,
           "dieselPremium": 1.88,
-          "gasolina95": 1.69,
+          "gasolina95": 1.68,
           "adblue": null,
           "lat": 37.422583,
           "lng": -6.79925
         },
         {
-          "rotulo": "Higueroil",
-          "municipio": "Higuera de la Sierra",
-          "direccion": "POLIGONO PUERTA DEL PARQUE NATURAL, 1",
-          "horario": "L-D: 24H",
-          "diesel": 1.842,
+          "rotulo": "Deoil",
+          "municipio": "Gibraleón",
+          "direccion": "POLIGONO LA COLMENILLA, 4",
+          "horario": "L: 06:00-22:00",
+          "diesel": 1.84,
           "dieselPremium": null,
-          "gasolina95": 1.655,
-          "adblue": null,
-          "lat": 37.82475,
-          "lng": -6.444083
+          "gasolina95": 1.68,
+          "adblue": 0.9,
+          "lat": 37.364139,
+          "lng": -6.960389
         },
         {
-          "rotulo": "Btp",
-          "municipio": "Ayamonte",
-          "direccion": "CALLE LAVANDA, 2",
-          "horario": "L: 07:00-23:00",
-          "diesel": 1.849,
-          "dieselPremium": null,
-          "gasolina95": 1.709,
-          "adblue": null,
-          "lat": 37.222972,
-          "lng": -7.401139
-        },
-        {
-          "rotulo": "Gesgasoleo",
-          "municipio": "Ayamonte",
-          "direccion": "LUGAR PP.KK. 42/003 Y 42/189, 0",
-          "horario": "L-D: 24H",
-          "diesel": 1.849,
-          "dieselPremium": null,
-          "gasolina95": 1.709,
-          "adblue": null,
-          "lat": 37.220833,
-          "lng": -7.320944
-        },
-        {
-          "rotulo": "Q8",
-          "municipio": "Ayamonte",
-          "direccion": "CARRETERA A 431 KM. 132",
-          "horario": "L-D: 24H",
-          "diesel": 1.849,
-          "dieselPremium": 1.919,
-          "gasolina95": 1.709,
-          "adblue": 0.899,
-          "lat": 37.217,
-          "lng": -7.392194
-        },
-        {
-          "rotulo": "Galp",
-          "municipio": "Ayamonte",
-          "direccion": "AVENIDA CAYETANO FEU, N",
+          "rotulo": "Deoil",
+          "municipio": "Punta Umbría",
+          "direccion": "CALLE COSTA DE LA LUZ, 2",
           "horario": "L-D: 06:00-23:00",
-          "diesel": 1.849,
-          "dieselPremium": 1.899,
-          "gasolina95": 1.749,
+          "diesel": 1.84,
+          "dieselPremium": null,
+          "gasolina95": 1.68,
+          "adblue": 0.9,
+          "lat": 37.19375,
+          "lng": -6.973167
+        },
+        {
+          "rotulo": "Deoil",
+          "municipio": "Valverde del Camino",
+          "direccion": "N-435 km 198,9",
+          "horario": "L-D: 24H",
+          "diesel": 1.84,
+          "dieselPremium": 1.88,
+          "gasolina95": 1.68,
+          "adblue": 0.9,
+          "lat": 37.51525,
+          "lng": -6.797639
+        },
+        {
+          "rotulo": "Deoil",
+          "municipio": "Valverde del Camino",
+          "direccion": "TRAVESÍA URBANA VALVERDE A-496 (A-496 KM 1+600), S/N",
+          "horario": "L-D: 06:00-22:00",
+          "diesel": 1.84,
+          "dieselPremium": null,
+          "gasolina95": 1.68,
+          "adblue": 0.9,
+          "lat": 37.578222,
+          "lng": -6.767806
+        },
+        {
+          "rotulo": "Deoil",
+          "municipio": "Zalamea la Real",
+          "direccion": "CARRETERA NACIONAL 435 KM. 181,8",
+          "horario": "L-D: 06:00-22:00",
+          "diesel": 1.84,
+          "dieselPremium": 1.88,
+          "gasolina95": 1.68,
           "adblue": null,
-          "lat": 37.21425,
-          "lng": -7.400972
+          "lat": 37.674722,
+          "lng": -6.657306
         }
       ]
     },
@@ -12299,18 +12299,6 @@
           "lng": 0.205
         },
         {
-          "rotulo": "Alcampo",
-          "municipio": "Barbastro",
-          "direccion": "CARRETERA N-240 KM. 160",
-          "horario": "L-D: 24H",
-          "diesel": 1.74,
-          "dieselPremium": 1.76,
-          "gasolina95": 1.61,
-          "adblue": null,
-          "lat": 42.032194,
-          "lng": 0.118444
-        },
-        {
           "rotulo": "Agropecuaria",
           "municipio": "Fraga",
           "direccion": "CAMINO TORRENTE, S/N",
@@ -12333,6 +12321,18 @@
           "adblue": null,
           "lat": 42.146889,
           "lng": -0.399278
+        },
+        {
+          "rotulo": "Alcampo",
+          "municipio": "Barbastro",
+          "direccion": "CARRETERA N-240 KM. 160",
+          "horario": "L-D: 24H",
+          "diesel": 1.76,
+          "dieselPremium": 1.79,
+          "gasolina95": 1.61,
+          "adblue": null,
+          "lat": 42.032194,
+          "lng": 0.118444
         },
         {
           "rotulo": "Centro De Servicios Agricolas, S.a.",
@@ -12387,10 +12387,10 @@
     {
       "slug": "jaen",
       "provincia": "Jaén",
-      "numEstaciones": 212,
+      "numEstaciones": 211,
       "dieselMin": 1.679,
       "dieselMax": 1.999,
-      "dieselMedia": 1.872,
+      "dieselMedia": 1.873,
       "estaciones": [
         {
           "rotulo": "Agla",
@@ -12427,18 +12427,6 @@
           "adblue": null,
           "lat": 37.558722,
           "lng": -3.624111
-        },
-        {
-          "rotulo": "S.c.a. Sanagustin",
-          "municipio": "Linares",
-          "direccion": "CARRETERA A-312 KM. 2",
-          "horario": "L-V: 07:00-14:00",
-          "diesel": 1.699,
-          "dieselPremium": 1.749,
-          "gasolina95": 1.599,
-          "adblue": null,
-          "lat": 38.111667,
-          "lng": -3.6075
         },
         {
           "rotulo": "Gasolinera Santana",
@@ -12518,7 +12506,7 @@
           "direccion": "CARRETERA ÚBEDA KM. 0,5",
           "horario": "L-D: 24H",
           "diesel": 1.729,
-          "dieselPremium": 1.749,
+          "dieselPremium": null,
           "gasolina95": 1.559,
           "adblue": null,
           "lat": 37.999694,
@@ -12561,6 +12549,18 @@
           "lng": -3.771917
         },
         {
+          "rotulo": "Plenergy",
+          "municipio": "Jaén",
+          "direccion": "CARRETERA BAILEN-MOTRIL KM. 332",
+          "horario": "L-D: 24H",
+          "diesel": 1.739,
+          "dieselPremium": null,
+          "gasolina95": 1.639,
+          "adblue": null,
+          "lat": 37.787667,
+          "lng": -3.783056
+        },
+        {
           "rotulo": "Petroprix",
           "municipio": "Jaén",
           "direccion": "RONDA DE LOS OLIVARES, 107",
@@ -12585,18 +12585,6 @@
           "lng": -3.785694
         },
         {
-          "rotulo": "Plenergy",
-          "municipio": "Jaén",
-          "direccion": "CARRETERA BAILEN-MOTRIL KM. 332",
-          "horario": "L-D: 24H",
-          "diesel": 1.739,
-          "dieselPremium": null,
-          "gasolina95": 1.639,
-          "adblue": null,
-          "lat": 37.787667,
-          "lng": -3.783056
-        },
-        {
           "rotulo": "Petroprix",
           "municipio": "Jaén",
           "direccion": "CALLE ESPELUY, 2",
@@ -12619,6 +12607,18 @@
           "adblue": null,
           "lat": 37.77375,
           "lng": -3.763028
+        },
+        {
+          "rotulo": "S.c.a. Sanagustin",
+          "municipio": "Linares",
+          "direccion": "CARRETERA A-312 KM. 2",
+          "horario": "L-V: 07:00-14:00",
+          "diesel": 1.739,
+          "dieselPremium": 1.789,
+          "gasolina95": 1.599,
+          "adblue": null,
+          "lat": 38.111667,
+          "lng": -3.6075
         },
         {
           "rotulo": "Ballenoil",
@@ -12715,18 +12715,6 @@
           "adblue": 0.75,
           "lat": 38.329917,
           "lng": -3.545361
-        },
-        {
-          "rotulo": "Gcl",
-          "municipio": "Alcaudete",
-          "direccion": "CARRETERA NAL.432 KM.367.950",
-          "horario": "L-D: 24H",
-          "diesel": 1.759,
-          "dieselPremium": null,
-          "gasolina95": 1.639,
-          "adblue": 0.8,
-          "lat": 37.543833,
-          "lng": -4.024389
         },
         {
           "rotulo": "Petroprix",
@@ -12871,14 +12859,26 @@
           "adblue": null,
           "lat": 38.009333,
           "lng": -3.905028
+        },
+        {
+          "rotulo": "E.s. Los Marcos Areaparking 24h",
+          "municipio": "Andújar",
+          "direccion": "CARRETERA CR MADRID-CADIZ KM. 324",
+          "horario": "L-D: 24H",
+          "diesel": 1.779,
+          "dieselPremium": null,
+          "gasolina95": 1.659,
+          "adblue": null,
+          "lat": 38.029972,
+          "lng": -4.056278
         }
       ]
     },
     {
       "slug": "leon",
       "provincia": "León",
-      "numEstaciones": 164,
-      "dieselMin": 1.639,
+      "numEstaciones": 163,
+      "dieselMin": 1.659,
       "dieselMax": 1.999,
       "dieselMedia": 1.87,
       "estaciones": [
@@ -12887,9 +12887,9 @@
           "municipio": "Santa María de la Isla",
           "direccion": "CALLE EL PARQUE, 9",
           "horario": "L-D: 24H",
-          "diesel": 1.639,
+          "diesel": 1.659,
           "dieselPremium": null,
-          "gasolina95": 1.539,
+          "gasolina95": 1.559,
           "adblue": 0.549,
           "lat": 42.375139,
           "lng": -5.935528
@@ -13005,18 +13005,6 @@
         {
           "rotulo": "Ballenoil",
           "municipio": "León",
-          "direccion": "AVENIDA ANTIBIOTICOS, 63",
-          "horario": "L-D: 24H",
-          "diesel": 1.699,
-          "dieselPremium": 1.719,
-          "gasolina95": 1.599,
-          "adblue": null,
-          "lat": 42.574361,
-          "lng": -5.582861
-        },
-        {
-          "rotulo": "Ballenoil",
-          "municipio": "León",
           "direccion": "AVENIDA AGUSTINOS, 27",
           "horario": "L-D: 24H",
           "diesel": 1.699,
@@ -13025,6 +13013,18 @@
           "adblue": null,
           "lat": 42.587833,
           "lng": -5.601111
+        },
+        {
+          "rotulo": "Ballenoil",
+          "municipio": "León",
+          "direccion": "AVENIDA ANTIBIOTICOS, 63",
+          "horario": "L-D: 24H",
+          "diesel": 1.699,
+          "dieselPremium": 1.719,
+          "gasolina95": 1.599,
+          "adblue": null,
+          "lat": 42.574361,
+          "lng": -5.582861
         },
         {
           "rotulo": "Paso Honroso",
@@ -13243,18 +13243,6 @@
           "lng": -5.894417
         },
         {
-          "rotulo": "Petroprix",
-          "municipio": "Ponferrada",
-          "direccion": "POLIGONO AV DE MILAN 1, 8",
-          "horario": "L-D: 24H",
-          "diesel": 1.779,
-          "dieselPremium": null,
-          "gasolina95": 1.629,
-          "adblue": null,
-          "lat": 42.554306,
-          "lng": -6.617694
-        },
-        {
           "rotulo": "Gasoleos Villager",
           "municipio": "Ponferrada",
           "direccion": "NACIONAL VI km 386.200",
@@ -13277,6 +13265,18 @@
           "adblue": null,
           "lat": 42.565222,
           "lng": -6.636
+        },
+        {
+          "rotulo": "Petroprix",
+          "municipio": "Ponferrada",
+          "direccion": "POLIGONO AV DE MILAN 1, 8",
+          "horario": "L-D: 24H",
+          "diesel": 1.779,
+          "dieselPremium": null,
+          "gasolina95": 1.629,
+          "adblue": null,
+          "lat": 42.554306,
+          "lng": -6.617694
         },
         {
           "rotulo": "Zepxa Eco",
@@ -13579,18 +13579,6 @@
         {
           "rotulo": "Bonarea",
           "municipio": "Balaguer",
-          "direccion": "POL.IND.CAMPLLONG,19",
-          "horario": "L-D: 24H",
-          "diesel": 1.648,
-          "dieselPremium": null,
-          "gasolina95": 1.492,
-          "adblue": 0.528,
-          "lat": 41.775472,
-          "lng": 0.818694
-        },
-        {
-          "rotulo": "Bonarea",
-          "municipio": "Balaguer",
           "direccion": "CALLE URGELL, 115,121",
           "horario": "L-D: 24H",
           "diesel": 1.648,
@@ -13599,6 +13587,18 @@
           "adblue": 0.528,
           "lat": 41.790306,
           "lng": 0.819278
+        },
+        {
+          "rotulo": "Bonarea",
+          "municipio": "Balaguer",
+          "direccion": "POL.IND.CAMPLLONG,19",
+          "horario": "L-D: 24H",
+          "diesel": 1.648,
+          "dieselPremium": null,
+          "gasolina95": 1.492,
+          "adblue": 0.528,
+          "lat": 41.775472,
+          "lng": 0.818694
         },
         {
           "rotulo": "Bonarea",
@@ -13857,10 +13857,10 @@
     {
       "slug": "lugo",
       "provincia": "Lugo",
-      "numEstaciones": 127,
+      "numEstaciones": 124,
       "dieselMin": 1.629,
       "dieselMax": 1.979,
-      "dieselMedia": 1.869,
+      "dieselMedia": 1.87,
       "estaciones": [
         {
           "rotulo": "Petrocash Truck Guitiriz",
@@ -13947,18 +13947,6 @@
           "lng": -7.345556
         },
         {
-          "rotulo": "Cando",
-          "municipio": "Castro de Rei",
-          "direccion": "POLIGONO CASTRO RIBERAS DE LEA, 44",
-          "horario": "L: 24H",
-          "diesel": 1.719,
-          "dieselPremium": null,
-          "gasolina95": 1.619,
-          "adblue": 0.69,
-          "lat": 43.139556,
-          "lng": -7.509556
-        },
-        {
           "rotulo": "Clun - Mercarural",
           "municipio": "Ribadeo",
           "direccion": "CARRETERA N-634 KM.563 KM. 563",
@@ -13969,6 +13957,18 @@
           "adblue": 0.769,
           "lat": 43.545528,
           "lng": -7.158806
+        },
+        {
+          "rotulo": "Cando",
+          "municipio": "Castro de Rei",
+          "direccion": "POLIGONO CASTRO RIBERAS DE LEA, 44",
+          "horario": "L: 24H",
+          "diesel": 1.727,
+          "dieselPremium": null,
+          "gasolina95": 1.637,
+          "adblue": 0.69,
+          "lat": 43.139556,
+          "lng": -7.509556
         },
         {
           "rotulo": "Petrocash Fontefria",
@@ -14199,18 +14199,6 @@
           "lng": -7.524889
         },
         {
-          "rotulo": "Q8",
-          "municipio": "Outeiro de Rei",
-          "direccion": "CARRETERA CTRA. N-VI. ROBRA KM. KM 511,5",
-          "horario": "L-D: 07:00-22:00",
-          "diesel": 1.799,
-          "dieselPremium": null,
-          "gasolina95": 1.689,
-          "adblue": null,
-          "lat": 43.084222,
-          "lng": -7.605972
-        },
-        {
           "rotulo": "O Xeixo,s.coop Galega  Oil ",
           "municipio": "Pastoriza (A)",
           "direccion": "LUGAR CARRIZAL, S/N",
@@ -14235,13 +14223,25 @@
           "lng": -7.326361
         },
         {
+          "rotulo": "Q8",
+          "municipio": "Outeiro de Rei",
+          "direccion": "CARRETERA CTRA. N-VI. ROBRA KM. KM 511,5",
+          "horario": "L-D: 07:00-22:00",
+          "diesel": 1.819,
+          "dieselPremium": null,
+          "gasolina95": 1.699,
+          "adblue": null,
+          "lat": 43.084222,
+          "lng": -7.605972
+        },
+        {
           "rotulo": "E.s. Ribeira De Piquín",
           "municipio": "Ribeira de Piquín",
           "direccion": "CARRETERA LU-P-4606 (O CHAO DE POUSADOIRO) KM. 16",
           "horario": "L-D: 07:30-13:30 y 15:00-20:00",
-          "diesel": 1.818,
+          "diesel": 1.82,
           "dieselPremium": null,
-          "gasolina95": 1.694,
+          "gasolina95": 1.696,
           "adblue": null,
           "lat": 43.203056,
           "lng": -7.203833
@@ -14295,42 +14295,6 @@
           "lng": -7.017639
         },
         {
-          "rotulo": "Ortegal Oil",
-          "municipio": "Viveiro",
-          "direccion": "RUA ILLA GAVEIRA, 81",
-          "horario": "L-D: 07:00-22:00",
-          "diesel": 1.849,
-          "dieselPremium": 1.909,
-          "gasolina95": 1.719,
-          "adblue": 0.769,
-          "lat": 43.684917,
-          "lng": -7.576861
-        },
-        {
-          "rotulo": "E.s. Camba",
-          "municipio": "Xove",
-          "direccion": "LUGAR CAMBA - PQ XUANCES, 25",
-          "horario": "L-S: 08:00-22:00",
-          "diesel": 1.849,
-          "dieselPremium": null,
-          "gasolina95": 1.719,
-          "adblue": null,
-          "lat": 43.687417,
-          "lng": -7.537167
-        },
-        {
-          "rotulo": "Q8",
-          "municipio": "Outeiro de Rei",
-          "direccion": "ACCESO CTRA. N-VI.  ROBRA, ",
-          "horario": "L-D: 24H",
-          "diesel": 1.859,
-          "dieselPremium": null,
-          "gasolina95": 1.739,
-          "adblue": 0.899,
-          "lat": 43.084528,
-          "lng": -7.606361
-        },
-        {
           "rotulo": "Caxigo S Coop Galega",
           "municipio": "Portomarín",
           "direccion": "LG ALTO DO VALIÑO",
@@ -14341,6 +14305,42 @@
           "adblue": null,
           "lat": 42.818889,
           "lng": -7.629167
+        },
+        {
+          "rotulo": "Campo Da Cruz",
+          "municipio": "Castro de Rei",
+          "direccion": "DE LUGO A GONTAN A CASTRO DE REI km 9",
+          "horario": "L-D: 24H",
+          "diesel": 1.869,
+          "dieselPremium": null,
+          "gasolina95": 1.729,
+          "adblue": null,
+          "lat": 43.207806,
+          "lng": -7.409194
+        },
+        {
+          "rotulo": "Cepsa",
+          "municipio": "Guntín",
+          "direccion": "CTRA. LOUSADA  - A VEIGA km 0,100",
+          "horario": "L: 07:00-23:00",
+          "diesel": 1.869,
+          "dieselPremium": 1.939,
+          "gasolina95": 1.749,
+          "adblue": null,
+          "lat": 42.914667,
+          "lng": -7.662222
+        },
+        {
+          "rotulo": "Galp",
+          "municipio": "Lugo",
+          "direccion": "Avda. Los Deportes 12",
+          "horario": "L-S: 07:00-23:00; D: 07:00-22:00",
+          "diesel": 1.869,
+          "dieselPremium": 1.919,
+          "gasolina95": 1.729,
+          "adblue": null,
+          "lat": 43.005694,
+          "lng": -7.572028
         }
       ]
     },
@@ -14350,20 +14350,8 @@
       "numEstaciones": 861,
       "dieselMin": 1.619,
       "dieselMax": 2.009,
-      "dieselMedia": 1.857,
+      "dieselMedia": 1.856,
       "estaciones": [
-        {
-          "rotulo": "Petroprix",
-          "municipio": "Móstoles",
-          "direccion": "CALLE PLASENCIA, 29",
-          "horario": "L-D: 24H",
-          "diesel": 1.619,
-          "dieselPremium": null,
-          "gasolina95": 1.529,
-          "adblue": null,
-          "lat": 40.35225,
-          "lng": -3.875222
-        },
         {
           "rotulo": "Ballenoil",
           "municipio": "Móstoles",
@@ -14375,6 +14363,18 @@
           "adblue": null,
           "lat": 40.351694,
           "lng": -3.876639
+        },
+        {
+          "rotulo": "Petroprix",
+          "municipio": "Móstoles",
+          "direccion": "CALLE PLASENCIA, 29",
+          "horario": "L-D: 24H",
+          "diesel": 1.619,
+          "dieselPremium": null,
+          "gasolina95": 1.529,
+          "adblue": null,
+          "lat": 40.35225,
+          "lng": -3.875222
         },
         {
           "rotulo": "Ballenoil",
@@ -14413,18 +14413,6 @@
           "lng": -3.760778
         },
         {
-          "rotulo": "Plenergy",
-          "municipio": "Fuenlabrada",
-          "direccion": "CALLE DE LA CONSTITUCIÓN, 69",
-          "horario": "L-D: 24H",
-          "diesel": 1.649,
-          "dieselPremium": null,
-          "gasolina95": 1.639,
-          "adblue": null,
-          "lat": 40.280722,
-          "lng": -3.78325
-        },
-        {
           "rotulo": "Petroprix",
           "municipio": "Fuenlabrada",
           "direccion": "CALLE CONSTITUCION (DE LA), 100",
@@ -14435,6 +14423,18 @@
           "adblue": null,
           "lat": 40.280167,
           "lng": -3.782417
+        },
+        {
+          "rotulo": "Plenergy",
+          "municipio": "Fuenlabrada",
+          "direccion": "CALLE DE LA CONSTITUCIÓN, 69",
+          "horario": "L-D: 24H",
+          "diesel": 1.649,
+          "dieselPremium": null,
+          "gasolina95": 1.639,
+          "adblue": null,
+          "lat": 40.280722,
+          "lng": -3.78325
         },
         {
           "rotulo": "Petroprix",
@@ -14487,6 +14487,18 @@
         {
           "rotulo": "Ballenoil",
           "municipio": "Talamanca de Jarama",
+          "direccion": "CARRETERA M-103 KM. 34,5",
+          "horario": "L-D: 24H",
+          "diesel": 1.685,
+          "dieselPremium": 1.705,
+          "gasolina95": 1.589,
+          "adblue": null,
+          "lat": 40.731583,
+          "lng": -3.510361
+        },
+        {
+          "rotulo": "Ballenoil",
+          "municipio": "Talamanca de Jarama",
           "direccion": "AVENIDA DE LA CHOPERA, 2",
           "horario": "L-D: 24H",
           "diesel": 1.685,
@@ -14497,16 +14509,16 @@
           "lng": -3.510083
         },
         {
-          "rotulo": "Ballenoil",
-          "municipio": "Talamanca de Jarama",
-          "direccion": "CARRETERA M-103 KM. 34,5",
+          "rotulo": "Plenergy",
+          "municipio": "Álamo (El)",
+          "direccion": "AVENIDA MADRID, 2",
           "horario": "L-D: 24H",
-          "diesel": 1.685,
-          "dieselPremium": 1.705,
+          "diesel": 1.689,
+          "dieselPremium": null,
           "gasolina95": 1.589,
           "adblue": null,
-          "lat": 40.731583,
-          "lng": -3.510361
+          "lat": 40.233056,
+          "lng": -3.980417
         },
         {
           "rotulo": "Plenergy",
@@ -14557,6 +14569,18 @@
           "lng": -4.01
         },
         {
+          "rotulo": "Gasoelectric Low Cost",
+          "municipio": "Fuenlabrada",
+          "direccion": "CALLE ALMANZOR, 11",
+          "horario": "L-D: 24H",
+          "diesel": 1.695,
+          "dieselPremium": null,
+          "gasolina95": 1.575,
+          "adblue": null,
+          "lat": 40.276528,
+          "lng": -3.806722
+        },
+        {
           "rotulo": "Confor Auto",
           "municipio": "Alcobendas",
           "direccion": "AVENIDA DE LA INDUSTRIA, 45",
@@ -14567,18 +14591,6 @@
           "adblue": 0.9,
           "lat": 40.533556,
           "lng": -3.6535
-        },
-        {
-          "rotulo": "Plenergy",
-          "municipio": "Álamo (El)",
-          "direccion": "AVENIDA MADRID, 2",
-          "horario": "L-D: 24H",
-          "diesel": 1.699,
-          "dieselPremium": null,
-          "gasolina95": 1.589,
-          "adblue": null,
-          "lat": 40.233056,
-          "lng": -3.980417
         },
         {
           "rotulo": "Solner",
@@ -14593,18 +14605,6 @@
           "lng": -3.817278
         },
         {
-          "rotulo": "Lavaplus",
-          "municipio": "Alcorcón",
-          "direccion": "AVENIDA DE EUROPA, 15",
-          "horario": "L-D: 24H",
-          "diesel": 1.699,
-          "dieselPremium": null,
-          "gasolina95": 1.535,
-          "adblue": null,
-          "lat": 40.346917,
-          "lng": -3.8515
-        },
-        {
           "rotulo": "Ballenoil",
           "municipio": "Arroyomolinos",
           "direccion": "CALLE FRESADORES (DE), 7",
@@ -14615,30 +14615,6 @@
           "adblue": null,
           "lat": 40.302861,
           "lng": -3.905167
-        },
-        {
-          "rotulo": "Alcampo",
-          "municipio": "Colmenar Viejo",
-          "direccion": "CALLE C.C. ALCAMPO, C/. TEJERA, 2",
-          "horario": "L-D: 24H",
-          "diesel": 1.699,
-          "dieselPremium": 1.719,
-          "gasolina95": 1.589,
-          "adblue": null,
-          "lat": 40.658722,
-          "lng": -3.757167
-        },
-        {
-          "rotulo": "Petroprix",
-          "municipio": "Colmenar Viejo",
-          "direccion": "AVENIDA DE LOS REYES, 2",
-          "horario": "L-D: 24H",
-          "diesel": 1.699,
-          "dieselPremium": null,
-          "gasolina95": 1.589,
-          "adblue": null,
-          "lat": 40.656917,
-          "lng": -3.754472
         },
         {
           "rotulo": "Ballenoil",
@@ -14653,6 +14629,30 @@
           "lng": -3.75875
         },
         {
+          "rotulo": "Petroprix",
+          "municipio": "Colmenar Viejo",
+          "direccion": "AVENIDA DE LOS REYES, 2",
+          "horario": "L-D: 24H",
+          "diesel": 1.699,
+          "dieselPremium": null,
+          "gasolina95": 1.589,
+          "adblue": null,
+          "lat": 40.656917,
+          "lng": -3.754472
+        },
+        {
+          "rotulo": "Alcampo",
+          "municipio": "Colmenar Viejo",
+          "direccion": "CALLE C.C. ALCAMPO, C/. TEJERA, 2",
+          "horario": "L-D: 24H",
+          "diesel": 1.699,
+          "dieselPremium": 1.719,
+          "gasolina95": 1.589,
+          "adblue": null,
+          "lat": 40.658722,
+          "lng": -3.757167
+        },
+        {
           "rotulo": "Carbugal Fuenlabrada",
           "municipio": "Fuenlabrada",
           "direccion": "CALLE ARGANZA, 5",
@@ -14665,6 +14665,30 @@
           "lng": -3.7485
         },
         {
+          "rotulo": "Ballenoil",
+          "municipio": "Getafe",
+          "direccion": "CALLE ISAS CIES, 1",
+          "horario": "L-D: 24H",
+          "diesel": 1.699,
+          "dieselPremium": 1.719,
+          "gasolina95": 1.599,
+          "adblue": null,
+          "lat": 40.281056,
+          "lng": -3.750917
+        },
+        {
+          "rotulo": "Gasolinera Getafe",
+          "municipio": "Getafe",
+          "direccion": "AVDA ARCAS DE AGUA SN",
+          "horario": "L-D: 06:30-22:30",
+          "diesel": 1.699,
+          "dieselPremium": null,
+          "gasolina95": 1.599,
+          "adblue": null,
+          "lat": 40.294583,
+          "lng": -3.744833
+        },
+        {
           "rotulo": "Petroprix",
           "municipio": "Getafe",
           "direccion": "CALLE HERREROS, 1",
@@ -14675,6 +14699,18 @@
           "adblue": null,
           "lat": 40.30925,
           "lng": -3.701222
+        },
+        {
+          "rotulo": "Gasexpress Getafe",
+          "municipio": "Getafe",
+          "direccion": "AVENIDA RIO GUADALQUIVIR, 20",
+          "horario": "L-D: 24H",
+          "diesel": 1.699,
+          "dieselPremium": null,
+          "gasolina95": 1.629,
+          "adblue": null,
+          "lat": 40.270528,
+          "lng": -3.695944
         },
         {
           "rotulo": "Ballenoil",
@@ -14699,18 +14735,6 @@
           "adblue": null,
           "lat": 40.311389,
           "lng": -3.699528
-        },
-        {
-          "rotulo": "Gasexpress Getafe",
-          "municipio": "Getafe",
-          "direccion": "AVENIDA RIO GUADALQUIVIR, 20",
-          "horario": "L-D: 24H",
-          "diesel": 1.699,
-          "dieselPremium": null,
-          "gasolina95": 1.629,
-          "adblue": null,
-          "lat": 40.270528,
-          "lng": -3.695944
         },
         {
           "rotulo": "Plenergy",
@@ -14807,37 +14831,13 @@
           "adblue": null,
           "lat": 40.243917,
           "lng": -3.687278
-        },
-        {
-          "rotulo": "Ballenoil",
-          "municipio": "Alcorcón",
-          "direccion": "CALLE LAGUNA, 88",
-          "horario": "L-D: 24H",
-          "diesel": 1.705,
-          "dieselPremium": null,
-          "gasolina95": 1.585,
-          "adblue": null,
-          "lat": 40.3325,
-          "lng": -3.81825
-        },
-        {
-          "rotulo": "Plenergy",
-          "municipio": "Alcorcón",
-          "direccion": "CALLE POLVORANCA, 65",
-          "horario": "L-D: 24H",
-          "diesel": 1.705,
-          "dieselPremium": null,
-          "gasolina95": 1.585,
-          "adblue": null,
-          "lat": 40.336861,
-          "lng": -3.811639
         }
       ]
     },
     {
       "slug": "malaga",
       "provincia": "Málaga",
-      "numEstaciones": 306,
+      "numEstaciones": 304,
       "dieselMin": 1.698,
       "dieselMax": 1.989,
       "dieselMedia": 1.882,
@@ -14855,18 +14855,6 @@
           "lng": -4.417639
         },
         {
-          "rotulo": "Petroprix",
-          "municipio": "Benalmádena",
-          "direccion": "URBANIZACIÓN LA LEALA, 22",
-          "horario": "L-D: 24H",
-          "diesel": 1.715,
-          "dieselPremium": null,
-          "gasolina95": 1.619,
-          "adblue": null,
-          "lat": 36.606639,
-          "lng": -4.529333
-        },
-        {
           "rotulo": "Ballenoil",
           "municipio": "Benalmádena",
           "direccion": "CALLE PACHARAN, 25",
@@ -14877,6 +14865,18 @@
           "adblue": null,
           "lat": 36.6045,
           "lng": -4.530389
+        },
+        {
+          "rotulo": "Petroprix",
+          "municipio": "Benalmádena",
+          "direccion": "URBANIZACIÓN LA LEALA, 22",
+          "horario": "L-D: 24H",
+          "diesel": 1.715,
+          "dieselPremium": null,
+          "gasolina95": 1.619,
+          "adblue": null,
+          "lat": 36.606639,
+          "lng": -4.529333
         },
         {
           "rotulo": "Ballenoil",
@@ -14913,6 +14913,18 @@
           "adblue": null,
           "lat": 36.798528,
           "lng": -4.118028
+        },
+        {
+          "rotulo": "Lisbona Oil",
+          "municipio": "Vélez-Málaga",
+          "direccion": "CL ANGUSTIAS, 1",
+          "horario": "L-D: 24H",
+          "diesel": 1.718,
+          "dieselPremium": null,
+          "gasolina95": 1.583,
+          "adblue": 0.83,
+          "lat": 36.745944,
+          "lng": -4.096306
         },
         {
           "rotulo": "Madese-Benamaina",
@@ -15059,18 +15071,6 @@
           "lng": -4.442917
         },
         {
-          "rotulo": "Eroski",
-          "municipio": "Vélez-Málaga",
-          "direccion": "AVENIDA JUAN CARLOS I, S/N",
-          "horario": "L-D: 24H",
-          "diesel": 1.749,
-          "dieselPremium": 1.809,
-          "gasolina95": 1.599,
-          "adblue": null,
-          "lat": 36.755167,
-          "lng": -4.103472
-        },
-        {
           "rotulo": "Petroprix",
           "municipio": "Vélez-Málaga",
           "direccion": "AVENIDA REY JUAN CARLOS I, 5",
@@ -15081,6 +15081,18 @@
           "adblue": null,
           "lat": 36.76625,
           "lng": -4.098722
+        },
+        {
+          "rotulo": "Eroski",
+          "municipio": "Vélez-Málaga",
+          "direccion": "AVENIDA JUAN CARLOS I, S/N",
+          "horario": "L-D: 24H",
+          "diesel": 1.749,
+          "dieselPremium": 1.809,
+          "gasolina95": 1.599,
+          "adblue": null,
+          "lat": 36.755167,
+          "lng": -4.103472
         },
         {
           "rotulo": "Ballenoil",
@@ -15179,16 +15191,16 @@
           "lng": -4.65425
         },
         {
-          "rotulo": "Dinergia",
+          "rotulo": "Ballenoil",
           "municipio": "Málaga",
-          "direccion": "CALLE EDUARDO QUEIPO DE LLANO CABALLERO, 11",
-          "horario": "L-V: 06:00-21:00; S: 09:00-15:00",
+          "direccion": "AVENIDA VELAZQUEZ, 113",
+          "horario": "L-D: 24H",
           "diesel": 1.769,
-          "dieselPremium": null,
+          "dieselPremium": 1.789,
           "gasolina95": 1.669,
-          "adblue": 0.799,
-          "lat": 36.693333,
-          "lng": -4.470583
+          "adblue": null,
+          "lat": 36.6885,
+          "lng": -4.459583
         },
         {
           "rotulo": "E.s. Las Palmeras",
@@ -15203,18 +15215,6 @@
           "lng": -4.474944
         },
         {
-          "rotulo": "Ballenoil",
-          "municipio": "Málaga",
-          "direccion": "AVENIDA VELAZQUEZ, 113",
-          "horario": "L-D: 24H",
-          "diesel": 1.769,
-          "dieselPremium": 1.789,
-          "gasolina95": 1.669,
-          "adblue": null,
-          "lat": 36.6885,
-          "lng": -4.459583
-        },
-        {
           "rotulo": "Petroprix",
           "municipio": "Málaga",
           "direccion": "CALLE LICURGO, 2",
@@ -15225,6 +15225,18 @@
           "adblue": null,
           "lat": 36.693556,
           "lng": -4.462361
+        },
+        {
+          "rotulo": "Dinergia",
+          "municipio": "Málaga",
+          "direccion": "CALLE EDUARDO QUEIPO DE LLANO CABALLERO, 11",
+          "horario": "L-V: 06:00-21:00; S: 09:00-15:00",
+          "diesel": 1.769,
+          "dieselPremium": null,
+          "gasolina95": 1.669,
+          "adblue": 0.799,
+          "lat": 36.693333,
+          "lng": -4.470583
         },
         {
           "rotulo": "Petroprix",
@@ -15239,18 +15251,6 @@
           "lng": -4.471667
         },
         {
-          "rotulo": "Plenergy",
-          "municipio": "Málaga",
-          "direccion": "CALLE LA BOHEME, S/N",
-          "horario": "L-D: 24H",
-          "diesel": 1.769,
-          "dieselPremium": null,
-          "gasolina95": 1.669,
-          "adblue": null,
-          "lat": 36.710278,
-          "lng": -4.468
-        },
-        {
           "rotulo": "Petroprix",
           "municipio": "Málaga",
           "direccion": "AVENIDA JOSE ORTEGA Y GASSET, 277",
@@ -15261,6 +15261,18 @@
           "adblue": null,
           "lat": 36.706056,
           "lng": -4.46775
+        },
+        {
+          "rotulo": "Plenergy",
+          "municipio": "Málaga",
+          "direccion": "CALLE LA BOHEME, S/N",
+          "horario": "L-D: 24H",
+          "diesel": 1.769,
+          "dieselPremium": null,
+          "gasolina95": 1.669,
+          "adblue": null,
+          "lat": 36.710278,
+          "lng": -4.468
         },
         {
           "rotulo": "Es Limonar",
@@ -15275,18 +15287,6 @@
           "lng": -4.655333
         },
         {
-          "rotulo": "Distreax-22, S. L.",
-          "municipio": "Vélez-Málaga",
-          "direccion": "CALLE IGNACIO ZULOAGA, 6",
-          "horario": "L-V: 06:30-22:00; S: 07:00-21:00; D: 09:00-18:00",
-          "diesel": 1.769,
-          "dieselPremium": null,
-          "gasolina95": 1.609,
-          "adblue": 0.695,
-          "lat": 36.763306,
-          "lng": -4.095
-        },
-        {
           "rotulo": "Fejama 2022, S.l.",
           "municipio": "Vélez-Málaga",
           "direccion": "CARRETERA A-356 KM. 42",
@@ -15299,6 +15299,18 @@
           "lng": -4.124917
         },
         {
+          "rotulo": "Distreax-22, S. L.",
+          "municipio": "Vélez-Málaga",
+          "direccion": "CALLE IGNACIO ZULOAGA, 6",
+          "horario": "L-V: 06:30-22:00; S: 07:00-21:00; D: 09:00-18:00",
+          "diesel": 1.769,
+          "dieselPremium": null,
+          "gasolina95": 1.609,
+          "adblue": 0.695,
+          "lat": 36.763306,
+          "lng": -4.095
+        },
+        {
           "rotulo": "Easygas",
           "municipio": "Vélez-Málaga",
           "direccion": "AUTOVIA DEL MEDITERRANEO (A-7) KM. 264,5",
@@ -15309,18 +15321,6 @@
           "adblue": 0.949,
           "lat": 36.743306,
           "lng": -4.18
-        },
-        {
-          "rotulo": "Es Coloso Churriana",
-          "municipio": "Málaga",
-          "direccion": "CARRETERA COMARCAL COIN-MALAGA KM. 89",
-          "horario": "L-D: 07:00-23:00",
-          "diesel": 1.775,
-          "dieselPremium": 1.825,
-          "gasolina95": 1.675,
-          "adblue": null,
-          "lat": 36.660889,
-          "lng": -4.502306
         }
       ]
     },
@@ -15481,23 +15481,11 @@
     {
       "slug": "murcia",
       "provincia": "Murcia",
-      "numEstaciones": 456,
+      "numEstaciones": 452,
       "dieselMin": 1.568,
       "dieselMax": 2.139,
       "dieselMedia": 1.821,
       "estaciones": [
-        {
-          "rotulo": "Renesur",
-          "municipio": "Fortuna",
-          "direccion": "POLIGONO CALLE JÚPITER, 2, 2",
-          "horario": "L-D: 24H",
-          "diesel": 1.568,
-          "dieselPremium": 1.598,
-          "gasolina95": 1.498,
-          "adblue": 0.788,
-          "lat": 38.153694,
-          "lng": -1.124806
-        },
         {
           "rotulo": "E.s. Premier",
           "municipio": "Fortuna",
@@ -15509,6 +15497,18 @@
           "adblue": 0.788,
           "lat": 38.150722,
           "lng": -1.124111
+        },
+        {
+          "rotulo": "Renesur",
+          "municipio": "Fortuna",
+          "direccion": "POLIGONO CALLE JÚPITER, 2, 2",
+          "horario": "L-D: 24H",
+          "diesel": 1.568,
+          "dieselPremium": 1.598,
+          "gasolina95": 1.498,
+          "adblue": 0.788,
+          "lat": 38.153694,
+          "lng": -1.124806
         },
         {
           "rotulo": "Renesur-El Altiplano",
@@ -15559,18 +15559,6 @@
           "lng": -1.497611
         },
         {
-          "rotulo": "Repostamax",
-          "municipio": "Murcia",
-          "direccion": "CARRETERA ALICANTE KM. 155",
-          "horario": "L-D: 24H",
-          "diesel": 1.65,
-          "dieselPremium": null,
-          "gasolina95": 1.54,
-          "adblue": null,
-          "lat": 38.008417,
-          "lng": -1.104917
-        },
-        {
           "rotulo": "Golbal Oil Los Martinez Del Puerto",
           "municipio": "Murcia",
           "direccion": "CALLE UA I, EL MERINO 2 6 PARCT6, 2",
@@ -15581,18 +15569,6 @@
           "adblue": null,
           "lat": 37.824361,
           "lng": -1.095944
-        },
-        {
-          "rotulo": "Secotrans",
-          "municipio": "Alcantarilla",
-          "direccion": "CALLE COLOMBIA -PG.IND  EN  ALCANTARILLA, 1706",
-          "horario": "L-D: 24H",
-          "diesel": 1.669,
-          "dieselPremium": null,
-          "gasolina95": 1.519,
-          "adblue": 0.75,
-          "lat": 37.952167,
-          "lng": -1.196139
         },
         {
           "rotulo": "Gasoleos Calasparra",
@@ -15617,6 +15593,18 @@
           "adblue": null,
           "lat": 37.613222,
           "lng": -1.002972
+        },
+        {
+          "rotulo": "Repostamax",
+          "municipio": "Murcia",
+          "direccion": "CARRETERA ALICANTE KM. 155",
+          "horario": "L-D: 24H",
+          "diesel": 1.67,
+          "dieselPremium": null,
+          "gasolina95": 1.56,
+          "adblue": null,
+          "lat": 38.008417,
+          "lng": -1.104917
         },
         {
           "rotulo": "Tradic",
@@ -15780,23 +15768,11 @@
           "direccion": "AVENIDA DON JUAN DE BORBON  EN  MURCIA, SN",
           "horario": "L-D: 24H",
           "diesel": 1.685,
-          "dieselPremium": null,
+          "dieselPremium": 1.756,
           "gasolina95": 1.569,
           "adblue": null,
           "lat": 38.018,
           "lng": -1.136861
-        },
-        {
-          "rotulo": "Plenergy",
-          "municipio": "Cartagena",
-          "direccion": "CALLE FLORIDABLANCA, 6",
-          "horario": "L-D: 24H",
-          "diesel": 1.687,
-          "dieselPremium": null,
-          "gasolina95": 1.579,
-          "adblue": null,
-          "lat": 37.632917,
-          "lng": -1.002917
         },
         {
           "rotulo": "Peninsula Cartagena",
@@ -15871,16 +15847,16 @@
           "lng": -1.006444
         },
         {
-          "rotulo": "24h",
-          "municipio": "Murcia",
-          "direccion": "CARRETERA CABEZO DE TORRES AL ESPARRAGAL KM. 6,2",
+          "rotulo": "Plenergy",
+          "municipio": "Cartagena",
+          "direccion": "CALLE FLORIDABLANCA, 6",
           "horario": "L-D: 24H",
           "diesel": 1.689,
-          "dieselPremium": 1.719,
+          "dieselPremium": null,
           "gasolina95": 1.579,
-          "adblue": 1.55,
-          "lat": 38.047611,
-          "lng": -1.088167
+          "adblue": null,
+          "lat": 37.632917,
+          "lng": -1.002917
         },
         {
           "rotulo": "Omega Sangonera",
@@ -15965,6 +15941,30 @@
           "adblue": null,
           "lat": 37.952639,
           "lng": -1.183306
+        },
+        {
+          "rotulo": "Intercon",
+          "municipio": "Molina de Segura",
+          "direccion": "CTRA. ESPINARDO - ALTORREAL, S/N km 2.5",
+          "horario": "L-D: 24H",
+          "diesel": 1.697,
+          "dieselPremium": 1.747,
+          "gasolina95": 1.587,
+          "adblue": null,
+          "lat": 38.057306,
+          "lng": -1.161083
+        },
+        {
+          "rotulo": "Renesur Gr",
+          "municipio": "Molina de Segura",
+          "direccion": "CARRETERA CTRA MU-411 KM. 5,637",
+          "horario": "L-D: 06:00-22:00",
+          "diesel": 1.698,
+          "dieselPremium": 1.698,
+          "gasolina95": 1.628,
+          "adblue": null,
+          "lat": 38.156056,
+          "lng": -1.210833
         }
       ]
     },
@@ -15974,7 +15974,7 @@
       "numEstaciones": 242,
       "dieselMin": 1.539,
       "dieselMax": 1.959,
-      "dieselMedia": 1.796,
+      "dieselMedia": 1.797,
       "estaciones": [
         {
           "rotulo": "Avia",
@@ -16037,18 +16037,6 @@
           "lng": -1.588
         },
         {
-          "rotulo": "Plenergy",
-          "municipio": "Tudela",
-          "direccion": "AVENIDA ZARAGOZA, S/N",
-          "horario": "L-D: 24H",
-          "diesel": 1.635,
-          "dieselPremium": null,
-          "gasolina95": 1.479,
-          "adblue": null,
-          "lat": 42.047111,
-          "lng": -1.594472
-        },
-        {
           "rotulo": "Petroprix",
           "municipio": "Tudela",
           "direccion": "CALLE CANAL DE TAUSTE, 290",
@@ -16059,6 +16047,18 @@
           "adblue": null,
           "lat": 42.040639,
           "lng": -1.590028
+        },
+        {
+          "rotulo": "Plenergy",
+          "municipio": "Tudela",
+          "direccion": "AVENIDA ZARAGOZA, S/N",
+          "horario": "L-D: 24H",
+          "diesel": 1.635,
+          "dieselPremium": null,
+          "gasolina95": 1.479,
+          "adblue": null,
+          "lat": 42.047111,
+          "lng": -1.594472
         },
         {
           "rotulo": "Bonarea",
@@ -16223,7 +16223,7 @@
           "horario": "L-D: 24H",
           "diesel": 1.679,
           "dieselPremium": null,
-          "gasolina95": 1.609,
+          "gasolina95": 1.729,
           "adblue": null,
           "lat": 42.185444,
           "lng": -1.62125
@@ -16241,6 +16241,30 @@
           "lng": -1.698306
         },
         {
+          "rotulo": "Plenergy",
+          "municipio": "Fontellas",
+          "direccion": "AUTOVIA A-68 KM. 99",
+          "horario": "L-D: 24H",
+          "diesel": 1.685,
+          "dieselPremium": null,
+          "gasolina95": 1.509,
+          "adblue": 0.527,
+          "lat": 42.023583,
+          "lng": -1.580222
+        },
+        {
+          "rotulo": "Plenergy",
+          "municipio": "Fontellas",
+          "direccion": "CARRETERA A-68 KM. 99,82",
+          "horario": "L-D: 24H",
+          "diesel": 1.685,
+          "dieselPremium": null,
+          "gasolina95": 1.509,
+          "adblue": 0.527,
+          "lat": 42.024778,
+          "lng": -1.580333
+        },
+        {
           "rotulo": "E.s. Bardenas",
           "municipio": "Tudela",
           "direccion": "POLIGONO LA SERNA - CALLE B - A68(N232) SALIDA 91, S/N",
@@ -16251,30 +16275,6 @@
           "adblue": 0.581,
           "lat": 42.076222,
           "lng": -1.642889
-        },
-        {
-          "rotulo": "Plenergy",
-          "municipio": "Fontellas",
-          "direccion": "AUTOVIA A-68 KM. 99",
-          "horario": "L-D: 24H",
-          "diesel": 1.687,
-          "dieselPremium": null,
-          "gasolina95": 1.495,
-          "adblue": 0.527,
-          "lat": 42.023583,
-          "lng": -1.580222
-        },
-        {
-          "rotulo": "Plenergy",
-          "municipio": "Fontellas",
-          "direccion": "CARRETERA A-68 KM. 99,82",
-          "horario": "L-D: 24H",
-          "diesel": 1.687,
-          "dieselPremium": null,
-          "gasolina95": 1.495,
-          "adblue": 0.527,
-          "lat": 42.024778,
-          "lng": -1.580333
         },
         {
           "rotulo": "Estacion De Servicio Aralar",
@@ -16461,10 +16461,10 @@
     {
       "slug": "ourense",
       "provincia": "Ourense",
-      "numEstaciones": 86,
+      "numEstaciones": 85,
       "dieselMin": 1.697,
       "dieselMax": 1.969,
-      "dieselMedia": 1.87,
+      "dieselMedia": 1.871,
       "estaciones": [
         {
           "rotulo": "Ballenoil",
@@ -16755,18 +16755,6 @@
           "lng": -7.182083
         },
         {
-          "rotulo": "E.s. Alto Do Couso",
-          "municipio": "Maceda",
-          "direccion": "LUGAR ALTO DO COUSO, S/N",
-          "horario": "L-D: 08:00-20:00",
-          "diesel": 1.849,
-          "dieselPremium": 1.909,
-          "gasolina95": 1.749,
-          "adblue": null,
-          "lat": 42.311667,
-          "lng": -7.676111
-        },
-        {
           "rotulo": "Ourensana De Petroleos Sl",
           "municipio": "Taboadela",
           "direccion": "LG. PEREIRAS Nº 36 (CTRA. CUMIAL-SALGUEIROS)",
@@ -16945,6 +16933,18 @@
           "adblue": null,
           "lat": 41.982722,
           "lng": -7.285694
+        },
+        {
+          "rotulo": "Repsol",
+          "municipio": "Carballiño (O)",
+          "direccion": "CARRETERA RIBADAVIA, 57 KM. 4",
+          "horario": "L-S: 07:00-22:30",
+          "diesel": 1.889,
+          "dieselPremium": null,
+          "gasolina95": 1.778,
+          "adblue": null,
+          "lat": 42.425556,
+          "lng": -8.078639
         }
       ]
     },
@@ -16954,7 +16954,7 @@
       "numEstaciones": 68,
       "dieselMin": 1.677,
       "dieselMax": 1.985,
-      "dieselMedia": 1.902,
+      "dieselMedia": 1.903,
       "estaciones": [
         {
           "rotulo": "Agropal",
@@ -16979,6 +16979,18 @@
           "adblue": 0.6,
           "lat": 42.0315,
           "lng": -4.524167
+        },
+        {
+          "rotulo": "Puerta De La Montaña ",
+          "municipio": "Alar del Rey",
+          "direccion": "AUTOVIA A-67, SALIDA KM. 94",
+          "horario": "L: 07:00-23:00",
+          "diesel": 1.739,
+          "dieselPremium": 1.749,
+          "gasolina95": 1.659,
+          "adblue": 0.75,
+          "lat": 42.718306,
+          "lng": -4.291778
         },
         {
           "rotulo": "An Energeticos - Car Carrion",
@@ -17017,18 +17029,6 @@
           "lng": -4.249722
         },
         {
-          "rotulo": "Puerta De La Montaña ",
-          "municipio": "Alar del Rey",
-          "direccion": "AUTOVIA A-67, SALIDA KM. 94",
-          "horario": "L: 07:00-23:00",
-          "diesel": 1.769,
-          "dieselPremium": 1.779,
-          "gasolina95": 1.699,
-          "adblue": 0.75,
-          "lat": 42.718306,
-          "lng": -4.291778
-        },
-        {
           "rotulo": "Beroil",
           "municipio": "Paredes de Nava",
           "direccion": "POLIGONO POLIGONO INDUSTRIAL NAVE 80, 80",
@@ -17039,18 +17039,6 @@
           "adblue": 0.6,
           "lat": 42.147139,
           "lng": -4.681167
-        },
-        {
-          "rotulo": "Petrocorner Los Chopos",
-          "municipio": "Osorno la Mayor",
-          "direccion": "CARRETERA SANTANDER KM. 59",
-          "horario": "L-D: 06:00-22:00",
-          "diesel": 1.789,
-          "dieselPremium": null,
-          "gasolina95": 1.699,
-          "adblue": 0.809,
-          "lat": 42.417,
-          "lng": -4.35075
         },
         {
           "rotulo": "Repostar",
@@ -17075,6 +17063,18 @@
           "adblue": 0.9,
           "lat": 42.776194,
           "lng": -4.868444
+        },
+        {
+          "rotulo": "Petrocorner Los Chopos",
+          "municipio": "Osorno la Mayor",
+          "direccion": "CARRETERA SANTANDER KM. 59",
+          "horario": "L-D: 06:00-22:00",
+          "diesel": 1.809,
+          "dieselPremium": null,
+          "gasolina95": 1.709,
+          "adblue": 0.809,
+          "lat": 42.417,
+          "lng": -4.35075
         },
         {
           "rotulo": "Gasexpress",
@@ -17389,18 +17389,6 @@
           "lng": -4.604917
         },
         {
-          "rotulo": "Cepsa",
-          "municipio": "Aguilar de Campoo",
-          "direccion": "CALLE POLIGONO AGUILAR II, 42",
-          "horario": "D: 07:00-23:00",
-          "diesel": 1.934,
-          "dieselPremium": 2.014,
-          "gasolina95": 1.799,
-          "adblue": 1,
-          "lat": 42.788583,
-          "lng": -4.246889
-        },
-        {
           "rotulo": "Ids",
           "municipio": "Villamuriel de Cerrato",
           "direccion": "POLIGONO INDUSTRIAL, 88",
@@ -17435,6 +17423,18 @@
           "adblue": 0.95,
           "lat": 42.037306,
           "lng": -4.27975
+        },
+        {
+          "rotulo": "Bp Villaherreros",
+          "municipio": "Villaherreros",
+          "direccion": "AUTOVIA A-231.BURGOS-LEON KM. 99",
+          "horario": "L-D: 24H",
+          "diesel": 1.945,
+          "dieselPremium": 2.035,
+          "gasolina95": 1.775,
+          "adblue": 1.225,
+          "lat": 42.391861,
+          "lng": -4.474139
         }
       ]
     },
@@ -17444,7 +17444,7 @@
       "numEstaciones": 257,
       "dieselMin": 1.389,
       "dieselMax": 1.68,
-      "dieselMedia": 1.513,
+      "dieselMedia": 1.514,
       "estaciones": [
         {
           "rotulo": "Plenergy",
@@ -17555,6 +17555,18 @@
           "lng": -15.454667
         },
         {
+          "rotulo": "Océano",
+          "municipio": "Telde",
+          "direccion": "CALLE ALEGRIA, 2",
+          "horario": "L-D: 24H",
+          "diesel": 1.424,
+          "dieselPremium": 1.462,
+          "gasolina95": 1.32,
+          "adblue": null,
+          "lat": 28.022389,
+          "lng": -15.387917
+        },
+        {
           "rotulo": "Plenergy",
           "municipio": "Ingenio",
           "direccion": "CALLE ÁFRICA, 4",
@@ -17639,30 +17651,6 @@
           "lng": -15.457806
         },
         {
-          "rotulo": "Disa La Pardilla",
-          "municipio": "Telde",
-          "direccion": "AUTOPISTA AUTOPOISTA GC-1 KM. 8",
-          "horario": "L-S: 06:00-22:00; D: 08:00-20:00",
-          "diesel": 1.425,
-          "dieselPremium": null,
-          "gasolina95": 1.329,
-          "adblue": null,
-          "lat": 28.014444,
-          "lng": -15.388611
-        },
-        {
-          "rotulo": "Disa Bocabarranco",
-          "municipio": "Telde",
-          "direccion": "CALLE ALEGRIA, 35",
-          "horario": "L-D: 24H",
-          "diesel": 1.425,
-          "dieselPremium": 1.499,
-          "gasolina95": 1.329,
-          "adblue": 1.86,
-          "lat": 28.023056,
-          "lng": -15.388333
-        },
-        {
           "rotulo": "Petroprix",
           "municipio": "Telde",
           "direccion": "CALLE ANTONIO JOSE DE SUCRE, 1",
@@ -17713,18 +17701,6 @@
         {
           "rotulo": "Petroprix",
           "municipio": "Agüimes",
-          "direccion": "CALLE LOS ALGARROBOS, 17",
-          "horario": "L-D: 24H",
-          "diesel": 1.429,
-          "dieselPremium": null,
-          "gasolina95": 1.299,
-          "adblue": null,
-          "lat": 27.858417,
-          "lng": -15.417639
-        },
-        {
-          "rotulo": "Petroprix",
-          "municipio": "Agüimes",
           "direccion": "AVENIDA DEL SURESTE, 1",
           "horario": "L-D: 24H",
           "diesel": 1.429,
@@ -17733,18 +17709,6 @@
           "adblue": null,
           "lat": 27.86975,
           "lng": -15.430111
-        },
-        {
-          "rotulo": "Plenergy",
-          "municipio": "Agüimes",
-          "direccion": "CALLE CANAL IZQUIERDA CON ALGARROBO, S/N",
-          "horario": "L-D: 24H",
-          "diesel": 1.429,
-          "dieselPremium": null,
-          "gasolina95": 1.299,
-          "adblue": null,
-          "lat": 27.861583,
-          "lng": -15.414556
         },
         {
           "rotulo": "Petroprix",
@@ -17769,6 +17733,30 @@
           "adblue": null,
           "lat": 27.862861,
           "lng": -15.434361
+        },
+        {
+          "rotulo": "Plenergy",
+          "municipio": "Agüimes",
+          "direccion": "CALLE CANAL IZQUIERDA CON ALGARROBO, S/N",
+          "horario": "L-D: 24H",
+          "diesel": 1.429,
+          "dieselPremium": null,
+          "gasolina95": 1.299,
+          "adblue": null,
+          "lat": 27.861583,
+          "lng": -15.414556
+        },
+        {
+          "rotulo": "Petroprix",
+          "municipio": "Agüimes",
+          "direccion": "CALLE LOS ALGARROBOS, 17",
+          "horario": "L-D: 24H",
+          "diesel": 1.429,
+          "dieselPremium": null,
+          "gasolina95": 1.299,
+          "adblue": null,
+          "lat": 27.858417,
+          "lng": -15.417639
         },
         {
           "rotulo": "Pcan Gil",
@@ -17797,18 +17785,6 @@
         {
           "rotulo": "Petroprix",
           "municipio": "Palmas de Gran Canaria (Las)",
-          "direccion": "CALLE LUIS SAAVEDRA MIRANDA, 59",
-          "horario": "L-D: 24H",
-          "diesel": 1.439,
-          "dieselPremium": null,
-          "gasolina95": 1.269,
-          "adblue": null,
-          "lat": 28.097528,
-          "lng": -15.442222
-        },
-        {
-          "rotulo": "Petroprix",
-          "municipio": "Palmas de Gran Canaria (Las)",
           "direccion": "CALLE EUFEMIANO FUENTES CABRERA, 10",
           "horario": "L-D: 24H",
           "diesel": 1.439,
@@ -17817,18 +17793,6 @@
           "adblue": null,
           "lat": 28.099139,
           "lng": -15.438667
-        },
-        {
-          "rotulo": "Plenergy",
-          "municipio": "Palmas de Gran Canaria (Las)",
-          "direccion": "CALLE DIEGO VEGA SARMIENTO, 48",
-          "horario": "L-D: 24H",
-          "diesel": 1.439,
-          "dieselPremium": null,
-          "gasolina95": 1.269,
-          "adblue": null,
-          "lat": 28.099528,
-          "lng": -15.440806
         },
         {
           "rotulo": "Canary Oil, S.l.",
@@ -17841,6 +17805,30 @@
           "adblue": 0.98,
           "lat": 28.09775,
           "lng": -15.44225
+        },
+        {
+          "rotulo": "Petroprix",
+          "municipio": "Palmas de Gran Canaria (Las)",
+          "direccion": "CALLE LUIS SAAVEDRA MIRANDA, 59",
+          "horario": "L-D: 24H",
+          "diesel": 1.439,
+          "dieselPremium": null,
+          "gasolina95": 1.269,
+          "adblue": null,
+          "lat": 28.097528,
+          "lng": -15.442222
+        },
+        {
+          "rotulo": "Plenergy",
+          "municipio": "Palmas de Gran Canaria (Las)",
+          "direccion": "CALLE DIEGO VEGA SARMIENTO, 48",
+          "horario": "L-D: 24H",
+          "diesel": 1.439,
+          "dieselPremium": null,
+          "gasolina95": 1.269,
+          "adblue": null,
+          "lat": 28.099528,
+          "lng": -15.440806
         },
         {
           "rotulo": "Plenergy",
@@ -17925,6 +17913,18 @@
           "adblue": null,
           "lat": 27.913194,
           "lng": -15.411639
+        },
+        {
+          "rotulo": "Petroprix",
+          "municipio": "Palmas de Gran Canaria (Las)",
+          "direccion": "CALLE QUITO, 3",
+          "horario": "L-D: 24H",
+          "diesel": 1.449,
+          "dieselPremium": null,
+          "gasolina95": 1.369,
+          "adblue": null,
+          "lat": 28.156556,
+          "lng": -15.420583
         }
       ]
     },
@@ -18043,6 +18043,18 @@
           "adblue": null,
           "lat": 42.595139,
           "lng": -8.751222
+        },
+        {
+          "rotulo": "Peinador",
+          "municipio": "Mos",
+          "direccion": "POLIGONO RUA ANEL DO PERRAL, 21",
+          "horario": "L-D: 06:00-23:30",
+          "diesel": 1.716,
+          "dieselPremium": null,
+          "gasolina95": 1.598,
+          "adblue": 0.839,
+          "lat": 42.189944,
+          "lng": -8.625028
         },
         {
           "rotulo": "Plenergy",
@@ -18249,18 +18261,6 @@
           "lng": -8.67025
         },
         {
-          "rotulo": "Peinador",
-          "municipio": "Mos",
-          "direccion": "POLIGONO RUA ANEL DO PERRAL, 21",
-          "horario": "L-D: 06:00-23:30",
-          "diesel": 1.736,
-          "dieselPremium": null,
-          "gasolina95": 1.598,
-          "adblue": 0.839,
-          "lat": 42.189944,
-          "lng": -8.625028
-        },
-        {
           "rotulo": "Es Rb",
           "municipio": "Barro",
           "direccion": "POLIGONO PARQUE EMPRESARIAL BARRO -MEIS PARCELA A-1, 1",
@@ -18357,18 +18357,6 @@
           "lng": -8.751528
         },
         {
-          "rotulo": "Alcampo Vigo",
-          "municipio": "Vigo",
-          "direccion": "AVENIDA MADRID, S/N",
-          "horario": "L-D: 24H",
-          "diesel": 1.739,
-          "dieselPremium": 1.766,
-          "gasolina95": 1.635,
-          "adblue": null,
-          "lat": 42.214083,
-          "lng": -8.700889
-        },
-        {
           "rotulo": "Petroprix",
           "municipio": "Vigo",
           "direccion": "RUA RAMON SOLER, 5",
@@ -18415,16 +18403,28 @@
           "adblue": null,
           "lat": 42.195472,
           "lng": -8.774722
+        },
+        {
+          "rotulo": "Petroprix",
+          "municipio": "Vigo",
+          "direccion": "AVENIDA RICARDO MELLA, 135",
+          "horario": "L-D: 24H",
+          "diesel": 1.739,
+          "dieselPremium": null,
+          "gasolina95": 1.639,
+          "adblue": null,
+          "lat": 42.195556,
+          "lng": -8.773861
         }
       ]
     },
     {
       "slug": "rioja-la",
       "provincia": "Rioja (la)",
-      "numEstaciones": 83,
+      "numEstaciones": 82,
       "dieselMin": 1.639,
       "dieselMax": 1.929,
-      "dieselMedia": 1.812,
+      "dieselMedia": 1.814,
       "estaciones": [
         {
           "rotulo": "Beroil",
@@ -18559,18 +18559,6 @@
           "lng": -2.287
         },
         {
-          "rotulo": "Combustibles Calahorra S.l.",
-          "municipio": "Calahorra",
-          "direccion": "POLIGONO TEJERIAS NORTE PARCELA 9-10 C",
-          "horario": "L-V: 07:00-20:30",
-          "diesel": 1.699,
-          "dieselPremium": null,
-          "gasolina95": 1.659,
-          "adblue": 0.725,
-          "lat": 42.289472,
-          "lng": -1.943806
-        },
-        {
           "rotulo": "Eroski",
           "municipio": "Calahorra",
           "direccion": "CARRETERA CTRA. LOGROÑO KM. S/N",
@@ -18683,9 +18671,9 @@
           "municipio": "Alfaro",
           "direccion": "AVENIDA DE ZARAGOZA, 97",
           "horario": "L-D: 24H",
-          "diesel": 1.737,
+          "diesel": 1.735,
           "dieselPremium": null,
-          "gasolina95": 1.545,
+          "gasolina95": 1.559,
           "adblue": null,
           "lat": 42.171472,
           "lng": -1.744056
@@ -18715,18 +18703,6 @@
           "lng": -2.050306
         },
         {
-          "rotulo": "Alcampo",
-          "municipio": "Haro",
-          "direccion": "CARRETERA CASALAREINA KM. 111",
-          "horario": "L-D: 24H",
-          "diesel": 1.769,
-          "dieselPremium": 1.779,
-          "gasolina95": 1.629,
-          "adblue": null,
-          "lat": 42.565917,
-          "lng": -2.867167
-        },
-        {
           "rotulo": "Carburantes Rioja",
           "municipio": "Lardero",
           "direccion": "AVENIDA ENTRENA, 30",
@@ -18742,18 +18718,6 @@
           "rotulo": "Avia",
           "municipio": "Logroño",
           "direccion": "AVENIDA BURGOS, 49",
-          "horario": "L-D: 06:00-22:00",
-          "diesel": 1.769,
-          "dieselPremium": 1.849,
-          "gasolina95": 1.659,
-          "adblue": 0.899,
-          "lat": 42.461611,
-          "lng": -2.470417
-        },
-        {
-          "rotulo": "Avia",
-          "municipio": "Logroño",
-          "direccion": "AVENIDA BURGOS, 49",
           "horario": "L-D: 24H",
           "diesel": 1.769,
           "dieselPremium": 1.849,
@@ -18763,16 +18727,16 @@
           "lng": -2.469472
         },
         {
-          "rotulo": "Carburantes Rioja Santo Domingo De La Calzada",
-          "municipio": "Santo Domingo de la Calzada",
-          "direccion": "CALLE SAN LÁZARO, 1",
-          "horario": "L-D: 24H",
+          "rotulo": "Avia",
+          "municipio": "Logroño",
+          "direccion": "AVENIDA BURGOS, 49",
+          "horario": "L-D: 06:00-22:00",
           "diesel": 1.769,
-          "dieselPremium": null,
-          "gasolina95": 1.669,
-          "adblue": 1.2,
-          "lat": 42.4385,
-          "lng": -2.945222
+          "dieselPremium": 1.849,
+          "gasolina95": 1.659,
+          "adblue": 0.899,
+          "lat": 42.461611,
+          "lng": -2.470417
         },
         {
           "rotulo": "E.s. Rio Linares",
@@ -18811,6 +18775,18 @@
           "lng": -1.862278
         },
         {
+          "rotulo": "Alcampo",
+          "municipio": "Haro",
+          "direccion": "CARRETERA CASALAREINA KM. 111",
+          "horario": "L-D: 24H",
+          "diesel": 1.789,
+          "dieselPremium": 1.799,
+          "gasolina95": 1.629,
+          "adblue": null,
+          "lat": 42.565917,
+          "lng": -2.867167
+        },
+        {
           "rotulo": "Carrefour",
           "municipio": "Logroño",
           "direccion": "CALLE MADRE DE DIOS, 109",
@@ -18833,6 +18809,18 @@
           "adblue": 0.899,
           "lat": 42.479694,
           "lng": -2.456694
+        },
+        {
+          "rotulo": "Carburantes Rioja Santo Domingo De La Calzada",
+          "municipio": "Santo Domingo de la Calzada",
+          "direccion": "CALLE SAN LÁZARO, 1",
+          "horario": "L-D: 24H",
+          "diesel": 1.799,
+          "dieselPremium": null,
+          "gasolina95": 1.679,
+          "adblue": 1.2,
+          "lat": 42.4385,
+          "lng": -2.945222
         },
         {
           "rotulo": "Adelfas Oil",
@@ -18905,16 +18893,28 @@
           "adblue": null,
           "lat": 42.230028,
           "lng": -2.086194
+        },
+        {
+          "rotulo": "Valcarce",
+          "municipio": "Hormilla",
+          "direccion": "CALLE PRINCIPAL, S/N",
+          "horario": "L-D: 24H",
+          "diesel": 1.839,
+          "dieselPremium": 1.939,
+          "gasolina95": 1.679,
+          "adblue": null,
+          "lat": 42.431167,
+          "lng": -2.762194
         }
       ]
     },
     {
       "slug": "salamanca",
       "provincia": "Salamanca",
-      "numEstaciones": 109,
+      "numEstaciones": 108,
       "dieselMin": 1.659,
       "dieselMax": 1.969,
-      "dieselMedia": 1.844,
+      "dieselMedia": 1.845,
       "estaciones": [
         {
           "rotulo": "Euronor Energy ",
@@ -18953,18 +18953,6 @@
           "lng": -5.203889
         },
         {
-          "rotulo": "Ballenoil",
-          "municipio": "Carbajosa de la Sagrada",
-          "direccion": "CALLE NEWTON, 13",
-          "horario": "L-D: 24H",
-          "diesel": 1.697,
-          "dieselPremium": 1.717,
-          "gasolina95": 1.629,
-          "adblue": null,
-          "lat": 40.943306,
-          "lng": -5.655139
-        },
-        {
           "rotulo": "Petroprix",
           "municipio": "Carbajosa de la Sagrada",
           "direccion": "AVENIDA DE CARBAJOSA LA SAGRADA, 13",
@@ -18975,6 +18963,18 @@
           "adblue": null,
           "lat": 40.945528,
           "lng": -5.656194
+        },
+        {
+          "rotulo": "Ballenoil",
+          "municipio": "Carbajosa de la Sagrada",
+          "direccion": "CALLE NEWTON, 13",
+          "horario": "L-D: 24H",
+          "diesel": 1.697,
+          "dieselPremium": 1.717,
+          "gasolina95": 1.629,
+          "adblue": null,
+          "lat": 40.943306,
+          "lng": -5.655139
         },
         {
           "rotulo": "Plenergy",
@@ -19073,18 +19073,6 @@
           "lng": -5.650361
         },
         {
-          "rotulo": "Hidro&gar.2",
-          "municipio": "Peñaranda de Bracamonte",
-          "direccion": "CALLE CARRETEROS, 14",
-          "horario": "L: 24H",
-          "diesel": 1.709,
-          "dieselPremium": null,
-          "gasolina95": 1.529,
-          "adblue": null,
-          "lat": 40.892306,
-          "lng": -5.20075
-        },
-        {
           "rotulo": "An Energeticos - Peñaranda",
           "municipio": "Peñaranda de Bracamonte",
           "direccion": "CAMINO CAMINO DEL VILLAR, 0",
@@ -19095,6 +19083,18 @@
           "adblue": 0.705,
           "lat": 40.91125,
           "lng": -5.20475
+        },
+        {
+          "rotulo": "Hidro&gar.2",
+          "municipio": "Peñaranda de Bracamonte",
+          "direccion": "CALLE CARRETEROS, 14",
+          "horario": "L: 24H",
+          "diesel": 1.709,
+          "dieselPremium": null,
+          "gasolina95": 1.529,
+          "adblue": null,
+          "lat": 40.892306,
+          "lng": -5.20075
         },
         {
           "rotulo": "Plenergy",
@@ -19151,7 +19151,7 @@
           "horario": "L-D: 24H",
           "diesel": 1.727,
           "dieselPremium": null,
-          "gasolina95": 1.649,
+          "gasolina95": 1.645,
           "adblue": null,
           "lat": 40.993139,
           "lng": -5.639028
@@ -19163,7 +19163,7 @@
           "horario": "L-D: 24H",
           "diesel": 1.727,
           "dieselPremium": null,
-          "gasolina95": 1.649,
+          "gasolina95": 1.645,
           "adblue": null,
           "lat": 40.988556,
           "lng": -5.646361
@@ -19191,18 +19191,6 @@
           "adblue": null,
           "lat": 41.236278,
           "lng": -6.382778
-        },
-        {
-          "rotulo": "Libre",
-          "municipio": "Valdecarros",
-          "direccion": "AVENIDA PAZ, 1",
-          "horario": "L-D: 24H",
-          "diesel": 1.779,
-          "dieselPremium": 1.819,
-          "gasolina95": 1.669,
-          "adblue": null,
-          "lat": 40.766778,
-          "lng": -5.419694
         },
         {
           "rotulo": "Estacion De Servicio Prieto, S.l.",
@@ -19289,42 +19277,6 @@
           "lng": -5.667972
         },
         {
-          "rotulo": "El Trebol",
-          "municipio": "Calvarrasa de Arriba",
-          "direccion": "*EL TREBOL* CR.ALBA DE TORMES-PIEDRAHITA  KM 5.200 km 8,7",
-          "horario": "L-S: 07:00-22:00; D: 08:00-22:00",
-          "diesel": 1.807,
-          "dieselPremium": 1.879,
-          "gasolina95": 1.698,
-          "adblue": null,
-          "lat": 40.894167,
-          "lng": -5.58675
-        },
-        {
-          "rotulo": "El Trebol",
-          "municipio": "Salamanca",
-          "direccion": "(EL TREBOL) CTRA. FREGENEDA Nº 12-22 SALAMANCA",
-          "horario": "L-S: 07:00-22:00; D: 08:00-22:00",
-          "diesel": 1.807,
-          "dieselPremium": 1.898,
-          "gasolina95": 1.698,
-          "adblue": 0.999,
-          "lat": 40.955806,
-          "lng": -5.67275
-        },
-        {
-          "rotulo": "El Trebol",
-          "municipio": "Vecinos",
-          "direccion": "(EL TREBOL) AVD. JOSE ANTONIO Nº 7 (SALAMANCA-CORIA km 30,4)",
-          "horario": "L-S: 07:00-22:00; D: 08:00-22:00",
-          "diesel": 1.807,
-          "dieselPremium": 1.879,
-          "gasolina95": 1.698,
-          "adblue": null,
-          "lat": 40.777472,
-          "lng": -5.877528
-        },
-        {
           "rotulo": "Shell",
           "municipio": "Santa Marta de Tormes",
           "direccion": "CARRETERA C-510 KM. 1,3",
@@ -19337,6 +19289,18 @@
           "lng": -5.627389
         },
         {
+          "rotulo": "Libre",
+          "municipio": "Valdecarros",
+          "direccion": "AVENIDA PAZ, 1",
+          "horario": "L-D: 24H",
+          "diesel": 1.809,
+          "dieselPremium": 1.859,
+          "gasolina95": 1.679,
+          "adblue": null,
+          "lat": 40.766778,
+          "lng": -5.419694
+        },
+        {
           "rotulo": "Eumogas, Sl",
           "municipio": "Villarmayor",
           "direccion": "CARRETERA CL-517 KM. 22,500",
@@ -19347,6 +19311,42 @@
           "adblue": null,
           "lat": 41.012083,
           "lng": -5.970083
+        },
+        {
+          "rotulo": "El Trebol",
+          "municipio": "Calvarrasa de Arriba",
+          "direccion": "*EL TREBOL* CR.ALBA DE TORMES-PIEDRAHITA  KM 5.200 km 8,7",
+          "horario": "L-S: 07:00-22:00; D: 08:00-22:00",
+          "diesel": 1.817,
+          "dieselPremium": 1.889,
+          "gasolina95": 1.699,
+          "adblue": null,
+          "lat": 40.894167,
+          "lng": -5.58675
+        },
+        {
+          "rotulo": "El Trebol",
+          "municipio": "Salamanca",
+          "direccion": "(EL TREBOL) CTRA. FREGENEDA Nº 12-22 SALAMANCA",
+          "horario": "L-S: 07:00-22:00; D: 08:00-22:00",
+          "diesel": 1.817,
+          "dieselPremium": 1.889,
+          "gasolina95": 1.699,
+          "adblue": 0.999,
+          "lat": 40.955806,
+          "lng": -5.67275
+        },
+        {
+          "rotulo": "El Trebol",
+          "municipio": "Vecinos",
+          "direccion": "(EL TREBOL) AVD. JOSE ANTONIO Nº 7 (SALAMANCA-CORIA km 30,4)",
+          "horario": "L-S: 07:00-22:00; D: 08:00-22:00",
+          "diesel": 1.817,
+          "dieselPremium": 1.889,
+          "gasolina95": 1.699,
+          "adblue": null,
+          "lat": 40.777472,
+          "lng": -5.877528
         },
         {
           "rotulo": "Galp",
@@ -19402,7 +19402,7 @@
       "slug": "santa-cruz-de-tenerife",
       "provincia": "Santa Cruz De Tenerife",
       "numEstaciones": 240,
-      "dieselMin": 1.389,
+      "dieselMin": 1.419,
       "dieselMax": 1.839,
       "dieselMedia": 1.574,
       "estaciones": [
@@ -19411,24 +19411,12 @@
           "municipio": "Arafo",
           "direccion": "CALLE CAMINO LA MOLINETA POLÍGONO EL CARRETÓN, S/N",
           "horario": "L-D: 24H",
-          "diesel": 1.389,
+          "diesel": 1.419,
           "dieselPremium": null,
           "gasolina95": 1.289,
           "adblue": null,
           "lat": 28.332694,
           "lng": -16.37775
-        },
-        {
-          "rotulo": "Plenergy",
-          "municipio": "Adeje",
-          "direccion": "AVENIDA DE AYYO, 16",
-          "horario": "L-D: 24H",
-          "diesel": 1.429,
-          "dieselPremium": null,
-          "gasolina95": 1.377,
-          "adblue": null,
-          "lat": 28.126833,
-          "lng": -16.737917
         },
         {
           "rotulo": "H2exagon Arafo",
@@ -19473,10 +19461,22 @@
           "horario": "L-D: 24H",
           "diesel": 1.435,
           "dieselPremium": null,
-          "gasolina95": 1.365,
+          "gasolina95": 1.349,
           "adblue": null,
           "lat": 28.054361,
           "lng": -16.612417
+        },
+        {
+          "rotulo": "Pcan",
+          "municipio": "San Miguel de Abona",
+          "direccion": "AVENIDA MODESTO HERNANDEZ GONZALEZ, 7",
+          "horario": "L-D: 24H",
+          "diesel": 1.435,
+          "dieselPremium": null,
+          "gasolina95": 1.365,
+          "adblue": null,
+          "lat": 28.049472,
+          "lng": -16.611694
         },
         {
           "rotulo": "Eess Océano  La Azadilla",
@@ -19513,6 +19513,30 @@
           "adblue": null,
           "lat": 28.381417,
           "lng": -16.574694
+        },
+        {
+          "rotulo": "Disa",
+          "municipio": "Realejos (Los)",
+          "direccion": "CARRETERA TF-342 LOS REALEJOS - LA GUANCHA KM. 15",
+          "horario": "L-S: 06:00-22:00; D: 08:00-20:00",
+          "diesel": 1.438,
+          "dieselPremium": null,
+          "gasolina95": 1.358,
+          "adblue": null,
+          "lat": 28.379111,
+          "lng": -16.618972
+        },
+        {
+          "rotulo": "Plenergy",
+          "municipio": "Adeje",
+          "direccion": "AVENIDA DE AYYO, 16",
+          "horario": "L-D: 24H",
+          "diesel": 1.449,
+          "dieselPremium": null,
+          "gasolina95": 1.365,
+          "adblue": null,
+          "lat": 28.126833,
+          "lng": -16.737917
         },
         {
           "rotulo": "Red De Combustibles Canarios",
@@ -19563,16 +19587,28 @@
           "lng": -16.282361
         },
         {
-          "rotulo": "Disa",
-          "municipio": "Realejos (Los)",
-          "direccion": "CARRETERA TF-342 LOS REALEJOS - LA GUANCHA KM. 15",
-          "horario": "L-S: 06:00-22:00; D: 08:00-20:00",
-          "diesel": 1.458,
+          "rotulo": "Plenergy",
+          "municipio": "Orotava (La)",
+          "direccion": "CALLE MOLINOS DE GOLFO, S/N",
+          "horario": "L-D: 24H",
+          "diesel": 1.457,
           "dieselPremium": null,
-          "gasolina95": 1.378,
+          "gasolina95": 1.377,
           "adblue": null,
-          "lat": 28.379111,
-          "lng": -16.618972
+          "lat": 28.394806,
+          "lng": -16.543389
+        },
+        {
+          "rotulo": "Plenergy",
+          "municipio": "Orotava (La)",
+          "direccion": "CALLE ALBAÑILERIA, S/N",
+          "horario": "L-D: 24H",
+          "diesel": 1.457,
+          "dieselPremium": null,
+          "gasolina95": 1.377,
+          "adblue": null,
+          "lat": 28.3945,
+          "lng": -16.54125
         },
         {
           "rotulo": "Tgas-Tu Trébol",
@@ -19597,30 +19633,6 @@
           "adblue": null,
           "lat": 28.26425,
           "lng": -16.426417
-        },
-        {
-          "rotulo": "Plenergy",
-          "municipio": "Orotava (La)",
-          "direccion": "CALLE MOLINOS DE GOLFO, S/N",
-          "horario": "L-D: 24H",
-          "diesel": 1.459,
-          "dieselPremium": null,
-          "gasolina95": 1.389,
-          "adblue": null,
-          "lat": 28.394806,
-          "lng": -16.543389
-        },
-        {
-          "rotulo": "Plenergy",
-          "municipio": "Orotava (La)",
-          "direccion": "CALLE ALBAÑILERIA, S/N",
-          "horario": "L-D: 24H",
-          "diesel": 1.459,
-          "dieselPremium": null,
-          "gasolina95": 1.389,
-          "adblue": null,
-          "lat": 28.3945,
-          "lng": -16.54125
         },
         {
           "rotulo": "Gmoil",
@@ -19693,18 +19705,6 @@
           "adblue": null,
           "lat": 28.464056,
           "lng": -16.279417
-        },
-        {
-          "rotulo": "Pcan",
-          "municipio": "San Miguel de Abona",
-          "direccion": "AVENIDA MODESTO HERNANDEZ GONZALEZ, 7",
-          "horario": "L-D: 24H",
-          "diesel": 1.497,
-          "dieselPremium": null,
-          "gasolina95": 1.398,
-          "adblue": null,
-          "lat": 28.049472,
-          "lng": -16.611694
         },
         {
           "rotulo": "Pcan",
@@ -19891,10 +19891,10 @@
     {
       "slug": "segovia",
       "provincia": "Segovia",
-      "numEstaciones": 76,
+      "numEstaciones": 75,
       "dieselMin": 1.729,
       "dieselMax": 1.978,
-      "dieselMedia": 1.865,
+      "dieselMedia": 1.867,
       "estaciones": [
         {
           "rotulo": "G Cantalejo",
@@ -19909,18 +19909,6 @@
           "lng": -3.928306
         },
         {
-          "rotulo": "G Cantalejo",
-          "municipio": "Cantalejo",
-          "direccion": "CARRETERA SEGOVIA KM. 4",
-          "horario": "L-D: 24H",
-          "diesel": 1.729,
-          "dieselPremium": 1.779,
-          "gasolina95": 1.649,
-          "adblue": 0.6,
-          "lat": 41.255389,
-          "lng": -3.929
-        },
-        {
           "rotulo": "Beroil",
           "municipio": "Cantalejo",
           "direccion": "CALLEJA, CALLEJÓN HOSPITAL, 7",
@@ -19931,6 +19919,18 @@
           "adblue": 0.6,
           "lat": 41.264389,
           "lng": -3.929389
+        },
+        {
+          "rotulo": "G Cantalejo",
+          "municipio": "Cantalejo",
+          "direccion": "CARRETERA SEGOVIA KM. 4",
+          "horario": "L-D: 24H",
+          "diesel": 1.729,
+          "dieselPremium": 1.779,
+          "gasolina95": 1.649,
+          "adblue": 0.6,
+          "lat": 41.255389,
+          "lng": -3.929
         },
         {
           "rotulo": "Beroil Navalmanzano",
@@ -20003,18 +20003,6 @@
           "adblue": null,
           "lat": 40.721389,
           "lng": -4.258778
-        },
-        {
-          "rotulo": "Gar",
-          "municipio": "Nava de la Asunción",
-          "direccion": "CALLE REQUIJADA, 2",
-          "horario": "L-D: 24H",
-          "diesel": 1.759,
-          "dieselPremium": null,
-          "gasolina95": 1.709,
-          "adblue": null,
-          "lat": 41.156556,
-          "lng": -4.510972
         },
         {
           "rotulo": "Navatrans",
@@ -20118,7 +20106,7 @@
           "direccion": "CL-601 (VALLADOLID-SEGOVIA) km 105",
           "horario": "L-D: 24H",
           "diesel": 1.779,
-          "dieselPremium": 1.789,
+          "dieselPremium": null,
           "gasolina95": 1.679,
           "adblue": null,
           "lat": 40.969556,
@@ -20191,7 +20179,7 @@
           "horario": "L-D: 24H",
           "diesel": 1.799,
           "dieselPremium": null,
-          "gasolina95": 1.689,
+          "gasolina95": 1.685,
           "adblue": null,
           "lat": 40.910139,
           "lng": -4.058111
@@ -20261,8 +20249,8 @@
           "municipio": "Lastrilla (La)",
           "direccion": "CARRETERA N-110 A SORIA KM 189 PARKING SUPERMERCADO KM. 110",
           "horario": "L-V: 07:00-22:00; S-D: 08:00-22:00",
-          "diesel": 1.859,
-          "dieselPremium": 1.929,
+          "diesel": 1.879,
+          "dieselPremium": 1.949,
           "gasolina95": 1.749,
           "adblue": null,
           "lat": 40.965917,
@@ -20375,13 +20363,25 @@
           "adblue": null,
           "lat": 40.776917,
           "lng": -4.207917
+        },
+        {
+          "rotulo": "Repostar",
+          "municipio": "Hontalbilla",
+          "direccion": "CARRERA RIAZA A TORO, SN",
+          "horario": "L-D: 24H",
+          "diesel": 1.909,
+          "dieselPremium": 1.999,
+          "gasolina95": 1.759,
+          "adblue": null,
+          "lat": 41.347444,
+          "lng": -4.119111
         }
       ]
     },
     {
       "slug": "sevilla",
       "provincia": "Sevilla",
-      "numEstaciones": 445,
+      "numEstaciones": 444,
       "dieselMin": 1.599,
       "dieselMax": 2.034,
       "dieselMedia": 1.84,
@@ -20435,18 +20435,6 @@
           "lng": -5.792278
         },
         {
-          "rotulo": "E.s.vistalegre",
-          "municipio": "Utrera",
-          "direccion": "CALLE ECIJA-JEREZ, 11",
-          "horario": "L: 06:30-22:30",
-          "diesel": 1.629,
-          "dieselPremium": null,
-          "gasolina95": 1.549,
-          "adblue": null,
-          "lat": 37.176333,
-          "lng": -5.774083
-        },
-        {
           "rotulo": "Ballenoil",
           "municipio": "Utrera",
           "direccion": "PLAZA DE LA TRIANILLA, S/N",
@@ -20457,6 +20445,18 @@
           "adblue": null,
           "lat": 37.187056,
           "lng": -5.787306
+        },
+        {
+          "rotulo": "E.s.vistalegre",
+          "municipio": "Utrera",
+          "direccion": "CALLE ECIJA-JEREZ, 11",
+          "horario": "L: 06:30-22:30",
+          "diesel": 1.629,
+          "dieselPremium": null,
+          "gasolina95": 1.549,
+          "adblue": null,
+          "lat": 37.176333,
+          "lng": -5.774083
         },
         {
           "rotulo": "Plenergy",
@@ -20495,18 +20495,6 @@
           "lng": -5.452889
         },
         {
-          "rotulo": "Ballenoil",
-          "municipio": "Morón de la Frontera",
-          "direccion": "CALLE DEL YESO, S/N",
-          "horario": "L-D: 24H",
-          "diesel": 1.649,
-          "dieselPremium": null,
-          "gasolina95": 1.569,
-          "adblue": null,
-          "lat": 37.130194,
-          "lng": -5.453222
-        },
-        {
           "rotulo": "Petroprix",
           "municipio": "Morón de la Frontera",
           "direccion": "AVENIDA DEL PILAR, 4",
@@ -20517,6 +20505,18 @@
           "adblue": null,
           "lat": 37.131222,
           "lng": -5.451639
+        },
+        {
+          "rotulo": "Ballenoil",
+          "municipio": "Morón de la Frontera",
+          "direccion": "CALLE DEL YESO, S/N",
+          "horario": "L-D: 24H",
+          "diesel": 1.649,
+          "dieselPremium": null,
+          "gasolina95": 1.569,
+          "adblue": null,
+          "lat": 37.130194,
+          "lng": -5.453222
         },
         {
           "rotulo": "Moove",
@@ -20711,6 +20711,18 @@
           "lng": -5.113694
         },
         {
+          "rotulo": "Ballenoil",
+          "municipio": "Rinconada (La)",
+          "direccion": "CALLE MIGUEL SERVET, 2",
+          "horario": "L-D: 24H",
+          "diesel": 1.699,
+          "dieselPremium": null,
+          "gasolina95": 1.549,
+          "adblue": null,
+          "lat": 37.487722,
+          "lng": -5.933833
+        },
+        {
           "rotulo": "Plenergy",
           "municipio": "Rinconada (La)",
           "direccion": "AVENIDA DE BOYEROS, 14",
@@ -20733,18 +20745,6 @@
           "adblue": null,
           "lat": 37.480389,
           "lng": -5.937639
-        },
-        {
-          "rotulo": "Ballenoil",
-          "municipio": "Rinconada (La)",
-          "direccion": "CALLE MIGUEL SERVET, 2",
-          "horario": "L-D: 24H",
-          "diesel": 1.699,
-          "dieselPremium": null,
-          "gasolina95": 1.549,
-          "adblue": null,
-          "lat": 37.487722,
-          "lng": -5.933833
         },
         {
           "rotulo": "Plenergy",
@@ -20807,18 +20807,6 @@
           "lng": -5.934167
         },
         {
-          "rotulo": "Petroprix",
-          "municipio": "Dos Hermanas",
-          "direccion": "AVENIDA ANDALUCIA, 183",
-          "horario": "L-D: 24H",
-          "diesel": 1.715,
-          "dieselPremium": null,
-          "gasolina95": 1.619,
-          "adblue": null,
-          "lat": 37.264111,
-          "lng": -5.920167
-        },
-        {
           "rotulo": "Plenergy",
           "municipio": "Dos Hermanas",
           "direccion": "AVENIDA 4 DE DICIEMBRE, 553",
@@ -20829,6 +20817,18 @@
           "adblue": null,
           "lat": 37.288806,
           "lng": -5.943333
+        },
+        {
+          "rotulo": "Petroprix",
+          "municipio": "Dos Hermanas",
+          "direccion": "AVENIDA ANDALUCIA, 183",
+          "horario": "L-D: 24H",
+          "diesel": 1.715,
+          "dieselPremium": null,
+          "gasolina95": 1.619,
+          "adblue": null,
+          "lat": 37.264111,
+          "lng": -5.920167
         },
         {
           "rotulo": "Ballenoil",
@@ -21781,7 +21781,7 @@
           "horario": "L-D: 24H",
           "diesel": 1.698,
           "dieselPremium": null,
-          "gasolina95": 1.598,
+          "gasolina95": 1.568,
           "adblue": null,
           "lat": 41.105389,
           "lng": 1.150583
@@ -21854,7 +21854,7 @@
       "numEstaciones": 69,
       "dieselMin": 1.6,
       "dieselMax": 1.929,
-      "dieselMedia": 1.824,
+      "dieselMedia": 1.825,
       "estaciones": [
         {
           "rotulo": "Alcampo",
@@ -22145,18 +22145,6 @@
           "lng": -0.447833
         },
         {
-          "rotulo": "Q8",
-          "municipio": "Híjar",
-          "direccion": "CARRETERA HIJAR, N-232 KM. KM 164,4",
-          "horario": "L-D: 06:00-22:00",
-          "diesel": 1.829,
-          "dieselPremium": 1.899,
-          "gasolina95": 1.719,
-          "adblue": null,
-          "lat": 41.170611,
-          "lng": -0.442194
-        },
-        {
           "rotulo": "Repsol",
           "municipio": "Calaceite",
           "direccion": "CARRETERA N-420 KM. 418,50",
@@ -22179,6 +22167,18 @@
           "adblue": null,
           "lat": 40.836194,
           "lng": -0.244611
+        },
+        {
+          "rotulo": "Q8",
+          "municipio": "Híjar",
+          "direccion": "CARRETERA HIJAR, N-232 KM. KM 164,4",
+          "horario": "L-D: 06:00-22:00",
+          "diesel": 1.849,
+          "dieselPremium": 1.919,
+          "gasolina95": 1.729,
+          "adblue": null,
+          "lat": 41.170611,
+          "lng": -0.442194
         },
         {
           "rotulo": "E.s.orihuela Del Tremedal",
@@ -22265,18 +22265,6 @@
           "lng": -0.706083
         },
         {
-          "rotulo": "Valcarce",
-          "municipio": "Villafranca del Campo",
-          "direccion": "AUTOVIA A-23 KM. 160",
-          "horario": "L-D: 24H",
-          "diesel": 1.869,
-          "dieselPremium": 1.969,
-          "gasolina95": 1.769,
-          "adblue": 0.799,
-          "lat": 40.702417,
-          "lng": -1.317556
-        },
-        {
           "rotulo": "Cepsa",
           "municipio": "Alcañiz",
           "direccion": "AVENIDA MAESTRAZGO, 4",
@@ -22335,6 +22323,18 @@
           "adblue": null,
           "lat": 41.050833,
           "lng": -1.276389
+        },
+        {
+          "rotulo": "Repsol",
+          "municipio": "Santa Eulalia",
+          "direccion": "CARRETERA SAGUNTO A BURGOS KM. 150",
+          "horario": "L-D: 24H",
+          "diesel": 1.885,
+          "dieselPremium": null,
+          "gasolina95": 1.725,
+          "adblue": null,
+          "lat": 40.564778,
+          "lng": -1.2855
         }
       ]
     },
@@ -22515,18 +22515,6 @@
           "lng": -3.424361
         },
         {
-          "rotulo": "Ballenoil",
-          "municipio": "Ocaña",
-          "direccion": "CALLE CTRA. CABAÑAS, 2",
-          "horario": "L-D: 24H",
-          "diesel": 1.729,
-          "dieselPremium": null,
-          "gasolina95": 1.659,
-          "adblue": null,
-          "lat": 39.953806,
-          "lng": -3.5055
-        },
-        {
           "rotulo": "Petroprix",
           "municipio": "Ocaña",
           "direccion": "CARRETERA N400 KM. 6",
@@ -22537,6 +22525,18 @@
           "adblue": null,
           "lat": 39.960139,
           "lng": -3.488778
+        },
+        {
+          "rotulo": "Ballenoil",
+          "municipio": "Ocaña",
+          "direccion": "CALLE CTRA. CABAÑAS, 2",
+          "horario": "L-D: 24H",
+          "diesel": 1.729,
+          "dieselPremium": null,
+          "gasolina95": 1.659,
+          "adblue": null,
+          "lat": 39.953806,
+          "lng": -3.5055
         },
         {
           "rotulo": "Supeco",
@@ -22601,18 +22601,6 @@
         {
           "rotulo": "Ballenoil",
           "municipio": "Illescas",
-          "direccion": "AVENIDA COMERCIO, 49",
-          "horario": "L-D: 24H",
-          "diesel": 1.739,
-          "dieselPremium": null,
-          "gasolina95": 1.649,
-          "adblue": null,
-          "lat": 40.112389,
-          "lng": -3.857028
-        },
-        {
-          "rotulo": "Ballenoil",
-          "municipio": "Illescas",
           "direccion": "CALLE TILO, 54",
           "horario": "L-D: 24H",
           "diesel": 1.739,
@@ -22621,6 +22609,18 @@
           "adblue": null,
           "lat": 40.135111,
           "lng": -3.836
+        },
+        {
+          "rotulo": "Ballenoil",
+          "municipio": "Illescas",
+          "direccion": "AVENIDA COMERCIO, 49",
+          "horario": "L-D: 24H",
+          "diesel": 1.739,
+          "dieselPremium": null,
+          "gasolina95": 1.649,
+          "adblue": null,
+          "lat": 40.112389,
+          "lng": -3.857028
         },
         {
           "rotulo": "Ntra. Sra. Del Carmen - Cooperativa Vinicola",
@@ -22831,7 +22831,7 @@
     {
       "slug": "valencia-valencia",
       "provincia": "Valencia / València",
-      "numEstaciones": 637,
+      "numEstaciones": 634,
       "dieselMin": 1.599,
       "dieselMax": 2.015,
       "dieselMedia": 1.802,
@@ -22959,14 +22959,14 @@
         {
           "rotulo": "Ballenoil",
           "municipio": "Paiporta",
-          "direccion": "CARRETERA BENETÚSSER KM. 57",
+          "direccion": "CAMINO SANTA ANA, PARCELA 19, POLIGONO, 9",
           "horario": "L-D: 24H",
           "diesel": 1.599,
-          "dieselPremium": null,
-          "gasolina95": 1.489,
+          "dieselPremium": 1.619,
+          "gasolina95": 1.499,
           "adblue": null,
-          "lat": 39.426694,
-          "lng": -0.404889
+          "lat": 39.422583,
+          "lng": -0.421111
         },
         {
           "rotulo": "Ballenoil",
@@ -22983,14 +22983,14 @@
         {
           "rotulo": "Ballenoil",
           "municipio": "Paiporta",
-          "direccion": "CAMINO SANTA ANA, PARCELA 19, POLIGONO, 9",
+          "direccion": "CARRETERA BENETÚSSER KM. 57",
           "horario": "L-D: 24H",
           "diesel": 1.599,
-          "dieselPremium": 1.619,
-          "gasolina95": 1.499,
+          "dieselPremium": null,
+          "gasolina95": 1.489,
           "adblue": null,
-          "lat": 39.422583,
-          "lng": -0.421111
+          "lat": 39.426694,
+          "lng": -0.404889
         },
         {
           "rotulo": "Euronor Energy ",
@@ -23017,16 +23017,16 @@
           "lng": -0.938861
         },
         {
-          "rotulo": "Plenergy",
+          "rotulo": "Ballenoil",
           "municipio": "Xàtiva",
-          "direccion": "CALLE VIA SERVICIO POLIGONO IND. F, 18",
+          "direccion": "CARRETERA ALZIRA KM. 13",
           "horario": "L-D: 24H",
           "diesel": 1.629,
           "dieselPremium": null,
           "gasolina95": 1.549,
           "adblue": null,
-          "lat": 38.996361,
-          "lng": -0.521528
+          "lat": 38.996222,
+          "lng": -0.513389
         },
         {
           "rotulo": "+b Energias",
@@ -23041,6 +23041,18 @@
           "lng": -0.512611
         },
         {
+          "rotulo": "Plenergy",
+          "municipio": "Xàtiva",
+          "direccion": "CALLE VIA SERVICIO POLIGONO IND. F, 18",
+          "horario": "L-D: 24H",
+          "diesel": 1.629,
+          "dieselPremium": null,
+          "gasolina95": 1.549,
+          "adblue": null,
+          "lat": 38.996361,
+          "lng": -0.521528
+        },
+        {
           "rotulo": "Family Energy,sl",
           "municipio": "Xàtiva",
           "direccion": "CARRETERA LLOSA DE RANES S/N KM. S/N",
@@ -23053,16 +23065,16 @@
           "lng": -0.526778
         },
         {
-          "rotulo": "Ballenoil",
-          "municipio": "Xàtiva",
-          "direccion": "CARRETERA ALZIRA KM. 13",
+          "rotulo": "Plenergy",
+          "municipio": "Canet d'En Berenguer",
+          "direccion": "AVENIDA DEL MEDITERRANEO, S/N",
           "horario": "L-D: 24H",
-          "diesel": 1.629,
+          "diesel": 1.639,
           "dieselPremium": null,
           "gasolina95": 1.549,
           "adblue": null,
-          "lat": 38.996222,
-          "lng": -0.513389
+          "lat": 39.678972,
+          "lng": -0.216972
         },
         {
           "rotulo": "Eldisser",
@@ -23075,6 +23087,54 @@
           "adblue": null,
           "lat": 39.520194,
           "lng": -0.456583
+        },
+        {
+          "rotulo": "Plenergy",
+          "municipio": "Puçol",
+          "direccion": "CARRER LA CREU, 1",
+          "horario": "L-D: 24H",
+          "diesel": 1.639,
+          "dieselPremium": null,
+          "gasolina95": 1.549,
+          "adblue": null,
+          "lat": 39.624361,
+          "lng": -0.30425
+        },
+        {
+          "rotulo": "Petroprix",
+          "municipio": "Sagunto/Sagunt",
+          "direccion": "AVENIDA FAUSTO CARUANA, 59",
+          "horario": "L-D: 24H",
+          "diesel": 1.639,
+          "dieselPremium": null,
+          "gasolina95": 1.549,
+          "adblue": null,
+          "lat": 39.672306,
+          "lng": -0.253
+        },
+        {
+          "rotulo": "Plenergy",
+          "municipio": "Sagunto/Sagunt",
+          "direccion": "CARRETERA 237 KM. ",
+          "horario": "L-D: 24H",
+          "diesel": 1.639,
+          "dieselPremium": null,
+          "gasolina95": 1.549,
+          "adblue": null,
+          "lat": 39.672972,
+          "lng": -0.255694
+        },
+        {
+          "rotulo": "Plenergy",
+          "municipio": "Sagunto/Sagunt",
+          "direccion": "CALLE SERRA DE CORBERA, 1",
+          "horario": "L-D: 24H",
+          "diesel": 1.639,
+          "dieselPremium": null,
+          "gasolina95": 1.549,
+          "adblue": null,
+          "lat": 39.669389,
+          "lng": -0.223611
         },
         {
           "rotulo": "Tc Campillo",
@@ -23137,6 +23197,18 @@
           "lng": -0.526861
         },
         {
+          "rotulo": "Alcampo S.a.",
+          "municipio": "Alboraya",
+          "direccion": "C.C.ALCAMPO km A-7 SAL 2",
+          "horario": "L-D: 24H",
+          "diesel": 1.654,
+          "dieselPremium": 1.699,
+          "gasolina95": 1.599,
+          "adblue": null,
+          "lat": 39.504528,
+          "lng": -0.324472
+        },
+        {
           "rotulo": "La Baronia De Turis Coop V",
           "municipio": "Turís",
           "direccion": "POLIGONO PROYECTO, 1",
@@ -23185,18 +23257,6 @@
           "lng": -0.434528
         },
         {
-          "rotulo": "Ballenoil",
-          "municipio": "Carcaixent",
-          "direccion": "CALLE VICTOR OROVAL I TOMAS, 7",
-          "horario": "L-D: 24H",
-          "diesel": 1.659,
-          "dieselPremium": null,
-          "gasolina95": 1.559,
-          "adblue": null,
-          "lat": 39.127056,
-          "lng": -0.442472
-        },
-        {
           "rotulo": "Family Energy",
           "municipio": "Carcaixent",
           "direccion": "AVENIDA BOTICARI BODI (C.C. RIBERA DEL XUQUER), 28",
@@ -23207,6 +23267,18 @@
           "adblue": null,
           "lat": 39.1285,
           "lng": -0.446194
+        },
+        {
+          "rotulo": "Ballenoil",
+          "municipio": "Carcaixent",
+          "direccion": "CALLE VICTOR OROVAL I TOMAS, 7",
+          "horario": "L-D: 24H",
+          "diesel": 1.659,
+          "dieselPremium": null,
+          "gasolina95": 1.559,
+          "adblue": null,
+          "lat": 39.127056,
+          "lng": -0.442472
         },
         {
           "rotulo": "Petroprix",
@@ -23243,78 +23315,6 @@
           "adblue": null,
           "lat": 39.478389,
           "lng": -0.404306
-        },
-        {
-          "rotulo": "Alcampo S.a.",
-          "municipio": "Alboraya",
-          "direccion": "C.C.ALCAMPO km A-7 SAL 2",
-          "horario": "L-D: 24H",
-          "diesel": 1.663,
-          "dieselPremium": 1.699,
-          "gasolina95": 1.599,
-          "adblue": null,
-          "lat": 39.504528,
-          "lng": -0.324472
-        },
-        {
-          "rotulo": "Estacion Inter Patty",
-          "municipio": "Paterna",
-          "direccion": "CALLE OLLER, 5",
-          "horario": "L-D: 24H",
-          "diesel": 1.663,
-          "dieselPremium": null,
-          "gasolina95": null,
-          "adblue": null,
-          "lat": 39.518028,
-          "lng": -0.454667
-        },
-        {
-          "rotulo": "Gasolinera Alfafar",
-          "municipio": "Alfafar",
-          "direccion": "Pgno. nº 3 - Parcela H-11",
-          "horario": "L-D: 06:00-22:00",
-          "diesel": 1.664,
-          "dieselPremium": null,
-          "gasolina95": 1.489,
-          "adblue": null,
-          "lat": 39.415528,
-          "lng": -0.398056
-        },
-        {
-          "rotulo": "E.s. San Coronado",
-          "municipio": "Jarafuel",
-          "direccion": "AVENIDA PAIS VALENCIANO, S/N",
-          "horario": "L-D: 24H",
-          "diesel": 1.667,
-          "dieselPremium": null,
-          "gasolina95": 1.548,
-          "adblue": null,
-          "lat": 39.138306,
-          "lng": -1.075722
-        },
-        {
-          "rotulo": "Ballenoil",
-          "municipio": "Cheste",
-          "direccion": "POLIGONO MANZANA A, P.I. DE CASTILLA, S/N",
-          "horario": "L-D: 24H",
-          "diesel": 1.669,
-          "dieselPremium": 1.689,
-          "gasolina95": 1.499,
-          "adblue": null,
-          "lat": 39.47725,
-          "lng": -0.653556
-        },
-        {
-          "rotulo": "Ayafuel",
-          "municipio": "Valencia",
-          "direccion": "CALLE DELS GREMIS, 8",
-          "horario": "L-D: 24H",
-          "diesel": 1.669,
-          "dieselPremium": 1.719,
-          "gasolina95": 1.575,
-          "adblue": null,
-          "lat": 39.45775,
-          "lng": -0.409306
         }
       ]
     },
@@ -23327,24 +23327,12 @@
       "dieselMedia": 1.848,
       "estaciones": [
         {
-          "rotulo": "Petroprix",
-          "municipio": "Medina del Campo",
-          "direccion": "AVENIDA DE LA CONSTITUCION, 82",
-          "horario": "L-D: 24H",
-          "diesel": 1.599,
-          "dieselPremium": null,
-          "gasolina95": 1.599,
-          "adblue": null,
-          "lat": 41.322111,
-          "lng": -4.920861
-        },
-        {
           "rotulo": "Ballenoil",
           "municipio": "Medina del Campo",
           "direccion": "AVENIDA CONSTITUCIÓN, 71",
           "horario": "L-D: 24H",
           "diesel": 1.599,
-          "dieselPremium": null,
+          "dieselPremium": 1.619,
           "gasolina95": 1.599,
           "adblue": null,
           "lat": 41.319,
@@ -23361,6 +23349,18 @@
           "adblue": null,
           "lat": 41.324417,
           "lng": -4.915944
+        },
+        {
+          "rotulo": "Petroprix",
+          "municipio": "Medina del Campo",
+          "direccion": "AVENIDA DE LA CONSTITUCION, 82",
+          "horario": "L-D: 24H",
+          "diesel": 1.599,
+          "dieselPremium": null,
+          "gasolina95": 1.599,
+          "adblue": null,
+          "lat": 41.322111,
+          "lng": -4.920861
         },
         {
           "rotulo": "Es Castronuño",
@@ -23627,18 +23627,6 @@
           "lng": -4.699472
         },
         {
-          "rotulo": "Plenergy",
-          "municipio": "Valladolid",
-          "direccion": "CALLE DANIEL DEL OLMO 23, 23",
-          "horario": "L-D: 24H",
-          "diesel": 1.719,
-          "dieselPremium": null,
-          "gasolina95": 1.629,
-          "adblue": null,
-          "lat": 41.627861,
-          "lng": -4.729056
-        },
-        {
           "rotulo": "Gasexpress",
           "municipio": "Valladolid",
           "direccion": "AVENIDA ZAMORA, 51",
@@ -23649,6 +23637,30 @@
           "adblue": null,
           "lat": 41.6195,
           "lng": -4.735861
+        },
+        {
+          "rotulo": "Petroprix",
+          "municipio": "Valladolid",
+          "direccion": "CALLE DANIEL DEL OLMO GONZÁLEZ, 16",
+          "horario": "L-D: 24H",
+          "diesel": 1.719,
+          "dieselPremium": null,
+          "gasolina95": 1.629,
+          "adblue": null,
+          "lat": 41.627528,
+          "lng": -4.7325
+        },
+        {
+          "rotulo": "Plenergy",
+          "municipio": "Valladolid",
+          "direccion": "CALLE DANIEL DEL OLMO 23, 23",
+          "horario": "L-D: 24H",
+          "diesel": 1.719,
+          "dieselPremium": null,
+          "gasolina95": 1.629,
+          "adblue": null,
+          "lat": 41.627861,
+          "lng": -4.729056
         },
         {
           "rotulo": "Ballenoil",
@@ -23665,14 +23677,14 @@
         {
           "rotulo": "Petroprix",
           "municipio": "Valladolid",
-          "direccion": "CALLE DANIEL DEL OLMO GONZÁLEZ, 16",
+          "direccion": "AVENIDA GIJON, 78",
           "horario": "L-D: 24H",
           "diesel": 1.719,
           "dieselPremium": null,
           "gasolina95": 1.629,
           "adblue": null,
-          "lat": 41.627528,
-          "lng": -4.7325
+          "lat": 41.660861,
+          "lng": -4.751611
         },
         {
           "rotulo": "Espanoil",
@@ -23697,18 +23709,6 @@
           "adblue": null,
           "lat": 41.671139,
           "lng": -4.725306
-        },
-        {
-          "rotulo": "Petroprix",
-          "municipio": "Valladolid",
-          "direccion": "AVENIDA GIJON, 78",
-          "horario": "L-D: 24H",
-          "diesel": 1.719,
-          "dieselPremium": null,
-          "gasolina95": 1.629,
-          "adblue": null,
-          "lat": 41.660861,
-          "lng": -4.751611
         },
         {
           "rotulo": "La Estrella De Qatar",
@@ -24009,18 +24009,6 @@
           "lng": -5.798417
         },
         {
-          "rotulo": "Petroprix",
-          "municipio": "Benavente",
-          "direccion": "AVENIDA FEDERICO SILVA MUÑOZ, 146",
-          "horario": "L-D: 24H",
-          "diesel": 1.709,
-          "dieselPremium": null,
-          "gasolina95": 1.599,
-          "adblue": null,
-          "lat": 41.996944,
-          "lng": -5.658778
-        },
-        {
           "rotulo": "Beroil ",
           "municipio": "Benavente",
           "direccion": "CAÑADA REAL BERCIANA, 9",
@@ -24031,6 +24019,18 @@
           "adblue": 0.6,
           "lat": 41.9985,
           "lng": -5.656472
+        },
+        {
+          "rotulo": "Petroprix",
+          "municipio": "Benavente",
+          "direccion": "AVENIDA FEDERICO SILVA MUÑOZ, 146",
+          "horario": "L-D: 24H",
+          "diesel": 1.709,
+          "dieselPremium": null,
+          "gasolina95": 1.599,
+          "adblue": null,
+          "lat": 41.996944,
+          "lng": -5.658778
         },
         {
           "rotulo": "Repostar--Vista Alegre",
@@ -24117,18 +24117,6 @@
           "lng": -6.64025
         },
         {
-          "rotulo": "E.s. Diez Centimos",
-          "municipio": "Gamones",
-          "direccion": "CARRERA ZAMORA V2210-P47-P94, 0",
-          "horario": "L-D: 24H",
-          "diesel": 1.809,
-          "dieselPremium": null,
-          "gasolina95": 1.699,
-          "adblue": null,
-          "lat": 41.475917,
-          "lng": -6.175528
-        },
-        {
           "rotulo": "E.s. El Pino",
           "municipio": "Asturianos",
           "direccion": "CARRETERA NACIONAL 525 KM. 69,200",
@@ -24199,6 +24187,18 @@
           "adblue": null,
           "lat": 41.321583,
           "lng": -6.377528
+        },
+        {
+          "rotulo": "E.s. Diez Centimos",
+          "municipio": "Gamones",
+          "direccion": "CARRERA ZAMORA V2210-P47-P94, 0",
+          "horario": "L-D: 24H",
+          "diesel": 1.839,
+          "dieselPremium": null,
+          "gasolina95": 1.699,
+          "adblue": null,
+          "lat": 41.475917,
+          "lng": -6.175528
         },
         {
           "rotulo": "Repostar--Alfa",
@@ -24304,7 +24304,7 @@
       "numEstaciones": 231,
       "dieselMin": 1.607,
       "dieselMax": 1.939,
-      "dieselMedia": 1.82,
+      "dieselMedia": 1.821,
       "estaciones": [
         {
           "rotulo": "Coop. Virgen Del Rosario",
@@ -24535,18 +24535,6 @@
           "lng": -1.641861
         },
         {
-          "rotulo": "Ganar, S. Coop.",
-          "municipio": "Caspe",
-          "direccion": "AVENIDA MAELLA, 56,5",
-          "horario": "L-D: 24H",
-          "diesel": 1.658,
-          "dieselPremium": null,
-          "gasolina95": 1.49,
-          "adblue": null,
-          "lat": 41.227694,
-          "lng": -0.029944
-        },
-        {
           "rotulo": "Ganar Energia",
           "municipio": "Caspe",
           "direccion": "AVENIDA MAELLA, 99",
@@ -24557,6 +24545,18 @@
           "adblue": 0.52,
           "lat": 41.226056,
           "lng": -0.029333
+        },
+        {
+          "rotulo": "Ganar, S. Coop.",
+          "municipio": "Caspe",
+          "direccion": "AVENIDA MAELLA, 56,5",
+          "horario": "L-D: 24H",
+          "diesel": 1.658,
+          "dieselPremium": null,
+          "gasolina95": 1.49,
+          "adblue": null,
+          "lat": 41.227694,
+          "lng": -0.029944
         },
         {
           "rotulo": "Senersa S.l",
